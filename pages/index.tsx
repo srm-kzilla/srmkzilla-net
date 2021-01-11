@@ -7,7 +7,7 @@ const Home = () => {
       <Navbar />
       <p>home</p>
 
-      <div className="container mx-auto text-white rounded-xl p-20 bg-baseBlack">
+      <div className="container mx-auto text-white rounded-xl p-20 mt-20 bg-baseBlack">
         <div>{/* <ImageBox /> */}</div>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quaerat,
         eligendi impedit ipsum recusandae rerum ducimus veritatis laborum
