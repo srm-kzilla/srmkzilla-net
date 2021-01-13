@@ -9,6 +9,7 @@ module.exports = {
         baseBlue: "#5D9BEE",
         baseBlack: "#222221",
         baseGray: "#C4C4C4",
+        footerBackground: "#221F1F",
       },
     },
   },

@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar } from "../shared/components";
+import { Navbar, Footer } from "../shared/components";
 
 const Home = () => {
   return (
@@ -252,6 +252,8 @@ const Home = () => {
         adipisicing elit. Iure facere facilis blanditiis quo distinctio deleniti
         quos voluptatum nemo ea impedit optio ve
       </div>
+      <Footer />
+
     </div>
   );
 };
