@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Search } from "react-feather";
+import { Search, Menu } from "react-feather";
 import Link from "next/link";
 
 const Navbar = () => {
@@ -22,6 +22,7 @@ const Navbar = () => {
       setSearch(false);
     }
   };
+  
 
   useEffect(() => {
     window.addEventListener("scroll", searchshow);
@@ -29,65 +30,91 @@ const Navbar = () => {
 
   return (
     <nav className="bg-baseBlack bg-opacity-20 fixed w-full">
-      <div className="container mx-1 text-white p-5">
-        <div className="flex items-center justify-between">
+      <div className="container text-white px-6 py-3">
+        <div className="md:flex md:items-center md:justify-between">
           <div className="flex justify-between items-center">
             <div className="text-xl font-semibold">
               <img className="w-10" src="/images/kzillalogo.png" />
             </div>
 
             <div className="flex md:hidden">
-              <button type="button">
-                <Search size={16} />
+              <div className="lg:hidden md:block">
+                <input
+                  type="text"
+                  name="search"
+                  className={`${
+                    search ? "block" : "hidden"
+                  } px-1 rounded-2xl md:mt-0 bg-baseBlack border focus:outline-none`}
+                />
+                <button
+                  className="mx-4 md:mt-0 focus:outline-none"
+                  onClick={openSearch}
+                >
+                  <Search size={16} />
+                </button>
+              </div>
+              <button
+                type="button"
+                className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
+                onClick={btntoggle1}
+              >
+                <Menu size={16} />
               </button>
             </div>
           </div>
 
-          <div className="hidden md:flex md:items-center md:justify-between flex-1">
-            <div className="flex flex-col -mx-4 md:flex-row md:items-center md:mx-8">
+          <div
+            className={`${
+              open ? "block" : "hidden"
+            } md:flex md:items-center md:justify-between flex-1`}
+          >
+            <div className="flex bg-opacity-20 flex-col -mx-4 md:flex-row md:items-center md:mx-8">
               <Link href="/">
-                <p className="mx-2 mt-2 px-2 py-1 hover:border-lightOrange border-b-2 border-transparent">
+                <p className="md:mt-0 mx-2 mt-2 px-2 py-1 hover:border-lightOrange border-b-2 border-transparent">
                   Home
                 </p>
               </Link>
               <Link href="/">
-                <p className="mx-2 mt-2 px-2 py-1 hover:border-lightOrange border-b-2 border-transparent">
+                <p className="md:mt-0 mx-2 mt-2 px-2 py-1 hover:border-lightOrange border-b-2 border-transparent">
                   Events
                 </p>
               </Link>
               <Link href="/">
-                <p className="mx-2 mt-2 px-2 py-1 hover:border-lightOrange border-b-2 border-transparent">
+                <p className="md:mt-0 mx-2 mt-2 px-2 py-1 hover:border-lightOrange border-b-2 border-transparent">
                   Our Services
                 </p>
               </Link>
               <Link href="/">
-                <p className="mx-2 mt-2 px-2 py-1 hover:border-lightOrange border-b-2 border-transparent">
+                <p className="md:mt-0 mx-2 mt-2 px-2 py-1 hover:border-lightOrange border-b-2 border-transparent">
                   Team
                 </p>
               </Link>
 
               <Link href="/">
-                <p className="mx-2 mt-2 px-2 py-1 hover:border-lightOrange border-b-2 border-transparent">
+                <p className="md:mt-0 mx-2 mt-2 px-2 py-1 hover:border-lightOrange border-b-2 border-transparent">
                   What's New?
                 </p>
               </Link>
             </div>
 
-            <div className="flex">
+            <div className="flex md:flex-row items-center mt-4 md:mt-0">
               <input
                 type="text"
                 name="search"
                 className={`${
                   search ? "block" : "hidden"
-                } px-1 rounded-2xl bg-baseBlack border focus:outline-none`}
+                } px-1 rounded-2xl  md:mt-0 bg-baseBlack border focus:outline-none`}
               />
-              <button className="mx-4 focus:outline-none" onClick={openSearch}>
+              <button
+                className="mx-4  md:mt-0 focus:outline-none"
+                onClick={openSearch}
+              >
                 <Search size={16} />
               </button>
 
               <button
                 type="button"
-                className="flex focus:outline-none"
+                className="flex sm:flex-row focus:outline-none"
                 onClick={btntoggle2}
               >
                 <div>En</div>
