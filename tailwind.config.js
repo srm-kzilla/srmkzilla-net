@@ -11,6 +11,10 @@ module.exports = {
         baseGray: "#C4C4C4",
       },
     },
+    fontFamily: {
+
+      'subHeading': ['Helvetica',],
+    },
   },
   variants: {
     extend: {},
