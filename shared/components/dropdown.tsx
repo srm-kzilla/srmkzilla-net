@@ -1,7 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
-const Dropdown = (props) => {
+interface DropDownProps {
+  name: string;
+  nameClass: string;
+  class: string;
+}
+
+const Dropdown = (props: DropDownProps) => {
   const [open, setOpen] = useState(false);
   const ref = useRef();
 
@@ -19,28 +25,22 @@ const Dropdown = (props) => {
     };
   }, []);
 
-  const DropDownOptions = () => {
-    return (
-      <div>
-        {props.items.map((aItem, index, links) => (
-          <div
-            className="block px-4 py-2 text-sm text-white hover:bg-orange300"
-            key={index}
-          >
-            <Link href={links}>{aItem}</Link>
-          </div>
-        ))}
-      </div>
-    );
-  };
-
   return (
     <div ref={ref} onClick={() => setOpen(!open)}>
-      <button className={props.namepos}>{props.name}</button>
+      <button className={props.nameClass}>{props.name}</button>
 
       <div className={`${open ? "block" : "hidden"}`}>
-        <div className={props.pos}>
-          <DropDownOptions />
+        <div className={props.class}>
+          <div>
+            {props.items.map((aItem, index, links) => (
+              <div
+                className="block px-4 py-2 text-sm text-white hover:bg-orange300"
+                key={index}
+              >
+                <Link href={links}>{aItem}</Link>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
