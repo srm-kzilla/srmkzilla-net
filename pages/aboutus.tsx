@@ -70,39 +70,57 @@ const aboutus = () => {
                 <div className="container bg-black mx-auto w-full h-full">
       <div className="relative wrap overflow-hidden p-10 h-full">
         <div
-          className=" absolute  left-1/2 border-white h-full border"
+          className=" absolute top-20 left-1/2 border-white h-full border"
         ></div>
-    {/* right timeline */}
-        <div
-          className="mb-8 flex justify-between items-center w-full right-timeline"
-        >
+    
+
+        {/* left timeline */}
+        <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+          <div className="order-1 w-1/2"></div>
+          <div className="z-20 flex  mb-10 items-center order-1 bg-black border  w-6 h-6 rounded-full">
+          </div>
+                  <div className="order-1 bg-black rounded-lg shadow-xl w-1/2  py-4">
+                   
+
+                              <div className="order-1 bg-blue-400 rounded-lg shadow-xl mx-2  px-6 py-4">
+                                  <h3 className="mb-3 w-full font-bold text-white text-xl">Lorem Ipsum</h3>
+                                  <p
+                                    className="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100"
+                                  >
+                              
+                                </p>
+                              </div>
+                    
+
+
+                                  <div className="order-1 mt-12 bg-baseBlack rounded-lg shadow-xl  px-6 py-4">
+                                     <div className=" bg-white h-auto rounded-lg shadow-xl  px-6 py-4">
+                      
+                                      <h3 className="mb-3 w-full font-bold text-white text-xl">Lorem Ipsum</h3>
+                                     <p
+                                         className="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100"
+                                       >
+                          
+                                     </p>
+                                 </div>                     
+                        
+                             </div>
+                      
+              </div>
+                  
+                  
+                </div>
+                
+                <div className="mb-8 flex justify-between items-center w-full right-timeline">
           <div className="order-1 w-5/12"></div>
           <div className="z-20 flex items-center order-1 bg-black border  w-6 h-6 rounded-full">
-            
           </div>
           <div
-            className="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-3"
+            className="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4"
           >
             <h3 className="mb-3 font-bold text-gray-800 text-xl">Lorem Ipsum</h3>
             <p
               className="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100"
-            >
-         
-            </p>
-          </div>
-        </div>
-
-        {/* left timeline */}
-        <div
-          className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
-        >
-          <div className="order-1 w-5/12"></div>
-          <div className="z-20 flex items-center order-1 bg-black border  w-6 h-6 rounded-full">
-          </div>
-          <div className="order-1 bg-blue-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
-            <h3 className="mb-3 font-bold text-white text-xl">Lorem Ipsum</h3>
-            <p
-              className="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100"
             >
              
             </p>
