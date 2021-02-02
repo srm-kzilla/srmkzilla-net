@@ -1,10 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
+type links = {
+  label: string;
+  link: string;
+};
 interface DropDownProps {
   name: string;
   nameClass: string;
   class: string;
+  items: links[];
 }
 
 const Dropdown = (props: DropDownProps) => {
@@ -32,14 +37,19 @@ const Dropdown = (props: DropDownProps) => {
       <div className={`${open ? "block" : "hidden"}`}>
         <div className={props.class}>
           <div>
-            {props.items.map((aItem, index, links) => (
-              <div
-                className="block px-4 py-2 text-sm text-white hover:bg-orange300"
-                key={index}
-              >
-                <Link href={links}>{aItem}</Link>
-              </div>
-            ))}
+            {props.items.map((item, index) => {
+              console.log(item);
+              return (
+                <div
+                  className="block px-4 py-2 text-sm text-white hover:bg-orange300"
+                  key={index}
+                >
+                  <Link href={item.link}>
+                    <p>{item.label}</p>
+                  </Link>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
