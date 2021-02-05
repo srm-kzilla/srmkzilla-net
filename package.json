@@ -9,11 +9,13 @@
   },
   "dependencies": {
     "autoprefixer": "^10.2.1",
+    "framer-motion": "^3.3.0",
     "next": "10.0.5",
     "postcss": "^8.2.4",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-feather": "^2.0.9",
+    "react-intersection-observer": "^8.31.0",
     "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
