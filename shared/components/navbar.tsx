@@ -32,7 +32,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-black fixed w-full" ref={ref}>
+    <nav className="bg-black fixed z-20 w-full" ref={ref}>
       <div className="container text-white px-6 py-3">
         <div className="md:flex md:items-center md:justify-between">
           <div className="flex justify-between items-center">
