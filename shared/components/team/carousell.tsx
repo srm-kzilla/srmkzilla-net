@@ -57,6 +57,7 @@ const Carousell = () => {
   return (
     <>
       <Carousel
+        // isRTL={false}
         breakPoints={breakPoints}
         focusOnSelect={false}
         verticalMode

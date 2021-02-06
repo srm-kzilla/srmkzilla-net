@@ -2,19 +2,27 @@ import React, { useState, useEffect } from "react";
 import { Volume, Volume2 } from "react-feather";
 
 const useAudio = (url) => {
-  const [audio] = useState(new Audio(url));
+  const [audio, setAudio] = useState<HTMLAudioElement>();
   const [playing, setPlaying] = useState(false);
 
   const toggle = () => setPlaying(!playing);
 
   useEffect(() => {
-    playing ? audio.play() : audio.pause();
+    setAudio(new Audio(url));
+    console.log(audio);
+    if (audio) {
+      playing ? audio.play() : audio.pause();
+    }
   }, [playing]);
 
   useEffect(() => {
-    audio.addEventListener("ended", () => setPlaying(false));
+    if (audio) {
+      audio.addEventListener("ended", () => setPlaying(false));
+    }
     return () => {
-      audio.removeEventListener("ended", () => setPlaying(false));
+      if (audio) {
+        audio.removeEventListener("ended", () => setPlaying(false));
+      }
     };
   }, []);
 
