@@ -34,11 +34,11 @@ const Player = ({ url }) => {
 
   return (
     <div className="absolute right-1 mb-5">
-      <button onClick={toggle}>
+      <button onClick={toggle} className="focus:outline-none">
         {playing ? (
-          <Volume2 color="white" size={30} className="focus:none" />
+          <Volume2 color="white" size={30} />
         ) : (
-          <Volume color="white" size={30} className="focus:none" />
+          <Volume color="white" size={30} />
         )}
       </button>
     </div>

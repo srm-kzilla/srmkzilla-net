@@ -65,22 +65,22 @@ const Carousell = () => {
         autoPlaySpeed={4000}
       >
         {hearteammembers.map((hearteammembers) => (
-          <div className="w-3/6  p-3 focus:none">
+          <div className="lg:w-3/6 lg:p-3 focus:none">
             <div className="rounded-xl bg-baseBlack">
-              <div className="m-5 p-20 text-2xl text-white">
+              <div className="lg:m-5 lg:p-20 lg:text-2xl text-white">
                 {hearteammembers.message}
               </div>
             </div>
-            <div className="m-auto p-20 w-3/5 text-white">
+            <div className="m-auto lg:p-20 lg:w-3/5 text-white">
               <img
-                className="w-56 h-56 object-cover ml-10 rounded-full self-center"
+                className="lg:w-56 object-cover lg:ml-10 rounded-full self-center"
                 src={hearteammembers.src}
                 alt="avatar"
               />
-              <div className="text-center mt-5 font-bold">
+              <div className="text-center lg:mt-5 font-bold">
                 {hearteammembers.name}
               </div>
-              <div className="text-center my-2">
+              <div className="text-center lg:my-2">
                 {hearteammembers.designation}
               </div>
             </div>
