@@ -7,7 +7,7 @@ module.exports = {
         orange600: "#E9573E",
         orange300: "#FF644E",
         baseBlue: "#5D9BEE",
-        baseBlack: "#222221",
+        baseBlack: "#0F0F0F",
         baseGray: "#C4C4C4",
       },
     },

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Search, Menu } from "react-feather";
 import Link from "next/link";
 import Dropdown from "./dropdown";
+import {motion} from "framer-motion"
 
 const Navbar = () => {
   const [search, setSearch] = useState(false);
@@ -32,7 +33,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-black fixed w-full" ref={ref}>
+    <nav className="bg-black fixed z-20 w-full" ref={ref}>
       <div className="container text-white px-6 py-3">
         <div className="md:flex md:items-center md:justify-between">
           <div className="flex justify-between items-center">
