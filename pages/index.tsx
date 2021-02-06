@@ -2,6 +2,10 @@ import React, { useState, useRef, useLayoutEffect } from "react";
 import { Navbar } from "../shared/components";
 import Card_home from "../shared/components/card_home";
 import Message from "../shared/components/Message";
+import Bounce from 'react-reveal/Bounce';
+import Zoom from 'react-reveal/Zoom';
+import Slide from 'react-reveal/Slide';
+import Head from 'next/head'
 import { InView, useInView } from "react-intersection-observer";
 import {
   AnimatePresence,
@@ -10,15 +14,22 @@ import {
   useElementScroll,
 } from "framer-motion";
 
+
 const cardData = [
-  { title: "First", image: "" },
-  { title: "Second", image: "" },
-  { title: "third", image: "" },
+  { title: "First", image: "./images/testImage.png" },
+  { title: "Second", image: "./images/testImage.png" },
+  { title: "third", image: "./images/testImage.png" },
 ];
 
 const Home = () => {
   return (
-    <div className="bg-black">
+    <div className="bg-black overflow-hidden">
+
+      <Head>
+        <title>SRMKZILLA</title>
+        <link rel="icon" href="./images/kzillalogo.png" />
+      </Head>
+      
       <section className="hero h-screen bg-black overflow-hidden relative">
         <Navbar />
         <div>
@@ -45,10 +56,10 @@ const Home = () => {
       {/* New Section start */}
       <section className="works">
         <div className="bg-baseBlack sm:pt-32 pt-24">
-          <h1 className="text-white text-center text-4xl">What's New</h1>
+          <Bounce bottom><h1 className="text-white text-center text-4xl">What's New</h1></Bounce>
           <div className="flex flex-wrap items-center justify-center sm:mt-20 mt-14 pb-10">
             {cardData.map((card) => (
-              <Card_home name={card.title} />
+              <Bounce bottom><Card_home name={card.title} image={card.image} /></Bounce>
             ))}
           </div>
         </div>
@@ -58,20 +69,21 @@ const Home = () => {
       {/* {Process aection starts} */}
       <section className="process bg-baseBlack pt-10 min-h-screen lg:px-40 md:px-32 px-10">
         <div>
-          <h1 className="text-white text-center text-4xl">How we work</h1>
-          <div>
-            <Message color="baseBlue" />
+          <Bounce bottom><h1 className="text-white text-center text-4xl">How we work</h1></Bounce>
+          <div >
+            <Bounce delay={[500]}><Message color="baseBlue" /></Bounce>
           </div>
         </div>
 
         {/* ideation */}
 
-        <div className="flex flex-wrap w-full">
+        <div className="flex flex-wrap w-full mt">
           <div className="xl:w-3/6 lg:w-2/5 w-auto">
-            <h1 className="text-white text-3xl mt-24">
+            <Bounce bottom><h1 className="text-white text-3xl mt-24">
               Ideation<span className="text-orange600 text-4xl">.</span>
             </h1>
-            <p className="text-white text-lg my-4">
+            </Bounce>
+            <Bounce bottom><p className="text-white text-lg my-4">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Praesentium reprehenderit mollitia nihil sunt modi. Ad eaque,
               labore dolorem, debitis id eum cum adipisci impedit quos mollitia
@@ -81,34 +93,36 @@ const Home = () => {
               src="./images/bulb.png"
               className="h-96 w-auto lg:block hidden"
               alt=""
-            />
+            /></Bounce>
           </div>
-          <div className="lg:mt-52 mt-24 mx-auto">
+          <Bounce bottom><div className="lg:mt-52 mt-24 mx-auto">
             <div className="relative video transform -rotate-6 bg-orange300 md:w-72 md:h-72 sm:h-64 sm:w-64 h-52 w-52 items-center rounded-2xl z-100">
               <div className="absolute h-full w-full transform rotate-6 bg-white -top-8 left-6 rounded-2xl"></div>
             </div>
           </div>
+          </Bounce>
         </div>
         {/* ideation end */}
 
         {/* design */}
-        <div className="lg:-mt-16 sm:mt-24 mt-14">
+        <Bounce right><div className="lg:-mt-16 sm:mt-24 mt-14">
           <Message color="baseBlue" />
         </div>
-        <div className="flex flex-wrap w-full">
+        </Bounce>
+        <div className="flex flex-wrap w-full mt-52">
           <div className="xl:w-3/6 lg:w-2/5 w-auto">
-            <div className="lg:mt-auto mt-24">
+          <Slide right delay={[500]}><div className="lg:mt-auto mt-24">
               <span className="text-white text-3xl relative lg:mt-24">
-                Design<span className="text-orange600 text-4xl">.</span>{" "}
+                Design<span className="text-orange600 text-4xl">.</span>
                 <img
                   src="./images/arrow.png"
                   className="absolute top-full left-full h-5 transform -translate-y-2"
                   alt=""
-                />{" "}
+                />
               </span>
-            </div>
+            </div></Slide>
 
-            <p className="text-white text-lg my-4">
+            <Bounce bottom><p className="text-white text-lg my-4">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Praesentium reprehenderit mollitia nihil sunt modi. Ad eaque,
               labore dolorem, debitis id eum cum adipisci impedit quos mollitia
@@ -118,51 +132,51 @@ const Home = () => {
               src="./images/design1.png"
               className="w-72 lg:ml-16 mt-16 mx-auto"
               alt=""
-            />
+            /></Bounce>
           </div>
           <div className="mt-32 lg:block hidden">
-            <img
+            <Bounce bottom><img
               className="w-96 h-auto xl:ml-16 ml-10 mt-16 border-orange600 border-8 rounded-2xl"
               src="./images/design2.png"
               alt="design"
-            />
+            /></Bounce>
           </div>
         </div>
         {/* design end */}
 
         <div className="lg:mt-auto sm:mt-16 mt-10">
-          <Message color="orange300" />
+        <Bounce right><Message color="orange300" /></Bounce>
         </div>
         <div className="flex flex-wrap w-full -mt-10">
           <div className="xl:w-3/6 lg:w-2/5 w-auto">
-            <h1 className="text-white text-3xl mt-24">
+            <Bounce bottom><h1 className="text-white text-3xl mt-24">
               Technical<span className="text-orange600 text-4xl">.</span>
-            </h1>
-            <p className="text-white text-lg my-4">
+            </h1></Bounce>
+            <Bounce bottom><p className="text-white text-lg my-4">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Praesentium reprehenderit mollitia nihil sunt modi. Ad eaque,
               labore dolorem, debitis id eum cum adipisci impedit quos mollitia
               earum, voluptate natus. Voluptas.
-            </p>
-            <p className="text-white text-lg my-4">
+            </p></Bounce>
+            <Bounce bottom><p className="text-white text-lg my-4">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Praesentium reprehenderit mollitia nihil sunt modi. Ad eaque,
               labore dolorem, debitis id eum cum adipisci impedit quos mollitia
               earum, voluptate natus. Voluptas.
-            </p>
-            <p className="text-white text-lg my-4">
+            </p></Bounce>
+            <Bounce bottom><p className="text-white text-lg my-4">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Praesentium reprehenderit mollitia nihil sunt modi. Ad eaque,
               labore dolorem, debitis id eum cum adipisci impedit quos mollitia
               earum, voluptate natus. Voluptas.
-            </p>
+            </p></Bounce>
           </div>
           <div className="lg:mt-24 mt-0">
-            <img
+            <Bounce bottom><img
               src="./images/tech.png"
               className="w-96 lg:ml-24 mx-auto lg:mt-24 mt-16"
               alt=""
-            />
+            /></Bounce>
           </div>
         </div>
       </section>

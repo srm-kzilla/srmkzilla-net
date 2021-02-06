@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Search, Menu } from "react-feather";
 import Link from "next/link";
 import Dropdown from "./dropdown";
+import {motion} from "framer-motion"
 
 const Navbar = () => {
   const [search, setSearch] = useState(false);
