@@ -105,14 +105,14 @@ const Team = () => {
         <Navbar />
         <p>fhjfvk</p>
         <div className="my-20">
-          <h1 className="text-7xl font-semibold text-gray-100 text-center mb-10">
+          <h1 className="text-5xl md:text-7xl font-semibold text-gray-100 text-center mb-10 mx-2">
             Meet the team
           </h1>
           <h3 className="text-3xl font-semibold text-gray-100 text-center">
             syadjgewkfewvasiugs
           </h3>
         </div>
-        <div className=" text-white rounded-2xl p-1 md:p-5 bg-baseBlack grid grid-cols-1 gap-1 md:grid-cols-3 lg:grid-cols-5 md:gap-6 lg:gap-5 md:mx-20 mx-2">
+        <div className=" text-white rounded-2xl p-1 md:p-10 bg-baseBlack grid grid-cols-1 gap-1 md:grid-cols-3 lg:grid-cols-5 lg:gap-3 md:mx-20 mx-2">
           {members.map((members) => (
             <MemberCard
               src={members.src}

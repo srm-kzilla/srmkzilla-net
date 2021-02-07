@@ -65,9 +65,9 @@ const Carousell = () => {
         autoPlaySpeed={4000}
       >
         {hearteammembers.map((hearteammembers) => (
-          <div className="lg:w-3/6 lg:p-3 focus:none">
+          <div className="lg:w-3/6 lg:p-3 w-5/6 focus:none">
             <div className="rounded-xl bg-baseBlack">
-              <div className="lg:m-5 lg:p-20 lg:text-2xl text-white">
+              <div className="lg:m-5 lg:p-20 p-10 lg:text-2xl text-white">
                 {hearteammembers.message}
               </div>
             </div>

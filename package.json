@@ -8,7 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-
+    "3d-react-carousal": "^3.1.0",
     "autoprefixer": "^10.2.1",
     "next": "10.0.5",
     "postcss": "^8.2.4",
@@ -16,6 +16,7 @@
     "react-dom": "17.0.1",
     "react-elastic-carousel": "^0.11.1",
     "react-feather": "^2.0.9",
+    "react-spring-3d-carousel": "^1.2.0",
     "styled-components": "^5.2.1",
     "tailwindcss": "^2.0.2"
   },

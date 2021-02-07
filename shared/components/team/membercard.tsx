@@ -6,7 +6,7 @@ const MemberCard = (props) => {
   const [cloudShow, setCloudShow] = useState(false);
   return (
     <div className="place-self-center">
-      <div className="relative left-20 ml-12 z-20 top-20 -mt-10">
+      <div className="relative left-20 ml-12 z-20 top-20 -mt-20">
         <img
           src="/images/cloud.svg"
           alt="cloud"
