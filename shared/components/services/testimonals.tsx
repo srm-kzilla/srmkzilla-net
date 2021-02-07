@@ -3,7 +3,7 @@ import React from "react";
 const Testimonals = () => {
   return (
     <>
-      <div className="container flex flex-col flex-wrap bg-baseBlack rounded-2xl text-white text-xl py-5 my-10">
+      <div className="container flex flex-col flex-wrap bg-baseBlack rounded-2xl text-white text-xl py-5">
         <div className="flex flex-col md:flex-row">
           <div className="flex flex-col">
             <div>
