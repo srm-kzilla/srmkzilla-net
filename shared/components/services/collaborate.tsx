@@ -3,7 +3,7 @@ import React from "react";
 const Collaborate = () => {
   return (
     <>
-      <div className="flex flex-col md:flex-row text-white text-lg">
+      <div className="flex flex-col md:flex-row text-white text-lg mx-3">
         <div className="md:w-2/4 my-5 flex-3 flex-col">
           Collaboration means challenging our potential and achieving a common
           goal. We can get together and bring out the best in us.
@@ -18,7 +18,7 @@ const Collaborate = () => {
             </button>
           </div>
         </div>
-        <div className="flex-1">
+        <div className="lg:ml-20 lg:pl-20 flex align-self-center">
           <img src="/images/thisisus.gif" className="w-max" />
         </div>
       </div>
