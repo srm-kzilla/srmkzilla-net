@@ -38,7 +38,6 @@ const Dropdown = (props: DropDownProps) => {
         <div className={props.class}>
           <div>
             {props.items.map((item, index) => {
-              console.log(item);
               return (
                 <div
                   className="block px-4 py-2 text-sm text-white hover:bg-orange300"
