@@ -7,8 +7,8 @@ const ServicesProvided = () => {
         <h1 className="text-5xl font-semibold text-gray-100 text-center m-5">
           Services we provide
         </h1>
-        <div className="flex flex-col md:flex-row justify-around p-10 container">
-          <div className="p-1  mr-5 flex flex-col">
+        <div className="flex flex-col lg:flex-row justify-around p-10 container">
+          <div className="p-1  mr-5 flex flex-col hidden lg:block">
             <div>
               <h2 className="text-2xl font-semibold text-gray-100 text-left my-5">
                 Web Development
@@ -25,7 +25,7 @@ const ServicesProvided = () => {
             </div>
           </div>
           <div className="flex flex-col">
-            <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+            <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
               <div className="lg:p-10  p-5 bg-orange300 rounded-2xl mt-3 md:mt-0">
                 <img src="/images/Black-webdev.png" />
                 <p className="text-black my-2 font-bold"> Web Development</p>

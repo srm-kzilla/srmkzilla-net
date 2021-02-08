@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Search, Menu } from "react-feather";
 import Link from "next/link";
 import Dropdown from "./dropdown";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [search, setSearch] = useState(false);
@@ -84,12 +84,12 @@ const Navbar = () => {
                   Events
                 </div>
               </Link>
-              <Link href="/">
+              <Link href="/ourservices">
                 <div className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent">
                   Our Services
                 </div>
               </Link>
-              <Link href="/">
+              <Link href="/team">
                 <div className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent">
                   Team
                 </div>
