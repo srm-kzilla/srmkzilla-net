@@ -25,7 +25,7 @@ const Testimonals = () => {
             </div>
           </div>
           <div>
-            <p className="lg:w-4/5 lg:mt-16 px-6 py-1">
+            <p className="lg:w-4/5 lg:mt-16 px-6 py-1 text-justify">
               I have been fortunate to use the services of SRMKZILLA for the
               past six months. In this ever changing world of technology,
               SRMKZILLA has provided quality and timely service to my company.
@@ -58,7 +58,7 @@ const Testimonals = () => {
             </div>
           </div>
           <div>
-            <p className="lg:w-4/5 lg:mt-16 px-6 py-1">
+            <p className="lg:w-4/5 lg:mt-16 px-6 py-1 text-justify">
               SRMKZILLA did a great job developing our website,
               theelecruisers.in . Whether providing direct development support
               or giving us the opportunity to make our development updates,

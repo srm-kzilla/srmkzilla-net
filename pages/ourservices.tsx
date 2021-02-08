@@ -14,7 +14,7 @@ const Services = () => {
         <link rel="icon" href="./images/kzillalogo.png" />
       </Head>
       <Navbar />
-      <section className="min-h-screen my-3 lg:my-32 mx-3 lg:mx-10">
+      <section className="min-h-screen my-20 lg:my-32 mx-3 lg:mx-10">
         <div className="flex flex-col place-items-center">
           <ServicesProvided />
         </div>
