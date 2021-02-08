@@ -15,7 +15,7 @@ const ServicesProvided = () => {
               </h2>
             </div>
             <div>
-              <p className="w-80 text-justify">
+              <p className="lg:w-80 text-justify">
                 SRMKZILLA has expertise in creating robust, scalable,
                 responsive, and powerful web portals. This enables us to deliver
                 web portals that are a perfect amalgamation of features such as
@@ -26,25 +26,25 @@ const ServicesProvided = () => {
           </div>
           <div className="flex flex-col">
             <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-              <div className="lg:p-10  p-20 bg-orange300 rounded-2xl">
+              <div className="lg:p-10  p-5 bg-orange300 rounded-2xl mt-3 md:mt-0">
                 <img src="/images/Black-webdev.png" />
                 <p className="text-black my-2 font-bold"> Web Development</p>
               </div>
-              <div className="lg:p-10 p-20  bg-baseBlack200 rounded-2xl">
+              <div className="lg:p-10 p-5  bg-baseBlack200 rounded-2xl">
                 <img src="/images/webdes.png" />
                 <p className="my-3 font-bold"> Web Design</p>
               </div>
-              <div className="lg:p-10  p-20 bg-baseBlack200 rounded-2xl">
+              <div className="lg:p-10  p-5 bg-baseBlack200 rounded-2xl">
                 <img src="/images/gfx.png" />
                 <p className="mt-5 font-bold"> Graphic designing</p>
               </div>
-              <div className="lg:p-10  p-20 bg-baseBlack200 rounded-2xl">
+              <div className="lg:p-10  p-5 bg-baseBlack200 rounded-2xl">
                 <img src="/images/mobapp.png" className="-mt-5" />
                 <p className="font-bold"> Mobile application</p>
               </div>
             </div>
 
-            <div className="lg:p-10  p-20 bg-baseBlack200 rounded-2xl my-5">
+            <div className="lg:p-10  p-5 bg-baseBlack200 rounded-2xl my-5">
               <p className="my-2 font-bold">Others</p>
               <p className="my-2">
                 We are also expanding our domains with Machine Learning,

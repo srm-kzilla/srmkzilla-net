@@ -1,37 +1,38 @@
 import React from "react";
 import Head from "next/head";
+import { Navbar } from "../shared/components";
 import Testimonals from "../shared/components/services/testimonals";
 import Collaborate from "../shared/components/services/collaborate";
 import ServicesProvided from "../shared/components/services/servicesprovided";
+import Numbers from "../shared/components/services/numbers";
 
 const Services = () => {
   return (
-    <div className="bg-black overflow-hidden px-3 lg:px-10">
+    <div className="bg-black overflow-hidden">
       <Head>
         <title>SRMKZILLA</title>
         <link rel="icon" href="./images/kzillalogo.png" />
       </Head>
-
-      <section className="min-h-screen my-3 lg:my-14">
+      <Navbar />
+      <section className="min-h-screen my-3 lg:my-32 mx-3 lg:mx-10">
         <div className="flex flex-col place-items-center">
           <ServicesProvided />
         </div>
       </section>
 
       {/* Collaborate&numbers section starts*/}
-      <section className="min-h-screen my-3 lg:my-10">
+      <section className="min-h-screen my-3 lg:my-10  mx-3 lg:mx-10">
         <div className="flex flex-col place-items-center">
-          <div className="text-gray-100 pb-10">
+          <div className="text-gray-100 pb-10 mb-10">
             <h1 className="text-5xl font-semibold text-gray-100 text-center mb-5">
               Let’s talk numbers
             </h1>
             <h3 className="text-xl  text-gray-100 text-center mb-10">
               Producing Quality. Delivering Finest.
             </h3>
+            <Numbers />
           </div>
-          <div>
-            <Collaborate />
-          </div>
+
           <div className="text-gray-100 pb-10">
             <h1 className="text-5xl font-semibold text-center">
               Collaborate with us
@@ -45,7 +46,7 @@ const Services = () => {
       {/* Collaborate&numbers section ends*/}
 
       {/* Testimonals section starts*/}
-      <section className="min-h-screen my-3 lg:my-10">
+      <section className="min-h-screen my-3 lg:my-10 mx-3 lg:mx-10">
         <div className="flex flex-col place-items-center">
           <div className="text-gray-100 pb-10">
             <h1 className="text-5xl font-semibold text-center mb-5">
