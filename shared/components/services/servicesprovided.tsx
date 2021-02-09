@@ -7,7 +7,7 @@ const ServicesProvided = () => {
   const [openapp, setOpenapp] = useState(false);
 
   const [desc, setDesc] = useState(
-    "SRMKZILLA has expertise in creating robust, scalable,responsive, and powerful web portals. This enables us to deliverweb portals that are a perfect amalgamation of features such ase-mails, chats, news, and information. If you can think it, wecan web it."
+    "SRMKZILLA has expertise in creating robust, scalable, responsive, and powerful web portals. This enables us to deliver web portals that are a perfect amalgamation of features such as e-mails, chats, news, and information. If you can think it, we can web it."
   );
   const [title, setTitle] = useState("Web Development");
 
@@ -17,6 +17,9 @@ const ServicesProvided = () => {
     );
     setTitle("Web Development");
     setOpenwebdev(!openwebdev);
+    setOpenwebdes(false);
+    setOpengfx(false);
+    setOpenapp(false);
   };
   const webdes = () => {
     setDesc(
@@ -24,6 +27,9 @@ const ServicesProvided = () => {
     );
     setTitle("Web Design");
     setOpenwebdes(!openwebdes);
+    setOpengfx(false);
+    setOpenapp(false);
+    setOpenwebdev(false);
   };
   const gfx = () => {
     setDesc(
@@ -31,6 +37,9 @@ const ServicesProvided = () => {
     );
     setTitle("Graphic Designing");
     setOpengfx(!opengfx);
+    setOpenwebdes(false);
+    setOpenwebdev(false);
+    setOpenapp(false);
   };
 
   const app = () => {
@@ -39,6 +48,9 @@ const ServicesProvided = () => {
     );
     setTitle("Mobile Application");
     setOpenapp(!openapp);
+    setOpenwebdes(false);
+    setOpenwebdev(false);
+    setOpengfx(false);
   };
   return (
     <>
