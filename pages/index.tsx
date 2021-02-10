@@ -1,257 +1,186 @@
-import React from "react";
+import React, { useState, useRef, useLayoutEffect } from "react";
 import { Navbar } from "../shared/components";
+import Card_home from "../shared/components/card_home";
+import Message from "../shared/components/Message";
+import Bounce from 'react-reveal/Bounce';
+import Zoom from 'react-reveal/Zoom';
+import Slide from 'react-reveal/Slide';
+import Head from 'next/head'
+import { InView, useInView } from "react-intersection-observer";
+import {
+  AnimatePresence,
+  motion,
+  useAnimation,
+  useElementScroll,
+} from "framer-motion";
+
+
+const cardData = [
+  { title: "First", image: "./images/testImage.png" },
+  { title: "Second", image: "./images/testImage.png" },
+  { title: "third", image: "./images/testImage.png" },
+];
 
 const Home = () => {
   return (
-    <div className="bg-black">
-      <Navbar />
-      <p>home</p>
+    <div className="bg-black overflow-hidden">
 
-      <div className="container mx-auto text-white rounded-xl p-20 bg-baseBlack">
-        <div>{/* <ImageBox /> */}</div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quaerat,
-        eligendi impedit ipsum recusandae rerum ducimus veritatis laborum
-        voluptates cupiditate numquam, consequatur ipsam, est tenetur facilis id
-        magnam optio sed. Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Laboriosam labore quibusdam voluptas temporibus natus quia
-        reprehenderit amet aliquam voluptatibus ex. Eveniet, porro. Aliquam
-        inventore vel molestiae doloribus quisquam perspiciatis ea? Lorem ipsum
-        dolor sit, amet consectetur adipisicing elit. Tenetur quas repellat
-        necessitatibus quos deserunt numquam, ut facere quisquam alias voluptas
-        molestiae quo incidunt laudantium ratione earum ad dolor vel pariatur.
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda
-        deserunt illum, est veritatis modi aspernatur eligendi ut cupiditate
-        omnis expedita, quibusdam porro! Temporibus, consectetur suscipit soluta
-        architecto non voluptatibus voluptatum? Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Doloribus ducimus quod reiciendis dicta
-        facere consectetur vel illum sapiente reprehenderit dignissimos?
-        Suscipit non iusto dicta qui asperiores dolor placeat neque repellendus.
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut dicta sint
-        cupiditate voluptate reiciendis cum nihil qui enim, neque et, ipsa
-        quaerat natus consectetur sunt obcaecati at voluptates voluptatibus
-        quae? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Temporibus consectetur accusantium sunt reiciendis velit nemo eveniet
-        doloribus, magni hic facere, fugit odit veritatis reprehenderit ratione
-        quia voluptatem, tempore cupiditate laboriosam. Lorem ipsum dolor, sit
-        amet consectetur adipisicing elit. Error saepe temporibus exercitationem
-        placeat sapiente? Doloremque dolore excepturi sint sit, nostrum expedita
-        corporis laudantium neque harum quasi ducimus modi dolorem natus. Lorem
-        ipsum dolor sit amet, consectetur adipisicing elit. Numquam incidunt
-        voluptatem quisquam adipisci eius. Recusandae, expedita aliquam aut
-        reprehenderit itaque deserunt impedit non perferendis id soluta illo?
-        Quibusdam, reprehenderit corporis. Lorem ipsum dolor sit, amet
-        consectetur adipisicing elit. Nesciunt officia quam, quisquam excepturi
-        debitis sint expedita fuga reprehenderit error amet! Ratione
-        exercitationem, aspernatur neque eligendi impedit sit sint doloremque
-        voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Repellendus sapiente neque ipsum eos. Quisquam dolor, in illo voluptatem
-        reiciendis officia nisi fuga! Numquam velit quasi molestias
-        exercitationem dolores laudantium voluptatibus? Lorem ipsum dolor sit
-        amet consectetur, adipisicing elit. Quis consequuntur optio quidem natus
-        a unde quo eos voluptates, facilis velit aspernatur? Hic aliquam vel
-        ducimus commodi suscipit repudiandae quia et? Lorem ipsum dolor sit amet
-        consectetur, adipisicing elit. Eveniet quod quibusdam nemo pariatur,
-        veritatis, officia tempora quia eligendi minima officiis explicabo!
-        Magni optio perspiciatis dolor laborum reiciendis rerum quia voluptatum.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-        dolores nobis obcaecati doloremque voluptatum velit, porro officiis
-        similique impedit quas illo earum quos aut assumenda ut ipsam eveniet
-        architecto magnam! Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Voluptatibus reiciendis odio tenetur molestiae aperiam natus
-        repudiandae praesentium eveniet ipsum. Iste, quos suscipit harum minus
-        neque quae facere sequi vero officia. Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Architecto qui, possimus et atque hic
-        blanditiis porro magnam, optio, fugit vel sequi quas officia veritatis
-        quibusdam deleniti. Aspernatur iusto molestiae quod? Lorem ipsum dolor
-        sit, amet consectetur adipisicing elit. Consectetur optio numquam cum
-        ratione eum nesciunt doloribus voluptates nostrum esse vero alias minima
-        tempora ad ullam eveniet voluptatibus porro, atque vel! Lorem ipsum
-        dolor sit amet consectetur adipisicing elit. Eligendi officia qui
-        impedit voluptas, iure consequuntur hic maiores temporibus voluptates
-        perferendis inventore accusamus cumque voluptatum, eveniet distinctio
-        harum doloribus non ullam? Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Nesciunt voluptas similique, doloribus quibusdam
-        tenetur ipsa enim minus nemo quidem maxime voluptatum dolorem dolore
-        commodi porro adipisci beatae molestias. Quisquam, dignissimos? Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Porro nam optio quo
-        corporis perferendis excepturi, delectus qui sed! Qui dolorem dicta
-        eveniet dolores eos quod similique accusamus eum animi voluptatem! Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Ea numquam rem error
-        corrupti consectetur vero magnam! Odit iure eligendi labore,
-        perspiciatis quas omnis rerum autem. Soluta voluptate assumenda quo
-        distinctio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-        quo nemo dolore itaque nulla debitis perspiciatis aspernatur,
-        dignissimos earum ad libero autem odio quaerat facere atque odit sed
-        cupiditate enim. Lorem ipsum, dolor sit amet consectetur adipisicing
-        elit. Eligendi iste aliquam molestias quos nobis repellendus est odio
-        tempore quidem consequuntur tempora doloremque numquam asperiores omnis
-        eum quisquam, beatae recusandae vero? Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Doloremque magnam beatae quisquam libero
-        maiores. Tempore asperiores possimus debitis eum perspiciatis voluptas
-        aut excepturi. Iure laborum totam corporis cum blanditiis earum? Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
-        laboriosam obcaecati aliquid laborum voluptas, commodi deserunt quasi
-        voluptatum! Dolore perspiciatis quibusdam sunt voluptates facere quas,
-        quos omnis fugiat corrupti molestias. Lorem ipsum dolor sit amet,
-        consectetur adipisicing elit. Pariatur eum magni possimus debitis, sequi
-        illo ex corrupti neque reprehenderit enim quae assumenda. Quas aliquid a
-        sed nam maiores quis sapiente. Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Sequi earum quas ea nesciunt soluta ipsum animi
-        cupiditate laboriosam error architecto aspernatur ab minus iure
-        voluptatem consequuntur, laborum veritatis commodi incidunt! Lorem ipsum
-        dolor sit, amet consectetur adipisicing elit. Pariatur illum harum
-        quibusdam beatae fugit vero eligendi. Repellat dolorem consequuntur
-        autem ut exercitationem fugiat eos, aspernatur quia hic culpa. Totam,
-        sunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
-        saepe optio praesentium. Blanditiis, facere eaque! Sequi temporibus,
-        amet voluptas expedita vitae quia neque eum, fugiat aut vel similique
-        veritatis beatae. Lorem ipsum, dolor sit amet consectetur adipisicing
-        elit. Inventore qui necessitatibus fuga, a perferendis ullam quis
-        deserunt, cupiditate repellat dolores maiores eveniet ut! Assumenda
-        dolores consequuntur rem, a officiis tenetur. Lorem ipsum dolor, sit
-        amet consectetur adipisicing elit. Voluptatem delectus vitae explicabo
-        maxime error necessitatibus! Perspiciatis, porro sunt non commodi
-        incidunt reiciendis, est cumque facilis ad exercitationem earum minus
-        facere! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-        dolorum quidem qui sint a optio recusandae et atque, non minus ad
-        accusantium ut porro reprehenderit, temporibus sapiente! Voluptate,
-        quisquam distinctio. Lorem ipsum dolor, sit amet consectetur adipisicing
-        elit. Ipsam possimus est quam dolorum nisi repellat sapiente officiis
-        impedit aspernatur atque vero deserunt, reiciendis inventore
-        voluptatibus numquam sed obcaecati? Dolorum, dignissimos. Lorem ipsum
-        dolor, sit amet consectetur adipisicing elit. Inventore odio nisi
-        commodi suscipit doloribus maiores dolores iure praesentium provident
-        neque porro odit saepe, cumque, voluptatibus deleniti minus veritatis!
-        Corporis, ab? Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        Commodi, inventore enim cum laudantium similique fugit, ex ipsum sit,
-        perspiciatis mollitia maiores harum! Quod, sit error possimus fuga
-        beatae totam corrupti! Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Iure facere facilis blanditiis quo distinctio deleniti
-        quos voluptatum nemo ea impedit optio vero voluptatem vel necessitatibus
-        temporibus veritatis, eum cumque corporis. Lorem ipsum dolor, sit amet
-        consectetur adipisicing elit. Voluptatibus voluptatem vero non, esse
-        sequi laborum natus blanditiis ut laudantium? Incidunt libero dolores
-        laudantium quam eum harum, quod reiciendis quisquam eaque! Lorem ipsum
-        dolor sit amet consectetur adipisicing elit. Ullam quaerat, eligendi
-        impedit ipsum recusandae rerum ducimus veritatis laborum voluptates
-        cupiditate numquam, consequatur ipsam, est tenetur facilis id magnam
-        optio sed. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Laboriosam labore quibusdam voluptas temporibus natus quia reprehenderit
-        amet aliquam voluptatibus ex. Eveniet, porro. Aliquam inventore vel
-        molestiae doloribus quisquam perspiciatis ea? Lorem ipsum dolor sit,
-        amet consectetur adipisicing elit. Tenetur quas repellat necessitatibus
-        quos deserunt numquam, ut facere quisquam alias voluptas molestiae quo
-        incidunt laudantium ratione earum ad dolor vel pariatur. Lorem ipsum,
-        dolor sit amet consectetur adipisicing elit. Assumenda deserunt illum,
-        est veritatis modi aspernatur eligendi ut cupiditate omnis expedita,
-        quibusdam porro! Temporibus, consectetur suscipit soluta architecto non
-        voluptatibus voluptatum? Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Doloribus ducimus quod reiciendis dicta facere
-        consectetur vel illum sapiente reprehenderit dignissimos? Suscipit non
-        iusto dicta qui asperiores dolor placeat neque repellendus. Lorem ipsum,
-        dolor sit amet consectetur adipisicing elit. Aut dicta sint cupiditate
-        voluptate reiciendis cum nihil qui enim, neque et, ipsa quaerat natus
-        consectetur sunt obcaecati at voluptates voluptatibus quae? Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit. Temporibus consectetur
-        accusantium sunt reiciendis velit nemo eveniet doloribus, magni hic
-        facere, fugit odit veritatis reprehenderit ratione quia voluptatem,
-        tempore cupiditate laboriosam. Lorem ipsum dolor, sit amet consectetur
-        adipisicing elit. Error saepe temporibus exercitationem placeat
-        sapiente? Doloremque dolore excepturi sint sit, nostrum expedita
-        corporis laudantium neque harum quasi ducimus modi dolorem natus. Lorem
-        ipsum dolor sit amet, consectetur adipisicing elit. Numquam incidunt
-        voluptatem quisquam adipisci eius. Recusandae, expedita aliquam aut
-        reprehenderit itaque deserunt impedit non perferendis id soluta illo?
-        Quibusdam, reprehenderit corporis. Lorem ipsum dolor sit, amet
-        consectetur adipisicing elit. Nesciunt officia quam, quisquam excepturi
-        debitis sint expedita fuga reprehenderit error amet! Ratione
-        exercitationem, aspernatur neque eligendi impedit sit sint doloremque
-        voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Repellendus sapiente neque ipsum eos. Quisquam dolor, in illo voluptatem
-        reiciendis officia nisi fuga! Numquam velit quasi molestias
-        exercitationem dolores laudantium voluptatibus? Lorem ipsum dolor sit
-        amet consectetur, adipisicing elit. Quis consequuntur optio quidem natus
-        a unde quo eos voluptates, facilis velit aspernatur? Hic aliquam vel
-        ducimus commodi suscipit repudiandae quia et? Lorem ipsum dolor sit amet
-        consectetur, adipisicing elit. Eveniet quod quibusdam nemo pariatur,
-        veritatis, officia tempora quia eligendi minima officiis explicabo!
-        Magni optio perspiciatis dolor laborum reiciendis rerum quia voluptatum.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-        dolores nobis obcaecati doloremque voluptatum velit, porro officiis
-        similique impedit quas illo earum quos aut assumenda ut ipsam eveniet
-        architecto magnam! Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Voluptatibus reiciendis odio tenetur molestiae aperiam natus
-        repudiandae praesentium eveniet ipsum. Iste, quos suscipit harum minus
-        neque quae facere sequi vero officia. Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Architecto qui, possimus et atque hic
-        blanditiis porro magnam, optio, fugit vel sequi quas officia veritatis
-        quibusdam deleniti. Aspernatur iusto molestiae quod? Lorem ipsum dolor
-        sit, amet consectetur adipisicing elit. Consectetur optio numquam cum
-        ratione eum nesciunt doloribus voluptates nostrum esse vero alias minima
-        tempora ad ullam eveniet voluptatibus porro, atque vel! Lorem ipsum
-        dolor sit amet consectetur adipisicing elit. Eligendi officia qui
-        impedit voluptas, iure consequuntur hic maiores temporibus voluptates
-        perferendis inventore accusamus cumque voluptatum, eveniet distinctio
-        harum doloribus non ullam? Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Nesciunt voluptas similique, doloribus quibusdam
-        tenetur ipsa enim minus nemo quidem maxime voluptatum dolorem dolore
-        commodi porro adipisci beatae molestias. Quisquam, dignissimos? Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Porro nam optio quo
-        corporis perferendis excepturi, delectus qui sed! Qui dolorem dicta
-        eveniet dolores eos quod similique accusamus eum animi voluptatem! Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Ea numquam rem error
-        corrupti consectetur vero magnam! Odit iure eligendi labore,
-        perspiciatis quas omnis rerum autem. Soluta voluptate assumenda quo
-        distinctio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-        quo nemo dolore itaque nulla debitis perspiciatis aspernatur,
-        dignissimos earum ad libero autem odio quaerat facere atque odit sed
-        cupiditate enim. Lorem ipsum, dolor sit amet consectetur adipisicing
-        elit. Eligendi iste aliquam molestias quos nobis repellendus est odio
-        tempore quidem consequuntur tempora doloremque numquam asperiores omnis
-        eum quisquam, beatae recusandae vero? Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Doloremque magnam beatae quisquam libero
-        maiores. Tempore asperiores possimus debitis eum perspiciatis voluptas
-        aut excepturi. Iure laborum totam corporis cum blanditiis earum? Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
-        laboriosam obcaecati aliquid laborum voluptas, commodi deserunt quasi
-        voluptatum! Dolore perspiciatis quibusdam sunt voluptates facere quas,
-        quos omnis fugiat corrupti molestias. Lorem ipsum dolor sit amet,
-        consectetur adipisicing elit. Pariatur eum magni possimus debitis, sequi
-        illo ex corrupti neque reprehenderit enim quae assumenda. Quas aliquid a
-        sed nam maiores quis sapiente. Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Sequi earum quas ea nesciunt soluta ipsum animi
-        cupiditate laboriosam error architecto aspernatur ab minus iure
-        voluptatem consequuntur, laborum veritatis commodi incidunt! Lorem ipsum
-        dolor sit, amet consectetur adipisicing elit. Pariatur illum harum
-        quibusdam beatae fugit vero eligendi. Repellat dolorem consequuntur
-        autem ut exercitationem fugiat eos, aspernatur quia hic culpa. Totam,
-        sunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
-        saepe optio praesentium. Blanditiis, facere eaque! Sequi temporibus,
-        amet voluptas expedita vitae quia neque eum, fugiat aut vel similique
-        veritatis beatae. Lorem ipsum, dolor sit amet consectetur adipisicing
-        elit. Inventore qui necessitatibus fuga, a perferendis ullam quis
-        deserunt, cupiditate repellat dolores maiores eveniet ut! Assumenda
-        dolores consequuntur rem, a officiis tenetur. Lorem ipsum dolor, sit
-        amet consectetur adipisicing elit. Voluptatem delectus vitae explicabo
-        maxime error necessitatibus! Perspiciatis, porro sunt non commodi
-        incidunt reiciendis, est cumque facilis ad exercitationem earum minus
-        facere! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-        dolorum quidem qui sint a optio recusandae et atque, non minus ad
-        accusantium ut porro reprehenderit, temporibus sapiente! Voluptate,
-        quisquam distinctio. Lorem ipsum dolor, sit amet consectetur adipisicing
-        elit. Ipsam possimus est quam dolorum nisi repellat sapiente officiis
-        impedit aspernatur atque vero deserunt, reiciendis inventore
-        voluptatibus numquam sed obcaecati? Dolorum, dignissimos. Lorem ipsum
-        dolor, sit amet consectetur adipisicing elit. Inventore odio nisi
-        commodi suscipit doloribus maiores dolores iure praesentium provident
-        neque porro odit saepe, cumque, voluptatibus deleniti minus veritatis!
-        Corporis, ab? Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        Commodi, inventore enim cum laudantium similique fugit, ex ipsum sit,
-        perspiciatis mollitia maiores harum! Quod, sit error possimus fuga
-        beatae totam corrupti! Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Iure facere facilis blanditiis quo distinctio deleniti
-        quos voluptatum nemo ea impedit optio ve
-      </div>
+      <Head>
+        <title>SRMKZILLA</title>
+        <link rel="icon" href="./images/kzillalogo.png" />
+      </Head>
+      
+      <section className="hero h-screen bg-black overflow-hidden relative">
+        <Navbar />
+        <div>
+          <div className="relative sm:h-64 h-52 md:mt-36 sm:mt-24 mt-20">
+            <video
+              autoPlay
+              loop
+              className="sm:h-64 h-52 absolute left-2/4 transform -translate-x-1/2"
+              src="./images/hero_logo.mp4"
+            ></video>
+          </div>
+          <div className="lg:px-60 sm:px-32 px-10">
+            <h1 className="text-center text-white sm:text-5xl text-4xl sm:mt-auto mt-5 font-bold">
+              The campus club you love
+            </h1>
+            <p className="text-white opacity-25 text-center text-2xl mt-6">
+              delectus quia adipisci amet suscipit error eveniet perspiciatis
+              eius pariatur, aspernatur ullam. Ipsa, dolores?
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* New Section start */}
+      <section className="works">
+        <div className="bg-baseBlack sm:pt-32 pt-24">
+          <Bounce bottom><h1 className="text-white text-center text-4xl">What's New</h1></Bounce>
+          <div className="flex flex-wrap items-center justify-center sm:mt-20 mt-14 pb-10">
+            {cardData.map((card) => (
+              <Bounce bottom><Card_home name={card.title} image={card.image} /></Bounce>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* New section ends */}
+
+      {/* {Process aection starts} */}
+      <section className="process bg-baseBlack pt-10 min-h-screen lg:px-40 md:px-32 px-10">
+        <div>
+          <Bounce bottom><h1 className="text-white text-center text-4xl">How we work</h1></Bounce>
+          <div >
+            <Bounce delay={[500]}><Message color="baseBlue" /></Bounce>
+          </div>
+        </div>
+
+        {/* ideation */}
+
+        <div className="flex flex-wrap w-full mt">
+          <div className="xl:w-3/6 lg:w-2/5 w-auto">
+            <Bounce bottom><h1 className="text-white text-3xl mt-24">
+              Ideation<span className="text-orange600 text-4xl">.</span>
+            </h1>
+            </Bounce>
+            <Bounce bottom><p className="text-white text-lg my-4">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Praesentium reprehenderit mollitia nihil sunt modi. Ad eaque,
+              labore dolorem, debitis id eum cum adipisci impedit quos mollitia
+              earum, voluptate natus. Voluptas.
+            </p>
+            <img
+              src="./images/bulb.png"
+              className="h-96 w-auto lg:block hidden"
+              alt=""
+            /></Bounce>
+          </div>
+          <Bounce bottom><div className="lg:mt-52 mt-24 mx-auto">
+            <div className="relative video transform -rotate-6 bg-orange300 md:w-72 md:h-72 sm:h-64 sm:w-64 h-52 w-52 items-center rounded-2xl z-100">
+              <div className="absolute h-full w-full transform rotate-6 bg-white -top-8 left-6 rounded-2xl"></div>
+            </div>
+          </div>
+          </Bounce>
+        </div>
+        {/* ideation end */}
+
+        {/* design */}
+        <Bounce right><div className="lg:-mt-16 sm:mt-24 mt-14">
+          <Message color="baseBlue" />
+        </div>
+        </Bounce>
+        <div className="flex flex-wrap w-full mt-52">
+          <div className="xl:w-3/6 lg:w-2/5 w-auto">
+          <Slide right delay={[500]}><div className="lg:mt-auto mt-24">
+              <span className="text-white text-3xl relative lg:mt-24">
+                Design<span className="text-orange600 text-4xl">.</span>
+                <img
+                  src="./images/arrow.png"
+                  className="absolute top-full left-full h-5 transform -translate-y-2"
+                  alt=""
+                />
+              </span>
+            </div></Slide>
+
+            <Bounce bottom><p className="text-white text-lg my-4">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Praesentium reprehenderit mollitia nihil sunt modi. Ad eaque,
+              labore dolorem, debitis id eum cum adipisci impedit quos mollitia
+              earum, voluptate natus. Voluptas.
+            </p>
+            <img
+              src="./images/design1.png"
+              className="w-72 lg:ml-16 mt-16 mx-auto"
+              alt=""
+            /></Bounce>
+          </div>
+          <div className="mt-32 lg:block hidden">
+            <Bounce bottom><img
+              className="w-96 h-auto xl:ml-16 ml-10 mt-16 border-orange600 border-8 rounded-2xl"
+              src="./images/design2.png"
+              alt="design"
+            /></Bounce>
+          </div>
+        </div>
+        {/* design end */}
+
+        <div className="lg:mt-auto sm:mt-16 mt-10">
+        <Bounce right><Message color="orange300" /></Bounce>
+        </div>
+        <div className="flex flex-wrap w-full -mt-10">
+          <div className="xl:w-3/6 lg:w-2/5 w-auto">
+            <Bounce bottom><h1 className="text-white text-3xl mt-24">
+              Technical<span className="text-orange600 text-4xl">.</span>
+            </h1></Bounce>
+            <Bounce bottom><p className="text-white text-lg my-4">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Praesentium reprehenderit mollitia nihil sunt modi. Ad eaque,
+              labore dolorem, debitis id eum cum adipisci impedit quos mollitia
+              earum, voluptate natus. Voluptas.
+            </p></Bounce>
+            <Bounce bottom><p className="text-white text-lg my-4">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Praesentium reprehenderit mollitia nihil sunt modi. Ad eaque,
+              labore dolorem, debitis id eum cum adipisci impedit quos mollitia
+              earum, voluptate natus. Voluptas.
+            </p></Bounce>
+            <Bounce bottom><p className="text-white text-lg my-4">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Praesentium reprehenderit mollitia nihil sunt modi. Ad eaque,
+              labore dolorem, debitis id eum cum adipisci impedit quos mollitia
+              earum, voluptate natus. Voluptas.
+            </p></Bounce>
+          </div>
+          <div className="lg:mt-24 mt-0">
+            <Bounce bottom><img
+              src="./images/tech.png"
+              className="w-96 lg:ml-24 mx-auto lg:mt-24 mt-16"
+              alt=""
+            /></Bounce>
+          </div>
+        </div>
+      </section>
+      {/* Process section ends */}
     </div>
   );
 };
