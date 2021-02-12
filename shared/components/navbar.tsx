@@ -1,13 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Search, Menu } from "react-feather";
 import Link from "next/link";
 import Dropdown from "./dropdown";
-import {motion} from "framer-motion"
 
 const Navbar = () => {
   const [search, setSearch] = useState(false);
   const [open, setOpen] = useState(false);
-  const ref = useRef();
 
   const searchshow = () => {
     if (window.scrollY >= 600) {
@@ -19,21 +17,10 @@ const Navbar = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", searchshow);
-    const onBodyClick = (event) => {
-      if (ref.current.contains(event.target)) {
-        return;
-      }
-      setOpen(false);
-    };
-
-    document.body.addEventListener("click", onBodyClick);
-    return () => {
-      document.body.removeEventListener("click", onBodyClick);
-    };
-  }, []);
+  });
 
   return (
-    <nav className="bg-black fixed z-20 w-full" ref={ref}>
+    <nav className="bg-black fixed z-20 w-full">
       <div className="container text-white px-6 py-3">
         <div className="md:flex md:items-center md:justify-between">
           <div className="flex justify-between items-center">
@@ -61,7 +48,8 @@ const Navbar = () => {
               <button
                 type="button"
                 className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
-                onClick={() => setOpen(!open)}
+                onMouseEnter={() => setOpen(true)}
+                onMouseLeave={() => setOpen(false)}
               >
                 <Menu size={16} />
               </button>
