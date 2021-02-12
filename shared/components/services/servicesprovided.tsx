@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const ServicesProvided = () => {
-  const [openwebdev, setOpenwebdev] = useState(false);
+  const [openwebdev, setOpenwebdev] = useState(true);
   const [openwebdes, setOpenwebdes] = useState(false);
   const [opengfx, setOpengfx] = useState(false);
   const [openapp, setOpenapp] = useState(false);
@@ -77,7 +77,7 @@ const ServicesProvided = () => {
                   openwebdev
                     ? "bg-orange300 text-black"
                     : "bg-baseBlack200 text-white"
-                } lg:p-10  p-5 focus:outline-none hover:bg-orange300 cursor-pointer  rounded-2xl mt-3 md:mt-0}`}
+                } lg:p-10  p-5 focus:outline-none hover:bg-orange300 cursor-pointer  rounded-2xl }`}
               >
                 <img
                   src={`${
@@ -107,7 +107,7 @@ const ServicesProvided = () => {
                   openwebdes
                     ? "bg-orange300 text-black"
                     : "bg-baseBlack200 text-white"
-                } lg:p-10  p-5 focus:outline-none hover:bg-orange300 cursor-pointer  rounded-2xl mt-3 md:mt-0}`}
+                } lg:p-10  p-5 focus:outline-none hover:bg-orange300 cursor-pointer  rounded-2xl }`}
               >
                 <img
                   src={`${
@@ -134,7 +134,7 @@ const ServicesProvided = () => {
                   opengfx
                     ? "bg-orange300 text-black"
                     : "bg-baseBlack200 text-white"
-                } lg:p-10  p-5 focus:outline-none hover:bg-orange300  cursor-pointer  rounded-2xl mt-3 md:mt-0}`}
+                } lg:p-10  p-5 focus:outline-none hover:bg-orange300  cursor-pointer  rounded-2xl }`}
               >
                 <img
                   src={`${
@@ -161,7 +161,7 @@ const ServicesProvided = () => {
                   openapp
                     ? "bg-orange300 text-black"
                     : "bg-baseBlack200 text-white"
-                } lg:p-10  p-5 focus:outline-none hover:bg-orange300 cursor-pointer  rounded-2xl mt-3 md:mt-0}`}
+                } lg:p-10  p-5 focus:outline-none hover:bg-orange300 cursor-pointer  rounded-2xl }`}
               >
                 <img
                   src={`${
@@ -182,7 +182,7 @@ const ServicesProvided = () => {
               </p>
             </div>
 
-            <div className="lg:p-10  p-5 bg-baseBlack200 rounded-2xl my-5">
+            <div className="lg:p-10  p-5 bg-baseBlack200 rounded-2xl mt-5">
               <p className="my-2 font-bold">Others</p>
               <p className="my-2">
                 We are also expanding our domains with Machine Learning,
