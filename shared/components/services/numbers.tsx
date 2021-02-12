@@ -23,13 +23,13 @@ export var ProgressBar = (props: ProgressProps) => {
       >
         <div
           style={{ width: `${value}px`, backgroundColor: `${props.color}` }}
-          className=" h-10 rounded-md transition delay-500"
+          className=" h-20 rounded-md transition delay-500"
         />
         <div>
-          <img src={props.gif} className="w-10" />
+          <img src={props.gif} className="w-20" />
         </div>
         <div>
-          <p className="text-white mt-2 z-50">{props.stats}</p>
+          <p className="text-white mt-7 mx-3">{props.stats}</p>
         </div>
       </div>
     </div>
@@ -44,7 +44,7 @@ class Numbers extends React.Component {
           <div className="flex">
             <div>
               <ProgressBar
-                width={600}
+                width={1100}
                 percent={0.7}
                 color={"#22D296"}
                 gif={"/images/greenwave.gif"}
@@ -52,13 +52,13 @@ class Numbers extends React.Component {
               />
             </div>
             <div>
-              <img src="/images/insta_icon.png" className="h-7 my-4" />
+              <img src="/images/insta_icon.png" className="h-15 my-5" />
             </div>
           </div>
           <div className="flex">
             <div>
               <ProgressBar
-                width={600}
+                width={700}
                 percent={0.4}
                 color={"#FFF2CC"}
                 gif={"/images/whitewave.gif"}
@@ -66,13 +66,13 @@ class Numbers extends React.Component {
               />
             </div>
             <div>
-              <img src="/images/github_icon.png" className="h-7 my-4" />
+              <img src="/images/github_icon.png" className="h-15 my-5" />
             </div>
           </div>
           <div className="flex">
             <div>
               <ProgressBar
-                width={600}
+                width={1300}
                 percent={0.6}
                 color={"#58ACF5"}
                 gif={"/images/bluewave.gif"}
@@ -80,7 +80,7 @@ class Numbers extends React.Component {
               />
             </div>
             <div>
-              <img src="/images/youtube_icon.png" className="h-7 my-4" />
+              <img src="/images/youtube_icon.png" className="h-15 my-5" />
             </div>
           </div>
         </div>
