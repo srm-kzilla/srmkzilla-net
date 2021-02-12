@@ -5,7 +5,6 @@ import Testimonals from "../shared/components/services/testimonals";
 import Collaborate from "../shared/components/services/collaborate";
 import ServicesProvided from "../shared/components/services/servicesprovided";
 import Numbers from "../shared/components/services/numbers";
-import Carousel from "../shared/components/carousel";
 
 const Services = () => {
   return (
@@ -24,7 +23,6 @@ const Services = () => {
       {/* Collaborate&numbers section starts*/}
       <section className="min-h-screen my-3 lg:my-10  mx-3 lg:mx-10">
         <div className="flex flex-col place-items-center">
-          {/* <Carousel /> */}
           <div className="text-gray-100 pb-10 mb-10 container">
             <h1 className="text-5xl font-semibold text-gray-100 text-center mb-5">
               Let’s talk numbers
