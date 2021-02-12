@@ -73,9 +73,19 @@ const ServicesProvided = () => {
             <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
               <div
                 onClick={webdev}
-                className="lg:p-10  p-5 focus:outline-none hover:bg-orange300 active:bg-orange300 cursor-pointer bg-baseBlack200 rounded-2xl mt-3 md:mt-0"
+                className={`${
+                  openwebdev
+                    ? "bg-orange300 text-black"
+                    : "bg-baseBlack200 text-white"
+                } lg:p-10  p-5 focus:outline-none hover:bg-orange300 cursor-pointer  rounded-2xl mt-3 md:mt-0}`}
               >
-                <img src="/images/webdev.png" />
+                <img
+                  src={`${
+                    openwebdev
+                      ? "/images/Black-webdev.png"
+                      : "/images/webdev.png"
+                  }`}
+                />
                 <p className="active:text-black my-2 font-bold">
                   {" "}
                   Web Development
@@ -93,9 +103,19 @@ const ServicesProvided = () => {
 
               <div
                 onClick={webdes}
-                className="lg:p-10 p-5 afocus:outline-none hover:bg-orange300 ctive:bg-orange300 cursor-pointer  bg-baseBlack200 rounded-2xl"
+                className={`${
+                  openwebdes
+                    ? "bg-orange300 text-black"
+                    : "bg-baseBlack200 text-white"
+                } lg:p-10  p-5 focus:outline-none hover:bg-orange300 cursor-pointer  rounded-2xl mt-3 md:mt-0}`}
               >
-                <img src="/images/webdes.png" />
+                <img
+                  src={`${
+                    openwebdes
+                      ? "/images/Black_webdes.png"
+                      : "/images/webdes.png"
+                  }`}
+                />
                 <p className="my-3 font-bold"> Web Design</p>
               </div>
               <div className={`${openwebdes ? "block lg:hidden" : "hidden"}`}>
@@ -110,9 +130,17 @@ const ServicesProvided = () => {
               </div>
               <div
                 onClick={gfx}
-                className="lg:p-10  p-5 focus:outline-none hover:bg-orange300 active:bg-orange300 cursor-pointer bg-baseBlack200 rounded-2xl"
+                className={`${
+                  opengfx
+                    ? "bg-orange300 text-black"
+                    : "bg-baseBlack200 text-white"
+                } lg:p-10  p-5 focus:outline-none hover:bg-orange300  cursor-pointer  rounded-2xl mt-3 md:mt-0}`}
               >
-                <img src="/images/gfx.png" />
+                <img
+                  src={`${
+                    opengfx ? "/images/Black_gfx.png" : "/images/gfx.png"
+                  }`}
+                />
                 <p className="mt-5 font-bold"> Graphic designing</p>
               </div>
               <div className={`${opengfx ? "block lg:hidden" : "hidden"}`}>
@@ -129,9 +157,17 @@ const ServicesProvided = () => {
 
               <div
                 onClick={app}
-                className="lg:p-10  p-5 focus:outline-none hover:bg-orange300 active:bg-orange300 cursor-pointer bg-baseBlack200 rounded-2xl"
+                className={`${
+                  openapp
+                    ? "bg-orange300 text-black"
+                    : "bg-baseBlack200 text-white"
+                } lg:p-10  p-5 focus:outline-none hover:bg-orange300 cursor-pointer  rounded-2xl mt-3 md:mt-0}`}
               >
-                <img src="/images/mobapp.png" className="-mt-5" />
+                <img
+                  src={`${
+                    openapp ? "/images/Black_app.png" : "/images/app.png"
+                  }`}
+                />
                 <p className="font-bold"> Mobile application</p>
               </div>
             </div>
