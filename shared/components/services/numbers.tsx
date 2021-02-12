@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 interface ProgressProps {
   width: number;
@@ -9,83 +9,78 @@ interface ProgressProps {
 }
 
 export var ProgressBar = (props: ProgressProps) => {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
 
-  React.useEffect(() => {
+  useEffect(() => {
     setValue(props.percent * props.width);
   });
 
   return (
-    <div>
+    <div
+      className="bg-baseBlack rounded-md flex my-3 mx-5"
+      style={{ width: props.width }}
+    >
       <div
-        className="bg-baseBlack rounded-md flex m-3"
-        style={{ width: props.width }}
-      >
-        <div
-          style={{ width: `${value}px`, backgroundColor: `${props.color}` }}
-          className=" h-20 rounded-md transition delay-500"
-        />
-        <div>
-          <img src={props.gif} className="w-20" />
+        style={{ width: `${value}px`, backgroundColor: `${props.color}` }}
+        className="h-20 rounded-md transition delay-500"
+      />
+
+      <img src={props.gif} className="w-20 -ml-1" />
+
+      <p className="text-white mt-7 mx-3 z-50">{props.stats}</p>
+    </div>
+  );
+};
+const Numbers = () => {
+  return (
+    <div className="container m-5">
+      <div className="div">
+        <div className="flex">
+          <div>
+            <ProgressBar
+              width={1100}
+              percent={0.7}
+              color={"rgb(27,179,132)"}
+              gif={"/images/Comp-6.gif"}
+              stats={`2345 followers`}
+            />
+          </div>
+
+          <div>
+            <img src="/images/insta_icon.png" className="h-12 mt-7" />
+          </div>
         </div>
-        <div>
-          <p className="text-white mt-7 mx-3">{props.stats}</p>
+        <div className="flex">
+          <div>
+            <ProgressBar
+              width={700}
+              percent={0.6}
+              color={"#FFF2CC"}
+              gif={"/images/Comp-7.gif"}
+              stats={"54 repositories"}
+            />
+          </div>
+          <div>
+            <img src="/images/github_icon.png" className="h-12 mt-7" />
+          </div>
+        </div>
+        <div className="flex">
+          <div>
+            <ProgressBar
+              width={1300}
+              percent={0.9}
+              color={"rgb(101,167,242)"}
+              gif={"/images/Comp-8.gif"}
+              stats={"2698 subscribers"}
+            />
+          </div>
+          <div>
+            <img src="/images/youtube_icon.png" className="h-12 mt-7" />
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-class Numbers extends React.Component {
-  render() {
-    return (
-      <div className="container m-5">
-        <div className="div">
-          <div className="flex">
-            <div>
-              <ProgressBar
-                width={1100}
-                percent={0.7}
-                color={"#22D296"}
-                gif={"/images/greenwave.gif"}
-                stats={"7890 followers"}
-              />
-            </div>
-            <div>
-              <img src="/images/insta_icon.png" className="h-15 my-5" />
-            </div>
-          </div>
-          <div className="flex">
-            <div>
-              <ProgressBar
-                width={700}
-                percent={0.4}
-                color={"#FFF2CC"}
-                gif={"/images/whitewave.gif"}
-                stats={"54 repositories"}
-              />
-            </div>
-            <div>
-              <img src="/images/github_icon.png" className="h-15 my-5" />
-            </div>
-          </div>
-          <div className="flex">
-            <div>
-              <ProgressBar
-                width={1300}
-                percent={0.6}
-                color={"#58ACF5"}
-                gif={"/images/bluewave.gif"}
-                stats={"2698 subscribers"}
-              />
-            </div>
-            <div>
-              <img src="/images/youtube_icon.png" className="h-15 my-5" />
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-}
 export default Numbers;

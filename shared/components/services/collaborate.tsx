@@ -13,12 +13,13 @@ const Collaborate = () => {
             create something magnificent.
           </p>
           <div className="my-10">
-            <button className="px-14 py-2 rounded-3xl bg-baseBlack border-2 border-white focus:outline-none">
-              Get Started
+            <button className="flex px-14 py-2 rounded-3xl bg-baseBlack border-2 border-white focus:outline-none transition duration-500 ease-in-out  transform hover:-translate-y-1 hover:scale-110">
+              <p>Get Started</p>
+              <img src="/images/rightarrow_icon.png" className="mx-5 my-1" />
             </button>
           </div>
         </div>
-        <div className="lg:ml-20 lg:pl-20 flex place-items-center">
+        <div className="lg:ml-20 lg:pl-20 flex flex-col place-items-center">
           <div>
             {" "}
             <img src="/images/thisisus.gif" className="w-max" />
