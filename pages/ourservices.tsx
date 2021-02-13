@@ -6,7 +6,9 @@ import {
   Collaborate,
   ServicesProvided,
   Numbers,
+  Carousel,
 } from "../shared/components";
+import { CarouselData } from "../shared/components/carouseldata";
 
 const Services = () => {
   return (
@@ -16,11 +18,20 @@ const Services = () => {
         <link rel="icon" href="./images/kzillalogo.png" />
       </Head>
       <Navbar />
+
+      <section className="my-20 lg:my-32 mx-3 lg:mx-10">
+        <div className="flex flex-col place-items-center">
+          <Carousel slides={CarouselData} />
+        </div>
+      </section>
+
+      {/* Services Provided section starts*/}
       <section className="min-h-screen my-20 lg:my-32 mx-3 lg:mx-10">
         <div className="flex flex-col place-items-center">
           <ServicesProvided />
         </div>
       </section>
+      {/* Services Provided section ends*/}
 
       {/* Collaborate&numbers section starts*/}
       <section className="min-h-screen my-3 lg:my-10  mx-3 lg:mx-10">
