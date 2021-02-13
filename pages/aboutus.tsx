@@ -1,10 +1,23 @@
 import React from 'react';
 import { Navbar } from "../shared/components";
+import dynamic from "next/dynamic";
 
-const aboutus = () => {
+const Card3d = dynamic(
+  () => {
+    return import("../shared/3d_card");
+  },
+  { ssr: false }
+);
+
+
+const aboutus =  () => {
+
+
+
     return (
       <div className="bg-black w-screen text-white ">
-        <Navbar/>
+        <Navbar />
+        <Card3d />
         <div  className="  w-screen">
             <div className="container  w-full text-white  p-2  bg-black">
                
@@ -89,9 +102,12 @@ const aboutus = () => {
                                       </p>
                                     </div>
                           
+                                    
 
 
-                                        <div className="order-1 mt-6 lg:mt-12 lg:mr-14 transform -rotate-2 max-w-full h-max bg-baseBlack rounded-3xl shadow-xl px-4 py-3  lg:px-6 lg:py-4">
+
+                      <div className="effect3d__container moveable-3d order-1 mt-6 lg:mt-12 lg:mr-14 transform -rotate-2 w-full h-max bg-baseBlack rounded-3xl shadow-xl px-4 py-3  lg:px-6 lg:py-4" id="moveable-3d effect3d__container">
+                   
                                           <div className="h-64 lg:h-80 bg-white rounded-3xl shadow-xl px-3  lg:px-6 lg:py-4">
                             
                                             <h3 className="lg:mb-3 w-full font-bold text-black lg:text-xl">Lorem Ipsum</h3>
@@ -102,7 +118,7 @@ const aboutus = () => {
                                           </p>
                           
                             
-                              
+                                             
                                           </div>
                                  </div>
                                           <div className="lg:mb-20 w-full ">
@@ -114,7 +130,7 @@ const aboutus = () => {
                                                       A 3-day extravaganza aimed at spreading the message of the power of open-source web among the students is complete with workshops, technical quizzes, games and much more. Mozofest provides the perfect respite to students from their busy schedules.
                                                       </p>
                                               </div>
-                                        </div>
+                                              </div> 
                                     </div>
                                     
                           {/* right timeline */}
@@ -135,7 +151,7 @@ const aboutus = () => {
                           
 
 
-                                        <div className="order-1 mt-6 lg:mt-12 lg:mr-14 transform rotate-2 max-w-full h-max bg-baseBlack rounded-3xl shadow-xl px-4 py-3  lg:px-6 lg:py-4">
+                                        <div className="effect3d__container moveable-3d order-1 mt-6 lg:mt-12 lg:mr-14 transform rotate-2 max-w-full h-max bg-baseBlack rounded-3xl shadow-xl px-4 py-3  lg:px-6 lg:py-4" id="moveable-3d effect3d__container">
                                           <div className="h-64 lg:h-80 bg-white rounded-3xl shadow-xl px-3  lg:px-6 lg:py-4">
                             
                                             <h3 className="lg:mb-3 w-full font-bold text-black lg:text-xl">Lorem Ipsum</h3>
@@ -178,7 +194,7 @@ const aboutus = () => {
                           
 
 
-                                        <div className="order-1 mt-6 lg:mt-12 lg:mr-14 transform -rotate-2 max-w-full h-max bg-baseBlack rounded-3xl shadow-xl px-4 py-3  lg:px-6 lg:py-4">
+                                        <div className="moveable-3d effect3d__container order-1 mt-6 lg:mt-12 lg:mr-14 transform -rotate-2 max-w-full h-max bg-baseBlack rounded-3xl shadow-xl px-4 py-3  lg:px-6 lg:py-4" id="moveable-3d effect3d__container">
                                           <div className="h-64 lg:h-80 bg-white rounded-3xl shadow-xl px-3  lg:px-6 lg:py-4">
                             
                                             <h3 className="lg:mb-3 w-full font-bold text-black lg:text-xl">Lorem Ipsum</h3>
