@@ -1,10 +1,12 @@
 import React from "react";
 import Head from "next/head";
-import { Navbar } from "../shared/components";
-import Testimonals from "../shared/components/services/testimonals";
-import Collaborate from "../shared/components/services/collaborate";
-import ServicesProvided from "../shared/components/services/servicesprovided";
-import Numbers from "../shared/components/services/numbers";
+import {
+  Navbar,
+  Testimonals,
+  Collaborate,
+  ServicesProvided,
+  Numbers,
+} from "../shared/components";
 
 const Services = () => {
   return (
