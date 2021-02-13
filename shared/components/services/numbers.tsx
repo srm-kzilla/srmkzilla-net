@@ -22,7 +22,7 @@ export var ProgressBar = (props: ProgressProps) => {
     >
       <div
         style={{ width: `${value}px`, backgroundColor: `${props.color}` }}
-        className="h-20 rounded-md transition delay-500"
+        className="h-20 rounded-md transition delay-100"
       />
 
       <img src={props.gif} className="w-20 -ml-1" />
@@ -40,7 +40,7 @@ const Numbers = () => {
             <ProgressBar
               width={1100}
               percent={0.7}
-              color={"rgb(27,179,132)"}
+              color={"rgb(14,189,150)"}
               gif={"/images/Comp-6.gif"}
               stats={`2345 followers`}
             />
@@ -69,7 +69,7 @@ const Numbers = () => {
             <ProgressBar
               width={1300}
               percent={0.9}
-              color={"rgb(101,167,242)"}
+              color={"rgb(79,168,248)"}
               gif={"/images/Comp-8.gif"}
               stats={"2698 subscribers"}
             />
