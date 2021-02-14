@@ -21,7 +21,6 @@ const Navbar = () => {
 
   return (
     <nav className="nav fixed z-50 w-full">
-
       <div className="container text-white px-6 py-3">
         <div className="md:flex md:items-center md:justify-between">
           <div className="flex justify-between items-center">
@@ -94,7 +93,7 @@ const Navbar = () => {
                   },
                   {
                     label: "Projects",
-                    link: "/",
+                    link: "/projects",
                   },
                   {
                     label: "Others",

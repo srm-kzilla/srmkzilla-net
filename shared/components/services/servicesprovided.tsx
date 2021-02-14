@@ -54,7 +54,7 @@ const ServicesProvided = () => {
   };
   return (
     <>
-      <div className="bg-baseBlack rounded-2xl text-white text-xl container py-10">
+      <div className="bg-baseBlack2 rounded-2xl text-white text-xl container py-10">
         <h1 className="text-5xl font-semibold text-gray-100 text-center m-5">
           Services we provide
         </h1>

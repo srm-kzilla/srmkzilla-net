@@ -3,6 +3,7 @@ import axios from "axios";
 
 interface ProgressProps {
   width: number;
+  widthmob: number;
   percent: number;
   color: string;
   gif: any;
@@ -16,21 +17,42 @@ export var ProgressBar = (props: ProgressProps) => {
   });
 
   return (
-    <div
-      className="bg-baseBlack rounded-md flex my-3 mx-5"
-      style={{ width: props.width }}
-    >
-      <div
-        style={{ width: `${value}px`, backgroundColor: `${props.color}` }}
-        className="h-20 rounded-md transition delay-100 relative"
-      />
+    <>
+      <div className="hidden xl:block">
+        <div
+          className="bg-baseBlack rounded-md flex my-3 mx-5"
+          style={{ width: props.width }}
+        >
+          <div
+            style={{ width: `${value}px`, backgroundColor: `${props.color}` }}
+            className="h-20 rounded-md transition delay-100 relative"
+          />
 
-      <img src={props.gif} className="w-20 -ml-1" />
+          <img src={props.gif} className="w-20 -ml-1" />
 
-      <p className="text-white mt-7 mx-3 sticky top-10 left-0 z-50">
-        {props.stats}
-      </p>
-    </div>
+          <p className="text-white mt-7 mx-3 sticky top-10 left-0 z-50">
+            {props.stats}
+          </p>
+        </div>
+      </div>
+      <div className="xl:hidden">
+        <div
+          className="bg-baseBlack rounded-md flex my-1 mx-1"
+          style={{ width: props.widthmob }}
+        >
+          <div
+            style={{ width: `${value}px`, backgroundColor: `${props.color}` }}
+            className="h-10 rounded-md transition delay-100 relative"
+          />
+
+          <img src={props.gif} className="w-10 h-10 -ml-1" />
+
+          <p className="text-white text-xs mt-1 mx-1 sticky top-10 left-0 z-50">
+            {props.stats}
+          </p>
+        </div>
+      </div>
+    </>
   );
 };
 const Numbers = () => {
@@ -60,12 +82,13 @@ const Numbers = () => {
   }, []);
 
   return (
-    <div className="container m-5">
-      <div className="div">
+    <div className="container m-1 xl:m-5 flex flex-col place-items-center">
+      <div>
         <div className="flex">
           <div>
             <ProgressBar
               width={1100}
+              widthmob={280}
               percent={0.7}
               color={"rgb(14,189,150)"}
               gif={"/images/Comp-6.gif"}
@@ -74,13 +97,17 @@ const Numbers = () => {
           </div>
 
           <div>
-            <img src="/images/insta_icon.png" className="h-12 mt-7" />
+            <img
+              src="/images/insta_icon.png"
+              className="h-8 xl:h-12 my-2 mx-1 xl:mt-7"
+            />
           </div>
         </div>
         <div className="flex">
           <div>
             <ProgressBar
               width={700}
+              widthmob={200}
               percent={0.5}
               color={"#FFF2CC"}
               gif={"/images/Comp-7.gif"}
@@ -88,13 +115,17 @@ const Numbers = () => {
             />
           </div>
           <div>
-            <img src="/images/github_icon.png" className="h-12 mt-7" />
+            <img
+              src="/images/github_icon.png"
+              className="h-8 xl:h-12  my-2 mx-1 xl:mt-7"
+            />
           </div>
         </div>
         <div className="flex">
           <div>
             <ProgressBar
               width={1300}
+              widthmob={300}
               percent={0.8}
               color={"rgb(79,168,248)"}
               gif={"/images/Comp-8.gif"}
@@ -102,7 +133,10 @@ const Numbers = () => {
             />
           </div>
           <div>
-            <img src="/images/youtube_icon.png" className="h-12 mt-7" />
+            <img
+              src="/images/youtube_icon.png"
+              className="h-8 xl:h-12  my-2 mx-1 xl:mt-7"
+            />
           </div>
         </div>
       </div>
