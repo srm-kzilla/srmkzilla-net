@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 interface ProgressProps {
   width: number;
@@ -10,7 +11,6 @@ interface ProgressProps {
 
 export var ProgressBar = (props: ProgressProps) => {
   const [value, setValue] = useState(0);
-
   useEffect(() => {
     setValue(props.percent * props.width);
   });
@@ -34,6 +34,31 @@ export var ProgressBar = (props: ProgressProps) => {
   );
 };
 const Numbers = () => {
+  const [followers, setFollowers] = useState("");
+  const [repos, setRepos] = useState("");
+  useEffect(() => {
+    axios
+      .get("https://www.instagram.com/srmkzilla/?__a=1", {
+        headers: { "content-type": "application/json" },
+      })
+      .then((res) => {
+        setFollowers(res?.data?.graphql?.user?.edge_followed_by.count || 2400);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    axios
+      .get("https://api.github.com/users/srm-kzilla", {
+        headers: { "content-type": "application/json" },
+      })
+      .then((res) => {
+        setRepos(res.data.public_repos || 31);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   return (
     <div className="container m-5">
       <div className="div">
@@ -44,7 +69,7 @@ const Numbers = () => {
               percent={0.7}
               color={"rgb(14,189,150)"}
               gif={"/images/Comp-6.gif"}
-              stats={`2345 followers`}
+              stats={`${followers} followers`}
             />
           </div>
 
@@ -59,7 +84,7 @@ const Numbers = () => {
               percent={0.5}
               color={"#FFF2CC"}
               gif={"/images/Comp-7.gif"}
-              stats={"54 repositories"}
+              stats={`${repos} repositories`}
             />
           </div>
           <div>
