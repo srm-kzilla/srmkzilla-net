@@ -4,16 +4,16 @@ import { useRouter } from "next/router";
 import pro from "../../shared/pro.json";
 import cardData from "../../shared/test";
 import Head from "next/head";
+import imageUrlBuilder from '@sanity/image-url';
+import { useState, useEffect } from 'react';
+import BlockContent from '@sanity/block-content-to-react';
+
 
 const Project = () => {
-  const router = useRouter();
-  const index = Number(router.query.slug);
-  const project = cardData[index - 1];
-  if (!project) return <p></p>;
   return (
-    <div className="bg-black">
+    <div className="bg-black overflow-hidden">
       <Head>
-        <title>SRMKZILLA | {project.title}</title>
+        <title>SRMKZILLA</title>
         <link rel="icon" href="../images/kzillalogo.png" />
       </Head>
       <div className="h-screen">
@@ -25,15 +25,12 @@ const Project = () => {
         />
         <div className="flex flex-wrap w-screen">
           <div className="z-10 w-2/4 px-24 mt-40">
-            <img className="" src={`.${project.logo}`} alt="" />
+            <img className="" src='../images/xyz.png' alt="" />
             <h1 className="text-white text-5xl font-semibold mt-10">
-              {project.title}
+              Kzilla.xyz
             </h1>
             <p className="text-white mt-4">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Praesentium, labore, tenetur fugiat, vitae sapiente veniam nemo
-              quia corporis tempore vel ratione modi odit ab architecto quae ea!
-              In, est ratione.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
             </p>
             <div className="mt-7">
               <button className="px-5 py-3 rounded-full bg-baseBlack text-white text-sm">
@@ -45,12 +42,28 @@ const Project = () => {
             </div>
           </div>
           <div className="z-10 w-2/4 relative">
-            <div className="absolute h-64 z-20 w-2/3 bg-white left-2/4 top-2/3 transform -rotate-3 rounded-lg -translate-y-1/2 -translate-x-1/2"></div>
+            <div className="absolute videoCard h-64 z-20 w-2/3 left-2/4 top-2/3 transform -rotate-3 rounded-lg -translate-y-1/2 -translate-x-1/2"></div>
+            <div className="absolute bg-white h-64 z-20 w-2/3 left-2/4 top-3/4 transform  rounded-lg -translate-y-36 -translate-x-64 overflow-hidden">
+            <iframe src="https://www.youtube.com/embed/sxDqY1myzko" height='100%' width='100%' frameBorder="0" allowFullScreen></iframe>
+            </div>
           </div>
         </div>
       </div>
+      <section>
+        <div className="insta flex flex-wrap">
+            <div>
+                
+            </div>
+            <div>
+
+            </div>
+        </div>
+      </section>
     </div>
   );
 };
 
+
 export default Project;
+
+

@@ -19,6 +19,7 @@ import {
 } from "framer-motion";
 import Icons from "../shared/components/icons";
 import Homecarousel from "../shared/components/home_carousel";
+import Footer from "../shared/components/footer";
 
 const cardData = [
   {
@@ -131,10 +132,11 @@ const Home = () => {
       <section className="process bg-baseBlack pt-10 min-h-screen lg:px-40 md:px-32 px-10">
         <div>
           <h1 className="text-white text-center text-4xl">How we work</h1>
-
+          <Bounce>
           <div>
             <Message color="baseBlue" />
           </div>
+          </Bounce>
         </div>
 
         {/* ideation */}
@@ -260,14 +262,15 @@ const Home = () => {
         {/* ideation end */}
 
         {/* design */}
-
+        <Bounce>
         <div className="lg:mt-0 sm:mt-24 mt-14">
           <Message color="baseBlue" />
         </div>
+        </Bounce>
 
         <div className="flex flex-wrap w-full mt-52 relative">
           <div className="xl:w-3/6 lg:w-2/5 w-auto">
-            <Slide right delay={[500]}>
+            <Slide right delay={[800]}>
               <div className="lg:-mt-20 mt-16">
                 <span className="text-white text-3xl relative lg:mt-24">
                   Design<span className="text-orange600 text-4xl">.</span>
@@ -388,34 +391,41 @@ const Home = () => {
           </motion.svg>
         </div>
         {/* design end */}
-
+        <Bounce>
         <div className="lg:mt-auto sm:mt-16 mt-10">
           <Message color="orange300" />
         </div>
+        </Bounce>
 
         <div className="flex flex-wrap w-full -mt-10">
           <div className="xl:w-3/6 lg:w-2/5 -mt-16 w-auto">
             <h1 className="text-white text-3xl mt-24">
               Technical<span className="text-orange600 text-4xl">.</span>
             </h1>
+            <div>
             <p className="text-white text-lg my-4">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              <p className='text-white text-xl font-semibold'>Lorem Ipsum</p>
               Praesentium reprehenderit mollitia nihil sunt modi. Ad eaque,
               labore dolorem, debitis id eum cum adipisci impedit quos mollitia
               earum, voluptate natus. Voluptas.
             </p>
+            </div>
+            <div>
             <p className="text-white text-lg my-4">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Praesentium reprehenderit mollitia nihil sunt modi. Ad eaque,
+              <p className='text-white text-xl font-semibold'>Lorem Ipsum</p>
+              <p className='text-lg font-normal'>Praesentium reprehenderit mollitia nihil sunt modi. Ad eaque,
               labore dolorem, debitis id eum cum adipisci impedit quos mollitia
-              earum, voluptate natus. Voluptas.
+              earum, voluptate natus. Voluptas.</p>
             </p>
+            </div>
+            <div>
             <p className="text-white text-lg my-4">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Praesentium reprehenderit mollitia nihil sunt modi. Ad eaque,
+              <p className='text-white text-xl font-semibold'>Lorem Ipsum</p>
+              <p className='text-lg text-white font-normal'>Praesentium reprehenderit mollitia nihil sunt modi. Ad eaque,
               labore dolorem, debitis id eum cum adipisci impedit quos mollitia
-              earum, voluptate natus. Voluptas.
+              earum, voluptate natus. Voluptas.</p>
             </p>
+            </div>
           </div>
           <div className="lg:mt-24 ml-6 mt-0">
             <img
@@ -427,6 +437,8 @@ const Home = () => {
         </div>
       </section>
       {/* Process section ends */}
+      <Footer />
+     
     </div>
   );
 };

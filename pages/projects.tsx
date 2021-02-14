@@ -43,18 +43,9 @@ const projects = () => {
         <p className="text-white text-center font-light text-xl mt-3 sm:px-auto px-8">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus illo
         </p>
-        {/* <div className="flex flex-wrap items-center justify-center lg:px-36 md:px-24 px-10 mt-4">
-          {Object.entries(pro).map((card) => (
-            <Link href='/projects/[slug]' as={`/projects/${card[1].title}`}><a><ProjectIcon
-              icon={card[1].logo}
-              title={card[1].title}
-              upcomming={card[1].new}
-            /></a></Link>
-          ))}
-        </div> */}
         <div className="flex flex-wrap items-center justify-center lg:px-36 md:px-24 px-10 mt-4">
           {cardData.map((card) => (
-            <Link href="/projects/[slug]" as={`/projects/${card.id}`}>
+            <Link href="/projects/[slug]" as={`/projects/${card.title}`}>
               <a>
                 <ProjectIcon
                   icon={card.logo}
