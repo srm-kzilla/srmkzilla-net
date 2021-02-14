@@ -8,15 +8,22 @@
     "start": "next start"
   },
   "dependencies": {
+    "@sanity/block-content-to-react": "^2.0.7",
+    "@sanity/image-url": "^0.140.19",
+    "@brainhubeu/react-carousel": "^1.19.26",
+    "@types/brainhubeu__react-carousel": "^2.0.2",
     "autoprefixer": "^10.2.1",
     "framer-motion": "^3.3.0",
     "next": "10.0.5",
     "postcss": "^8.2.4",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-elastic-carousel": "^0.11.1",
     "react-feather": "^2.0.9",
+    "react-icons": "^4.2.0",
     "react-intersection-observer": "^8.31.0",
     "react-reveal": "^1.2.2",
+    "styled-components": "^5.2.1",
     "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
