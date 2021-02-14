@@ -1,0 +1,58 @@
+const cardData = [
+  { id: 1,
+    title: "kzilla.xyz",
+    logo: "./images/xyz.png",
+    link: "/",
+    new: false,
+  },
+  { id: 2,
+    title: "Springboard",
+    logo: "./images/springboard.png",
+    link: "/",
+    new: false,
+  },
+  { 
+    id: 3,
+    title: "Yvette",
+    logo: "./images/yvette.png",
+    link: "/",
+    new: false,
+  },
+  { 
+    id: 4,
+    title: "Mozarc",
+    logo: "./images/mozarc.png",
+    link: "/",
+    new: false,
+  },
+  { 
+    id: 5,
+    title: "Billboard",
+    logo: "./images/billboard.png",
+    link: "/",
+    new: false,
+  },
+  {
+    id: 6,
+    title: "Mellow",
+    logo: "./images/mellow.png",
+    link: "/",
+    new: false,
+  },
+  { 
+    id: 7,
+    title: "Jack",
+    logo: "./images/jack.png",
+    link: "/",
+    new: false,
+  },
+  { 
+    id: 8,
+    title: "New",
+    logo: "./images/jack.png",
+    link: "/",
+    new: true,
+  },
+]
+
+export default cardData
