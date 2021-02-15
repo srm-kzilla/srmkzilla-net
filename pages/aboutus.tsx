@@ -40,8 +40,8 @@ const aboutus =  () => {
 
               <div className=" h-auto overflow-hidden flex items-center justify-center bg-black">
                 <div className="container  w-full h-full">
-                  <div className="relative wrap overflow-hidden px- py-10 lg:p-10 h-full mx-4 md:mx-16 lg:mx-10">
-                    <div className=" absolute lg:top-20   left-1/2 border-white h-full border"></div>
+                  <div className="relative wrap overflow-hidden px-3 py-10 lg:p-10 h-full mx-4 md:mx-16 lg:mx-10">
+                    <div className=" absolute lg:top-20  md:left-1/2 lg:left-1/2 border-white h-full border"></div>
                     {/* timeline */}
                     <LeftTimeline />
                     <RightTimeline/>
