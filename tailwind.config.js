@@ -6,10 +6,19 @@ module.exports = {
       colors: {
         orange600: "#E9573E",
         orange300: "#FF644E",
-        baseBlue: "#5D9BEE",
-        baseBlack: "#0F0F0F",
+        baseBlue: "#58ACF5",
+        baseBlack: "#15131c",
         baseGray: "#C4C4C4",
+        newBlack: "#1F1E24",
+        icon: "#262430"
       },
+      backgroundImage: theme => ({
+        'hero-pattern': "url('/images/herobg.png')",
+       }),
+       boxShadow: {
+         'box': '0px 12px 50px 10px rgba(0, 0, 0, 0.65)',
+         'icon': '0px 0px 30px #58ACF5'
+       }
     },
     fontFamily: {
 
