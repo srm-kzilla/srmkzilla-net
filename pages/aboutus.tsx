@@ -9,7 +9,6 @@ const cardData = [
   { title: "Mission" },
   { title: "Vision" },
 ];
-
 const aboutus =  () => {
     return (
       <div className="bg-black w-screen text-white ">
