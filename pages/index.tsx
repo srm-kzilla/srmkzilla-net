@@ -85,18 +85,18 @@ const Home = () => {
         <title>SRMKZILLA</title>
         <link rel="icon" href="./images/kzillalogo.png" />
       </Head>
-      <Icons />
+      
       <section className="hero h-screen bg-hero-pattern bg-fixed overflow-hidden relative">
         <Navbar />
         <div className="absolute top-2/4 transform -translate-y-1/2">
-          <div className="relative sm:h-64 h-52 z-30">
-            <video
+          <motion.div className="relative w-screen sm:h-64 h-52 z-30">
+            <motion.video
               autoPlay
               loop
               className="sm:h-64 h-52 absolute left-2/4 transform -translate-x-1/2"
               src="./images/hero_logo.mp4"
-            ></video>
-          </div>
+            ></motion.video>
+          </motion.div>
           <div className="lg:px-60 sm:px-32 px-10 z-30">
             <h1 className="text-center text-white sm:text-5xl text-4xl sm:mt-auto mt-5 font-bold">
               The campus club you love

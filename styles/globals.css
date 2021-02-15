@@ -32,5 +32,11 @@ a {
 backdrop-filter: blur(10px);
 }
 
+.whatitdoes{
+  border: solid 1px #22415e;
+
+background: rgba(31, 30, 36, 0.1);
+}
+
 
 @tailwind utilities;
