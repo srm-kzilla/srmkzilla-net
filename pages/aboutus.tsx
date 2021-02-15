@@ -4,13 +4,6 @@ import Card_aboutus from "../shared/components/card_aboutus"
 import {LeftTimeline, RightTimeline } from "../shared/components/timeline_aboutus"
 import dynamic from "next/dynamic";
 
-const Card3d = dynamic(
-  () => {
-    return import("../shared/components/3d_card");
-  },
-  { ssr: false }
-);
-
 const cardData = [
   { title: "Values" },
   { title: "Mission" },
@@ -21,7 +14,7 @@ const aboutus =  () => {
     return (
       <div className="bg-black w-screen text-white ">
         <Navbar />
-        <Card3d />
+        
         <div  className="  w-screen">
             <div className="container  w-full text-white  p-2  bg-black">
                
@@ -47,7 +40,7 @@ const aboutus =  () => {
 
               <div className=" h-auto overflow-hidden flex items-center justify-center bg-black">
                 <div className="container  w-full h-full">
-                  <div className="relative wrap overflow-hidden px-4 py-10 lg:p-10 h-full ">
+                  <div className="relative wrap overflow-hidden px- py-10 lg:p-10 h-full mx-4 md:mx-16 lg:mx-10">
                     <div className=" absolute lg:top-20   left-1/2 border-white h-full border"></div>
                     {/* timeline */}
                     <LeftTimeline />
