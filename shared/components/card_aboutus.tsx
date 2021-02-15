@@ -2,14 +2,13 @@ import React from 'react'
 
 const Card_aboutus = (props: { name: String }) => {
     return (
-        <div className="w-3/4 h-96 overflow-hidden rounded-t-2xl rounded-b-2xl">
-            <div className="bg-baseBlack   p-10">
-                <div className="mb-10">
-                            <h1 className="text-4xl font-bold text-center">{props.name}</h1>
+        <div className="w-3/4 md:h-72 lg:h-96 overflow-hidden rounded-t-2xl rounded-b-2xl">
+            <div className="bg-baseBlack   p-8">
+                <div className="mx-auto font-subHeading my-4 font-bold">
+                            <h2 className="font-subHeading not-italic font-bold text-4xl lg:text-5xl text-center text-white">{props.name}</h2>
                             
                 </div>
-                <div className=" overflow-hidden">
-                            dsafgsdfgsdfdsfdsfjsdkjfhdk dsfdsfjsdkjfhdk dsafgsdfgsdfdsfdsfjsdkjfhdk dsafgsdfgsdfdsfdsfjsdkjfhdk dsafgsdfgsdfdsfdsfjsdkjfhdk dsafgsdfgsdfdsfdsfjsdkjfhdk dsafgsdfgsdfdsfdsfjsdkjfhdk dsafgsdfgsdfdsfdsfjsdkjfhdk dsafgsdfgsdfdsfdsfjsdkjfhdk dsafgsdfgsdfdsfdsfjsdkjfhdk dsafgsdfgsdfdsfdsfjsdkjfhdk dsafgsdfgsdfdsfdsfjsdkjfhdk dsafgsdfgsdfdsfdsfjsdkjfhdk dsafgsdfgsdfdsfdsfjsdkjfhdk dsafgsdfgsdfdsfdsfjsdkjfhdk dsafgsdfgsdfdsfdsfjsdkjfhdk dsafgsdfgsdfdsfdsfjsdkjfhdk dsafgsdfgsdfdsfdsfjsdkjfhdk dsafgsdfgsdfdsfdsfjsdkjfhdk dsafgsdfgsdfdsfdsfjsdkjfhdk dsafgsdfgsdfdsfdsfjsdkjfhdk dsafgsdfgsdfdsfdsfjsdkjfhdk dsafgsdfgsdfdsfdsfjsdkjfhdk dsafgsdfgsdfdsfdsfjsdkjfhdk dsafgsdfgsdfdsfdsfjsdkjfhdk dsafgsdfgsdfdsfdsfjsdkjfhdk dsafgsdfgsdfdsfdsfjsdkjfhdk dsafgsdfgsdfdsfdsfjsdkjfhdk dsafgsdfgsdfdsfdsfjsdkjfhdk dsafgsdfgsdfdsfdsfjsdkjfhdk dsafgsdfgsdfdsfdsfjsdkjfhdk dsafgsdfgsdfdsfdsfjsdkjfhdk dsafgsdfgsdfdsfdsfjsdkjfhdk
+                <div className=" h-72 lg:h-96 ">
                 </div>
                         
             </div>

@@ -7,7 +7,7 @@ import dynamic from "next/dynamic";
 const cardData = [
   { title: "Values" },
   { title: "Mission" },
-  { title: "Mission" },
+  { title: "Vision" },
 ];
 
 const aboutus =  () => {
@@ -34,8 +34,8 @@ const aboutus =  () => {
             
 
             <div className="h-auto overflow-hidden bg-black text-white lg:mx-20 ">
-              <div className=" mx-auto font-subHeading font-style: normal my-4 font-bold">
-                <h2 className="subHeading not-italic font-bold text-4xl lg:text-5xl text-center text-white ">Our Virtue</h2>
+              <div className=" mx-auto font-subHeading my-4 font-bold">
+                <h2 className="font-subHeading not-italic font-bold text-4xl lg:text-5xl text-center text-white ">Our Virtue</h2>
               </div>
 
               <div className=" h-auto overflow-hidden flex items-center justify-center bg-black">
