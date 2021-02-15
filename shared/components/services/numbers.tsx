@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { motion } from "framer-motion";
 
 interface ProgressProps {
   width: number;
@@ -58,13 +59,16 @@ export var ProgressBar = (props: ProgressProps) => {
 const Numbers = () => {
   const [followers, setFollowers] = useState("");
   const [repos, setRepos] = useState("");
+  const [subscribers, setSubscribers] = useState("");
   useEffect(() => {
     axios
       .get("https://www.instagram.com/srmkzilla/?__a=1", {
         headers: { "content-type": "application/json" },
       })
       .then((res) => {
-        setFollowers(res?.data?.graphql?.user?.edge_followed_by.count || 2400);
+        setFollowers(
+          res?.data?.graphql?.user?.edge_followed_by.count || "2400"
+        );
       })
       .catch((err) => {
         console.log(err);
@@ -75,6 +79,20 @@ const Numbers = () => {
       })
       .then((res) => {
         setRepos(res.data.public_repos || 31);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    axios
+      .get(
+        "https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCEPXeeZz6gcnciv-HjwMjsQ&key=" +
+          process.env.NEXT_PUBLIC_YOUTUBE_KEY,
+        {
+          headers: { "content-type": "application/json" },
+        }
+      )
+      .then((res) => {
+        setSubscribers(res.data.items[0].statistics.subscriberCount);
       })
       .catch((err) => {
         console.log(err);
@@ -129,7 +147,7 @@ const Numbers = () => {
               percent={0.8}
               color={"rgb(79,168,248)"}
               gif={"/images/Comp-8.gif"}
-              stats={"2698 subscribers"}
+              stats={`${subscribers} subscribers`}
             />
           </div>
           <div>

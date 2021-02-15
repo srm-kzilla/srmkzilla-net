@@ -7,8 +7,8 @@ import {
   ServicesProvided,
   Numbers,
   Carousel,
-} from "../shared/components";
-import { CarouselData } from "../shared/components/carouseldata";
+} from "../shared/components/services/services";
+import { CarouselData } from "../shared/components/services/carouseldata";
 
 const Services = () => {
   return (
@@ -59,7 +59,7 @@ const Services = () => {
       {/* Collaborate&numbers section ends*/}
 
       {/* Testimonals section starts*/}
-      <section className="min-h-screen my-3 lg:my-10 mx-3 lg:mx-10">
+      <section className="min-h-screen my-5 lg:my-10 mx-3 lg:mx-10">
         <div className="flex flex-col place-items-center">
           <div className="text-gray-100 pb-10">
             <h1 className="text-5xl font-semibold text-center mb-5">

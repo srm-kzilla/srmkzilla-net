@@ -33,8 +33,8 @@ const Carousel = ({ slides }) => {
           <div
             className={
               index === current
-                ? "opacity-1 transition transform scale-105 duration-100"
-                : "transition-opacity"
+                ? "opacity-1 transition transform scale-105 duration-50"
+                : "transition-opacity "
             }
             key={index}
           >

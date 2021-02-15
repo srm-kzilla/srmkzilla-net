@@ -72,7 +72,7 @@ const Navbar = () => {
                   Events
                 </div>
               </Link>
-              <Link href="/ourservices">
+              <Link href="/services">
                 <div className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent">
                   Our Services
                 </div>
@@ -86,7 +86,7 @@ const Navbar = () => {
                 name="What's New?"
                 class="absolute md:left-80 md:my-12 md:mx-10 md:top-3 py-2 w-48 rounded-md shadow-md bg-baseBlack cursor-pointer"
                 items={[
-                  { label: "Projects", link: "/" },
+                  { label: "Projects", link: "/projects" },
                   {
                     label: "Youtube",
                     link: "/",

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useLayoutEffect, Component } from "react";
-import { Navbar } from "../shared/components";
+import Navbar from "../shared/components/navbar";
 import Card_home from "../shared/components/card_home";
 import Message from "../shared/components/Message";
 import Bounce from "react-reveal/Bounce";
@@ -122,7 +122,6 @@ const Home = () => {
                 desc={card.desc}
               />
             ))}
-            
           </div>
         </div>
       </section>
@@ -133,9 +132,9 @@ const Home = () => {
         <div>
           <h1 className="text-white text-center text-4xl">How we work</h1>
           <Bounce>
-          <div>
-            <Message color="baseBlue" />
-          </div>
+            <div>
+              <Message color="baseBlue" />
+            </div>
           </Bounce>
         </div>
 
@@ -263,9 +262,9 @@ const Home = () => {
 
         {/* design */}
         <Bounce>
-        <div className="lg:mt-0 sm:mt-24 mt-14">
-          <Message color="baseBlue" />
-        </div>
+          <div className="lg:mt-0 sm:mt-24 mt-14">
+            <Message color="baseBlue" />
+          </div>
         </Bounce>
 
         <div className="flex flex-wrap w-full mt-52 relative">
@@ -392,9 +391,9 @@ const Home = () => {
         </div>
         {/* design end */}
         <Bounce>
-        <div className="lg:mt-auto sm:mt-16 mt-10">
-          <Message color="orange300" />
-        </div>
+          <div className="lg:mt-auto sm:mt-16 mt-10">
+            <Message color="orange300" />
+          </div>
         </Bounce>
 
         <div className="flex flex-wrap w-full -mt-10">
@@ -403,28 +402,32 @@ const Home = () => {
               Technical<span className="text-orange600 text-4xl">.</span>
             </h1>
             <div>
-            <p className="text-white text-lg my-4">
-              <p className='text-white text-xl font-semibold'>Lorem Ipsum</p>
-              Praesentium reprehenderit mollitia nihil sunt modi. Ad eaque,
-              labore dolorem, debitis id eum cum adipisci impedit quos mollitia
-              earum, voluptate natus. Voluptas.
-            </p>
+              <p className="text-white text-lg my-4">
+                <p className="text-white text-xl font-semibold">Lorem Ipsum</p>
+                Praesentium reprehenderit mollitia nihil sunt modi. Ad eaque,
+                labore dolorem, debitis id eum cum adipisci impedit quos
+                mollitia earum, voluptate natus. Voluptas.
+              </p>
             </div>
             <div>
-            <p className="text-white text-lg my-4">
-              <p className='text-white text-xl font-semibold'>Lorem Ipsum</p>
-              <p className='text-lg font-normal'>Praesentium reprehenderit mollitia nihil sunt modi. Ad eaque,
-              labore dolorem, debitis id eum cum adipisci impedit quos mollitia
-              earum, voluptate natus. Voluptas.</p>
-            </p>
+              <p className="text-white text-lg my-4">
+                <p className="text-white text-xl font-semibold">Lorem Ipsum</p>
+                <p className="text-lg font-normal">
+                  Praesentium reprehenderit mollitia nihil sunt modi. Ad eaque,
+                  labore dolorem, debitis id eum cum adipisci impedit quos
+                  mollitia earum, voluptate natus. Voluptas.
+                </p>
+              </p>
             </div>
             <div>
-            <p className="text-white text-lg my-4">
-              <p className='text-white text-xl font-semibold'>Lorem Ipsum</p>
-              <p className='text-lg text-white font-normal'>Praesentium reprehenderit mollitia nihil sunt modi. Ad eaque,
-              labore dolorem, debitis id eum cum adipisci impedit quos mollitia
-              earum, voluptate natus. Voluptas.</p>
-            </p>
+              <p className="text-white text-lg my-4">
+                <p className="text-white text-xl font-semibold">Lorem Ipsum</p>
+                <p className="text-lg text-white font-normal">
+                  Praesentium reprehenderit mollitia nihil sunt modi. Ad eaque,
+                  labore dolorem, debitis id eum cum adipisci impedit quos
+                  mollitia earum, voluptate natus. Voluptas.
+                </p>
+              </p>
             </div>
           </div>
           <div className="lg:mt-24 ml-6 mt-0">
@@ -438,7 +441,6 @@ const Home = () => {
       </section>
       {/* Process section ends */}
       <Footer />
-     
     </div>
   );
 };
