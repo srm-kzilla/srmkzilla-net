@@ -3,7 +3,7 @@ import React from "react";
 const Testimonals = () => {
   return (
     <>
-      <div className="container flex flex-col flex-wrap bg-baseBlack2 rounded-2xl text-white text-xl py-1">
+      <div className="container flex flex-col flex-wrap bg-black-200 rounded-2xl text-white text-xl py-1">
         <div className="flex flex-col lg:flex-row">
           <div className="flex flex-col">
             <div className="rounded-full">

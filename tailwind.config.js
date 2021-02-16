@@ -4,14 +4,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        black: {
+          DEFAULT: "#000",
+          100: "#1F1E24",
+          200: "#151519",
+        },
         orange600: "#E9573E",
         orange300: "#FF644E",
         baseBlue: "#58ACF5",
-        baseBlack: "#15131c",
-        baseBlack2: "#151519",
-        baseBlack200: "#1F1E24",
         baseGray: "#C4C4C4",
-        newBlack: "#1F1E24",
         icon: "#262430",
       },
       backgroundImage: (theme) => ({

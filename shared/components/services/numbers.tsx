@@ -21,7 +21,7 @@ export var ProgressBar = (props: ProgressProps) => {
     <>
       <div className="hidden xl:block">
         <div
-          className="bg-baseBlack rounded-md flex my-3 mx-5"
+          className="bg-black-200 rounded-md flex my-3 mx-5"
           style={{ width: props.width }}
         >
           <div
@@ -38,7 +38,7 @@ export var ProgressBar = (props: ProgressProps) => {
       </div>
       <div className="xl:hidden">
         <div
-          className="bg-baseBlack rounded-md flex my-1 mx-1"
+          className="bg-black-200 rounded-md flex my-1 mx-1"
           style={{ width: props.widthmob }}
         >
           <div
@@ -78,7 +78,7 @@ const Numbers = () => {
         headers: { "content-type": "application/json" },
       })
       .then((res) => {
-        setRepos(res.data.public_repos || 31);
+        setRepos(res.data.public_repos);
       })
       .catch((err) => {
         console.log(err);

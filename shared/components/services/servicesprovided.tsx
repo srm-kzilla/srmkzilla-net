@@ -15,19 +15,19 @@ const services = [
     title: "Web Designing",
     desc: `Web design is the digital face of your organization. Quality web design helps you keep your leads on your page. The domain of web designing is one that is dynamic and is only limited by the designer's imagination. Hence, at SRMKZILLA, we strive to create aesthetically pleasing designs with a mint of creativity while still keeping up with the latest trends.`,
     img_light: "/images/webdes.png",
-    img_dark: "/images/Black_webdes.png",
+    img_dark: "/images/Black-webdes.png",
   },
   {
     title: "Graphics Designing",
     desc: `Design is thinking made visual. If the aesthetics are not spot-on, your audience will not give you a second glance. At SRMKZILLA, our Graphic Designing team ensures their outputs are a blend of knock-out graphics and smart marketing strategies. From a wide range of logos, brochures, banners, to design that empowers your web identity, we bring art to the cart. You call it illustration, we call it a sweeping victory.`,
     img_light: "/images/gfx.png",
-    img_dark: "/images/Black_gfx.png",
+    img_dark: "/images/Black-gfx.png",
   },
   {
     title: "App Development",
     desc: `With the world at your fingertips, we expertise in creating unmatched user-experience for your digital solutions. We design, develop and customize cross-platform mobile applications that are robust, secure, and user-friendly. Whether you need applications for entertainment, gaming, web browsing, or communication, we are here to bring it to reality.`,
     img_light: "/images/app.png",
-    img_dark: "/images/Black_app.png",
+    img_dark: "/images/Black-app.png",
   },
 ];
 
@@ -36,7 +36,7 @@ const ServicesProvided = () => {
 
   return (
     <>
-      <div className="bg-baseBlack2 rounded-2xl text-white text-xl container py-10">
+      <div className="bg-black-200 rounded-2xl text-white text-xl container py-10">
         <h1 className="text-5xl font-semibold text-gray-100 text-center m-5">
           Services we provide
         </h1>
@@ -66,7 +66,7 @@ const ServicesProvided = () => {
                       className={`${
                         activeIndex == index
                           ? "bg-orange300 text-black"
-                          : "bg-baseBlack200 text-white"
+                          : "bg-black-100 text-white"
                       } lg:p-10  p-5 focus:outline-none hover:bg-orange300 cursor-pointer  rounded-2xl }`}
                     >
                       <img
@@ -98,7 +98,7 @@ const ServicesProvided = () => {
               })}
             </div>
 
-            <div className="lg:p-10  p-5 bg-baseBlack200 rounded-2xl mt-5">
+            <div className="lg:p-10  p-5 bg-black-100 rounded-2xl mt-5">
               <p className="my-2 font-bold">Others</p>
               <p className="my-2">
                 We are also expanding our domains with Machine Learning,

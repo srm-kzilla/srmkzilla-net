@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const CardProject = (props: { name: String; image: string; desc: String }) => {
   return (
     <motion.div
-      className="bg-baseBlack sm:w-80 w-72 rounded-xl mx-6 p-2 mb-10 shadow-box"
+      className="bg-black-200 sm:w-80 w-72 rounded-xl mx-6 p-2 mb-10 shadow-box"
       whileHover={{ scale: 1.05 }}
     >
       <div className="image h-52 rounded-xl overflow-hidden">

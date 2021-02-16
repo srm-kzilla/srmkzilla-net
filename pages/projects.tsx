@@ -35,7 +35,7 @@ const projects = () => {
         <title>SRMKZILLA | Projects</title>
         <link rel="icon" href="./images/kzillalogo.png" />
       </Head>
-      <div className="h-screen bg-baseBlack">
+      <div className="h-screen bg-black-200">
         <Navbar />
       </div>
       <div className="bg-black pt-28">
