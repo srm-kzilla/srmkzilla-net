@@ -21,7 +21,6 @@ const Navbar = () => {
 
   return (
     <nav className="nav fixed z-50 w-full">
-
       <div className="container text-white px-6 py-3">
         <div className="md:flex md:items-center md:justify-between">
           <div className="flex justify-between items-center">
@@ -36,7 +35,7 @@ const Navbar = () => {
                   name="search"
                   className={`${
                     search ? "block" : "hidden"
-                  } px-1 rounded-2xl bg-baseBlack border focus:outline-none`}
+                  } px-1 rounded-2xl bg-black-200 border focus:outline-none`}
                 />
                 <button
                   className="mx-4 focus:outline-none"
@@ -73,28 +72,28 @@ const Navbar = () => {
                   Events
                 </div>
               </Link>
-              <Link href="/">
+              <Link href="/services">
                 <div className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent">
                   Our Services
                 </div>
               </Link>
-              <Link href="/">
+              <Link href="/team">
                 <div className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent">
                   Team
                 </div>
               </Link>
               <Dropdown
                 name="What's New?"
-                class="absolute md:left-80 md:my-12 md:mx-10 md:top-3 py-2 w-48 rounded-md shadow-md bg-baseBlack cursor-pointer"
+                class="absolute md:left-80 md:my-12 md:mx-10 md:top-3 py-2 w-48 rounded-md shadow-md bg-black-200 cursor-pointer"
                 items={[
-                  { label: "Projects", link: "/" },
+                  { label: "Projects", link: "/projects" },
                   {
                     label: "Youtube",
                     link: "/",
                   },
                   {
                     label: "Projects",
-                    link: "/",
+                    link: "/projects",
                   },
                   {
                     label: "Others",
@@ -111,7 +110,7 @@ const Navbar = () => {
               name="search"
               className={`${
                 search ? "block" : "hidden"
-              } rounded-2xl h-8 md:my-1 bg-baseBlack border focus:outline-none`}
+              } rounded-2xl h-8 md:my-1 bg-black-200 border focus:outline-none`}
             />
             <button
               className="mx-5 md:my-2 focus:outline-none"
@@ -123,7 +122,7 @@ const Navbar = () => {
             <div>
               <Dropdown
                 name="En"
-                class="origin-top-right absolute right-1 top-5 my-3 w-48 rounded-md shadow-md py-1 bg-baseBlack cursor-pointer"
+                class="origin-top-right absolute right-1 top-5 my-3 w-48 rounded-md shadow-md py-1 bg-black-200 cursor-pointer"
                 items={[
                   { label: "En", link: "/" },
                   { label: "Sp", link: "/" },
