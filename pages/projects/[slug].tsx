@@ -32,7 +32,7 @@ const Project = ({title, desc, link, image, features, instagram, youtube, techst
       <div className="h-screen">
         <Navbar />
         <img
-          className="absolute top-0 right-0 h-screen z-0"
+          className="absolute top-0 right-0 sm:h-screen h-2/3 z-0"
           src="../images/bgpro.png"
           alt=""
         />
@@ -86,7 +86,7 @@ const Project = ({title, desc, link, image, features, instagram, youtube, techst
             </div>
           </div>
           <div className="lg:w-2/4 lg:mt-0 sm:mt-64 mt-44 w-full">
-            <div className="xl:w-4/5 lg:w-5/6 w-full mr-auto sm:mt-0 mt-20 py-10 sm:px-10 px-5 rounded-xl whatitdoes">
+            <div className="xl:w-4/5 lg:w-5/6 w-full mr-auto sm:mt-0 mt-20 py-10 sm:px-10 px-5 rounded-xl border-borderBlue border">
               <h1 className="text-white text-3xl mb-5 font-medium text-center">
                 What it does
               </h1>
@@ -137,7 +137,7 @@ export const getStaticProps = async (context: { params: { slug: any; }; }) => {
     return {
       notFound: true
     }
-  } else {
+  } else{
     return {
       props: {
         desc: post.description,

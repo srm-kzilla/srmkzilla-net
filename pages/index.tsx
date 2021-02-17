@@ -1,4 +1,4 @@
-import React, { useState, useRef, useLayoutEffect, Component } from "react";
+import React, { useState, useRef, useLayoutEffect, Component, useEffect } from "react";
 import { Navbar } from "../shared/components";
 import Card_home from "../shared/components/card_home";
 import Message from "../shared/components/Message";
@@ -7,6 +7,7 @@ import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 import Slide from "react-reveal/Slide";
 import Head from "next/head";
+import sanityClient from "../shared/client"
 import Carousel from "react-elastic-carousel";
 
 import { InView, useInView } from "react-intersection-observer";
@@ -79,6 +80,27 @@ const container = {
 };
 
 const Home = () => {
+
+  const [newCard, setNewCard] = useState(null)
+
+  useEffect(()=>{
+    sanityClient
+      .fetch(`*[_type == "whatsNew"]{
+        title,
+        picture{
+          asset->{
+            _id,
+            url
+          },
+          alt
+        },
+        description,
+        link
+    }`)
+      .then((data)=> setNewCard(data))
+      .catch(console.error)
+  }, []);
+
   return (
     <div className="bg-black overflow-hidden">
       <Head>
@@ -115,12 +137,12 @@ const Home = () => {
           <h1 className="text-white text-center text-4xl">What's New</h1>
 
           <div className="flex flex-wrap items-center justify-center sm:mt-20 mt-14 pb-10">
-            {cardData.map((card) => (
+            {newCard && newCard.map((card: { title: String; picture: { asset: { url: string; }; }; description: String; }) => (
               <Card_home
                 name={card.title}
-                image={card.image}
-                desc={card.desc}
-              />
+                image={card.picture.asset.url}
+                desc={card.description}
+              />  
             ))}
             
           </div>

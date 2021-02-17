@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const CardProject = (props: { name: String; image: string; desc: String }) => {
+const CardProject = (props: { name: String; image: any; desc: String }) => {
   return (
     <motion.div
       className="bg-baseBlack sm:w-80 w-72 rounded-xl mx-6 p-2 mb-10 shadow-box"

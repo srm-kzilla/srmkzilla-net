@@ -9,27 +9,7 @@ import cardData from "../shared/test";
 import sanityClient from "../shared/client"
 import BlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url";
-
-const serviceData = [
-  {
-    title: "First",
-    image: "./images/testImage.png",
-    desc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis sapiente enim pariatur blanditiis, tempore quia distinctio nihil atque deserunt eius repellendus. Cumque veniam corrupti",
-  },
-  {
-    title: "Second",
-    image: "./images/testImage.png",
-    desc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis sapiente enim pariatur blanditiis, tempore quia distinctio nihil atque deserunt eius repellendus. Cumque veniam corrupti",
-  },
-  {
-    title: "third",
-    image: "./images/testImage.png",
-    desc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis sapiente enim pariatur blanditiis, tempore quia distinctio nihil atque deserunt eius repellendus. Cumque veniam corrupti",
-  },
-];
+import Service from "../shared/components/services";
 
 const projects = () => {
 
@@ -53,7 +33,7 @@ const projects = () => {
     
   return (
     <div>
-     {console.log(projectData)}
+
       <Head>
         <title>SRMKZILLA | Projects</title>
         <link rel="icon" href="./images/kzillalogo.png" />
@@ -81,25 +61,12 @@ const projects = () => {
           ))}
          
         </div>
-        <div className="mt-36">
-          <h1 className="text-white text-center text-4xl">Services</h1>
-          <p className="text-white text-center font-light text-xl mt-3 sm:px-auto px-8">
-            Projects that we have done for others
-          </p>
-          <div className="flex flex-wrap items-center justify-center sm:mt-20 mt-14 pb-10">
-            {serviceData.map((card) => (
-              <CardProject
-                name={card.title}
-                image={card.image}
-                desc={card.desc}
-              />
-            ))}
-          </div>
-        </div>
+        <Service />
       </div>
     </div>
   );
 };
+
 
 
 export default projects;
