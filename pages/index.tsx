@@ -1,5 +1,5 @@
 import React, { useState, useRef, useLayoutEffect, Component } from "react";
-import { Navbar } from "../shared/components";
+import Navbar from "../shared/components/navbar";
 import Card_home from "../shared/components/card_home";
 import Message from "../shared/components/Message";
 import Bounce from "react-reveal/Bounce";
@@ -111,7 +111,7 @@ const Home = () => {
 
       {/* New Section start */}
       <section className="works">
-        <div className="bg-baseBlack sm:pt-32 pt-24">
+        <div className="bg-black-200 sm:pt-32 pt-24">
           <h1 className="text-white text-center text-4xl">What's New</h1>
 
           <div className="flex flex-wrap items-center justify-center sm:mt-20 mt-14 pb-10">
@@ -128,7 +128,7 @@ const Home = () => {
       {/* New section ends */}
 
       {/* {Process aection starts} */}
-      <section className="process bg-baseBlack pt-10 min-h-screen lg:px-40 md:px-32 px-10">
+      <section className="process bg-black-200 pt-10 min-h-screen lg:px-40 md:px-32 px-10">
         <div>
           <h1 className="text-white text-center text-4xl">How we work</h1>
           <Bounce>
