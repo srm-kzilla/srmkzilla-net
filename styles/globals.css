@@ -29,7 +29,7 @@ a {
 
 .videoCard{
   background: rgba(255, 255, 255, 0.2);
-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .whatitdoes{
@@ -37,6 +37,8 @@ backdrop-filter: blur(10px);
 
 background: rgba(31, 30, 36, 0.1);
 }
+
+
 
 
 @tailwind utilities;

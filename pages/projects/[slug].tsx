@@ -10,7 +10,7 @@ import BlockContent from "@sanity/block-content-to-react";
 import InstagramEmbed from "react-instagram-embed";
 import Tilt from "react-parallax-tilt";
 
-const Project = ({title, desc, link, image, features, instagram, youtube}) => {
+const Project = ({title, desc, link, image, features, instagram, youtube, techstack}) => {
   const [imageUrl, setImageUrl] = useState('');
 
   useEffect(() => {
@@ -99,7 +99,19 @@ const Project = ({title, desc, link, image, features, instagram, youtube}) => {
         </div>
       </section>
       <div>
-        
+        <h1 className="text-white text-center text-5xl mt-24 mb-5">Tech Stack</h1>
+        <div className="flex flex-wrap items-center justify-center px-24">
+          {/* <img src={`/images/${stack}.png`} alt=""/> */}
+          {techstack.map((tech: any) => (
+              <div className='mx-5 my-5'><img src={`/images/${tech}.png`} alt=""/></div>
+            ))}
+            
+        </div>
+        <div className='text-center'>
+            <button>
+                <p className='bg-orange300 px-5 py-2 rounded-full font-medium lg:my-5 my-10'>Explore {title}</p>
+            </button>
+        </div>
       </div>
     </div>
   );
@@ -134,7 +146,8 @@ export const getStaticProps = async (context: { params: { slug: any; }; }) => {
         link: post.link,
         features: post.features,
         instagram: post.instagram,
-        youtube: post.youtube
+        youtube: post.youtube,
+        techstack: post.techstack
       }
     }
   }

@@ -67,18 +67,7 @@ const projects = () => {
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus illo
         </p>
         <div className="flex flex-wrap items-center justify-center lg:px-36 md:px-24 px-10 mt-4">
-          {/* {cardData.map((card) => (
-            <Link href="/projects/[slug]" as={`/projects/${card.title}`}>
-              <a>
-                <ProjectIcon
-                  icon={card.logo}
-                  title={card.title}
-                  upcomming={card.new}
-                />
-              </a>
-            </Link>
-          ))} */}
-
+          
           {projectData && projectData.map((project: { title: String; logo: { asset: { url: string | undefined; }; }; }, index: any) => (
             <Link href="/projects/[slug]" as={`/projects/${project.title}`}>
               <a>
