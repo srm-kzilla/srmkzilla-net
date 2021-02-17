@@ -10,8 +10,7 @@ import BlockContent from "@sanity/block-content-to-react";
 import InstagramEmbed from "react-instagram-embed";
 import Tilt from "react-parallax-tilt";
 
-const Project = ({title, desc, link, image, features, codeI, codeY}) => {
-
+const Project = ({title, desc, link, image, features, instagram, youtube}) => {
   const [imageUrl, setImageUrl] = useState('');
 
   useEffect(() => {
@@ -39,11 +38,6 @@ const Project = ({title, desc, link, image, features, codeI, codeY}) => {
         />
         <div className="flex flex-wrap w-screen items-center content-center">
           <div className="z-10 lg:w-2/4 sm:px-24 px-12 sm:mt-40 mt-20 mx-auto">
-            {/* <img
-              className="lg:relative lg:mx-0 mx-auto"
-              src="../images/xyz.png"
-              alt=""
-            /> */}
              {imageUrl && <img className="lg:relative lg:mx-0 mx-auto" src={imageUrl} />}
             <h1 className="text-white text-5xl lg:text-left text-center font-semibold mt-10">
               {title}
@@ -64,7 +58,7 @@ const Project = ({title, desc, link, image, features, codeI, codeY}) => {
             <div className="absolute videoCard h-64 z-0 w-2/3 left-2/4 top-2/3 transform -rotate-3 rounded-lg sm:block hidden -translate-y-1/2 -translate-x-1/2"></div>
             <Tilt>
               <div className="absolute bg-white sm:h-64 h-56 z-20 sm:w-2/3 w-3/4 sm:mx-auto left-2/4 top-3/4 transform  rounded-lg -translate-y-36 sm:-translate-x-64  -translate-x-1/2 overflow-hidden">
-              <iframe width="100%" height="100%" src={`https://www.youtube.com/embed/${codeY}`} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+              <iframe width="100%" height="100%" src={youtube} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
               </div>
             </Tilt>
           </div>
@@ -76,7 +70,7 @@ const Project = ({title, desc, link, image, features, codeI, codeY}) => {
             <div className=" absolute overflow-hidden sm:w-96 w-full sm:h-96 h-72 lg:right-16 right-auto top-2/3 transform -translate-y-2/3 lg:mt-0 sm:mt-20 mt-0 rounded-xl">
               <div className="">
                 <InstagramEmbed
-                  url={`https://www.instagram.com/p/${codeI}/`}
+                  url={instagram}
                   clientAccessToken="704509423574860|d6698d49ebaef9f1a2de687b73b3bcd5"
                   className="absolute w-full -top-12 transform -translate-y-1"
                   hideCaption={true}
@@ -97,22 +91,23 @@ const Project = ({title, desc, link, image, features, codeI, codeY}) => {
                 What it does
               </h1>
               <p className="text-white font-light">
-                <BlockContent blocks={features} />
+                {features && <BlockContent blocks={features} />}
+               
               </p>
             </div>
           </div>
         </div>
       </section>
       <div>
-        {/* <h1 className="text-white text-center text-4xl mt-24">Tech Stack</h1> */}
+        
       </div>
     </div>
   );
 };
 
 
-export const getServerSideProps = async (pageContext: { query: { slug: any; }; }) => {
-  const pageSlug = pageContext.query.slug;
+export const getStaticProps = async (context: { params: { slug: any; }; }) => {
+  const pageSlug = context.params.slug;
   
   if (!pageSlug) {
     return {
@@ -138,11 +133,34 @@ export const getServerSideProps = async (pageContext: { query: { slug: any; }; }
         image: post.logo,
         link: post.link,
         features: post.features,
-        codeI: post.instagram,
-        codeY: post.youtube
+        instagram: post.instagram,
+        youtube: post.youtube
       }
     }
   }
 };
+
+export async function getStaticPaths(): Promise<unknown> {
+  
+  const query = encodeURIComponent(`*[ _type == "project"]{title,slug}`);
+  const url = `https://4orhaocq.api.sanity.io/v1/data/query/production?query=${query}`;
+
+  const result = await fetch(url).then(res => res.json());
+  const path = result.result;
+
+  const paths = path.map((project: { title: any; }) => {
+    return { params: { slug: project.title} };
+  });
+  if (!paths) {
+    return {
+      notFound: true
+    }
+  } else {
+    return {
+       paths,
+       fallback: false
+    }
+  }
+}
 
 export default Project;
