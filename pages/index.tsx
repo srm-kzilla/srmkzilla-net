@@ -479,6 +479,7 @@ const Home = () => {
         </div>
       </section>
       {/* Process section ends */}
+      <Footer />
     </div>
   );
 };
