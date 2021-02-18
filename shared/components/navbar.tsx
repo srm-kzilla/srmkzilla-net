@@ -2,13 +2,15 @@ import React, { useState, useEffect } from "react";
 import { Search, Menu } from "react-feather";
 import Link from "next/link";
 import Dropdown from "./dropdown";
+import { motion } from "framer-motion";
+
 
 const Navbar = () => {
   const [search, setSearch] = useState(false);
   const [open, setOpen] = useState(false);
 
   const searchshow = () => {
-    if (window.scrollY >= 600) {
+    if (window.scrollY >= 200) {
       setSearch(true);
     } else {
       setSearch(false);
@@ -20,7 +22,11 @@ const Navbar = () => {
   });
 
   return (
-    <nav className="nav fixed z-50 w-full">
+    <nav
+      className={`${search ? "bg-black" : (open ? "bg-black" : "nav")} fixed z-50 w-full`}
+      ref={ref}
+    >
+
       <div className="container text-white px-6 py-3">
         <div className="md:flex md:items-center md:justify-between">
           <div className="flex justify-between items-center">
@@ -69,7 +75,7 @@ const Navbar = () => {
               </Link>
               <Link href="/">
                 <div className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent">
-                  Events
+                  About Us
                 </div>
               </Link>
               <Link href="/services">
@@ -86,9 +92,8 @@ const Navbar = () => {
                 name="What's New?"
                 class="absolute md:left-80 md:my-12 md:mx-10 md:top-3 py-2 w-48 rounded-md shadow-md bg-black-200 cursor-pointer"
                 items={[
-                  { label: "Projects", link: "/projects" },
                   {
-                    label: "Youtube",
+                    label: "Events",
                     link: "/",
                   },
                   {
@@ -96,7 +101,7 @@ const Navbar = () => {
                     link: "/projects",
                   },
                   {
-                    label: "Others",
+                    label: "Everything",
                     link: "/",
                   },
                 ]}
@@ -118,19 +123,6 @@ const Navbar = () => {
             >
               <Search size={16} />
             </button>
-
-            <div>
-              <Dropdown
-                name="En"
-                class="origin-top-right absolute right-1 top-5 my-3 w-48 rounded-md shadow-md py-1 bg-black-200 cursor-pointer"
-                items={[
-                  { label: "En", link: "/" },
-                  { label: "Sp", link: "/" },
-                  { label: "Hn", link: "/" },
-                ]}
-                nameClass="flex sm:flex-row focus:outline-none md:my-2"
-              />
-            </div>
           </div>
         </div>
       </div>

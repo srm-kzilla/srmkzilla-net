@@ -14,10 +14,10 @@ const make = {
 
 const Icons = () => {
   return (
-    <div className="absolute top-24 items-center  h-screen w-full overflow-hidden z-20 lg:block hidden">
+    <div className="absolute top-24 items-center  h-screen w-screen overflow-hidden z-20 lg:block hidden">
       /
       <motion.svg
-        className="ml-24"
+        className="absolute w-screen overflow-hidden left-2/4 transform -translate-x-1/2"
         variants={make}
         initial="hidden"
         animate="show"

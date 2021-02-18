@@ -3,8 +3,8 @@ import {motion} from 'framer-motion'
 
 const Footer = () => {
     return (
-        <div className='relative'>
-            
+        <div className='relative w-screen'>
+
         </div>
     )
 }

@@ -11,6 +11,7 @@ const ProjectIcon = (props: {
   return (
     <motion.div
       whileHover={{ scale: 1.05 }}
+
       className="bg-black-200 h-28 group w-28 sm:mx-16 mx-8 mt-20 rounded-full relative hover:shadow-icon cursor-pointer"
     >
       <img
@@ -20,6 +21,7 @@ const ProjectIcon = (props: {
       />
       <div className="absolute opacity-0 group-hover:opacity-100 transition-opacity rounded-lg left-3/4 -mt-14">
         {!props.upcomming && (
+
           <div className="text-white text-lg bg-black-200 rounded-lg px-3 py-1 relative">
             {props.title}
             <div className="absolute left-2">
