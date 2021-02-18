@@ -10,20 +10,39 @@ import BlockContent from "@sanity/block-content-to-react";
 import InstagramEmbed from "react-instagram-embed";
 import Tilt from "react-parallax-tilt";
 
-const Project = ({title, desc, link, image, features, instagram, youtube, techstack}) => {
-  const [imageUrl, setImageUrl] = useState('');
+type Props = {
+  title: String;
+  image: any;
+  desc: Text;
+  link: URL;
+  features: any;
+  instagram: any;
+  youtube: any;
+  techstack: [];
+};
+
+const Project = ({
+  title,
+  desc,
+  link,
+  image,
+  features,
+  instagram,
+  youtube,
+  techstack,
+}: Props) => {
+  const [imageUrl, setImageUrl] = useState("");
 
   useEffect(() => {
     const imgBuilder = imageUrlBuilder({
-      projectId: '4orhaocq',
-      dataset: 'production',
+      projectId: "4orhaocq",
+      dataset: "production",
     });
 
     setImageUrl(imgBuilder.image(image));
   }, [image]);
 
   return (
-    
     <div className="bg-black overflow-hidden">
       <Head>
         <title>SRMKZILLA</title>
@@ -38,13 +57,13 @@ const Project = ({title, desc, link, image, features, instagram, youtube, techst
         />
         <div className="flex flex-wrap w-screen items-center content-center">
           <div className="z-10 lg:w-2/4 sm:px-24 px-12 sm:mt-40 mt-20 mx-auto">
-             {imageUrl && <img className="lg:relative lg:mx-0 mx-auto" src={imageUrl} />}
+            {imageUrl && (
+              <img className="lg:relative lg:mx-0 mx-auto" src={imageUrl} />
+            )}
             <h1 className="text-white text-5xl lg:text-left text-center font-semibold mt-10">
               {title}
             </h1>
-            <p className="text-white lg:text-left text-center mt-4">
-              {desc}
-            </p>
+            <p className="text-white lg:text-left text-center mt-4">{desc}</p>
             <div className="mt-7 lg:text-left text-center">
               <button className="px-5 py-3 rounded-full bg-baseBlack text-white text-sm mb-5">
                 View Project
@@ -58,7 +77,14 @@ const Project = ({title, desc, link, image, features, instagram, youtube, techst
             <div className="absolute videoCard h-64 z-0 w-2/3 left-2/4 top-2/3 transform -rotate-3 rounded-lg sm:block hidden -translate-y-1/2 -translate-x-1/2"></div>
             <Tilt>
               <div className="absolute bg-white sm:h-64 h-56 z-20 sm:w-2/3 w-3/4 sm:mx-auto left-2/4 top-3/4 transform  rounded-lg -translate-y-36 sm:-translate-x-64  -translate-x-1/2 overflow-hidden">
-              <iframe width="100%" height="100%" src={youtube} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={youtube}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
             </Tilt>
           </div>
@@ -77,10 +103,6 @@ const Project = ({title, desc, link, image, features, instagram, youtube, techst
                   containerTagName="div"
                   protocol=""
                   injectScript
-                  onLoading={() => {}}
-                  onSuccess={() => {}}
-                  onAfterRender={() => {}}
-                  onFailure={() => {}}
                 />
               </div>
             </div>
@@ -92,52 +114,56 @@ const Project = ({title, desc, link, image, features, instagram, youtube, techst
               </h1>
               <p className="text-white font-light">
                 {features && <BlockContent blocks={features} />}
-               
               </p>
             </div>
           </div>
         </div>
       </section>
       <div>
-        <h1 className="text-white text-center text-5xl mt-24 mb-5">Tech Stack</h1>
+        <h1 className="text-white text-center text-5xl mt-24 mb-5">
+          Tech Stack
+        </h1>
         <div className="flex flex-wrap items-center justify-center px-24">
-          {/* <img src={`/images/${stack}.png`} alt=""/> */}
           {techstack.map((tech: any) => (
-              <div className='mx-5 my-5'><img src={`/images/${tech}.png`} alt=""/></div>
-            ))}
-            
+            <div className="mx-5 my-5">
+              <img src={`/images/${tech}.png`} alt="" />
+            </div>
+          ))}
         </div>
-        <div className='text-center'>
-            <button>
-                <p className='bg-orange300 px-5 py-2 rounded-full font-medium lg:my-5 my-10'>Explore {title}</p>
-            </button>
+        <div className="text-center">
+          <button>
+            <p className="bg-orange300 px-5 py-2 rounded-full font-medium lg:my-5 my-10">
+              Explore {title}
+            </p>
+          </button>
         </div>
       </div>
     </div>
   );
 };
 
-
-export const getStaticProps = async (context: { params: { slug: any; }; }) => {
+export const getStaticProps = async (context: { params: { slug: any } }) => {
   const pageSlug = context.params.slug;
-  
+
   if (!pageSlug) {
     return {
-      notFound: true
-    }
+      notFound: true,
+    };
   }
 
-  const query = encodeURIComponent(`*[ _type == "project" && slug.current == "${pageSlug}" ]`);
+  const query = encodeURIComponent(
+    `*[ _type == "project" && slug.current == "${pageSlug}" ]`
+  );
   const url = `https://4orhaocq.api.sanity.io/v1/data/query/production?query=${query}`;
 
-  const result = await fetch(url).then(res => res.json());
+  const result = await fetch(url).then((res) => res.json());
   const post = result.result[0];
 
   if (!post) {
     return {
-      notFound: true
-    }
-  } else{
+      notFound: true,
+    };
+  } else {
     return {
       props: {
         desc: post.description,
@@ -147,32 +173,31 @@ export const getStaticProps = async (context: { params: { slug: any; }; }) => {
         features: post.features,
         instagram: post.instagram,
         youtube: post.youtube,
-        techstack: post.techstack
-      }
-    }
+        techstack: post.techstack,
+      },
+    };
   }
 };
 
 export async function getStaticPaths(): Promise<unknown> {
-  
   const query = encodeURIComponent(`*[ _type == "project"]{title,slug}`);
   const url = `https://4orhaocq.api.sanity.io/v1/data/query/production?query=${query}`;
 
-  const result = await fetch(url).then(res => res.json());
+  const result = await fetch(url).then((res) => res.json());
   const path = result.result;
 
-  const paths = path.map((project: { title: any; }) => {
-    return { params: { slug: project.title} };
+  const paths = path.map((project: { title: any }) => {
+    return { params: { slug: project.title } };
   });
   if (!paths) {
     return {
-      notFound: true
-    }
+      notFound: true,
+    };
   } else {
     return {
-       paths,
-       fallback: false
-    }
+      paths,
+      fallback: false,
+    };
   }
 }
 

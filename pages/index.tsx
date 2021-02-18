@@ -1,4 +1,10 @@
-import React, { useState, useRef, useLayoutEffect, Component, useEffect } from "react";
+import React, {
+  useState,
+  useRef,
+  useLayoutEffect,
+  Component,
+  useEffect,
+} from "react";
 import { Navbar } from "../shared/components";
 import Card_home from "../shared/components/card_home";
 import Message from "../shared/components/Message";
@@ -7,7 +13,7 @@ import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 import Slide from "react-reveal/Slide";
 import Head from "next/head";
-import sanityClient from "../shared/client"
+import sanityClient from "../shared/client";
 import Carousel from "react-elastic-carousel";
 
 import { InView, useInView } from "react-intersection-observer";
@@ -21,27 +27,6 @@ import {
 import Icons from "../shared/components/icons";
 import Homecarousel from "../shared/components/home_carousel";
 import Footer from "../shared/components/footer";
-
-const cardData = [
-  {
-    title: "First",
-    image: "./images/testImage.png",
-    desc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis sapiente enim pariatur blanditiis, tempore quia distinctio nihil atque deserunt eius repellendus. Cumque veniam corrupti",
-  },
-  {
-    title: "Second",
-    image: "./images/testImage.png",
-    desc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis sapiente enim pariatur blanditiis, tempore quia distinctio nihil atque deserunt eius repellendus. Cumque veniam corrupti",
-  },
-  {
-    title: "third",
-    image: "./images/testImage.png",
-    desc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis sapiente enim pariatur blanditiis, tempore quia distinctio nihil atque deserunt eius repellendus. Cumque veniam corrupti",
-  },
-];
 
 const container = {
   hidden: { x: 0, y: 0 },
@@ -80,12 +65,12 @@ const container = {
 };
 
 const Home = () => {
+  const [newCard, setNewCard] = useState(null);
 
-  const [newCard, setNewCard] = useState(null)
-
-  useEffect(()=>{
+  useEffect(() => {
     sanityClient
-      .fetch(`*[_type == "whatsNew"]{
+      .fetch(
+        `*[_type == "whatsNew"]{
         title,
         picture{
           asset->{
@@ -96,9 +81,10 @@ const Home = () => {
         },
         description,
         link
-    }`)
-      .then((data)=> setNewCard(data))
-      .catch(console.error)
+    }`
+      )
+      .then((data) => setNewCard(data))
+      .catch(console.error);
   }, []);
 
   return (
@@ -107,7 +93,7 @@ const Home = () => {
         <title>SRMKZILLA</title>
         <link rel="icon" href="./images/kzillalogo.png" />
       </Head>
-      
+
       <section className="hero h-screen bg-hero-pattern bg-fixed overflow-hidden relative">
         <Navbar />
         <div className="absolute top-2/4 transform -translate-y-1/2">
@@ -137,14 +123,20 @@ const Home = () => {
           <h1 className="text-white text-center text-4xl">What's New</h1>
 
           <div className="flex flex-wrap items-center justify-center sm:mt-20 mt-14 pb-10">
-            {newCard && newCard.map((card: { title: String; picture: { asset: { url: string; }; }; description: String; }) => (
-              <Card_home
-                name={card.title}
-                image={card.picture.asset.url}
-                desc={card.description}
-              />  
-            ))}
-            
+            {newCard &&
+              newCard.map(
+                (card: {
+                  title: String;
+                  picture: { asset: { url: string } };
+                  description: String;
+                }) => (
+                  <Card_home
+                    name={card.title}
+                    image={card.picture.asset.url}
+                    desc={card.description}
+                  />
+                )
+              )}
           </div>
         </div>
       </section>
@@ -155,9 +147,9 @@ const Home = () => {
         <div>
           <h1 className="text-white text-center text-4xl">How we work</h1>
           <Bounce>
-          <div>
-            <Message color="baseBlue" />
-          </div>
+            <div>
+              <Message color="baseBlue" />
+            </div>
           </Bounce>
         </div>
 
@@ -285,9 +277,9 @@ const Home = () => {
 
         {/* design */}
         <Bounce>
-        <div className="lg:mt-0 sm:mt-24 mt-14">
-          <Message color="baseBlue" />
-        </div>
+          <div className="lg:mt-0 sm:mt-24 mt-14">
+            <Message color="baseBlue" />
+          </div>
         </Bounce>
 
         <div className="flex flex-wrap w-full mt-52 relative">
@@ -414,9 +406,9 @@ const Home = () => {
         </div>
         {/* design end */}
         <Bounce>
-        <div className="lg:mt-auto sm:mt-16 mt-10">
-          <Message color="orange300" />
-        </div>
+          <div className="lg:mt-auto sm:mt-16 mt-10">
+            <Message color="orange300" />
+          </div>
         </Bounce>
 
         <div className="flex flex-wrap w-full -mt-10">
@@ -425,28 +417,32 @@ const Home = () => {
               Technical<span className="text-orange600 text-4xl">.</span>
             </h1>
             <div>
-            <p className="text-white text-lg my-4">
-              <p className='text-white text-xl font-semibold'>Lorem Ipsum</p>
-              Praesentium reprehenderit mollitia nihil sunt modi. Ad eaque,
-              labore dolorem, debitis id eum cum adipisci impedit quos mollitia
-              earum, voluptate natus. Voluptas.
-            </p>
+              <p className="text-white text-lg my-4">
+                <p className="text-white text-xl font-semibold">Lorem Ipsum</p>
+                Praesentium reprehenderit mollitia nihil sunt modi. Ad eaque,
+                labore dolorem, debitis id eum cum adipisci impedit quos
+                mollitia earum, voluptate natus. Voluptas.
+              </p>
             </div>
             <div>
-            <p className="text-white text-lg my-4">
-              <p className='text-white text-xl font-semibold'>Lorem Ipsum</p>
-              <p className='text-lg font-normal'>Praesentium reprehenderit mollitia nihil sunt modi. Ad eaque,
-              labore dolorem, debitis id eum cum adipisci impedit quos mollitia
-              earum, voluptate natus. Voluptas.</p>
-            </p>
+              <p className="text-white text-lg my-4">
+                <p className="text-white text-xl font-semibold">Lorem Ipsum</p>
+                <p className="text-lg font-normal">
+                  Praesentium reprehenderit mollitia nihil sunt modi. Ad eaque,
+                  labore dolorem, debitis id eum cum adipisci impedit quos
+                  mollitia earum, voluptate natus. Voluptas.
+                </p>
+              </p>
             </div>
             <div>
-            <p className="text-white text-lg my-4">
-              <p className='text-white text-xl font-semibold'>Lorem Ipsum</p>
-              <p className='text-lg text-white font-normal'>Praesentium reprehenderit mollitia nihil sunt modi. Ad eaque,
-              labore dolorem, debitis id eum cum adipisci impedit quos mollitia
-              earum, voluptate natus. Voluptas.</p>
-            </p>
+              <p className="text-white text-lg my-4">
+                <p className="text-white text-xl font-semibold">Lorem Ipsum</p>
+                <p className="text-lg text-white font-normal">
+                  Praesentium reprehenderit mollitia nihil sunt modi. Ad eaque,
+                  labore dolorem, debitis id eum cum adipisci impedit quos
+                  mollitia earum, voluptate natus. Voluptas.
+                </p>
+              </p>
             </div>
           </div>
           <div className="lg:mt-24 ml-6 mt-0">
@@ -459,8 +455,6 @@ const Home = () => {
         </div>
       </section>
       {/* Process section ends */}
-      <Footer />
-     
     </div>
   );
 };
