@@ -1,140 +1,140 @@
-import React from "react";
-import { Navbar } from "../shared/components";
-import MemberCard from "../shared/components/team/membercard";
-import Carousel from "../shared/components/team/carousel";
+import React from 'react'
+import Navbar from '../shared/components/navbar'
+import MemberCard from '../shared/components/team/membercard'
+import Carousel from '../shared/components/team/carousel'
 
 const OldTeamMembers = [
   {
-    name: "Ayush",
-    src: "/images/ayush.png",
-    designation: "Secretary",
+    name: 'Ayush',
+    src: '/images/ayush.png',
+    designation: 'Secretary',
     message:
-      "hello jsdbjwqdvhjwd hwjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq wjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq",
+      'hello jsdbjwqdvhjwd hwjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq wjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq',
   },
   {
-    name: "kgjkg",
-    src: "/images/ayush.png",
-    designation: "Secretary",
+    name: 'kgjkg',
+    src: '/images/ayush.png',
+    designation: 'Secretary',
     message:
-      "lorem ipsum dolor sit amet. lorem ipsum dolor sit ameat. hjwqdvhjwd hwjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq wjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq",
+      'lorem ipsum dolor sit amet. lorem ipsum dolor sit ameat. hjwqdvhjwd hwjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq wjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq',
   },
   {
-    name: "hghjjv",
-    src: "/images/ayush.png",
-    designation: "Secretary",
+    name: 'hghjjv',
+    src: '/images/ayush.png',
+    designation: 'Secretary',
     message:
-      "sjhasxa dxajdlor sit amet. lorem ipsum dolor sit ameat. hjwqdvhjwd hwjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq wjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq",
+      'sjhasxa dxajdlor sit amet. lorem ipsum dolor sit ameat. hjwqdvhjwd hwjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq wjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq',
   },
   {
-    name: "dfgvfd",
-    src: "/images/ayush.png",
-    designation: "Secretary",
+    name: 'dfgvfd',
+    src: '/images/ayush.png',
+    designation: 'Secretary',
     message:
-      "ahjfahjafjflorem ipsum dolor sit ameat. hjwqdvhjwd hwjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq wjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq",
+      'ahjfahjafjflorem ipsum dolor sit ameat. hjwqdvhjwd hwjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq wjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq',
   },
   {
-    name: "Ayush",
-    src: "/images/ayush.png",
-    designation: "Secretary",
+    name: 'Ayush',
+    src: '/images/ayush.png',
+    designation: 'Secretary',
     message:
-      "lorem ipsum dolor sit amet. lorem ipsum dolor sit ameat. hjwqdvhjwd hwjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq wjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq",
+      'lorem ipsum dolor sit amet. lorem ipsum dolor sit ameat. hjwqdvhjwd hwjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq wjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq',
   },
-];
+]
 
 const members = [
   {
-    name: "john doe",
-    src: "/images/ayush.png",
-    designation: "Executive Board",
-    audiourl: "/images/music.mp3",
+    name: 'john doe',
+    src: '/images/ayush.png',
+    designation: 'Executive Board',
+    audiourl: '/images/music.mp3',
   },
   {
-    name: "john doe",
-    src: "/images/ayush.png",
-    designation: "Executive Board",
-    audiourl: "/images/music.mp3",
+    name: 'john doe',
+    src: '/images/ayush.png',
+    designation: 'Executive Board',
+    audiourl: '/images/music.mp3',
   },
   {
-    name: "john doe",
-    src: "/images/ayush.png",
-    designation: "Executive Board",
-    audiourl: "/images/music.mp3",
+    name: 'john doe',
+    src: '/images/ayush.png',
+    designation: 'Executive Board',
+    audiourl: '/images/music.mp3',
   },
   {
-    name: "john doe",
-    src: "/images/ayush.png",
-    designation: "Executive Board",
-    audiourl: "/images/music.mp3",
+    name: 'john doe',
+    src: '/images/ayush.png',
+    designation: 'Executive Board',
+    audiourl: '/images/music.mp3',
   },
   {
-    name: "john doe",
-    src: "/images/ayush.png",
-    designation: "Executive Board",
-    audiourl: "/images/music.mp3",
+    name: 'john doe',
+    src: '/images/ayush.png',
+    designation: 'Executive Board',
+    audiourl: '/images/music.mp3',
   },
   {
-    name: "john doe",
-    src: "/images/ayush.png",
-    designation: "Executive Board",
-    audiourl: "/images/music.mp3",
+    name: 'john doe',
+    src: '/images/ayush.png',
+    designation: 'Executive Board',
+    audiourl: '/images/music.mp3',
   },
   {
-    name: "john doe",
-    src: "/images/ayush.png",
-    designation: "Executive Board",
-    audiourl: "/images/music.mp3",
+    name: 'john doe',
+    src: '/images/ayush.png',
+    designation: 'Executive Board',
+    audiourl: '/images/music.mp3',
   },
   {
-    name: "john doe",
-    src: "/images/ayush.png",
-    designation: "Executive Board",
-    audiourl: "/images/music.mp3",
+    name: 'john doe',
+    src: '/images/ayush.png',
+    designation: 'Executive Board',
+    audiourl: '/images/music.mp3',
   },
 
   {
-    name: "john doe",
-    src: "/images/ayush.png",
-    designation: "Executive Board",
-    audiourl: "/images/music.mp3",
+    name: 'john doe',
+    src: '/images/ayush.png',
+    designation: 'Executive Board',
+    audiourl: '/images/music.mp3',
   },
 
   {
-    name: "john doe",
-    src: "/images/ayush.png",
-    designation: "Executive Board",
-    audiourl: "/images/music.mp3",
+    name: 'john doe',
+    src: '/images/ayush.png',
+    designation: 'Executive Board',
+    audiourl: '/images/music.mp3',
   },
   {
-    name: "john doe",
-    src: "/images/ayush.png",
-    designation: "Executive Board",
-    audiourl: "/images/music.mp3",
+    name: 'john doe',
+    src: '/images/ayush.png',
+    designation: 'Executive Board',
+    audiourl: '/images/music.mp3',
   },
   {
-    name: "john doe",
-    src: "/images/ayush.png",
-    designation: "Executive Board",
-    audiourl: "/images/music.mp3",
+    name: 'john doe',
+    src: '/images/ayush.png',
+    designation: 'Executive Board',
+    audiourl: '/images/music.mp3',
   },
   {
-    name: "john doe",
-    src: "/images/ayush.png",
-    designation: "Executive Board",
-    audiourl: "/images/music.mp3",
+    name: 'john doe',
+    src: '/images/ayush.png',
+    designation: 'Executive Board',
+    audiourl: '/images/music.mp3',
   },
   {
-    name: "john doe",
-    src: "/images/ayush.png",
-    designation: "Executive Board",
-    audiourl: "/images/music.mp3",
+    name: 'john doe',
+    src: '/images/ayush.png',
+    designation: 'Executive Board',
+    audiourl: '/images/music.mp3',
   },
   {
-    name: "john doe",
-    src: "/images/ayush.png",
-    designation: "Executive Board",
-    audiourl: "/images/music.mp3",
+    name: 'john doe',
+    src: '/images/ayush.png',
+    designation: 'Executive Board',
+    audiourl: '/images/music.mp3',
   },
-];
+]
 
 const Team = () => {
   return (
@@ -150,7 +150,7 @@ const Team = () => {
             syadjgewkfewvasiugs
           </h3>
         </div>
-        <div className=" text-white rounded-2xl p-1 md:p-10 bg-baseBlack grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 lg:gap-2 md:mx-20 mx-2">
+        <div className=" text-white rounded-2xl p-1 md:p-10 bg-black-200 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 lg:gap-2 md:mx-20 mx-2">
           {members.map((members) => (
             <MemberCard
               src={members.src}
@@ -166,13 +166,11 @@ const Team = () => {
           <h1 className="text-5xl font-semibold text-gray-100 text-center my-20">
             Hear it form the team
           </h1>
-          <div>
-            <Carousel slides={OldTeamMembers} />
-          </div>
+          <Carousel slides={OldTeamMembers} />
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Team;
+export default Team

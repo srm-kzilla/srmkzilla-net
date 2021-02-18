@@ -1,40 +1,39 @@
-import React, { useState, useEffect } from "react";
-import { Volume, Volume2 } from "react-feather";
+import React, { useState, useEffect } from 'react'
+import { Volume, Volume2 } from 'react-feather'
 
-const useAudio = (url) => {
-  const [audio, setAudio] = useState<HTMLAudioElement>();
-  const [playing, setPlaying] = useState(false);
+const useAudio = (url: string) => {
+  const [audio, setAudio] = useState<HTMLAudioElement>()
+  const [playing, setPlaying] = useState(false)
 
-  const toggle = () => setPlaying(!playing);
+  const Toggle = () => setPlaying(!playing)
 
   useEffect(() => {
-    setAudio(new Audio(url));
-    console.log(audio);
+    setAudio(new Audio(url))
     if (audio) {
-      playing ? audio.play() : audio.pause();
+      playing ? audio.play() : audio.pause()
     }
-  }, [playing]);
+  }, [playing])
 
   useEffect(() => {
     if (audio) {
-      audio.addEventListener("ended", () => setPlaying(false));
+      audio.addEventListener('ended', () => setPlaying(false))
     }
     return () => {
       if (audio) {
-        audio.removeEventListener("ended", () => setPlaying(false));
+        audio.removeEventListener('ended', () => setPlaying(false))
       }
-    };
-  }, []);
+    }
+  }, [])
 
-  return [playing, toggle];
-};
+  return [playing, Toggle]
+}
 
 const Player = ({ url }) => {
-  const [playing, toggle] = useAudio(url);
+  const [playing, Toggle] = useAudio(url)
 
   return (
     <div className="absolute right-1 mb-5">
-      <button onClick={toggle} className="focus:outline-none mx-1">
+      <button onClick={Toggle} className="focus:outline-none mx-1">
         {playing ? (
           <Volume2 color="white" size={30} />
         ) : (
@@ -42,7 +41,7 @@ const Player = ({ url }) => {
         )}
       </button>
     </div>
-  );
-};
+  )
+}
 
-export default Player;
+export default Player
