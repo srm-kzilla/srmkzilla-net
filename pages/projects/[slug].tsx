@@ -19,6 +19,7 @@ type Props = {
   instagram: any;
   youtube: any;
   techstack: [];
+  instaKey: any;
 };
 
 const Project = ({
@@ -30,6 +31,7 @@ const Project = ({
   instagram,
   youtube,
   techstack,
+  instaKey,
 }: Props) => {
   const [imageUrl, setImageUrl] = useState("");
 
@@ -48,6 +50,7 @@ const Project = ({
         <title>SRMKZILLA</title>
         <link rel="icon" href="../images/kzillalogo.png" />
       </Head>
+
       <div className="h-screen">
         <Navbar />
         <img
@@ -97,7 +100,7 @@ const Project = ({
               <div className="">
                 <InstagramEmbed
                   url={instagram}
-                  clientAccessToken="704509423574860|d6698d49ebaef9f1a2de687b73b3bcd5"
+                  clientAccessToken={instaKey}
                   className="absolute w-full -top-12 transform -translate-y-1"
                   hideCaption={true}
                   containerTagName="div"
@@ -154,7 +157,7 @@ export const getStaticProps = async (context: { params: { slug: any } }) => {
   const query = encodeURIComponent(
     `*[ _type == "project" && slug.current == "${pageSlug}" ]`
   );
-  const url = `https://4orhaocq.api.sanity.io/v1/data/query/production?query=${query}`;
+  const url = `https://${process.env.SANITY_ID}.api.sanity.io/v1/data/query/production?query=${query}`;
 
   const result = await fetch(url).then((res) => res.json());
   const post = result.result[0];
@@ -174,6 +177,7 @@ export const getStaticProps = async (context: { params: { slug: any } }) => {
         instagram: post.instagram,
         youtube: post.youtube,
         techstack: post.techstack,
+        instaKey: process.env.INSTA_KEY,
       },
     };
   }
@@ -181,7 +185,7 @@ export const getStaticProps = async (context: { params: { slug: any } }) => {
 
 export async function getStaticPaths(): Promise<unknown> {
   const query = encodeURIComponent(`*[ _type == "project"]{title,slug}`);
-  const url = `https://4orhaocq.api.sanity.io/v1/data/query/production?query=${query}`;
+  const url = `https://${process.env.SANITY_ID}.api.sanity.io/v1/data/query/production?query=${query}`;
 
   const result = await fetch(url).then((res) => res.json());
   const path = result.result;

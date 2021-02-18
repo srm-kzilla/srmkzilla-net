@@ -17,6 +17,7 @@ import sanityClient from "../shared/client";
 import Carousel from "react-elastic-carousel";
 
 import { InView, useInView } from "react-intersection-observer";
+
 import {
   animate,
   AnimatePresence,
@@ -177,7 +178,22 @@ const Home = () => {
 
           <div className="lg:mt-52 mt-24 mx-auto z-30">
             <div className="relative video transform -rotate-6 bg-orange300 md:w-72 md:h-72 sm:h-64 sm:w-64 h-52 w-52 items-center rounded-2xl z-40">
-              <div className="absolute h-full w-full transform rotate-6 bg-white -top-8 left-6 rounded-2xl"></div>
+              <div className="absolute h-full w-full transform rotate-6 bg-white -top-8 left-6 rounded-2xl">
+                {/* {inView && (<video autoPlay className='h-full w-full' src='./images/idea.mp4'></video>)} */}
+                <InView>
+                  {({ inView, ref, entry }) => (
+                    <div ref={ref}>
+                      {inView && (
+                        <video
+                          autoPlay
+                          className="h-full w-full mt-8"
+                          src="./images/idea.mp4"
+                        ></video>
+                      )}
+                    </div>
+                  )}
+                </InView>
+              </div>
             </div>
           </div>
 
@@ -303,11 +319,19 @@ const Home = () => {
               labore dolorem, debitis id eum cum adipisci impedit quos mollitia
               earum, voluptate natus. Voluptas.
             </p>
-            <video
-              src="./images/another.mp4"
-              className="w-full mt-16 mx-auto"
-              autoPlay
-            />
+            <InView>
+              {({ inView, ref, entry }) => (
+                <div ref={ref}>
+                  {inView && (
+                    <video
+                      src="./images/another.mp4"
+                      className="w-full mt-16 mx-auto"
+                      autoPlay
+                    />
+                  )}
+                </div>
+              )}
+            </InView>
           </div>
           <div className="mt-32 lg:block hidden z-20">
             <img
