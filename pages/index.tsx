@@ -5,7 +5,6 @@ import React, {
   Component,
   useEffect,
 } from "react";
-import { Navbar } from "../shared/components";
 import Card_home from "../shared/components/card_home";
 import Message from "../shared/components/Message";
 import Bounce from "react-reveal/Bounce";
@@ -28,6 +27,7 @@ import {
 import Icons from "../shared/components/icons";
 import Homecarousel from "../shared/components/home_carousel";
 import Footer from "../shared/components/footer";
+import Navbar from "../shared/components/navbar";
 
 const container = {
   hidden: { x: 0, y: 0 },

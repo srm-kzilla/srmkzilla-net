@@ -1,15 +1,14 @@
 import Head from "next/head";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { Navbar } from "../shared/components";
+
 import CardProject from "../shared/components/card_projects";
 import ProjectIcon from "../shared/components/project_icons";
-import pro from "../shared/pro.json";
-import cardData from "../shared/test";
 import sanityClient from "../shared/client";
 import BlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url";
 import Service from "../shared/components/services";
+import Navbar from "../shared/components/navbar";
 
 const projects = () => {
   const [projectData, setProject] = useState(null);

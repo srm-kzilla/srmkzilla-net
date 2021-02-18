@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar } from "../../shared/components";
+
 import { useRouter } from "next/router";
 import pro from "../../shared/pro.json";
 import cardData from "../../shared/test";
@@ -10,6 +10,7 @@ import BlockContent from "@sanity/block-content-to-react";
 
 import InstagramEmbed from "react-instagram-embed";
 import Tilt from "react-parallax-tilt";
+import Navbar from "../../shared/components/navbar";
 
 type Props = {
   title: String;

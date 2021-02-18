@@ -24,7 +24,7 @@ const Navbar = () => {
   return (
     <nav
       className={`${search ? "bg-black" : (open ? "bg-black" : "nav")} fixed z-50 w-full`}
-      ref={ref}
+    
     >
 
       <div className="container text-white px-6 py-3">
