@@ -1,13 +1,13 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Search, Menu } from "react-feather";
 import Link from "next/link";
 import Dropdown from "./dropdown";
 import { motion } from "framer-motion";
 
+
 const Navbar = () => {
   const [search, setSearch] = useState(false);
   const [open, setOpen] = useState(false);
-  const ref = useRef();
 
   const searchshow = () => {
     if (window.scrollY >= 200) {
@@ -19,24 +19,14 @@ const Navbar = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", searchshow);
-    const onBodyClick = (event) => {
-      if (ref.current.contains(event.target)) {
-        return;
-      }
-      setOpen(false);
-    };
-
-    document.body.addEventListener("click", onBodyClick);
-    return () => {
-      document.body.removeEventListener("click", onBodyClick);
-    };
-  }, []);
+  });
 
   return (
     <nav
       className={`${search ? "bg-black" : (open ? "bg-black" : "nav")} fixed z-50 w-full`}
       ref={ref}
     >
+
       <div className="container text-white px-6 py-3">
         <div className="md:flex md:items-center md:justify-between">
           <div className="flex justify-between items-center">
@@ -51,7 +41,7 @@ const Navbar = () => {
                   name="search"
                   className={`${
                     search ? "block" : "hidden"
-                  } px-1 rounded-2xl bg-baseBlack border focus:outline-none`}
+                  } px-1 rounded-2xl bg-black-200 border focus:outline-none`}
                 />
                 <button
                   className="mx-4 focus:outline-none"
@@ -64,7 +54,8 @@ const Navbar = () => {
               <button
                 type="button"
                 className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
-                onClick={() => setOpen(!open)}
+                onMouseEnter={() => setOpen(true)}
+                onMouseLeave={() => setOpen(false)}
               >
                 <Menu size={16} />
               </button>
@@ -87,19 +78,19 @@ const Navbar = () => {
                   About Us
                 </div>
               </Link>
-              <Link href="/">
+              <Link href="/services">
                 <div className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent">
                   Our Services
                 </div>
               </Link>
-              <Link href="/">
+              <Link href="/team">
                 <div className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent">
                   Team
                 </div>
               </Link>
               <Dropdown
                 name="What's New?"
-                class="absolute md:left-80 md:my-12 md:mx-10 md:top-3 py-2 w-48 rounded-md shadow-md bg-baseBlack cursor-pointer"
+                class="absolute md:left-80 md:my-12 md:mx-10 md:top-3 py-2 w-48 rounded-md shadow-md bg-black-200 cursor-pointer"
                 items={[
                   {
                     label: "Events",
@@ -107,7 +98,7 @@ const Navbar = () => {
                   },
                   {
                     label: "Projects",
-                    link: "/",
+                    link: "/projects",
                   },
                   {
                     label: "Everything",
@@ -124,7 +115,7 @@ const Navbar = () => {
               name="search"
               className={`${
                 search ? "block" : "hidden"
-              } rounded-2xl h-8 md:my-1 bg-baseBlack border focus:outline-none`}
+              } rounded-2xl h-8 md:my-1 bg-black-200 border focus:outline-none`}
             />
             <button
               className="mx-5 md:my-2 focus:outline-none"

@@ -7,6 +7,7 @@ import Head from "next/head";
 import imageUrlBuilder from "@sanity/image-url";
 import { useState, useEffect } from "react";
 import BlockContent from "@sanity/block-content-to-react";
+
 import InstagramEmbed from "react-instagram-embed";
 import Tilt from "react-parallax-tilt";
 
@@ -71,7 +72,7 @@ const Project = ({
               <button className="px-5 py-3 rounded-full bg-baseBlack text-white text-sm mb-5">
                 View Project
               </button>
-              <button className="px-8 ml-3 py-3 rounded-full bg-baseBlack text-white text-sm">
+              <button className="px-8 ml-3 py-3 rounded-full bg-black-200 text-white text-sm">
                 Github
               </button>
             </div>
@@ -90,6 +91,7 @@ const Project = ({
                 ></iframe>
               </div>
             </Tilt>
+
           </div>
         </div>
       </div>
@@ -120,6 +122,7 @@ const Project = ({
               </p>
             </div>
           </div>
+
         </div>
       </section>
       <div>
@@ -204,5 +207,6 @@ export async function getStaticPaths(): Promise<unknown> {
     };
   }
 }
+
 
 export default Project;
