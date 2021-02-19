@@ -2,10 +2,10 @@ import React from 'react'
 
 const Card_aboutus = (props: { name: String }) => {
     return (
-        <div className="w-3/4 md:h-72 lg:h-96 overflow-hidden rounded-t-2xl rounded-b-2xl">
+        <div className="w-72 mx-10 md:h-72 lg:h-96 overflow-hidden rounded-t-2xl my-5 rounded-b-2xl">
             <div className="bg-baseBlack px-2  p-8">
                 <div className="mx-auto font-subHeading my-4 font-bold">
-                            <h2 className="font-subHeading not-italic font-bold text-4xl lg:text-5xl text-center text-white">{props.name}</h2>
+                            <h2 className="font-subHeading not-italic font-bold text-2xl text-center text-white">{props.name}</h2>
                             
                 </div>
                 <div className=" h-72 lg:h-96 ">

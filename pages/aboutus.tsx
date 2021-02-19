@@ -9,32 +9,33 @@ const cardData = [
   { title: "Mission" },
   { title: "Vision" },
 ];
+
 const aboutus =  () => {
     return (
-      <div className="bg-black w-screen text-white ">
+      <div className="bg-black text-white overflow-hidden">
         <Navbar />
         
-        <div  className="  w-screen">
-            <div className="container  w-full text-white  p-2  bg-black">
-               
-                <div className=" mx-auto  w-full font-subHeading font-style:normal p-14 lg:p-40 mb-8 lg:mb-80 font-bold">
-                    <h1 className="subHeading not-italic font-bold text-3xl lg:text-6xl  ">
+        <div  className="w-screen">
+            <div className="container  w-full text-white  p-2">
+                <div className=" mx-auto  w-full p-14 lg:p-40 mb-8">
+                    <h1 className="text-center text-3xl">
                     Welcome, Jack
                     </h1>
+                    <p className='text-center mt-5 text-lg'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus enim quam, luctus a nisi sed, dignissim suscipit tellus. Integer pulvinar nulla in blandit porta. Quisque nec porttitor eros, quis fermentum elit. Integer sodales fermentum egestas. Nunc sed rutrum enim, id volutpat metus. Morbi sagittis ultrices sapien in lacinia. Curabitur eget ex rutrum, eleifend dui sed, faucibus lorem.</p>
                 </div>
             </div>
 
 
-            <div className="grid lg:grid-cols-3 sm:grid-cols-1  md:grid-cols-3 sm:gap-2 md:gap-3 gap-14 ml-16 md:ml-12 lg:ml-36 lg:mb-20">
+            <div className="flex flex-wrap justify-center">
             {cardData.map((card) => (
-              <Card_aboutus name={card.title}/>
+              <div><Card_aboutus name={card.title}/></div>
             ))}
             </div>
             
 
-            <div className="h-auto overflow-hidden bg-black text-white lg:mx-20 ">
-              <div className=" mx-auto font-subHeading my-4 font-bold">
-                <h2 className="font-subHeading not-italic font-bold text-4xl lg:text-5xl text-center text-white ">Our Virtue</h2>
+            <div className="h-auto overflow-hidden bg-black text-white lg:mx-20 mt-24">
+              <div className=" mx-auto my-4">
+                <h2 className="text-4xl lg:text-5xl text-center text-white ">Our Virtue</h2>
               </div>
 
               <div className=" h-auto overflow-hidden flex items-center justify-center bg-black">
