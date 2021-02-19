@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { FaArrowAltCircleUp, FaArrowAltCircleDown } from 'react-icons/fa'
+import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa'
 
 const OldTeamMembers = [
   {
@@ -57,11 +57,11 @@ const Carousel = ({ slides }) => {
   return (
     <>
       <div className="relative flex h-full justify-center place-items-center mx-1 lg:mx-3">
-        <FaArrowAltCircleUp
+        <FaArrowAltCircleLeft
           className="absolute lg:top-1/2 top-2/3 lg:left-3 left-1 cursor-pointer z-10 text-gray-300"
           onClick={prevSlide}
         />
-        <FaArrowAltCircleDown
+        <FaArrowAltCircleRight
           className="absolute lg:top-1/2 top-2/3 lg:right-8  right-1 cursor-pointer z-10 text-gray-300"
           onClick={nextSlide}
         />
@@ -71,7 +71,9 @@ const Carousel = ({ slides }) => {
               className={
                 index === current
                   ? 'opacity-1 transition transform scale-105 duration-50 lg:w-3/6 lg:p-3 w-6/7 focus:none'
-                  : 'transition-opacity duration-300'
+                  : index == current - 1
+                  ? 'transform -translate-x-3/4 transition-opacity duration-1000 delay-1000 ease-in'
+                  : 'transform translate-x-3/4 transition-opacity duration-1000 delay-1000 ease-in'
               }
               key={index}
             >
