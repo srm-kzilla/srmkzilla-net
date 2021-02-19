@@ -71,7 +71,7 @@ const Project = ({
             </h1>
             <p className="text-white lg:text-left text-center mt-4">{desc}</p>
             <div className="mt-7 lg:text-left text-center">
-              <button className="px-5 py-3 rounded-full bg-baseBlack text-white text-sm mb-5">
+              <button className="px-5 py-3 rounded-full bg-black-200 text-white text-sm mb-5">
                 View Project
               </button>
               <button className="px-8 ml-3 py-3 rounded-full bg-black-200 text-white text-sm">
