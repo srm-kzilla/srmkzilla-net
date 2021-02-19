@@ -1,27 +1,29 @@
-import React from "react";
-import { Navbar } from "../../shared/components";
-import { useRouter } from "next/router";
-import pro from "../../shared/pro.json";
-import cardData from "../../shared/test";
-import Head from "next/head";
-import imageUrlBuilder from "@sanity/image-url";
-import { useState, useEffect } from "react";
-import BlockContent from "@sanity/block-content-to-react";
+import React from 'react'
 
-import InstagramEmbed from "react-instagram-embed";
-import Tilt from "react-parallax-tilt";
+import { useRouter } from 'next/router'
+import pro from '../../shared/pro.json'
+import cardData from '../../shared/test'
+import Head from 'next/head'
+import imageUrlBuilder from '@sanity/image-url'
+import { useState, useEffect } from 'react'
+import BlockContent from '@sanity/block-content-to-react'
+
+import InstagramEmbed from 'react-instagram-embed'
+import Tilt from 'react-parallax-tilt'
+import Navbar from '../../shared/components/navbar'
+import FooterCommon from '../../shared/components/footer_common'
 
 type Props = {
-  title: String;
-  image: any;
-  desc: Text;
-  link: URL;
-  features: any;
-  instagram: any;
-  youtube: any;
-  techstack: [];
-  instaKey: any;
-};
+  title: String
+  image: any
+  desc: Text
+  link: URL
+  features: any
+  instagram: any
+  youtube: any
+  techstack: []
+  instaKey: any
+}
 
 const Project = ({
   title,
@@ -34,16 +36,16 @@ const Project = ({
   techstack,
   instaKey,
 }: Props) => {
-  const [imageUrl, setImageUrl] = useState("");
+  const [imageUrl, setImageUrl] = useState('')
 
   useEffect(() => {
     const imgBuilder = imageUrlBuilder({
-      projectId: "4orhaocq",
-      dataset: "production",
-    });
+      projectId: '4orhaocq',
+      dataset: 'production',
+    })
 
-    setImageUrl(imgBuilder.image(image));
-  }, [image]);
+    setImageUrl(imgBuilder.image(image))
+  }, [image])
 
   return (
     <div className="bg-black overflow-hidden">
@@ -69,7 +71,7 @@ const Project = ({
             </h1>
             <p className="text-white lg:text-left text-center mt-4">{desc}</p>
             <div className="mt-7 lg:text-left text-center">
-              <button className="px-5 py-3 rounded-full bg-baseBlack text-white text-sm mb-5">
+              <button className="px-5 py-3 rounded-full bg-black-200 text-white text-sm mb-5">
                 View Project
               </button>
               <button className="px-8 ml-3 py-3 rounded-full bg-black-200 text-white text-sm">
@@ -91,7 +93,6 @@ const Project = ({
                 ></iframe>
               </div>
             </Tilt>
-
           </div>
         </div>
       </div>
@@ -122,7 +123,6 @@ const Project = ({
               </p>
             </div>
           </div>
-
         </div>
       </section>
       <div>
@@ -136,7 +136,7 @@ const Project = ({
             </div>
           ))}
         </div>
-        <div className="text-center">
+        <div className="text-center mb-14">
           <button>
             <p className="bg-orange300 px-5 py-2 rounded-full font-medium lg:my-5 my-10">
               Explore {title}
@@ -144,31 +144,32 @@ const Project = ({
           </button>
         </div>
       </div>
+      <FooterCommon />
     </div>
-  );
-};
+  )
+}
 
 export const getStaticProps = async (context: { params: { slug: any } }) => {
-  const pageSlug = context.params.slug;
+  const pageSlug = context.params.slug
 
   if (!pageSlug) {
     return {
       notFound: true,
-    };
+    }
   }
 
   const query = encodeURIComponent(
     `*[ _type == "project" && slug.current == "${pageSlug}" ]`
-  );
-  const url = `https://${process.env.SANITY_ID}.api.sanity.io/v1/data/query/production?query=${query}`;
+  )
+  const url = `https://${process.env.SANITY_ID}.api.sanity.io/v1/data/query/production?query=${query}`
 
-  const result = await fetch(url).then((res) => res.json());
-  const post = result.result[0];
+  const result = await fetch(url).then((res) => res.json())
+  const post = result.result[0]
 
   if (!post) {
     return {
       notFound: true,
-    };
+    }
   } else {
     return {
       props: {
@@ -182,31 +183,30 @@ export const getStaticProps = async (context: { params: { slug: any } }) => {
         techstack: post.techstack,
         instaKey: process.env.INSTA_KEY,
       },
-    };
+    }
   }
-};
+}
 
 export async function getStaticPaths(): Promise<unknown> {
-  const query = encodeURIComponent(`*[ _type == "project"]{title,slug}`);
-  const url = `https://${process.env.SANITY_ID}.api.sanity.io/v1/data/query/production?query=${query}`;
+  const query = encodeURIComponent(`*[ _type == "project"]{title,slug}`)
+  const url = `https://${process.env.SANITY_ID}.api.sanity.io/v1/data/query/production?query=${query}`
 
-  const result = await fetch(url).then((res) => res.json());
-  const path = result.result;
+  const result = await fetch(url).then((res) => res.json())
+  const path = result.result
 
   const paths = path.map((project: { title: any }) => {
-    return { params: { slug: project.title } };
-  });
+    return { params: { slug: project.title } }
+  })
   if (!paths) {
     return {
       notFound: true,
-    };
+    }
   } else {
     return {
       paths,
       fallback: false,
-    };
+    }
   }
 }
 
-
-export default Project;
+export default Project

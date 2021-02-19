@@ -4,19 +4,18 @@ import React, {
   useLayoutEffect,
   Component,
   useEffect,
-} from "react";
-import { Navbar } from "../shared/components";
-import Card_home from "../shared/components/card_home";
-import Message from "../shared/components/Message";
-import Bounce from "react-reveal/Bounce";
-import Fade from "react-reveal/Fade";
-import Zoom from "react-reveal/Zoom";
-import Slide from "react-reveal/Slide";
-import Head from "next/head";
-import sanityClient from "../shared/client";
-import Carousel from "react-elastic-carousel";
+} from 'react'
+import Card_home from '../shared/components/card_home'
+import Message from '../shared/components/Message'
+import Bounce from 'react-reveal/Bounce'
+import Fade from 'react-reveal/Fade'
+import Zoom from 'react-reveal/Zoom'
+import Slide from 'react-reveal/Slide'
+import Head from 'next/head'
+import sanityClient from '../shared/client'
+import Carousel from 'react-elastic-carousel'
 
-import { InView, useInView } from "react-intersection-observer";
+import { InView, useInView } from 'react-intersection-observer'
 
 import {
   animate,
@@ -24,10 +23,11 @@ import {
   motion,
   useAnimation,
   useElementScroll,
-} from "framer-motion";
-import Icons from "../shared/components/icons";
-import Homecarousel from "../shared/components/home_carousel";
-import Footer from "../shared/components/footer";
+} from 'framer-motion'
+import Icons from '../shared/components/icons'
+import Homecarousel from '../shared/components/home_carousel'
+import Footer from '../shared/components/footer'
+import Navbar from '../shared/components/navbar'
 
 const container = {
   hidden: { x: 0, y: 0 },
@@ -63,10 +63,10 @@ const container = {
       duration: 2,
     },
   },
-};
+}
 
 const Home = () => {
-  const [newCard, setNewCard] = useState(null);
+  const [newCard, setNewCard] = useState(null)
 
   useEffect(() => {
     sanityClient
@@ -85,8 +85,8 @@ const Home = () => {
     }`
       )
       .then((data) => setNewCard(data))
-      .catch(console.error);
-  }, []);
+      .catch(console.error)
+  }, [])
 
   return (
     <div className="bg-black overflow-hidden">
@@ -127,9 +127,9 @@ const Home = () => {
             {newCard &&
               newCard.map(
                 (card: {
-                  title: String;
-                  picture: { asset: { url: string } };
-                  description: String;
+                  title: String
+                  picture: { asset: { url: string } }
+                  description: String
                 }) => (
                   <Card_home
                     name={card.title}
@@ -478,9 +478,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {/* Process section ends */}
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
