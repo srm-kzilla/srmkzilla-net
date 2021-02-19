@@ -1,46 +1,33 @@
-import React, { useState, useRef, useLayoutEffect, Component } from "react";
-import Navbar from "../shared/components/navbar";
-import Card_home from "../shared/components/card_home";
-import Message from "../shared/components/Message";
-import Bounce from "react-reveal/Bounce";
-import Fade from "react-reveal/Fade";
-import Zoom from "react-reveal/Zoom";
-import Slide from "react-reveal/Slide";
-import Head from "next/head";
-import Carousel from "react-elastic-carousel";
+import React, {
+  useState,
+  useRef,
+  useLayoutEffect,
+  Component,
+  useEffect,
+} from 'react'
+import Card_home from '../shared/components/card_home'
+import Message from '../shared/components/Message'
+import Bounce from 'react-reveal/Bounce'
+import Fade from 'react-reveal/Fade'
+import Zoom from 'react-reveal/Zoom'
+import Slide from 'react-reveal/Slide'
+import Head from 'next/head'
+import sanityClient from '../shared/client'
+import Carousel from 'react-elastic-carousel'
 
-import { InView, useInView } from "react-intersection-observer";
+import { InView, useInView } from 'react-intersection-observer'
+
 import {
   animate,
   AnimatePresence,
   motion,
   useAnimation,
   useElementScroll,
-} from "framer-motion";
-import Icons from "../shared/components/icons";
-import Homecarousel from "../shared/components/home_carousel";
-import Footer from "../shared/components/footer";
-
-const cardData = [
-  {
-    title: "First",
-    image: "./images/testImage.png",
-    desc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis sapiente enim pariatur blanditiis, tempore quia distinctio nihil atque deserunt eius repellendus. Cumque veniam corrupti",
-  },
-  {
-    title: "Second",
-    image: "./images/testImage.png",
-    desc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis sapiente enim pariatur blanditiis, tempore quia distinctio nihil atque deserunt eius repellendus. Cumque veniam corrupti",
-  },
-  {
-    title: "third",
-    image: "./images/testImage.png",
-    desc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis sapiente enim pariatur blanditiis, tempore quia distinctio nihil atque deserunt eius repellendus. Cumque veniam corrupti",
-  },
-];
+} from 'framer-motion'
+import Icons from '../shared/components/icons'
+import Homecarousel from '../shared/components/home_carousel'
+import Footer from '../shared/components/footer'
+import Navbar from '../shared/components/navbar'
 
 const container = {
   hidden: { x: 0, y: 0 },
@@ -76,27 +63,49 @@ const container = {
       duration: 2,
     },
   },
-};
+}
 
 const Home = () => {
+  const [newCard, setNewCard] = useState(null)
+
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "whatsNew"]{
+        title,
+        picture{
+          asset->{
+            _id,
+            url
+          },
+          alt
+        },
+        description,
+        link
+    }`
+      )
+      .then((data) => setNewCard(data))
+      .catch(console.error)
+  }, [])
+
   return (
     <div className="bg-black overflow-hidden">
       <Head>
         <title>SRMKZILLA</title>
         <link rel="icon" href="./images/kzillalogo.png" />
       </Head>
-      <Icons />
+
       <section className="hero h-screen bg-hero-pattern bg-fixed overflow-hidden relative">
         <Navbar />
         <div className="absolute top-2/4 transform -translate-y-1/2">
-          <div className="relative sm:h-64 h-52 z-30">
-            <video
+          <motion.div className="relative w-screen sm:h-64 h-52 z-30">
+            <motion.video
               autoPlay
               loop
               className="sm:h-64 h-52 absolute left-2/4 transform -translate-x-1/2"
               src="./images/hero_logo.mp4"
-            ></video>
-          </div>
+            ></motion.video>
+          </motion.div>
           <div className="lg:px-60 sm:px-32 px-10 z-30">
             <h1 className="text-center text-white sm:text-5xl text-4xl sm:mt-auto mt-5 font-bold">
               The campus club you love
@@ -115,13 +124,20 @@ const Home = () => {
           <h1 className="text-white text-center text-4xl">What's New</h1>
 
           <div className="flex flex-wrap items-center justify-center sm:mt-20 mt-14 pb-10">
-            {cardData.map((card) => (
-              <Card_home
-                name={card.title}
-                image={card.image}
-                desc={card.desc}
-              />
-            ))}
+            {newCard &&
+              newCard.map(
+                (card: {
+                  title: String
+                  picture: { asset: { url: string } }
+                  description: String
+                }) => (
+                  <Card_home
+                    name={card.title}
+                    image={card.picture.asset.url}
+                    desc={card.description}
+                  />
+                )
+              )}
           </div>
         </div>
       </section>
@@ -162,7 +178,22 @@ const Home = () => {
 
           <div className="lg:mt-52 mt-24 mx-auto z-30">
             <div className="relative video transform -rotate-6 bg-orange300 md:w-72 md:h-72 sm:h-64 sm:w-64 h-52 w-52 items-center rounded-2xl z-40">
-              <div className="absolute h-full w-full transform rotate-6 bg-white -top-8 left-6 rounded-2xl"></div>
+              <div className="absolute h-full w-full transform rotate-6 bg-white -top-8 left-6 rounded-2xl">
+                {/* {inView && (<video autoPlay className='h-full w-full' src='./images/idea.mp4'></video>)} */}
+                <InView>
+                  {({ inView, ref, entry }) => (
+                    <div ref={ref}>
+                      {inView && (
+                        <video
+                          autoPlay
+                          className="h-full w-full mt-8"
+                          src="./images/idea.mp4"
+                        ></video>
+                      )}
+                    </div>
+                  )}
+                </InView>
+              </div>
             </div>
           </div>
 
@@ -288,11 +319,19 @@ const Home = () => {
               labore dolorem, debitis id eum cum adipisci impedit quos mollitia
               earum, voluptate natus. Voluptas.
             </p>
-            <video
-              src="./images/another.mp4"
-              className="w-full mt-16 mx-auto"
-              autoPlay
-            />
+            <InView>
+              {({ inView, ref, entry }) => (
+                <div ref={ref}>
+                  {inView && (
+                    <video
+                      src="./images/another.mp4"
+                      className="w-full mt-16 mx-auto"
+                      autoPlay
+                    />
+                  )}
+                </div>
+              )}
+            </InView>
           </div>
           <div className="mt-32 lg:block hidden z-20">
             <img
@@ -439,10 +478,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {/* Process section ends */}
-      <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

@@ -14,9 +14,12 @@ module.exports = {
         baseBlue: "#58ACF5",
         baseGray: "#C4C4C4",
         icon: "#262430",
+        borderBlue: "#22415e"
       },
       backgroundImage: (theme) => ({
         "hero-pattern": "url('/images/herobg.png')",
+        "footer-pattern": "url('/images/footer.png')",
+        "mobile-footer-pattern": "url(/images/mobilefooter.png)"
       }),
       boxShadow: {
         box: "0px 12px 50px 10px rgba(0, 0, 0, 0.65)",
