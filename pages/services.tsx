@@ -9,9 +9,12 @@ import {
   Carousel,
 } from "../shared/components/services/services";
 import { CarouselData } from "../shared/components/services/carouseldata";
+import Stats from "../shared/components/services/numbersNew"
+import FooterCommon from "../shared/components/footer_common";
 
 const Services = () => {
   return (
+    <div>
     <div className="bg-black overflow-hidden px-3">
       <Head>
         <title>SRMKZILLA | Services</title>
@@ -44,7 +47,8 @@ const Services = () => {
             <h3 className="text-xl  text-gray-100 text-center mb-10">
               Producing Quality. Delivering Finest.
             </h3>
-            <Numbers />
+            {/* <Numbers /> */}
+            <Stats />
           </div>
 
           <div className="text-gray-100 pb-10">
@@ -63,7 +67,7 @@ const Services = () => {
       <section className="min-h-screen my-5 lg:my-10 mx-3 lg:mx-10">
         <div className="flex flex-col place-items-center">
           <div className="text-gray-100 pb-10">
-            <h1 className="text-5xl font-semibold text-center mb-5">
+            <h1 className="text-4xl font-semibold text-center mb-5">
               Our website delivers
             </h1>
             <h3 className="text-xl text-center">Don’t take our word for it</h3>
@@ -74,6 +78,9 @@ const Services = () => {
         </div>
       </section>
       {/* Testimonals section ends*/}
+     
+    </div>
+    <FooterCommon />
     </div>
   );
 };
