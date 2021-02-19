@@ -18,6 +18,8 @@ module.exports = {
       },
       backgroundImage: (theme) => ({
         "hero-pattern": "url('/images/herobg.png')",
+        "footer-pattern": "url('/images/footer.png')",
+        "mobile-footer-pattern": "url(/images/mobilefooter.png)"
       }),
       boxShadow: {
         box: "0px 12px 50px 10px rgba(0, 0, 0, 0.65)",

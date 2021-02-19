@@ -1,32 +1,31 @@
-import React, { useState, useEffect } from "react";
-import { Search, Menu } from "react-feather";
-import Link from "next/link";
-import Dropdown from "./dropdown";
-import { motion } from "framer-motion";
-
+import React, { useState, useEffect } from 'react'
+import { Search, Menu } from 'react-feather'
+import Link from 'next/link'
+import Dropdown from './dropdown'
+import { motion } from 'framer-motion'
 
 const Navbar = () => {
-  const [search, setSearch] = useState(false);
-  const [open, setOpen] = useState(false);
+  const [search, setSearch] = useState(false)
+  const [open, setOpen] = useState(false)
 
   const searchshow = () => {
     if (window.scrollY >= 200) {
-      setSearch(true);
+      setSearch(true)
     } else {
-      setSearch(false);
+      setSearch(false)
     }
-  };
+  }
 
   useEffect(() => {
-    window.addEventListener("scroll", searchshow);
-  });
+    window.addEventListener('scroll', searchshow)
+  })
 
   return (
     <nav
-      className={`${search ? "bg-black" : (open ? "bg-black" : "nav")} fixed z-50 w-full`}
-    
+      className={`${
+        search ? 'bg-black' : open ? 'bg-black' : 'nav'
+      } fixed z-50 w-full`}
     >
-
       <div className="container text-white px-6 py-3">
         <div className="md:flex md:items-center md:justify-between">
           <div className="flex justify-between items-center">
@@ -40,7 +39,7 @@ const Navbar = () => {
                   type="text"
                   name="search"
                   className={`${
-                    search ? "block" : "hidden"
+                    search ? 'block' : 'hidden'
                   } px-1 rounded-2xl bg-black-200 border focus:outline-none`}
                 />
                 <button
@@ -64,7 +63,7 @@ const Navbar = () => {
 
           <div
             className={`${
-              open ? "block" : "hidden"
+              open ? 'block' : 'hidden'
             } md:flex md:items-center md:justify-between w-full flex-1`}
           >
             <div className="flex bg-opacity-20 flex-col md:flex-row md:items-center mx-5">
@@ -93,16 +92,16 @@ const Navbar = () => {
                 class="absolute md:left-80 md:my-12 md:mx-10 md:top-3 py-2 w-48 rounded-md shadow-md bg-black-200 cursor-pointer"
                 items={[
                   {
-                    label: "Events",
-                    link: "/",
+                    label: 'Events',
+                    link: '/',
                   },
                   {
-                    label: "Projects",
-                    link: "/projects",
+                    label: 'Projects',
+                    link: '/projects',
                   },
                   {
-                    label: "Everything",
-                    link: "/",
+                    label: 'Everything',
+                    link: '/',
                   },
                 ]}
                 nameClass="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out relative z-10 hover:border-orange300 cursor-pointer border-b-2 border-transparent focus:outline-none"
@@ -114,7 +113,7 @@ const Navbar = () => {
               type="text"
               name="search"
               className={`${
-                search ? "block" : "hidden"
+                search ? 'block' : 'hidden'
               } rounded-2xl h-8 md:my-1 bg-black-200 border focus:outline-none`}
             />
             <button
@@ -127,7 +126,7 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
