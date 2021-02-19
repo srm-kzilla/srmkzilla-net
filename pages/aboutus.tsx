@@ -33,15 +33,15 @@ const aboutus =  () => {
             </div>
             
 
-            <div className="h-auto overflow-hidden bg-black text-white lg:mx-20 mt-24">
+            <div className="h-auto overflow-hidden bg-black text-white lg:mx-auto mt-24">
               <div className=" mx-auto my-4">
                 <h2 className="text-4xl lg:text-5xl text-center text-white ">Our Virtue</h2>
               </div>
 
               <div className=" h-auto overflow-hidden flex items-center justify-center bg-black">
                 <div className="container  w-full h-full">
-                  <div className="relative wrap overflow-hidden px-3 py-10 lg:p-10 h-full mx-4 md:mx-16 lg:mx-10">
-                    <div className=" absolute lg:top-20  md:left-1/2 lg:left-1/2 border-white h-full border"></div>
+                  <div className="relative wrap overflow-hidden pr-3 py-10 lg:p-10 h-full mx-4 md:mx-16 lg:mx-10">
+                    <div className=" absolute lg:top-20 invisible md:visible lg:visible md:left-1/2 lg:left-1/2 border-white h-full border"></div>
                     {/* timeline */}
                     <LeftTimeline />
                     <RightTimeline/>
