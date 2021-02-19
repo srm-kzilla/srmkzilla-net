@@ -105,7 +105,7 @@ const Numbers = () => {
         <div className="flex">
           <div>
             <ProgressBar
-              width={1100}
+              width={800}
               widthmob={280}
               percent={0.7}
               color={"rgb(14,189,150)"}

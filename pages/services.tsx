@@ -12,21 +12,22 @@ import { CarouselData } from "../shared/components/services/carouseldata";
 
 const Services = () => {
   return (
-    <div className="bg-black overflow-hidden">
+    <div className="bg-black overflow-hidden px-3">
       <Head>
         <title>SRMKZILLA | Services</title>
         <link rel="icon" href="./images/kzillalogo.png" />
       </Head>
       <Navbar />
-
-      <section className="my-20 lg:my-32 mx-3 lg:mx-10">
+      <div>
+      <section className="h-3/4 md:my-5 my-20 mx-3 lg:mx-10">
         <div className="flex flex-col place-items-center">
           <Carousel slides={CarouselData} />
         </div>
       </section>
+      </div>
 
       {/* Services Provided section starts*/}
-      <section className="min-h-screen my-20 lg:my-32 mx-3 lg:mx-10">
+      <section className="my-20 lg:my-24 mx-3 lg:mx-24">
         <div className="flex flex-col place-items-center">
           <ServicesProvided />
         </div>
@@ -37,7 +38,7 @@ const Services = () => {
       <section className="min-h-screen my-3 lg:my-10  mx-3 lg:mx-10">
         <div className="flex flex-col place-items-center">
           <div className="text-gray-100 pb-10 mb-10 container">
-            <h1 className="text-5xl font-semibold text-gray-100 text-center mb-5">
+            <h1 className="text-4xl font-semibold text-gray-100 text-center mb-5">
               Let’s talk numbers
             </h1>
             <h3 className="text-xl  text-gray-100 text-center mb-10">
@@ -47,11 +48,11 @@ const Services = () => {
           </div>
 
           <div className="text-gray-100 pb-10">
-            <h1 className="text-5xl font-semibold text-center">
+            <h1 className="text-4xl font-semibold text-center">
               Collaborate with us
             </h1>
           </div>
-          <div>
+          <div className='xl:px-16'>
             <Collaborate />
           </div>
         </div>
