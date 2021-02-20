@@ -14,7 +14,8 @@ module.exports = {
         baseBlue: "#58ACF5",
         baseGray: "#C4C4C4",
         icon: "#262430",
-        borderBlue: "#22415e"
+        borderBlue: "#22415e",
+        baseGreen: "#50be96"
       },
       backgroundImage: (theme) => ({
         "hero-pattern": "url('/images/herobg.png')",

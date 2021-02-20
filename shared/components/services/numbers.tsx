@@ -42,7 +42,7 @@ export var ProgressBar = (props: ProgressProps) => {
           style={{ width: props.widthmob }}
         >
           <div
-            style={{ width: `${value}px`, backgroundColor: `${props.color}` }}
+            style={{ width: `${value}%`, backgroundColor: `${props.color}` }}
             className="h-10 rounded-md transition delay-100 relative"
           />
 
@@ -105,7 +105,7 @@ const Numbers = () => {
         <div className="flex">
           <div>
             <ProgressBar
-              width={1100}
+              width={1000}
               widthmob={280}
               percent={0.7}
               color={"rgb(14,189,150)"}

@@ -36,19 +36,19 @@ const ServicesProvided = () => {
 
   return (
     <>
-      <div className="bg-black-200 rounded-2xl text-white text-xl container py-10">
-        <h1 className="text-5xl font-semibold text-gray-100 text-center m-5">
+      <div className="bg-black-200 rounded-2xl text-white text-xl container mx-auto px-0 md:px-3 py-10">
+        <h1 className="text-3xl md:text-4xl font-semibold text-gray-100 text-center md:m-5 m-2 md:px-1 px-5">
           Services we provide
         </h1>
-        <div className="flex flex-col lg:flex-row justify-around p-10 container">
-          <div className="p-1  mr-5  flex-col hidden lg:block">
+        <div className="flex flex-col lg:flex-row justify-around p-5 md:p-10 container">
+          <div className="p-1 w-3/4  mr-5  flex-col hidden lg:block mt-14">
             <div>
-              <h2 className="text-2xl font-semibold text-gray-100 text-left my-5">
+              <h2 className="text-2xl font-semibold text-gray-100 text-left w-full mb-3">
                 {services[activeIndex].title}
               </h2>
             </div>
             <div>
-              <p className="lg:w-80 text-justify">
+              <p className="lg:w-full pr-8 text-justify ">
                 {" "}
                 {services[activeIndex].desc}
               </p>
@@ -67,7 +67,7 @@ const ServicesProvided = () => {
                         activeIndex == index
                           ? "bg-orange300 text-black"
                           : "bg-black-100 text-white"
-                      } lg:p-10  p-5 focus:outline-none hover:bg-orange300 cursor-pointer  rounded-2xl }`}
+                      } lg:px-10 lg:py-6 px-5 py-3 focus:outline-none hover:bg-orange300 cursor-pointer rounded-2xl }`}
                     >
                       <img
                         src={`${
@@ -75,9 +75,9 @@ const ServicesProvided = () => {
                             ? `${service.img_dark}`
                             : `${service.img_light}`
                         }`}
-                        className="h-14"
+                        className="h-8"
                       />
-                      <p className="active:text-black my-2 font-bold">
+                      <p className="active:text-black my-2 text-xl font-bold">
                         {" "}
                         {service.title}
                       </p>
@@ -91,16 +91,16 @@ const ServicesProvided = () => {
                         activeIndex == index ? "block lg:hidden" : "hidden"
                       }`}
                     >
-                      <p className="p-1"> {services[activeIndex].desc}</p>
+                      <p className="p-1 text-sm mt-3"> {services[activeIndex].desc}</p>
                     </div>
                   </div>
                 );
               })}
             </div>
 
-            <div className="lg:p-10  p-5 bg-black-100 rounded-2xl mt-5">
+            <div className="lg:px-10 lg:py-6  p-5 bg-black-100 rounded-2xl mt-5">
               <p className="my-2 font-bold">Others</p>
-              <p className="my-2">
+              <p className="my-2 md:text-xl text-lg">
                 We are also expanding our domains with Machine Learning,
                 Artificial Intelligence and much more.
               </p>
