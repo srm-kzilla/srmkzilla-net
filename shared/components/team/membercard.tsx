@@ -1,7 +1,14 @@
 import React, { useState } from 'react'
 import Player from './player'
 
-const MemberCard = (props) => {
+interface cardProps {
+  audiourl: string
+  name: string
+  designation: string
+  src: string
+}
+
+const MemberCard = (props: cardProps) => {
   const [cloudShow, setCloudShow] = useState(false)
   return (
     <div className="place-self-center">
