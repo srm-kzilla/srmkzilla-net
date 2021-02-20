@@ -4,6 +4,7 @@ import MemberCard from '../shared/components/team/membercard'
 import Carousel from '../shared/components/team/carousel'
 import NewCarousel from '../shared/components/team/newCarousel'
 import sanityClient from '../shared/client'
+import FooterCommon from '../shared/components/footer_common'
 const members = [
   {
     name: 'john doe',
@@ -160,6 +161,33 @@ const members = [
 ]
 
 const Team = () => {
+  const [newCard, setNewCard] = useState<any>(null)
+
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "teamMembers"]{
+        name,
+        picture{
+          asset->{
+            _id,
+            url
+          },
+          alt
+        },
+        description{
+          asset->{
+            _id,
+            url
+          }
+        },
+        designation
+    }`
+      )
+      .then((data) => setNewCard(data))
+      .catch(console.error)
+  }, [])
+
   return (
     <>
       <div className="bg-black overflow-hidden ">
@@ -174,15 +202,24 @@ const Team = () => {
           </h3>
         </div>
         <div className=" text-white rounded-2xl pt-8 px-1 md:p-10 bg-black-200 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 lg:gap-2 md:mx-20 mx-2">
-          {members.map((members) => (
-            <MemberCard
-              src={members.src}
-              name={members.name}
-              designation={members.designation}
-              audiourl={members.audiourl}
-              key={members.name}
-            />
-          ))}
+          {newCard &&
+            newCard.map(
+              (member: {
+                picture: { asset: { url: string } }
+                name: string
+                designation: string
+                description: { asset: { url: string } }
+              }) => {
+                return (
+                  <MemberCard
+                    src={member.picture.asset.url}
+                    name={member.name}
+                    designation={member.designation}
+                    audiourl={member.description.asset.url}
+                  />
+                )
+              }
+            )}
         </div>
 
         <div className="my-10 px-0 md:px-10">
@@ -192,6 +229,7 @@ const Team = () => {
           <NewCarousel />
         </div>
       </div>
+      <FooterCommon />
     </>
   )
 }
