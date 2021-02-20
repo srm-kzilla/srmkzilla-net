@@ -1,46 +1,9 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../shared/components/navbar'
 import MemberCard from '../shared/components/team/membercard'
 import Carousel from '../shared/components/team/carousel'
-
-const OldTeamMembers = [
-  {
-    name: 'Ayush',
-    src: '/images/ayush.png',
-    designation: 'Secretary',
-    message:
-      'hello jsdbjwqdvhjwd hwjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq wjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq',
-  },
-  {
-    name: 'kgjkg',
-    src: '/images/ayush.png',
-    designation: 'Secretary',
-    message:
-      'lorem ipsum dolor sit amet. lorem ipsum dolor sit ameat. hjwqdvhjwd hwjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq wjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq',
-  },
-  {
-    name: 'hghjjv',
-    src: '/images/ayush.png',
-    designation: 'Secretary',
-    message:
-      'sjhasxa dxajdlor sit amet. lorem ipsum dolor sit ameat. hjwqdvhjwd hwjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq wjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq',
-  },
-  {
-    name: 'dfgvfd',
-    src: '/images/ayush.png',
-    designation: 'Secretary',
-    message:
-      'ahjfahjafjflorem ipsum dolor sit ameat. hjwqdvhjwd hwjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq wjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq',
-  },
-  {
-    name: 'Ayush',
-    src: '/images/ayush.png',
-    designation: 'Secretary',
-    message:
-      'lorem ipsum dolor sit amet. lorem ipsum dolor sit ameat. hjwqdvhjwd hwjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq wjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq',
-  },
-]
-
+import NewCarousel from '../shared/components/team/newCarousel'
+import sanityClient from '../shared/client'
 const members = [
   {
     name: 'john doe',
@@ -203,10 +166,10 @@ const Team = () => {
         <Navbar />
         <p>fhjfvk</p>
         <div className="my-20">
-          <h1 className="text-5xl font-semibold text-gray-100 text-center mb-10 mx-2">
+          <h1 className="text-4xl font-semibold text-gray-100 text-center mb-10 mx-2">
             Meet the team
           </h1>
-          <h3 className="text-2xl font-semibold text-gray-100 text-center">
+          <h3 className="text-2xl text-gray-100 text-center">
             syadjgewkfewvasiugs
           </h3>
         </div>
@@ -222,11 +185,11 @@ const Team = () => {
           ))}
         </div>
 
-        <div className="my-10 p-10">
-          <h1 className="text-5xl font-semibold text-gray-100 text-center my-20">
+        <div className="my-10 px-0 md:px-10">
+          <h1 className="text-4xl font-semibold text-gray-100 text-center my-20">
             Hear it form the team
           </h1>
-          <Carousel slides={OldTeamMembers} />
+          <NewCarousel />
         </div>
       </div>
     </>
