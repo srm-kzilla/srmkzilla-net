@@ -134,6 +134,66 @@ const members = [
     designation: 'Executive Board',
     audiourl: '/images/music.mp3',
   },
+  {
+    name: 'john doe',
+    src: '/images/ayush.png',
+    designation: 'Executive Board',
+    audiourl: '/images/music.mp3',
+  },
+  {
+    name: 'john doe',
+    src: '/images/ayush.png',
+    designation: 'Executive Board',
+    audiourl: '/images/music.mp3',
+  },
+  {
+    name: 'john doe',
+    src: '/images/ayush.png',
+    designation: 'Executive Board',
+    audiourl: '/images/music.mp3',
+  },
+  {
+    name: 'john doe',
+    src: '/images/ayush.png',
+    designation: 'Executive Board',
+    audiourl: '/images/music.mp3',
+  },
+  {
+    name: 'john doe',
+    src: '/images/ayush.png',
+    designation: 'Executive Board',
+    audiourl: '/images/music.mp3',
+  },
+  {
+    name: 'john doe',
+    src: '/images/ayush.png',
+    designation: 'Executive Board',
+    audiourl: '/images/music.mp3',
+  },
+  {
+    name: 'john doe',
+    src: '/images/ayush.png',
+    designation: 'Executive Board',
+    audiourl: '/images/music.mp3',
+  },
+  {
+    name: 'john doe',
+    src: '/images/ayush.png',
+    designation: 'Executive Board',
+    audiourl: '/images/music.mp3',
+  },
+  {
+    name: 'john doe',
+    src: '/images/ayush.png',
+    designation: 'Executive Board',
+    audiourl: '/images/music.mp3',
+  },
+  {
+    name: 'john doe',
+    src: '/images/ayush.png',
+    designation: 'Executive Board',
+    audiourl: '/images/music.mp3',
+  },
 ]
 
 const Team = () => {
@@ -150,7 +210,7 @@ const Team = () => {
             syadjgewkfewvasiugs
           </h3>
         </div>
-        <div className=" text-white rounded-2xl p-1 md:p-10 bg-black-200 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 lg:gap-2 md:mx-20 mx-2">
+        <div className=" text-white rounded-2xl pt-8 px-1 md:p-10 bg-black-200 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 lg:gap-2 md:mx-20 mx-2">
           {members.map((members) => (
             <MemberCard
               src={members.src}
