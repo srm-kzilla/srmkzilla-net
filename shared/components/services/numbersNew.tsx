@@ -61,7 +61,7 @@ const Stats = () => {
               </h1>
               {inView && (
                 <motion.div
-                  initial={{ x: -400 }}
+                  initial={{ x: -500 }}
                   animate={{ x: 0 }}
                   transition={{ duration: 2 }}
                   className="bg-baseGreen rounded-tr-lg relative h-full w-10/12"
@@ -92,14 +92,14 @@ const Stats = () => {
               </h1>
               {inView && (
                 <motion.div
-                  initial={{ x: -400 }}
+                  initial={{ x: -500 }}
                   animate={{ x: 0 }}
                   transition={{ duration: 2 }}
-                  className="bg-white rounded-tr-lg relative h-full w-9/12"
+                  className="bg-offWhite rounded-tr-lg relative h-full w-9/12"
                 >
                   <motion.img
                     src="./images/Comp-7.gif"
-                    className="absolute left-full -mt-1 transform -translate-x-2"
+                    className="absolute left-full -mt-1 transform -translate-x-1.5"
                     alt=""
                   />
                 </motion.div>
@@ -123,7 +123,7 @@ const Stats = () => {
               </h1>
               {inView && (
                 <motion.div
-                  initial={{ x: -400 }}
+                  initial={{ x: -500 }}
                   animate={{ x: 0 }}
                   transition={{ duration: 2 }}
                   className="bg-baseBlue rounded-tr-lg relative h-full w-10/12"
