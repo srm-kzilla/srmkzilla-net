@@ -1,164 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from '../shared/components/navbar'
 import MemberCard from '../shared/components/team/membercard'
-import Carousel from '../shared/components/team/carousel'
 import NewCarousel from '../shared/components/team/newCarousel'
 import sanityClient from '../shared/client'
 import FooterCommon from '../shared/components/footer_common'
-const members = [
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-]
+import Head from 'next/head'
 
 const Team = () => {
   const [newCard, setNewCard] = useState<any>(null)
@@ -190,6 +36,10 @@ const Team = () => {
 
   return (
     <>
+      <Head>
+        <title>SRMKZILLA | Team</title>
+        <link rel="icon" href="./images/kzillalogo.png" />
+      </Head>
       <div className="bg-black overflow-hidden ">
         <Navbar />
         <p>fhjfvk</p>
