@@ -3,8 +3,10 @@ import { CarouselData } from './carouseldata'
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
 import { FiArrowLeftCircle, FiArrowRightCircle } from 'react-icons/fi'
-
-const Carousel = ({ slides }) => {
+interface props {
+  slides: any
+}
+const Carousel = ({ slides }: props) => {
   const [current, setCurrent] = useState(0)
   const length = slides.length
 
