@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
-import { AlignCenter } from 'react-feather'
 import Player from './player'
 
 const MemberCard = (props) => {
   const [cloudShow, setCloudShow] = useState(false)
   return (
     <div className="place-self-center">
-      <div className="relative left-20 ml-8 z-20 top-20 -mt-36">
+      <div className="relative left-20 ml-8 z-20 top-20 -mt-24">
         <img
           src="/images/cloud.svg"
           alt="cloud"
@@ -36,7 +35,7 @@ const MemberCard = (props) => {
         <span
           className={`${
             cloudShow ? 'block' : 'invisible'
-          } text-sm text-gray-100 text-center mb-2`}
+          } text-xs text-gray-100 text-center mb-2`}
         >
           {props.designation}
         </span>
