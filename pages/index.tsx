@@ -98,14 +98,21 @@ const Home = () => {
       <section className="hero h-screen bg-hero-pattern bg-fixed overflow-hidden relative">
         <Navbar />
         <div className="absolute top-2/4 transform -translate-y-1/2">
-          <motion.div className="relative w-screen sm:h-64 h-52 z-30">
-            <motion.video
-              autoPlay
-              loop
-              className="sm:h-64 h-52 absolute left-2/4 transform -translate-x-1/2"
-              src="./images/hero_logo.mp4"
-            ></motion.video>
-          </motion.div>
+        <InView>
+              {({ inView, ref, entry }) => (
+                <motion.div ref={ref} className="relative w-screen sm:h-64 h-52 z-30">
+                  {inView && (
+                    <motion.video
+                    initial={{opacity:0}} animate={{opacity:1}}
+                      autoPlay
+                      loop
+                      className="sm:h-64 h-52 absolute left-2/4 transform -translate-x-1/2"
+                      src="./images/hero_logo.mp4"
+                    />
+                  )}
+                </motion.div>
+              )}
+            </InView>
           <div className="lg:px-60 sm:px-32 px-10 z-30">
             <h1 className="text-center text-white sm:text-5xl text-4xl sm:mt-auto mt-5 font-bold">
               The campus club you love
@@ -324,7 +331,7 @@ const Home = () => {
                 <div ref={ref}>
                   {inView && (
                     <video
-                      src="./images/another.mp4"
+                      src="./images/pendrop.mp4"
                       className="w-full mt-16 mx-auto"
                       autoPlay
                     />
@@ -333,13 +340,25 @@ const Home = () => {
               )}
             </InView>
           </div>
-          <div className="mt-32 lg:block hidden z-20">
-            <img
+          <InView>
+              {({ inView, ref, entry }) => (
+                <div className="mt-32 lg:block hidden z-20" ref={ref}>
+                  {inView && (
+                    <video
+                      className="w-96 z-30 h-auto xl:ml-16 ml-10 mt-0 border-orange600 border-8 rounded-2xl"
+                      src="./images/draw.mp4"
+                      autoPlay
+                    />
+                  )}
+                </div>
+              )}
+            </InView>
+          {/* <div className="mt-32 lg:block hidden z-20">
+            <video
               className="w-96 z-30 h-auto xl:ml-16 ml-10 mt-0 border-orange600 border-8 rounded-2xl"
-              src="./images/design2.png"
-              alt="design"
+              src="./images/draw.mp4"
             />
-          </div>
+          </div> */}
           <motion.svg
             className="absolute top-2/3 -mt-28 z-0"
             width="1007"
@@ -469,13 +488,20 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="lg:mt-24 ml-6 mt-0">
-            <img
-              src="./images/tech.png"
-              className="lg:w-96 w-screen lg:ml-24 sm:mx-auto mx-auto lg:mt-10 mt-16"
-              alt=""
-            />
-          </div>
+          <InView>
+              {({ inView, ref, entry }) => (
+                <div ref={ref} className="lg:mt-24 ml-6 mt-0">
+                  {inView && (
+                    <video
+                    src="./images/technical.mp4"
+                    className="lg:w-96 w-screen lg:ml-24 sm:mx-auto mx-auto lg:mt-10 mt-16"
+                    autoPlay
+                    />
+                  )}
+                </div>
+              )}
+            </InView>
+            
         </div>
       </section>
     </div>

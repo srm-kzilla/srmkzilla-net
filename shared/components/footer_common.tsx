@@ -16,21 +16,21 @@ const FooterCommon = () => {
       </div>
       <div className="absolute w-full h-1 bg-black top-0"></div>
       <div className="relative">
-        <div className="absolute flex text-white text-2xl top-20 right-1/2 transform translate-x-1/2 md:translate-x-0 md:right-16">
-          <div className="h-12 relative w-12 border border-white rounded-full mr-3">
+        <div className="absolute flex text-white md:text-2xl text-xl md:top-20 md:bottom-auto top-auto bottom-24 right-1/2 transform translate-x-1/2 md:translate-x-0 md:right-16">
+          <div className="md:h-12 h-10 relative md:w-12 w-10 border border-white rounded-full mr-3">
             <FiInstagram className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer" />
           </div>
-          <div className="h-12 relative w-12 border border-white rounded-full mr-3">
+          <div className="md:h-12 h-10 relative md:w-12 w-10 border border-white rounded-full mr-3">
             <FaFacebookF className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer" />
           </div>
-          <div className="h-12 relative w-12 border border-white rounded-full mr-3">
+          <div className="md:h-12 h-10 relative md:w-12 w-10 border border-white rounded-full mr-3">
             <FaTwitter className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer" />
           </div>
-          <div className="h-12 relative w-12 border border-white rounded-full mr-3">
+          <div className="md:h-12 h-10 relative md:w-12 w-10 border border-white rounded-full mr-3">
             <FaLinkedinIn className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer" />
           </div>
         </div>
-        <div className="flex justify-center lg:justify-end pt-52 pb-20 text-white lg:pr-72 pr-auto">
+        <div className="flex justify-center lg:justify-end md:pt-52 pt-24 pb-20 text-white lg:pr-72 pr-auto">
           <div className="md:mr-28 mr-12 ml-2">
             <h1 className="md:text-2xl text-xl relative">
               Explore
@@ -75,7 +75,9 @@ const FooterCommon = () => {
 
           {/* second */}
         </div>
+        <h1 className='text-center text-white mt-16 text-sm md:mt-auto pb-5'>&#169; crafted with ❤️ by SRMKZILLA 2021</h1>
       </div>
+      
     </div>
   )
 }
