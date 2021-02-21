@@ -72,7 +72,7 @@ const Navbar = () => {
                   Home
                 </div>
               </Link>
-              <Link href="/aboutus">
+              <Link href="/about">
                 <div className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent">
                   About Us
                 </div>

@@ -1,34 +1,17 @@
 import React from 'react'
 import Navbar from '../shared/components/navbar'
 import Head from 'next/head'
-import CardSwipe from '../shared/components/card_aboutus'
-
+import CardSwipe from '../shared/components/about/swipe-card'
 import {
   LeftTimeline,
   RightTimeline,
-} from '../shared/components/timeline_aboutus'
-import dynamic from 'next/dynamic'
+} from '../shared/components/about/timeline'
 
-const cardData = [
-  { title: 'Values' },
-  { title: 'Mission' },
-  { title: 'Vision' },
-]
-
-const db = [
+const valuesdb = [
   {
     name: 'Values',
     desc:
-      'As Phil Jackson justly quoted, "Good teams become great ones when the members trust each other enough to surrender the Me for the We"',
-  },
-  {
-    name: 'Values',
-    desc: 'We at SRMKZILLA intend to move together as one.',
-  },
-  {
-    name: 'Values',
-    desc:
-      'We actively notice our communities and cater to their demands irrespective of the hardships that may hinder our way. ',
+      'We aim to grow bit by bit by our experiences, ideas, and perspectives manifested by the community of keen individuals',
   },
 
   {
@@ -39,15 +22,19 @@ const db = [
   {
     name: 'Values',
     desc:
-      'We aim to grow bit by bit by our experiences, ideas, and perspectives manifested by the community of keen individuals',
+      'We actively notice our communities and cater to their demands irrespective of the hardships that may hinder our way. ',
+  },
+  {
+    name: 'Values',
+    desc: 'We at SRMKZILLA intend to move together as one.',
+  },
+  {
+    name: 'Values',
+    desc:
+      'As Phil Jackson justly quoted, "Good teams become great ones when the members trust each other enough to surrender the Me for the We"',
   },
 ]
-const db2 = [
-  {
-    name: 'Mission',
-    desc:
-      'As a part of Mozilla’s open-source community, our mission is to provide a platform for inquisitive minds by guiding and empowering their aspirations. ',
-  },
+const missiondb = [
   {
     name: 'Mission',
     desc:
@@ -58,12 +45,17 @@ const db2 = [
     desc:
       'To help these individuals create a powerful nation and solve complex technical problems hindering their development.',
   },
+  {
+    name: 'Mission',
+    desc:
+      'As a part of Mozilla’s open-source community, our mission is to provide a platform for inquisitive minds by guiding and empowering their aspirations. ',
+  },
 ]
-const db3 = [
+const visiondb = [
   {
     name: 'Vision',
     desc:
-      'A community that discovers and invests in young minds that have the potential to make a difference.',
+      'To advocate free education and appraise the power of technical education in the form of seminars, workshops, and webinars.',
   },
   {
     name: 'Vision',
@@ -73,18 +65,7 @@ const db3 = [
   {
     name: 'Vision',
     desc:
-      'To advocate free education and appraise the power of technical education in the form of seminars, workshops, and webinars.',
-  },
-
-  {
-    name: 'Vision',
-    desc:
-      'We believe in taking small steps to accomplish big goals without losing our focus and determination. ',
-  },
-  {
-    name: 'Vision',
-    desc:
-      'We aim to grow bit by bit by our experiences, ideas, and perspectives manifested by the community of keen individuals',
+      'A community that discovers and invests in young minds that have the potential to make a difference.',
   },
 ]
 
@@ -108,11 +89,11 @@ const aboutus = () => {
             />{' '}
           </div>
         </div>
-        <div className="flex flex-wrap justify-center">
+        <div className="flex flex-wrap items-center justify-center">
           <div className="grid grid-cols-1 lg:grid-cols-3 grid-gap-3">
-            <CardSwipe datas={db} />
-            <CardSwipe datas={db2} />
-            <CardSwipe datas={db3} />
+            <CardSwipe datas={valuesdb} />
+            <CardSwipe datas={missiondb} />
+            <CardSwipe datas={visiondb} />
           </div>
         </div>
 
