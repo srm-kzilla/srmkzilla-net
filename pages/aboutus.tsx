@@ -136,21 +136,21 @@ const aboutus = () => {
                 <LeftTimeline
                   title="MOZOFEST"
                   desc="A three-day extravaganza to emanate the power of open source community sprinkled with a load of fun and frolic. MOZOFEST is our annual flagship event that witnesses speakers and developers from the community who educate the young minds about the latest developments in technology. Along with the intriguing tech talks, we organize many more exciting events to provide the perfect respite for people from all walks of life."
-                  date="12 dec 2020"
+                  date="29-31 March, 2019"
                   chat="lorem ipsum"
                   bg="bg-mozofest"
                 />
                 <RightTimeline
                   title="MOZOHACK"
                   desc="A thrilling 24-hour hackathon where students across the nation come together to bring some amazing ideas to life. An event that brings together the experts, enthusiasts, and beginners to put in their game-changing ideas for real-world problems. MOZOHACK is our flagship hackathon that is well received by developers across the globe."
-                  date="12 dec 2020"
+                  date="30-31 March, 2019"
                   chat="Dream it up. Code it down."
                   bg="bg-mozohack"
                 />
                 <LeftTimeline
                   title="SOCIAL RESPONSIBILITY"
                   desc="SRMKZILLA is committed to bring forth a change, in all ways possible. In our Social Outreach Programme, we visit orphanages and homes for the differently-abled and spent time with them while sharing happiness and love. We strive our best to bring smiles to their faces in a noble way. "
-                  date="12 dec 2020"
+                  date="9th feb 2020"
                   chat="lorem ipsum"
                   bg="bg-social"
                 />
