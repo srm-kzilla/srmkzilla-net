@@ -5,160 +5,7 @@ import Carousel from '../shared/components/team/carousel'
 import NewCarousel from '../shared/components/team/newCarousel'
 import sanityClient from '../shared/client'
 import FooterCommon from '../shared/components/footer_common'
-const members = [
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-  {
-    name: 'john doe',
-    src: '/images/ayush.png',
-    designation: 'Executive Board',
-    audiourl: '/images/music.mp3',
-  },
-]
+import Head from 'next/head'
 
 const Team = () => {
   const [newCard, setNewCard] = useState<any>(null)
@@ -190,6 +37,10 @@ const Team = () => {
 
   return (
     <>
+    <Head>
+        <title>SRMKZILLA</title>
+        <link rel="icon" href="./images/kzillalogo.png" />
+      </Head>
       <div className="bg-black overflow-hidden ">
         <Navbar />
         <p>fhjfvk</p>
@@ -198,7 +49,7 @@ const Team = () => {
             Meet the team
           </h1>
           <h3 className="text-2xl text-gray-100 text-center">
-            syadjgewkfewvasiugs
+          An awesome tech community driven by passion and innovation
           </h3>
         </div>
         <div className=" text-white rounded-2xl pt-8 px-1 md:p-10 bg-black-200 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 lg:gap-2 md:mx-20 mx-2">
@@ -212,10 +63,10 @@ const Team = () => {
               }) => {
                 return (
                   <MemberCard
-                    src={member.picture.asset.url}
-                    name={member.name}
-                    designation={member.designation}
-                    audiourl={member.description.asset.url}
+                    src={member?.picture?.asset?.url}
+                    name={member?.name}
+                    designation={member?.designation}
+                    audiourl={member?.description?.asset?.url}
                   />
                 )
               }

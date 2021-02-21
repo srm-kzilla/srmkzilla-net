@@ -31,7 +31,7 @@ const FooterCommon = () => {
           </div>
         </div>
         <div className="flex justify-center lg:justify-end md:pt-52 pt-24 pb-20 text-white lg:pr-72 pr-auto">
-          <div className="md:mr-28 mr-12 ml-2">
+          <div className="md:mr-28 mr-12 ml-2 sm:block hidden">
             <h1 className="md:text-2xl text-xl relative">
               Explore
               <div className="absolute top-full mt-2 left-0 w-24 md:w-32 h-1 bg-white opacity-25"></div>

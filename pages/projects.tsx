@@ -13,7 +13,7 @@ import Footer from '../shared/components/footer'
 import FooterCommon from '../shared/components/footer_common'
 
 const projects = () => {
-  const [projectData, setProject] = useState(null)
+  const [projectData, setProject] = useState([])
   useEffect(() => {
     sanityClient
       .fetch(
@@ -35,6 +35,7 @@ const projects = () => {
 
   return (
     <div className="overflow-hidden">
+      {console.log(projectData)}
       <Head>
         <title>SRMKZILLA | Projects</title>
         <link rel="icon" href="./images/kzillalogo.png" />
@@ -60,7 +61,7 @@ const projects = () => {
                 <Link href="/projects/[slug]" as={`/projects/${project.title}`}>
                   <a>
                     <ProjectIcon
-                      icon={project.logo.asset.url}
+                      icon={project?.logo?.asset?.url}
                       title={project.title}
                       upcomming={false}
                     />

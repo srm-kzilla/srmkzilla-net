@@ -23,11 +23,14 @@ import {
   motion,
   useAnimation,
   useElementScroll,
+  useTransform,
+  useViewportScroll,
 } from 'framer-motion'
 import Icons from '../shared/components/icons'
 import Homecarousel from '../shared/components/home_carousel'
 import Footer from '../shared/components/footer'
 import Navbar from '../shared/components/navbar'
+import FooterCommon from '../shared/components/footer_common'
 
 const container = {
   hidden: { x: 0, y: 0 },
@@ -100,8 +103,6 @@ const Home = () => {
         <div className="absolute top-2/4 transform -translate-y-1/2">
           <motion.div className="relative w-screen sm:h-64 h-52 z-30">
             <motion.img
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
               className="sm:h-64 h-52 absolute left-2/4 transform -translate-x-1/2"
               src="./images/hero_logo.gif"
               draggable="false"
@@ -122,7 +123,11 @@ const Home = () => {
       {/* New Section start */}
       <section className="works">
         <div className="bg-black-200 sm:pt-32 pt-24">
-          <Fade up><h1 className="text-white font-medium text-center text-4xl">Our latest brew</h1></Fade>
+          <Fade up>
+            <h1 className="text-white font-medium text-center text-4xl">
+              Our latest brew
+            </h1>
+          </Fade>
 
           <div className="flex flex-wrap items-center justify-center sm:mt-20 mt-14 pb-10">
             {newCard &&
@@ -147,10 +152,17 @@ const Home = () => {
       {/* {Process aection starts} */}
       <section className="process bg-black-200 pt-10 min-h-screen lg:px-40 md:px-32 px-10">
         <div>
-          <Fade up><h1 className="text-white text-center font-medium text-4xl">How we work</h1></Fade>
+          <Fade up>
+            <h1 className="text-white text-center font-medium text-4xl">
+              How we work
+            </h1>
+          </Fade>
           <Bounce>
             <div>
-              <Message color="baseBlue" message='Sketch me like one of your live projects!' />
+              <Message
+                color="baseBlue"
+                message="Sketch me like one of your live projects!"
+              />
             </div>
           </Bounce>
         </div>
@@ -163,8 +175,9 @@ const Home = () => {
             </h1>
 
             <p className="text-white text-lg my-4">
-            Wonders happen as we single-mindedly put our soul on paper. Sketching our ideas is the perfect place to start. We take rejections like a boss until the final model gets drafted.
-
+              Wonders happen as we single-mindedly put our soul on paper.
+              Sketching our ideas is the perfect place to start. We take
+              rejections like a boss until the final model gets drafted.
             </p>
             <img
               src="./images/bulb.png"
@@ -178,7 +191,7 @@ const Home = () => {
             {({ inView, ref }) => (
               <div ref={ref} className="lg:mt-52 mt-24 mx-auto z-30">
                 <div className="relative video transform -rotate-6 bg-orange300 md:w-72 md:h-72 sm:h-64 sm:w-64 h-52 w-52 items-center rounded-2xl z-40">
-                  <div className="absolute h-full w-full transform rotate-6 bg-white -top-8 left-6 rounded-2xl">
+                  <motion.div className="absolute h-full w-full transform rotate-6 bg-white -top-8 left-6 rounded-2xl">
                     <div>
                       {inView && (
                         <video
@@ -188,7 +201,7 @@ const Home = () => {
                         ></video>
                       )}
                     </div>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             )}
@@ -291,7 +304,10 @@ const Home = () => {
         {/* design */}
         <Bounce>
           <div className="lg:mt-0 sm:mt-24 mt-14">
-            <Message color="baseBlue" message='2040 just called; they said they want their design back.' />
+            <Message
+              color="baseBlue"
+              message="2040 just called; they said they want their design back."
+            />
           </div>
         </Bounce>
 
@@ -311,8 +327,9 @@ const Home = () => {
             </Slide>
 
             <p className="text-white text-lg my-4">
-            Getting our creative juices flowing helps us create magnificent designs. The design puts flesh and blood to the existing idea. These designs help turn our dreams into reality.
-
+              Getting our creative juices flowing helps us create magnificent
+              designs. The design puts flesh and blood to the existing idea.
+              These designs help turn our dreams into reality.
             </p>
             <InView>
               {({ inView, ref, entry }) => (
@@ -332,11 +349,13 @@ const Home = () => {
             {({ inView, ref, entry }) => (
               <div className="mt-24 lg:block hidden z-20 h-96" ref={ref}>
                 {inView && (
-                  <div><video
-                    className="w-96 z-30 h-auto xl:ml-16 ml-10 mt-0 border-orange600 border-8 rounded-2xl"
-                    src="./images/draw.mp4"
-                    autoPlay
-                  /></div>
+                  <div>
+                    <video
+                      className="w-96 z-30 h-auto xl:ml-16 ml-10 mt-0 border-orange600 border-8 rounded-2xl"
+                      src="./images/draw.mp4"
+                      autoPlay
+                    />
+                  </div>
                 )}
               </div>
             )}
@@ -430,11 +449,15 @@ const Home = () => {
           </motion.svg>
         </div>
         {/* design end */}
-   
-          <div className="lg:mt-auto sm:mt-16 mt-10">
-          <Bounce><Message color="orange300" message='404 does not exist on our number line.' /></Bounce>
-          </div>
-   
+
+        <div className="lg:mt-auto sm:mt-16 mt-10">
+          <Bounce>
+            <Message
+              color="orange300"
+              message="404 does not exist on our number line."
+            />
+          </Bounce>
+        </div>
 
         <div className="flex flex-wrap w-full -mt-10">
           <div className="xl:w-3/6 lg:w-2/5 -mt-5 w-auto">
@@ -444,32 +467,37 @@ const Home = () => {
             <div>
               <p className="text-white text-lg my-4">
                 <p className="text-white text-xl font-semibold">Robust Code</p>
-                We go through endless debugging to ensure our code can withstand a storm.
-
+                We go through endless debugging to ensure our code can withstand
+                a storm.
               </p>
             </div>
             <div>
               <p className="text-white text-lg my-4">
-                <p className="text-white text-xl font-semibold">Spick and Span</p>
+                <p className="text-white text-xl font-semibold">
+                  Spick and Span
+                </p>
                 <p className="text-lg font-normal">
-                We ensure that we follow the best practices for every project. Sticking to convention and arranging our work as a beautiful cheese platter is a priority for us.
-
+                  We ensure that we follow the best practices for every project.
+                  Sticking to convention and arranging our work as a beautiful
+                  cheese platter is a priority for us.
                 </p>
               </p>
             </div>
             <div>
               <p className="text-white text-lg my-4">
-                <p className="text-white text-xl font-semibold">Open source projects</p>
+                <p className="text-white text-xl font-semibold">
+                  Open source projects
+                </p>
                 <p className="text-lg text-white font-normal">
-                Edit and create something of your own from our Github repositories.
-
+                  Edit and create something of your own from our Github
+                  repositories.
                 </p>
               </p>
             </div>
           </div>
           <InView>
-            {({ inView, ref}) => (
-              <div ref={ref} className="lg:mt-24 mt-0 mb-24">
+            {({ inView, ref }) => (
+              <div ref={ref} className="lg:mt-24 mt-0 md:mb-24 mb-14">
                 {inView && (
                   <video
                     src="./images/technical.mp4"
@@ -482,7 +510,7 @@ const Home = () => {
           </InView>
         </div>
       </section>
-      
+      <Footer />
     </div>
   )
 }
