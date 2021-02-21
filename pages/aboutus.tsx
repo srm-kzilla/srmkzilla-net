@@ -98,21 +98,16 @@ const aboutus = () => {
       <Navbar />
 
       <div className="w-screen">
-        <div className="container  w-full text-white  p-2">
-          <div className=" mx-auto  w-full p-14 lg:p-40 mb-8">
-            <h1 className="text-center text-3xl">Welcome, Jack</h1>
-            <p className="text-center mt-5 text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              enim quam, luctus a nisi sed, dignissim suscipit tellus. Integer
-              pulvinar nulla in blandit porta. Quisque nec porttitor eros, quis
-              fermentum elit. Integer sodales fermentum egestas. Nunc sed rutrum
-              enim, id volutpat metus. Morbi sagittis ultrices sapien in
-              lacinia. Curabitur eget ex rutrum, eleifend dui sed, faucibus
-              lorem.
-            </p>
+        <div className="md:h-screen h-auto items-center flex justify-center">
+          <div className="md:h-3/4 h-full sm:w-10/12 w-full rounded-xl overflow-hidden">
+            <img
+              src="/images/mozofest.png"
+              draggable={false}
+              alt="image"
+              className="object-contain"
+            />{' '}
           </div>
         </div>
-
         <div className="flex flex-wrap justify-center">
           <div className="grid grid-cols-1 lg:grid-cols-3 grid-gap-3">
             <CardSwipe datas={db} />

@@ -56,7 +56,7 @@ const ServicesProvided = () => {
               </h2>
             </div>
             <div>
-              <p className="lg:w-full pr-8 text-justify ">
+              <p className="w-3/5 pr-8 text-justify ">
                 {services[activeIndex].head}
                 <br />
                 {services[activeIndex].desc}
@@ -79,6 +79,7 @@ const ServicesProvided = () => {
                       } lg:px-10 lg:py-6 px-5 py-3 focus:outline-none hover:bg-orange300 cursor-pointer rounded-2xl }`}
                     >
                       <img
+                        draggable={false}
                         src={`${
                           activeIndex == index
                             ? `${service.img_dark}`
@@ -112,10 +113,12 @@ const ServicesProvided = () => {
             </div>
 
             <div className="lg:px-10 lg:py-6  p-5 bg-black-100 rounded-2xl mt-5">
-              <p className="my-2 font-bold">Others</p>
-              <p className="my-2 md:text-xl text-lg">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
-                aspernatur eos consequuntur culpa distinctio cupiditate
+              <p className="my-2 font-bold">Penny for a Thought</p>
+              <p className="my-2 text-sm">
+                Have an amazing idea in mind? Let's discuss it over coffee and
+                bring it to life! <br /> Creativity has no boundaries, and same
+                applies to your ideas. Let's work on it together to create
+                something beautiful.
               </p>
             </div>
           </div>

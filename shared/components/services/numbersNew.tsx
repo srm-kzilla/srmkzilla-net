@@ -68,6 +68,7 @@ const Stats = () => {
                 >
                   <motion.img
                     src="./images/Comp-6.gif"
+                    draggable={false}
                     className="absolute left-full -translate-y-3 -mt-1 transform -translate-x-2"
                     alt=""
                   />
@@ -99,6 +100,7 @@ const Stats = () => {
                 >
                   <motion.img
                     src="./images/Comp-7.gif"
+                    draggable={false}
                     className="absolute left-full -mt-1 transform -translate-x-1.5"
                     alt=""
                   />
@@ -132,6 +134,7 @@ const Stats = () => {
                     src="./images/Comp-8.gif"
                     className="absolute left-full transform -translate-x-2"
                     alt=""
+                    draggable={false}
                   />
                 </motion.div>
               )}

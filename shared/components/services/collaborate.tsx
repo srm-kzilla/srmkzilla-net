@@ -24,7 +24,11 @@ const Collaborate = () => {
         <div className=" flex flex-col justify-center items-center">
           <div>
             {' '}
-            <img src="/images/thisisus.gif" className="w-max sm:ml-36" />
+            <img
+              src="/images/thisisus.gif"
+              className="w-max sm:ml-36"
+              draggable={false}
+            />
           </div>
         </div>
       </div>

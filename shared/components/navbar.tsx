@@ -93,7 +93,7 @@ const Navbar = () => {
                 items={[
                   {
                     label: 'Events',
-                    link: '/',
+                    link: 'http://events.srmkzilla.net/',
                   },
                   {
                     label: 'Projects',
@@ -101,7 +101,7 @@ const Navbar = () => {
                   },
                   {
                     label: 'Everything',
-                    link: '/',
+                    link: 'http://everything.srmkzilla.net/',
                   },
                 ]}
                 nameClass="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out relative z-10 hover:border-orange300 cursor-pointer border-b-2 border-transparent focus:outline-none"
