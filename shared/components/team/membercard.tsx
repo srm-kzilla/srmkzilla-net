@@ -21,7 +21,7 @@ const MemberCard = (props: cardProps) => {
         <p
           className={`${
             cloudShow ? 'block' : 'invisible'
-          } text-black mx-4 mb-1 mt-2 relative -top-20 text-xs`}
+          } text-black mx-4 mb-1 relative -top-20 text-xs w-3/5`}
         >
           Hey! I'm {props.name}.
         </p>
@@ -29,7 +29,7 @@ const MemberCard = (props: cardProps) => {
       <div
         onMouseOver={() => setCloudShow(true)}
         onMouseOut={() => setCloudShow(false)}
-        className=" hover:bg-black rounded-2xl md:p-3 overflow-hidden mx-auto cursor-pointer  transition duration-500 ease-in-out  transform hover:-translate-y-1 hover:scale-110"
+        className=" hover:bg-black rounded-2xl p-3 overflow-hidden mx-auto cursor-pointer  transition duration-500 ease-in-out  transform hover:-translate-y-1 hover:scale-110"
       >
         <img
           className="w-44 hover:w-76  rounded-full p-5  transition duration-500 ease-in-out  transform hover:-translate-y-1 hover:scale-110"
