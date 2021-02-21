@@ -29,8 +29,34 @@ a {
 
 .videoCard{
   background: rgba(255, 255, 255, 0.2);
-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
+.rec.rec-arrow {
+  border-radius: 50%; 
+  background-color: transparent !important;
+  color: #222221;
+  font-size: 15px;
+}
+
+.rec-dot{
+  background-color: #222221 !important;
+}
+
+.rec-dot_active{
+  box-shadow: none !important;
+  background-color:#FF644E !important;
+}
+
+.rec.rec-arrow:focus{
+  outline: none;
+}
+
+@media only screen and (max-width: 400px) {
+  .rec.rec-arrow{
+    display: none
+  }
+}
 
 @tailwind utilities;
+

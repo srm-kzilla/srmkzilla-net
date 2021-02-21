@@ -1,46 +1,33 @@
-import React, { useState, useRef, useLayoutEffect, Component } from "react";
-import { Navbar } from "../shared/components";
-import Card_home from "../shared/components/card_home";
-import Message from "../shared/components/Message";
-import Bounce from "react-reveal/Bounce";
-import Fade from "react-reveal/Fade";
-import Zoom from "react-reveal/Zoom";
-import Slide from "react-reveal/Slide";
-import Head from "next/head";
-import Carousel from "react-elastic-carousel";
+import React, {
+  useState,
+  useRef,
+  useLayoutEffect,
+  Component,
+  useEffect,
+} from 'react'
+import Card_home from '../shared/components/card_home'
+import Message from '../shared/components/Message'
+import Bounce from 'react-reveal/Bounce'
+import Fade from 'react-reveal/Fade'
+import Zoom from 'react-reveal/Zoom'
+import Slide from 'react-reveal/Slide'
+import Head from 'next/head'
+import sanityClient from '../shared/client'
+import Carousel from 'react-elastic-carousel'
 
-import { InView, useInView } from "react-intersection-observer";
+import { InView, useInView } from 'react-intersection-observer'
+
 import {
   animate,
   AnimatePresence,
   motion,
   useAnimation,
   useElementScroll,
-} from "framer-motion";
-import Icons from "../shared/components/icons";
-import Homecarousel from "../shared/components/home_carousel";
-import Footer from "../shared/components/footer";
-
-const cardData = [
-  {
-    title: "First",
-    image: "./images/testImage.png",
-    desc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis sapiente enim pariatur blanditiis, tempore quia distinctio nihil atque deserunt eius repellendus. Cumque veniam corrupti",
-  },
-  {
-    title: "Second",
-    image: "./images/testImage.png",
-    desc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis sapiente enim pariatur blanditiis, tempore quia distinctio nihil atque deserunt eius repellendus. Cumque veniam corrupti",
-  },
-  {
-    title: "third",
-    image: "./images/testImage.png",
-    desc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis sapiente enim pariatur blanditiis, tempore quia distinctio nihil atque deserunt eius repellendus. Cumque veniam corrupti",
-  },
-];
+} from 'framer-motion'
+import Icons from '../shared/components/icons'
+import Homecarousel from '../shared/components/home_carousel'
+import Footer from '../shared/components/footer'
+import Navbar from '../shared/components/navbar'
 
 const container = {
   hidden: { x: 0, y: 0 },
@@ -76,34 +63,66 @@ const container = {
       duration: 2,
     },
   },
-};
+}
 
 const Home = () => {
+  const [newCard, setNewCard] = useState(null)
+
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "whatsNew"]{
+        title,
+        picture{
+          asset->{
+            _id,
+            url
+          },
+          alt
+        },
+        description,
+        link
+    }`
+      )
+      .then((data) => setNewCard(data))
+      .catch(console.error)
+  }, [])
+
   return (
     <div className="bg-black overflow-hidden">
       <Head>
         <title>SRMKZILLA</title>
         <link rel="icon" href="./images/kzillalogo.png" />
       </Head>
-      <Icons />
+
       <section className="hero h-screen bg-hero-pattern bg-fixed overflow-hidden relative">
         <Navbar />
         <div className="absolute top-2/4 transform -translate-y-1/2">
-          <div className="relative sm:h-64 h-52 z-30">
-            <video
-              autoPlay
-              loop
-              className="sm:h-64 h-52 absolute left-2/4 transform -translate-x-1/2"
-              src="./images/hero_logo.mp4"
-            ></video>
-          </div>
+          <InView>
+            {({ inView, ref, entry }) => (
+              <motion.div
+                ref={ref}
+                className="relative w-screen sm:h-64 h-52 z-30"
+              >
+                {inView && (
+                  <motion.video
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    autoPlay
+                    loop
+                    className="sm:h-64 h-52 absolute left-2/4 transform -translate-x-1/2"
+                    src="./images/hero_logo.mp4"
+                  />
+                )}
+              </motion.div>
+            )}
+          </InView>
           <div className="lg:px-60 sm:px-32 px-10 z-30">
             <h1 className="text-center text-white sm:text-5xl text-4xl sm:mt-auto mt-5 font-bold">
               The campus club you love
             </h1>
             <p className="text-white opacity-25 text-center text-2xl mt-6">
-              delectus quia adipisci amet suscipit error eveniet perspiciatis
-              eius pariatur, aspernatur ullam. Ipsa, dolores?
+              We make tech exuberant and open source. We know no limits.
             </p>
           </div>
         </div>
@@ -111,31 +130,40 @@ const Home = () => {
 
       {/* New Section start */}
       <section className="works">
-        <div className="bg-baseBlack sm:pt-32 pt-24">
+        <div className="bg-black-200 sm:pt-32 pt-24">
           <h1 className="text-white text-center text-4xl">What's New</h1>
 
           <div className="flex flex-wrap items-center justify-center sm:mt-20 mt-14 pb-10">
-            {cardData.map((card) => (
-              <Card_home
-                name={card.title}
-                image={card.image}
-                desc={card.desc}
-              />
-            ))}
-            
+            {newCard &&
+              newCard.map(
+                (card: {
+                  title: String
+                  picture: { asset: { url: string } }
+                  description: String
+                }) => (
+                  <Card_home
+                    name={card.title}
+                    image={card.picture.asset.url}
+                    desc={card.description}
+                  />
+                )
+              )}
           </div>
         </div>
       </section>
       {/* New section ends */}
 
       {/* {Process aection starts} */}
-      <section className="process bg-baseBlack pt-10 min-h-screen lg:px-40 md:px-32 px-10">
+      <section className="process bg-black-200 pt-10 min-h-screen lg:px-40 md:px-32 px-10">
         <div>
           <h1 className="text-white text-center text-4xl">How we work</h1>
           <Bounce>
-          <div>
-            <Message color="baseBlue" />
-          </div>
+            <div>
+              <Message
+                color="baseBlue"
+                bubblemsg="Sketch me like one of your live projects!"
+              />
+            </div>
           </Bounce>
         </div>
 
@@ -148,10 +176,9 @@ const Home = () => {
             </h1>
 
             <p className="text-white text-lg my-4">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Praesentium reprehenderit mollitia nihil sunt modi. Ad eaque,
-              labore dolorem, debitis id eum cum adipisci impedit quos mollitia
-              earum, voluptate natus. Voluptas.
+              Wonders happen as we single-mindedly put our soul on paper.
+              Sketching our ideas is the perfect place to start. We take
+              rejections like a boss until the final model gets drafted.
             </p>
             <img
               src="./images/bulb.png"
@@ -163,7 +190,22 @@ const Home = () => {
 
           <div className="lg:mt-52 mt-24 mx-auto z-30">
             <div className="relative video transform -rotate-6 bg-orange300 md:w-72 md:h-72 sm:h-64 sm:w-64 h-52 w-52 items-center rounded-2xl z-40">
-              <div className="absolute h-full w-full transform rotate-6 bg-white -top-8 left-6 rounded-2xl"></div>
+              <div className="absolute h-full w-full transform rotate-6 bg-white -top-8 left-6 rounded-2xl">
+                {/* {inView && (<video autoPlay className='h-full w-full' src='./images/idea.mp4'></video>)} */}
+                <InView>
+                  {({ inView, ref, entry }) => (
+                    <div ref={ref}>
+                      {inView && (
+                        <video
+                          autoPlay
+                          className="h-full w-full mt-8"
+                          src="./images/idea.mp4"
+                        ></video>
+                      )}
+                    </div>
+                  )}
+                </InView>
+              </div>
             </div>
           </div>
 
@@ -263,9 +305,12 @@ const Home = () => {
 
         {/* design */}
         <Bounce>
-        <div className="lg:mt-0 sm:mt-24 mt-14">
-          <Message color="baseBlue" />
-        </div>
+          <div className="lg:mt-0 sm:mt-24 mt-14">
+            <Message
+              color="baseBlue"
+              bubblemsg="2040 just called; they said they want their design back."
+            />
+          </div>
         </Bounce>
 
         <div className="flex flex-wrap w-full mt-52 relative">
@@ -284,24 +329,43 @@ const Home = () => {
             </Slide>
 
             <p className="text-white text-lg my-4">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Praesentium reprehenderit mollitia nihil sunt modi. Ad eaque,
-              labore dolorem, debitis id eum cum adipisci impedit quos mollitia
-              earum, voluptate natus. Voluptas.
+              Getting our creative juices flowing helps us create magnificent
+              designs. The design puts flesh and blood to the existing idea.
+              These designs help turn our dreams into reality.
             </p>
+            <InView>
+              {({ inView, ref, entry }) => (
+                <div ref={ref}>
+                  {inView && (
+                    <video
+                      src="./images/pendrop.mp4"
+                      className="w-full mt-16 mx-auto"
+                      autoPlay
+                    />
+                  )}
+                </div>
+              )}
+            </InView>
+          </div>
+          <InView>
+            {({ inView, ref, entry }) => (
+              <div className="mt-32 lg:block hidden z-20" ref={ref}>
+                {inView && (
+                  <video
+                    className="w-96 z-30 h-auto xl:ml-16 ml-10 mt-0 border-orange600 border-8 rounded-2xl"
+                    src="./images/draw.mp4"
+                    autoPlay
+                  />
+                )}
+              </div>
+            )}
+          </InView>
+          {/* <div className="mt-32 lg:block hidden z-20">
             <video
-              src="./images/another.mp4"
-              className="w-full mt-16 mx-auto"
-              autoPlay
-            />
-          </div>
-          <div className="mt-32 lg:block hidden z-20">
-            <img
               className="w-96 z-30 h-auto xl:ml-16 ml-10 mt-0 border-orange600 border-8 rounded-2xl"
-              src="./images/design2.png"
-              alt="design"
+              src="./images/draw.mp4"
             />
-          </div>
+          </div> */}
           <motion.svg
             className="absolute top-2/3 -mt-28 z-0"
             width="1007"
@@ -392,9 +456,12 @@ const Home = () => {
         </div>
         {/* design end */}
         <Bounce>
-        <div className="lg:mt-auto sm:mt-16 mt-10">
-          <Message color="orange300" />
-        </div>
+          <div className="lg:mt-auto sm:mt-16 mt-10">
+            <Message
+              color="orange300"
+              bubblemsg="404 does not exist on our number line."
+            />
+          </div>
         </Bounce>
 
         <div className="flex flex-wrap w-full -mt-10">
@@ -403,44 +470,53 @@ const Home = () => {
               Technical<span className="text-orange600 text-4xl">.</span>
             </h1>
             <div>
-            <p className="text-white text-lg my-4">
-              <p className='text-white text-xl font-semibold'>Lorem Ipsum</p>
-              Praesentium reprehenderit mollitia nihil sunt modi. Ad eaque,
-              labore dolorem, debitis id eum cum adipisci impedit quos mollitia
-              earum, voluptate natus. Voluptas.
-            </p>
+              <p className="text-white text-lg my-4">
+                <p className="text-white text-xl font-semibold">Robust Code </p>
+                We go through endless debugging to ensure our code can withstand
+                a storm.
+              </p>
             </div>
             <div>
-            <p className="text-white text-lg my-4">
-              <p className='text-white text-xl font-semibold'>Lorem Ipsum</p>
-              <p className='text-lg font-normal'>Praesentium reprehenderit mollitia nihil sunt modi. Ad eaque,
-              labore dolorem, debitis id eum cum adipisci impedit quos mollitia
-              earum, voluptate natus. Voluptas.</p>
-            </p>
+              <p className="text-white text-lg my-4">
+                <p className="text-white text-xl font-semibold">
+                  Spick and Span
+                </p>
+                <p className="text-lg font-normal">
+                  We ensure that we follow the best practices for every project.
+                  Sticking to convention and arranging our work as a beautiful
+                  cheese platter is a priority for us.
+                </p>
+              </p>
             </div>
             <div>
-            <p className="text-white text-lg my-4">
-              <p className='text-white text-xl font-semibold'>Lorem Ipsum</p>
-              <p className='text-lg text-white font-normal'>Praesentium reprehenderit mollitia nihil sunt modi. Ad eaque,
-              labore dolorem, debitis id eum cum adipisci impedit quos mollitia
-              earum, voluptate natus. Voluptas.</p>
-            </p>
+              <p className="text-white text-lg my-4">
+                <p className="text-white text-xl font-semibold">
+                  Open Source Projects
+                </p>
+                <p className="text-lg text-white font-normal">
+                  Edit and create something of your own from our Github
+                  repositories.
+                </p>
+              </p>
             </div>
           </div>
-          <div className="lg:mt-24 ml-6 mt-0">
-            <img
-              src="./images/tech.png"
-              className="lg:w-96 w-screen lg:ml-24 sm:mx-auto mx-auto lg:mt-10 mt-16"
-              alt=""
-            />
-          </div>
+          <InView>
+            {({ inView, ref, entry }) => (
+              <div ref={ref} className="lg:mt-24 ml-6 mt-0">
+                {inView && (
+                  <video
+                    src="./images/technical.mp4"
+                    className="lg:w-96 w-screen lg:ml-24 sm:mx-auto mx-auto lg:mt-10 mt-16"
+                    autoPlay
+                  />
+                )}
+              </div>
+            )}
+          </InView>
         </div>
       </section>
-      {/* Process section ends */}
-      <Footer />
-     
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
