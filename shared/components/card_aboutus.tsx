@@ -1,19 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
+import TinderCard from 'react-tinder-card'
 
-const Card_aboutus = (props: { name: String }) => {
-    return (
-        <div className="w-72 mx-10 md:h-72 lg:h-96 overflow-hidden rounded-t-2xl my-5 rounded-b-2xl">
-            <div className="bg-baseBlack px-2  p-8">
-                <div className="mx-auto font-subHeading my-4 font-bold">
-                            <h2 className="font-subHeading not-italic font-bold text-2xl text-center text-white">{props.name}</h2>
-                            
-                </div>
-                <div className=" h-72 lg:h-96 ">
-                </div>
-                        
+function CardSwipe(props) {
+  const [lastDirection, setLastDirection] = useState()
+
+  const swiped = (direction, nameToDelete) => {
+    console.log('removing: ' + nameToDelete)
+    setLastDirection(direction)
+  }
+
+  const outOfFrame = (name) => {
+    console.log(name + ' left the screen!')
+  }
+
+  return (
+    <div>
+      <div className="w-96 h-96">
+        {props.datas.map((data) => (
+          <TinderCard
+            className="absolute"
+            key={data.name}
+            onSwipe={(dir) => swiped(dir, data.name)}
+            onCardLeftScreen={() => outOfFrame(data.name)}
+          >
+            <div className="relative bg-black-200 w-72 h-72 rounded-xl p-5">
+              <h1 className="text-2xl font-bold text-center my-5">
+                {data.name}
+              </h1>
+              <p className="text-justify mx-4">{data.desc}</p>
             </div>
-        </div>
-    )
+          </TinderCard>
+        ))}
+      </div>
+    </div>
+  )
 }
 
-export default Card_aboutus
+export default CardSwipe
