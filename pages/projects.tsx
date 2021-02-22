@@ -2,15 +2,12 @@ import Head from 'next/head'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import Fade from 'react-reveal/Fade'
-import CardProject from '../shared/components/card_projects'
 import ProjectIcon from '../shared/components/project_icons'
 import sanityClient from '../shared/client'
-import BlockContent from '@sanity/block-content-to-react'
-import imageUrlBuilder from '@sanity/image-url'
 import Service from '../shared/components/services'
 import Navbar from '../shared/components/navbar'
 import Footer from '../shared/components/footer'
-import FooterCommon from '../shared/components/footer_common'
+import Footer from '../shared/components/footer_common'
 
 const projects = () => {
   const [projectData, setProject] = useState([])
@@ -74,7 +71,7 @@ const projects = () => {
         </div>
         <Service />
       </div>
-      <FooterCommon />
+      <Footer />
     </div>
   )
 }

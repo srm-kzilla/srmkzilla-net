@@ -1,35 +1,15 @@
-import React, {
-  useState,
-  useRef,
-  useLayoutEffect,
-  Component,
-  useEffect,
-} from 'react'
+import React, { useState, useEffect } from 'react'
 import Card_home from '../shared/components/card_home'
 import Message from '../shared/components/Message'
 import Bounce from 'react-reveal/Bounce'
 import Fade from 'react-reveal/Fade'
-import Zoom from 'react-reveal/Zoom'
 import Slide from 'react-reveal/Slide'
 import Head from 'next/head'
 import sanityClient from '../shared/client'
-
-import { InView, useInView } from 'react-intersection-observer'
-
-import {
-  animate,
-  AnimatePresence,
-  motion,
-  useAnimation,
-  useElementScroll,
-  useTransform,
-  useViewportScroll,
-} from 'framer-motion'
-import Icons from '../shared/components/icons'
-import Homecarousel from '../shared/components/home_carousel'
-import Footer from '../shared/components/footer'
+import { InView } from 'react-intersection-observer'
+import { motion } from 'framer-motion'
 import Navbar from '../shared/components/navbar'
-import FooterCommon from '../shared/components/footer_common'
+import Footer from '../shared/components/footer_common'
 
 const container = {
   hidden: { x: 0, y: 0 },

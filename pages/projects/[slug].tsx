@@ -11,7 +11,7 @@ import BlockContent from '@sanity/block-content-to-react'
 import InstagramEmbed from 'react-instagram-embed'
 import Tilt from 'react-parallax-tilt'
 import Navbar from '../../shared/components/navbar'
-import FooterCommon from '../../shared/components/footer_common'
+import Footer from '../../shared/components/footer_common'
 
 type Props = {
   title: String
@@ -144,7 +144,7 @@ const Project = ({
           </button>
         </div>
       </div>
-      <FooterCommon />
+      <Footer />
     </div>
   )
 }

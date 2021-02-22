@@ -3,7 +3,7 @@ import Navbar from '../shared/components/navbar'
 import MemberCard from '../shared/components/team/membercard'
 import NewCarousel from '../shared/components/team/carousel'
 import sanityClient from '../shared/client'
-import FooterCommon from '../shared/components/footer_common'
+import Footer from '../shared/components/footer_common'
 import Head from 'next/head'
 
 const Team = () => {
@@ -88,7 +88,7 @@ const Team = () => {
           <NewCarousel />
         </div>
       </div>
-      <FooterCommon />
+      <Footer />
     </>
   )
 }
