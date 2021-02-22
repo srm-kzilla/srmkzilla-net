@@ -1,15 +1,7 @@
-import Navbar from "../navbar";
-import Testimonals from "./testimonals";
-import Collaborate from "./collaborate";
-import ServicesProvided from "./servicesprovided";
-import Numbers from "./numbers";
-import Carousel from "./carousel";
+import Navbar from '../navbar'
+import Testimonals from './testimonals'
+import Collaborate from './collaborate'
+import ServicesProvided from './servicesprovided'
+import Stats from './numbers'
 
-export {
-  Navbar,
-  Testimonals,
-  Collaborate,
-  ServicesProvided,
-  Numbers,
-  Carousel,
-};
+export { Navbar, Testimonals, Collaborate, ServicesProvided, Stats }

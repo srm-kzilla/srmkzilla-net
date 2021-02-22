@@ -49,14 +49,14 @@ const ServicesProvided = () => {
           Services we provide
         </h1>
         <div className="flex flex-col lg:flex-row justify-around p-5 md:p-10 container">
-          <div className="p-1 w-3/4  mr-5  flex-col hidden lg:block mt-14">
+          <div className="p-1 w-11/12 mr-0  flex-col hidden lg:block mt-14">
             <div>
               <h2 className="text-2xl font-semibold text-gray-100 text-left w-full mb-3">
                 {services[activeIndex].title}
               </h2>
             </div>
             <div>
-              <p className="lg:w-full pr-8 text-justify ">
+              <p className="w-11/12 pr-0 text-justify ">
                 {services[activeIndex].head}
                 <br />
                 {services[activeIndex].desc}
@@ -76,9 +76,10 @@ const ServicesProvided = () => {
                         activeIndex == index
                           ? 'bg-orange300 text-black'
                           : 'bg-black-100 text-white'
-                      } lg:px-10 lg:py-6 px-5 py-3 focus:outline-none hover:bg-orange300 cursor-pointer rounded-2xl }`}
+                      } lg:px-6 lg:py-6 px-5 py-3 focus:outline-none hover:bg-orange300 cursor-pointer rounded-2xl }`}
                     >
                       <img
+                        draggable={false}
                         src={`${
                           activeIndex == index
                             ? `${service.img_dark}`
@@ -86,8 +87,8 @@ const ServicesProvided = () => {
                         }`}
                         className="h-8"
                       />
-                      <p className="active:text-black my-2 text-xl font-bold">
-                        {' '}
+                      <p className="active:text-black my-2 text-lg font-bold">
+            
                         {service.title}
                       </p>
                     </div>
@@ -112,10 +113,12 @@ const ServicesProvided = () => {
             </div>
 
             <div className="lg:px-10 lg:py-6  p-5 bg-black-100 rounded-2xl mt-5">
-              <p className="my-2 font-bold">Others</p>
-              <p className="my-2 md:text-xl text-lg">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
-                aspernatur eos consequuntur culpa distinctio cupiditate
+              <p className="my-2 font-bold">Penny for a Thought</p>
+              <p className="my-2 text-sm">
+                Have an amazing idea in mind? Let's discuss it over coffee and
+                bring it to life! <br /> Creativity has no boundaries, and same
+                applies to your ideas. Let's work on it together to create
+                something beautiful.
               </p>
             </div>
           </div>

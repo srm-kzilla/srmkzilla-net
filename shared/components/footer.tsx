@@ -4,7 +4,6 @@ import { FiInstagram, FiMail } from 'react-icons/fi'
 import { IoCall } from 'react-icons/io5'
 import { BsArrowLeft } from 'react-icons/bs'
 import Link from 'next/link'
-import Fade from 'react-reveal/Fade'
 
 const Footer = () => {
   return (
@@ -41,7 +40,7 @@ const Footer = () => {
             <div className="mt-8 text-sm md:text-lg">
               <Link href='/'><p className="cursor-pointer">Home</p></Link>
               <Link href='https://events.srmkzilla.net/'><p className="mt-2 cursor-pointer">Events</p></Link>
-              <Link href='/aboutus'><p className="mt-2 cursor-pointer">About Us</p></Link>
+              <Link href='/about'><p className="mt-2 cursor-pointer">About Us</p></Link>
               <Link href='/services'><p className="mt-2 cursor-pointer">Our services</p></Link>
               <Link href='/team'><p className="mt-2 cursor-pointer text-logoGreen">Team</p></Link>
             </div>

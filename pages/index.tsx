@@ -13,7 +13,6 @@ import Zoom from 'react-reveal/Zoom'
 import Slide from 'react-reveal/Slide'
 import Head from 'next/head'
 import sanityClient from '../shared/client'
-import Carousel from 'react-elastic-carousel'
 
 import { InView, useInView } from 'react-intersection-observer'
 
