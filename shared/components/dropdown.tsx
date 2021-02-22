@@ -1,44 +1,52 @@
-import React, { useState } from "react";
-import Link from "next/link";
+import React, { useState } from 'react'
 
 type links = {
-  label: string;
-  link: string;
-};
+  label: string
+  link: string
+  newTab?: boolean
+}
 interface DropDownProps {
-  name: string;
-  nameClass: string;
-  class: string;
-  items: links[];
+  name: string
+  nameClass: string
+  class: string
+  items: links[]
 }
 
 const Dropdown = (props: DropDownProps) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
 
   return (
     <div onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
       <button className={props.nameClass}>{props.name}</button>
 
-      <div className={`${open ? "block" : "hidden"}`}>
+      <div className={`${open ? 'block' : 'hidden'}`}>
         <div className={props.class}>
           <div>
             {props.items.map((item) => {
-              return (
-                <div
+              return item.newTab ? (
+                <a
+                  href={item.link}
+                  className="block px-4 py-2 text-sm text-white hover:bg-orange300"
+                  key={item.label}
+                  target="_blank"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <a
+                  href={item.link}
                   className="block px-4 py-2 text-sm text-white hover:bg-orange300"
                   key={item.label}
                 >
-                  <Link href={item.link}>
-                    <p>{item.label}</p>
-                  </Link>
-                </div>
-              );
+                  {item.label}
+                </a>
+              )
             })}
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Dropdown;
+export default Dropdown
