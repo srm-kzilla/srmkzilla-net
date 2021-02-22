@@ -77,7 +77,7 @@ const aboutus = () => {
             <img
               src="/images/mozofest.png"
               draggable={false}
-              alt="image"
+              alt="about us"
               className="object-contain"
             />
           </div>

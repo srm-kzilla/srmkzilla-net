@@ -52,7 +52,7 @@ const NewCarousel = () => {
                 <img
                   className="absolute top-7 left-1/2 transform -translate-x-1/2"
                   src="./images/car.png"
-                  alt=""
+                  alt="quote"
                 />
                 <p className="text-white text-center px-5 md:px-16">
                   {item.message}
@@ -61,6 +61,7 @@ const NewCarousel = () => {
               <img
                 src={item.src}
                 className="avatar mx-auto h-32 w-32 mt-12 rounded-full"
+                alt="old team member"
               />
               <h1 className="text-center text-2xl text-white mt-2">
                 {item.name}

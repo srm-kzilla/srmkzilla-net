@@ -85,6 +85,7 @@ const Home = () => {
               className="sm:h-64 h-52 absolute left-2/4 transform -translate-x-1/2"
               src="./images/hero_logo.gif"
               draggable="false"
+              alt="srmkzilla logo"
             />
           </motion.div>
 
@@ -162,7 +163,7 @@ const Home = () => {
               src="./images/bulb.png"
               className="w-5/6 h-auto z-10 -ml-16 -mt-10 lg:block hidden relative"
               draggable="false"
-              alt=""
+              alt="bulb icon"
             />
           </div>
 
@@ -299,7 +300,7 @@ const Home = () => {
                   <img
                     src="./images/arrow.png"
                     className="absolute top-full left-full h-5 transform -translate-y-2"
-                    alt=""
+                    alt="arrow icon"
                   />
                 </span>
               </div>

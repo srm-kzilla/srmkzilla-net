@@ -11,6 +11,7 @@ const Testimonals = () => {
                 src="/images/testimonals_person1.png"
                 className="w-screen mt-5"
                 draggable={false}
+                alt="testimonals person"
               />
             </div>
             <div className="flex place-self-center mb-10 md:mb-0">
@@ -19,6 +20,7 @@ const Testimonals = () => {
                   src="/images/orangeline.png"
                   className="w-5/6"
                   draggable={false}
+                  alt="line"
                 />
               </div>
               <div className="flex flex-col">
@@ -52,6 +54,7 @@ const Testimonals = () => {
                 src="/images/testimonals_person2.png"
                 className="w-screen"
                 draggable={false}
+                alt="testimonals person"
               />
             </div>
             <div className="flex items-center place-self-center mb-5 -mt-10">
@@ -60,6 +63,7 @@ const Testimonals = () => {
                   src="/images/orangeline.png"
                   className="w-5/6"
                   draggable={false}
+                  alt="line"
                 />
               </div>
               <div className="flex flex-col">

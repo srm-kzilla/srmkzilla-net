@@ -59,12 +59,16 @@ const Project = ({
         <img
           className="absolute top-0 right-0 sm:h-screen h-2/3 z-0"
           src="../images/bgpro.png"
-          alt=""
+          alt="pattern"
         />
         <div className="flex flex-wrap w-screen items-center content-center">
           <div className="z-10 lg:w-2/4 sm:px-24 px-12 sm:mt-40 mt-20 mx-auto">
             {imageUrl && (
-              <img className="lg:relative lg:mx-0 mx-auto" src={imageUrl} />
+              <img
+                className="lg:relative lg:mx-0 mx-auto"
+                src={imageUrl}
+                alt="project"
+              />
             )}
             <h1 className="text-white text-5xl lg:text-left text-center font-semibold mt-10">
               {title}
@@ -132,7 +136,7 @@ const Project = ({
         <div className="flex flex-wrap items-center justify-center px-24">
           {techstack.map((tech: any) => (
             <div className="mx-5 my-5">
-              <img src={`/images/${tech}.png`} alt="" />
+              <img src={`/images/${tech}.png`} alt="techstack" />
             </div>
           ))}
         </div>
