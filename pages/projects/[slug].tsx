@@ -1,13 +1,9 @@
 import React from 'react'
-
 import { useRouter } from 'next/router'
-import pro from '../../shared/pro.json'
-import cardData from '../../shared/test'
 import Head from 'next/head'
 import imageUrlBuilder from '@sanity/image-url'
 import { useState, useEffect } from 'react'
 import BlockContent from '@sanity/block-content-to-react'
-
 import InstagramEmbed from 'react-instagram-embed'
 import Tilt from 'react-parallax-tilt'
 import Navbar from '../../shared/components/navbar'

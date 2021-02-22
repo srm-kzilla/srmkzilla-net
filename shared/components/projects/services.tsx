@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import CardProject from './card_projects'
-import sanityClient from '../../shared/client'
+import sanityClient from '../../client'
 import Fade from 'react-reveal/Fade'
 
 const Service = () => {
