@@ -5,9 +5,7 @@ import { IoCall } from 'react-icons/io5'
 import { BsArrowLeft } from 'react-icons/bs'
 import { useRouter } from 'next/router'
 const Footer = () => {
-  const router = useRouter()
-  const path = router.pathname
-  console.log(path)
+  const { pathname: path } = useRouter()
   return (
     <div
       className={`${
