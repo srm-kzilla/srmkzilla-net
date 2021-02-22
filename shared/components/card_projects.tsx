@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React from 'react'
+import { motion } from 'framer-motion'
 
 const CardProject = (props: { name: String; image: any; desc: String }) => {
   return (
@@ -23,7 +23,7 @@ const CardProject = (props: { name: String; image: any; desc: String }) => {
         </button>
       </div>
     </motion.div>
-  );
-};
+  )
+}
 
-export default CardProject;
+export default CardProject
