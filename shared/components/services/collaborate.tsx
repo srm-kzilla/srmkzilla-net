@@ -1,4 +1,5 @@
 import React from 'react'
+import { InView } from 'react-intersection-observer'
 
 const Collaborate = () => {
   return (
@@ -20,15 +21,22 @@ const Collaborate = () => {
             </div>
           </a>
         </div>
-        <div className=" flex flex-col justify-center items-center">
-          <div>
-            <img
-              src="/images/thisisus.gif"
-              className="w-max sm:ml-36"
-              draggable={false}
-            />
-          </div>
-        </div>
+        <InView>
+          {({ inView, ref }) => (
+            <div
+              ref={ref}
+              className="flex flex-col justify-center items-center -mt-10"
+            >
+              {inView && (
+                <video
+                  autoPlay
+                  className="h-full w-full"
+                  src="./images/thisisus.mp4"
+                ></video>
+              )}
+            </div>
+          )}
+        </InView>
       </div>
     </>
   )
