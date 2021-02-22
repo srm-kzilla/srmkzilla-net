@@ -56,7 +56,7 @@ const Stats = () => {
               ref={ref}
               className="instagram relative h-16 rounded-xl w-10/12 bg-black-200 overflow-hidden"
             >
-              <h1 className="text-black absolute top-1/2 transform -translate-y-1/2 z-40 right-1/4">
+              <h1 className="text-black absolute top-1/2 transform -translate-y-1/2 z-50 right-1/4">
                 {followers} followers
               </h1>
               {inView && (
@@ -66,10 +66,13 @@ const Stats = () => {
                   transition={{ duration: 2 }}
                   className="bg-baseGreen rounded-tr-lg relative h-full w-10/12"
                 >
+                  <div className='absolute w-2 bg-baseGreen h-full left-full transform -translate-x-4 z-30'>
+
+                  </div>
                   <motion.img
-                    src="./images/Comp-6.gif"
+                    src="./images/greenwave.gif"
                     draggable={false}
-                    className="absolute left-full -translate-y-3 -mt-1 transform -translate-x-2"
+                    className="absolute left-full -translate-y-3 -mt-1 transform -translate-x-3"
                     alt=""
                   />
                 </motion.div>
@@ -96,12 +99,13 @@ const Stats = () => {
                   initial={{ x: -500 }}
                   animate={{ x: 0 }}
                   transition={{ duration: 2 }}
-                  className="bg-offWhite rounded-tr-lg relative h-full w-9/12"
+                  className="bg-offWhite relative h-full w-9/12"
                 >
+                  <div className='absolute w-2 bg-offWhite h-full transform -translate-x-4 left-full z-30'></div>
                   <motion.img
-                    src="./images/Comp-7.gif"
+                    src="./images/whitewave.gif"
                     draggable={false}
-                    className="absolute left-full -mt-1 transform -translate-x-1.5"
+                    className="absolute left-full -translate-y-3 -mt-1 transform -translate-x-3"
                     alt=""
                   />
                 </motion.div>
@@ -130,11 +134,12 @@ const Stats = () => {
                   transition={{ duration: 2 }}
                   className="bg-baseBlue rounded-tr-lg relative h-full w-10/12"
                 >
+                   <div className='absolute w-2 bg-baseBlue h-full transform -translate-x-4 left-full z-30'></div>
                   <motion.img
-                    src="./images/Comp-8.gif"
-                    className="absolute left-full transform -translate-x-2"
-                    alt=""
+                    src="./images/bluewave.gif"
                     draggable={false}
+                    className="absolute left-full -translate-y-3 -mt-1 transform -translate-x-3"
+                    alt=""
                   />
                 </motion.div>
               )}
