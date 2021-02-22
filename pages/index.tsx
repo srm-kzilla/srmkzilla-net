@@ -92,7 +92,7 @@ const Home = () => {
             <h1 className="text-center text-white sm:text-5xl text-4xl sm:mt-auto mt-5 font-semibold ">
               The campus club you love
             </h1>
-            <p className="text-white group-hover:opacity-30 opacity-5 text-center text-2xl mt-6">
+            <p className="text-white opacity-30 text-center text-2xl mt-6">
               We make tech exuberant and open source. We know no limits.
             </p>
           </div>
