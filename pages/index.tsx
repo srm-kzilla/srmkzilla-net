@@ -23,11 +23,14 @@ import {
   motion,
   useAnimation,
   useElementScroll,
+  useTransform,
+  useViewportScroll,
 } from 'framer-motion'
 import Icons from '../shared/components/icons'
 import Homecarousel from '../shared/components/home_carousel'
 import Footer from '../shared/components/footer'
 import Navbar from '../shared/components/navbar'
+import FooterCommon from '../shared/components/footer_common'
 
 const container = {
   hidden: { x: 0, y: 0 },
@@ -66,7 +69,7 @@ const container = {
 }
 
 const Home = () => {
-  const [newCard, setNewCard] = useState(null)
+  const [newCard, setNewCard] = useState([])
 
   useEffect(() => {
     sanityClient
@@ -98,30 +101,19 @@ const Home = () => {
       <section className="hero h-screen bg-hero-pattern bg-fixed overflow-hidden relative">
         <Navbar />
         <div className="absolute top-2/4 transform -translate-y-1/2">
-          <InView>
-            {({ inView, ref, entry }) => (
-              <motion.div
-                ref={ref}
-                className="relative w-screen sm:h-64 h-52 z-30"
-              >
-                {inView && (
-                  <motion.video
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    autoPlay
-                    loop
-                    className="sm:h-64 h-52 absolute left-2/4 transform -translate-x-1/2"
-                    src="./images/hero_logo.mp4"
-                  />
-                )}
-              </motion.div>
-            )}
-          </InView>
-          <div className="lg:px-60 sm:px-32 px-10 z-30">
-            <h1 className="text-center text-white sm:text-5xl text-4xl sm:mt-auto mt-5 font-bold">
+          <motion.div className="relative w-screen sm:h-64 h-52 z-30">
+            <motion.img
+              className="sm:h-64 h-52 absolute left-2/4 transform -translate-x-1/2"
+              src="./images/hero_logo.gif"
+              draggable="false"
+            />
+          </motion.div>
+
+          <div className="lg:px-60 group sm:px-32 px-10 z-30 mt-10">
+            <h1 className="text-center text-white sm:text-5xl text-4xl sm:mt-auto mt-5 font-semibold ">
               The campus club you love
             </h1>
-            <p className="text-white opacity-25 text-center text-2xl mt-6">
+            <p className="text-white group-hover:opacity-30 opacity-5 text-center text-2xl mt-6">
               We make tech exuberant and open source. We know no limits.
             </p>
           </div>
@@ -131,7 +123,11 @@ const Home = () => {
       {/* New Section start */}
       <section className="works">
         <div className="bg-black-200 sm:pt-32 pt-24">
-          <h1 className="text-white text-center text-4xl">What's New</h1>
+          <Fade up>
+            <h1 className="text-white font-medium text-center text-4xl">
+              Our latest brew
+            </h1>
+          </Fade>
 
           <div className="flex flex-wrap items-center justify-center sm:mt-20 mt-14 pb-10">
             {newCard &&
@@ -142,9 +138,9 @@ const Home = () => {
                   description: String
                 }) => (
                   <Card_home
-                    name={card.title}
-                    image={card.picture.asset.url}
-                    desc={card.description}
+                    name={card?.title}
+                    image={card?.picture?.asset?.url}
+                    desc={card?.description}
                   />
                 )
               )}
@@ -156,19 +152,22 @@ const Home = () => {
       {/* {Process aection starts} */}
       <section className="process bg-black-200 pt-10 min-h-screen lg:px-40 md:px-32 px-10">
         <div>
-          <h1 className="text-white text-center text-4xl">How we work</h1>
+          <Fade up>
+            <h1 className="text-white text-center font-medium text-4xl">
+              How we work
+            </h1>
+          </Fade>
           <Bounce>
             <div>
               <Message
                 color="baseBlue"
-                bubblemsg="Sketch me like one of your live projects!"
+                message="Sketch me like one of your live projects!"
               />
             </div>
           </Bounce>
         </div>
 
         {/* ideation */}
-        {/*  */}
         <div className="flex flex-wrap w-full mt relative">
           <div className="xl:w-3/6 lg:w-2/5 w-auto">
             <h1 className="text-white text-3xl lg:mt-5 mt-16">
@@ -188,13 +187,12 @@ const Home = () => {
             />
           </div>
 
-          <div className="lg:mt-52 mt-24 mx-auto z-30">
-            <div className="relative video transform -rotate-6 bg-orange300 md:w-72 md:h-72 sm:h-64 sm:w-64 h-52 w-52 items-center rounded-2xl z-40">
-              <div className="absolute h-full w-full transform rotate-6 bg-white -top-8 left-6 rounded-2xl">
-                {/* {inView && (<video autoPlay className='h-full w-full' src='./images/idea.mp4'></video>)} */}
-                <InView>
-                  {({ inView, ref, entry }) => (
-                    <div ref={ref}>
+          <InView>
+            {({ inView, ref }) => (
+              <div ref={ref} className="lg:mt-52 mt-24 mx-auto z-30">
+                <div className="relative video transform -rotate-6 bg-orange300 md:w-72 md:h-72 sm:h-64 sm:w-64 h-52 w-52 items-center rounded-2xl z-40">
+                  <motion.div className="absolute h-full w-full transform rotate-6 bg-white -top-8 left-6 rounded-2xl">
+                    <div>
                       {inView && (
                         <video
                           autoPlay
@@ -203,11 +201,11 @@ const Home = () => {
                         ></video>
                       )}
                     </div>
-                  )}
-                </InView>
+                  </motion.div>
+                </div>
               </div>
-            </div>
-          </div>
+            )}
+          </InView>
 
           {/* svg */}
 
@@ -304,18 +302,18 @@ const Home = () => {
         {/* ideation end */}
 
         {/* design */}
-        <Bounce>
+        <Bounce delay={[500]}>
           <div className="lg:mt-0 sm:mt-24 mt-14">
             <Message
               color="baseBlue"
-              bubblemsg="2040 just called; they said they want their design back."
+              message="2040 just called; they said they want their design back."
             />
           </div>
         </Bounce>
 
         <div className="flex flex-wrap w-full mt-52 relative">
           <div className="xl:w-3/6 lg:w-2/5 w-auto">
-            <Slide right delay={[800]}>
+            <Slide right>
               <div className="lg:-mt-20 mt-16">
                 <span className="text-white text-3xl relative lg:mt-24">
                   Design<span className="text-orange600 text-4xl">.</span>
@@ -349,23 +347,20 @@ const Home = () => {
           </div>
           <InView>
             {({ inView, ref, entry }) => (
-              <div className="mt-32 lg:block hidden z-20" ref={ref}>
+              <div className="mt-24 lg:block hidden z-20 h-96" ref={ref}>
                 {inView && (
-                  <video
-                    className="w-96 z-30 h-auto xl:ml-16 ml-10 mt-0 border-orange600 border-8 rounded-2xl"
-                    src="./images/draw.mp4"
-                    autoPlay
-                  />
+                  <div>
+                    <video
+                      className="w-96 z-30 h-auto xl:ml-16 ml-10 mt-0 border-orange600 border-8 rounded-2xl"
+                      src="./images/draw.mp4"
+                      autoPlay
+                    />
+                  </div>
                 )}
               </div>
             )}
           </InView>
-          {/* <div className="mt-32 lg:block hidden z-20">
-            <video
-              className="w-96 z-30 h-auto xl:ml-16 ml-10 mt-0 border-orange600 border-8 rounded-2xl"
-              src="./images/draw.mp4"
-            />
-          </div> */}
+
           <motion.svg
             className="absolute top-2/3 -mt-28 z-0"
             width="1007"
@@ -455,23 +450,24 @@ const Home = () => {
           </motion.svg>
         </div>
         {/* design end */}
-        <Bounce>
-          <div className="lg:mt-auto sm:mt-16 mt-10">
+
+        <div className="lg:mt-auto sm:mt-16 mt-10">
+          <Bounce>
             <Message
               color="orange300"
-              bubblemsg="404 does not exist on our number line."
+              message="404 does not exist on our number line."
             />
-          </div>
-        </Bounce>
+          </Bounce>
+        </div>
 
         <div className="flex flex-wrap w-full -mt-10">
-          <div className="xl:w-3/6 lg:w-2/5 -mt-16 w-auto">
+          <div className="xl:w-3/6 lg:w-2/5 -mt-5 w-auto">
             <h1 className="text-white text-3xl mt-24">
               Technical<span className="text-orange600 text-4xl">.</span>
             </h1>
             <div>
               <p className="text-white text-lg my-4">
-                <p className="text-white text-xl font-semibold">Robust Code </p>
+                <p className="text-white text-xl font-semibold">Robust Code</p>
                 We go through endless debugging to ensure our code can withstand
                 a storm.
               </p>
@@ -491,7 +487,7 @@ const Home = () => {
             <div>
               <p className="text-white text-lg my-4">
                 <p className="text-white text-xl font-semibold">
-                  Open Source Projects
+                  Open source projects
                 </p>
                 <p className="text-lg text-white font-normal">
                   Edit and create something of your own from our Github
@@ -501,12 +497,12 @@ const Home = () => {
             </div>
           </div>
           <InView>
-            {({ inView, ref, entry }) => (
-              <div ref={ref} className="lg:mt-24 ml-6 mt-0">
+            {({ inView, ref }) => (
+              <div ref={ref} className="lg:mt-24 mt-0 md:mb-24 mb-14">
                 {inView && (
                   <video
                     src="./images/technical.mp4"
-                    className="lg:w-96 w-screen lg:ml-24 sm:mx-auto mx-auto lg:mt-10 mt-16"
+                    className="lg:w-96 w-screen lg:ml-24 sm:mx-auto mx-auto lg:mt-0 mt-16"
                     autoPlay
                   />
                 )}
@@ -515,6 +511,7 @@ const Home = () => {
           </InView>
         </div>
       </section>
+      <Footer />
     </div>
   )
 }

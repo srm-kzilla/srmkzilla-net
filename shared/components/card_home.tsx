@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const Card_home = (props: { name: String; image: string; desc: String }) => {
+const Card_home = (props: { name: String; image: string; desc: String}) => {
   return (
     <motion.div
       className="bg-black-200 sm:w-72 w-64 rounded-xl xl:mx-12 mx-6 p-2 mb-10 shadow-box"
@@ -9,7 +9,7 @@ const Card_home = (props: { name: String; image: string; desc: String }) => {
     >
       <div className="image h-44 rounded-xl overflow-hidden">
         <img
-          className="w-full"
+          className="h-full"
           draggable={false}
           src={props.image}
           alt="card-image"

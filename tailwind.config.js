@@ -16,12 +16,18 @@ module.exports = {
         icon: "#262430",
         borderBlue: "#22415e",
         baseGreen: "#50be96",
-        offWhite: "#fff1ca"
+        offWhite: "#fff1ca",
+        logoRed: "#F0634D",
+        logoGreen:"#54A870",
+        logoBlue:"#26BAFF"
       },
       backgroundImage: (theme) => ({
         "hero-pattern": "url('/images/herobg.png')",
-        "footer-pattern": "url('/images/footer.png')",
-        "mobile-footer-pattern": "url(/images/mobilefooter.png)"
+        "footer-pattern": "url('/images/newfooter.png')",
+        "mobile-footer-pattern": "url(/images/mobilefooter.png)",
+        "light": "url(/images/light.png)",
+        "home-footer": "url(/images/herofooter.png)",
+        "home-mobile": "url(/images/mobilehomefooter.png)"
       }),
       boxShadow: {
         box: "0px 12px 50px 10px rgba(0, 0, 0, 0.65)",
