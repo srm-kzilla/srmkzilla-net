@@ -1,10 +1,4 @@
-import React, {
-  useState,
-  useRef,
-  useLayoutEffect,
-  Component,
-  useEffect,
-} from 'react'
+import React, { useState, useEffect } from 'react'
 import Card_home from '../shared/components/card_home'
 import Message from '../shared/components/Message'
 import Bounce from 'react-reveal/Bounce'
@@ -13,23 +7,10 @@ import Zoom from 'react-reveal/Zoom'
 import Slide from 'react-reveal/Slide'
 import Head from 'next/head'
 import sanityClient from '../shared/client'
-
-import { InView, useInView } from 'react-intersection-observer'
-
-import {
-  animate,
-  AnimatePresence,
-  motion,
-  useAnimation,
-  useElementScroll,
-  useTransform,
-  useViewportScroll,
-} from 'framer-motion'
-import Icons from '../shared/components/icons'
-import Homecarousel from '../shared/components/home_carousel'
+import { InView } from 'react-intersection-observer'
+import { motion } from 'framer-motion'
 import Footer from '../shared/components/footer'
 import Navbar from '../shared/components/navbar'
-import FooterCommon from '../shared/components/footer_common'
 
 const container = {
   hidden: { x: 0, y: 0 },
@@ -112,7 +93,7 @@ const Home = () => {
             <h1 className="text-center text-white sm:text-5xl text-4xl sm:mt-auto mt-5 font-semibold ">
               The campus club you love
             </h1>
-            <p className="text-white group-hover:opacity-30 opacity-5 text-center text-2xl mt-6">
+            <p className="text-white opacity-30 text-center text-2xl mt-6">
               We make tech exuberant and open source. We know no limits.
             </p>
           </div>
