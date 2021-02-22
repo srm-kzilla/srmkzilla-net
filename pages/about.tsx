@@ -6,68 +6,35 @@ import {
   LeftTimeline,
   RightTimeline,
 } from '../shared/components/about/timeline'
+import Cardsnew from '../shared/components/about/newCards'
+import FooterCommon from '../shared/components/footer_common'
 
-const valuesdb = [
+const values = 
   {
     name: 'Values',
-    desc:
-      'We aim to grow bit by bit by our experiences, ideas, and perspectives manifested by the community of keen individuals',
-  },
+    desc1:'We aim to grow bit by bit by our experiences, ideas, and perspectives manifested by the community of keen individuals',
+    desc2: 'To help these individuals create a powerful nation and solve complex technical problems hindering their development.',
+    desc3:'As a part of Mozilla’s open-source community, our mission is to provide a platform for inquisitive minds by guiding and empowering their aspirations.'
+  }
 
-  {
-    name: 'Values',
-    desc:
-      'We believe in taking small steps to accomplish big goals without losing our focus and determination. ',
-  },
-  {
-    name: 'Values',
-    desc:
-      'We actively notice our communities and cater to their demands irrespective of the hardships that may hinder our way. ',
-  },
-  {
-    name: 'Values',
-    desc: 'We at SRMKZILLA intend to move together as one.',
-  },
-  {
-    name: 'Values',
-    desc:
-      'As Phil Jackson justly quoted, "Good teams become great ones when the members trust each other enough to surrender the Me for the We"',
-  },
-]
-const missiondb = [
+  
+
+const mission =
   {
     name: 'Mission',
-    desc:
-      'To guide these individuals to exhibit professional work ethics, commitment, and leadership qualities to emerge as influential leaders in the times to come.',
-  },
-  {
-    name: 'Mission',
-    desc:
-      'To help these individuals create a powerful nation and solve complex technical problems hindering their development.',
-  },
-  {
-    name: 'Mission',
-    desc:
-      'As a part of Mozilla’s open-source community, our mission is to provide a platform for inquisitive minds by guiding and empowering their aspirations. ',
-  },
-]
-const visiondb = [
+    desc1:'To guide these individuals to exhibit professional work ethics, commitment, and leadership qualities to emerge as influential leaders in the times to come.',
+    desc2:'To help these individuals create a powerful nation and solve complex technical problems hindering their development.',
+    desc3: 'As a part of Mozilla’s open-source community, our mission is to provide a platform for inquisitive minds by guiding and empowering their aspirations. ',
+  }
+
+const vision = 
   {
     name: 'Vision',
-    desc:
-      'To advocate free education and appraise the power of technical education in the form of seminars, workshops, and webinars.',
-  },
-  {
-    name: 'Vision',
-    desc:
-      'To spread awareness about the latest technological advancements and helping the curious minds choose their niche to feed in. ',
-  },
-  {
-    name: 'Vision',
-    desc:
-      'A community that discovers and invests in young minds that have the potential to make a difference.',
-  },
-]
+    desc1:'To advocate free education and appraise the power of technical education in the form of seminars, workshops, and webinars.',
+    desc2:'To spread awareness about the latest technological advancements and helping the curious minds choose their niche to feed in. ',
+    desc3:'A community that discovers and invests in young minds that have the potential to make a difference.',
+  }
+
 
 const aboutus = () => {
   return (
@@ -78,26 +45,27 @@ const aboutus = () => {
       </Head>
       <Navbar />
 
-      <div className="w-screen">
+      <div className="w-screen mt-0 md:mt-12">
         <div className="md:h-screen h-auto items-center flex justify-center">
-          <div className="md:h-3/4 h-full sm:w-10/12 w-full rounded-xl overflow-hidden">
+          <div className="md:h-3/4 h-full sm:w-10/12 w-full md:mb-16 mb-8 rounded-none md:rounded-xl overflow-hidden">
             <img
               src="/images/mozofest.png"
               draggable={false}
               alt="image"
               className="object-contain"
-            />{' '}
+            />
+            {/* <iframe className="object-contain" width="100%" height="100%" src="https://www.youtube.com/embed/LPt3vocZGfE" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> */}
           </div>
         </div>
-        <div className="flex flex-wrap items-center justify-center">
-          <div className="grid grid-cols-1 lg:grid-cols-3 grid-gap-3">
-            <CardSwipe datas={valuesdb} />
-            <CardSwipe datas={missiondb} />
-            <CardSwipe datas={visiondb} />
-          </div>
+        <div className="flex flex-wrap
+         items-center justify-center">
+            <Cardsnew data={values} />
+            <Cardsnew data={mission} />
+            <Cardsnew data={vision} />        
+      
         </div>
 
-        <div className="h-auto overflow-hidden bg-black text-white lg:mx-auto mt-24">
+        <div className="h-auto overflow-hidden bg-black text-white lg:mx-auto mt-14 md:mt-20">
           <div className=" mx-auto my-4">
             <h2 className="text-4xl lg:text-5xl text-center text-white ">
               Our Virtues
@@ -135,6 +103,7 @@ const aboutus = () => {
           </div>
         </div>
       </div>
+      <FooterCommon />
     </div>
   )
 }

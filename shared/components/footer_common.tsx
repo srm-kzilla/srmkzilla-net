@@ -41,7 +41,7 @@ const FooterCommon = () => {
             <div className="mt-8 text-sm md:text-lg">
               <Link href='/'><p className="cursor-pointer">Home</p></Link>
               <Link href='https://events.srmkzilla.net/'><p className="mt-2 cursor-pointer">Events</p></Link>
-              <Link href='/aboutus'><p className="mt-2 cursor-pointer">About Us</p></Link>
+              <Link href='/about'><p className="mt-2 cursor-pointer">About Us</p></Link>
               <Link href='/services'><p className="mt-2 cursor-pointer">Our services</p></Link>
               <Link href='/team'><p className="mt-2 cursor-pointer text-logoGreen">Team</p></Link>
             </div>
