@@ -3,14 +3,13 @@ import Card_home from '../shared/components/card_home'
 import Message from '../shared/components/Message'
 import Bounce from 'react-reveal/Bounce'
 import Fade from 'react-reveal/Fade'
-import Zoom from 'react-reveal/Zoom'
 import Slide from 'react-reveal/Slide'
 import Head from 'next/head'
 import sanityClient from '../shared/client'
 import { InView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
-import Footer from '../shared/components/footer'
 import Navbar from '../shared/components/navbar'
+import Footer from '../shared/components/footer'
 
 const container = {
   hidden: { x: 0, y: 0 },
