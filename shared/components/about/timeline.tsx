@@ -30,7 +30,7 @@ export const LeftTimeline = (props) => {
             <h3 className="lg:mb-3 w-full lg:mt-auto mt-6 text-white font-bold text-3xl">
               {props.title}
             </h3>
-            <p className="lg:text-xl lg:leading-relaxed lg:tracking-widest ">
+            <p className="text-lg lg:leading-relaxed lg:tracking-widest ">
               {props.desc}
             </p>
           </div>
@@ -70,7 +70,7 @@ export const RightTimeline = (props) => {
             <h3 className="lg:mb-3 w-full text-white font-bold text-3xl">
               {props.title}
             </h3>
-            <p className="lg:text-xl leading-relaxed lg:tracking-widest ">
+            <p className="lg:text-lg leading-relaxed lg:tracking-widest ">
               {props.desc}
             </p>
           </div>
