@@ -16,14 +16,12 @@ const MemberCard = (props: cardProps) => {
         <img
           src="/images/msg.png"
           alt="cloud"
-          className={`${
-            cloudShow ? 'block' : 'invisible'
-          } w-44 h-28 content-center`}
+          className={`${cloudShow ? 'block' : 'invisible'}  content-center`}
         />
         <p
           className={`${
             cloudShow ? 'block' : 'invisible'
-          } text-black mx-4 mb-1 relative -top-20 text-xs w-3/5`}
+          } text-black mx-4 mb-1 relative -top-20 -mt-3 text-xs w-3/5`}
         >
           Hey! I'm {props.name}.
         </p>
