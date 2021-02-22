@@ -8,7 +8,7 @@ import {
   Stats,
 } from '../shared/components/services/services'
 
-import Footer from '../shared/components/footer_common'
+import Footer from '../shared/components/footer'
 import { motion, useViewportScroll, useTransform } from 'framer-motion'
 const Services = () => {
   const { scrollYProgress } = useViewportScroll()

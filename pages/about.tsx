@@ -6,7 +6,7 @@ import {
   LeftTimeline,
   RightTimeline,
 } from '../shared/components/about/timeline'
-import Footer from '../shared/components/footer_common'
+import Footer from '../shared/components/footer'
 
 const lefttimeline1 = {
   title: 'MOZOFEST',

@@ -9,7 +9,7 @@ import sanityClient from '../shared/client'
 import { InView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
 import Navbar from '../shared/components/navbar'
-import Footer from '../shared/components/footer_common'
+import Footer from '../shared/components/footer'
 
 const container = {
   hidden: { x: 0, y: 0 },

@@ -7,7 +7,6 @@ import sanityClient from '../shared/client'
 import Service from '../shared/components/services'
 import Navbar from '../shared/components/navbar'
 import Footer from '../shared/components/footer'
-import Footer from '../shared/components/footer_common'
 
 const projects = () => {
   const [projectData, setProject] = useState([])
