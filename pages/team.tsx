@@ -47,8 +47,8 @@ const Team = () => {
           <h1 className="text-4xl font-semibold text-gray-100 text-center mb-10 mx-2">
             Meet the team
           </h1>
-          <h3 className="text-xl text-gray-100 text-center">
-            An awesome tech community driven by passion and innovation
+          <h3 className="text-2xl text-gray-100 text-center">
+          An awesome tech community driven by passion and innovation
           </h3>
         </div>
         <div className=" text-white rounded-2xl pt-8 px-1 md:p-10 bg-black-200 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 lg:gap-2 md:mx-20 mx-2">
@@ -62,10 +62,10 @@ const Team = () => {
               }) => {
                 return (
                   <MemberCard
-                    src={member.picture.asset.url}
-                    name={member.name}
-                    designation={member.designation}
-                    audiourl={member.description.asset.url}
+                    src={member?.picture?.asset?.url}
+                    name={member?.name}
+                    designation={member?.designation}
+                    audiourl={member?.description?.asset?.url}
                   />
                 )
               }
