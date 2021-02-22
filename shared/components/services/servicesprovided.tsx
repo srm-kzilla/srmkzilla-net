@@ -79,6 +79,7 @@ const ServicesProvided = () => {
                       } lg:px-6 lg:py-6 px-5 py-3 focus:outline-none hover:bg-orange300 cursor-pointer rounded-2xl }`}
                     >
                       <img
+                        alt="icon"
                         draggable={false}
                         src={`${
                           activeIndex == index
@@ -88,7 +89,6 @@ const ServicesProvided = () => {
                         className="h-8"
                       />
                       <p className="active:text-black my-2 text-lg font-bold">
-            
                         {service.title}
                       </p>
                     </div>
