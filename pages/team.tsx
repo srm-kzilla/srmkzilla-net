@@ -12,7 +12,7 @@ const Team = () => {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "teamMembers"]{
+        `*[_type == "teamMembers" ] | order(index) {
         name,
         picture{
           asset->{
@@ -27,7 +27,8 @@ const Team = () => {
             url
           }
         },
-        designation
+        designation,
+        index
     }`
       )
       .then((data) => setNewCard(data))
