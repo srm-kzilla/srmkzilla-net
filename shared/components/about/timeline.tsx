@@ -1,7 +1,7 @@
 import React from 'react'
 import Tilt from 'react-tilt'
 
-export const LeftTimeline = (props) => {
+export const LeftTimeline = (props: { chat: React.ReactNode; bg: any; date: React.ReactNode; title: React.ReactNode; desc: React.ReactNode }) => {
   return (
     <>
       <div className="mb-8 md:flex lg:flex justify-between flex-row-reverse items-center w-full left-timeline">
@@ -40,7 +40,7 @@ export const LeftTimeline = (props) => {
   )
 }
 // export  LeftTimeline
-export const RightTimeline = (props) => {
+export const RightTimeline = (props: { chat: React.ReactNode; bg: any; date: React.ReactNode; title: React.ReactNode; desc: React.ReactNode }) => {
   return (
     <>
       {/* right timeline */}
