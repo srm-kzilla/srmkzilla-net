@@ -35,7 +35,6 @@ const projects = () => {
 
   return (
     <div className="overflow-hidden">
-      {console.log(projectData)}
       <Head>
         <title>SRMKZILLA | Projects</title>
         <link rel="icon" href="./images/kzillalogo.png" />
@@ -44,10 +43,14 @@ const projects = () => {
         <Navbar />
       </div>
       <div className="bg-black pt-28">
-        <Fade up><h1 className="text-white text-center text-4xl">Projects</h1></Fade>
-        <Fade up><p className="text-white text-center font-light text-xl mt-3 sm:px-auto px-8">
-        Get ready to be swept off your feet
-        </p></Fade>
+        <Fade up>
+          <h1 className="text-white text-center text-4xl">Projects</h1>
+        </Fade>
+        <Fade up>
+          <p className="text-white text-center font-light text-xl mt-3 sm:px-auto px-8">
+            Get ready to be swept off your feet
+          </p>
+        </Fade>
         <div className="flex flex-wrap items-center justify-center lg:px-36 md:px-24 px-10 mt-4">
           {projectData &&
             projectData.map(

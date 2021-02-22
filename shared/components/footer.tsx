@@ -4,7 +4,6 @@ import { FiInstagram, FiMail } from 'react-icons/fi'
 import { IoCall } from 'react-icons/io5'
 import { BsArrowLeft } from 'react-icons/bs'
 import Link from 'next/link'
-import Fade from 'react-reveal/Fade'
 
 const Footer = () => {
   return (

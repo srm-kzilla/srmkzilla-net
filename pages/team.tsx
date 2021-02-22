@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from '../shared/components/navbar'
 import MemberCard from '../shared/components/team/membercard'
-import NewCarousel from '../shared/components/team/newCarousel'
+import NewCarousel from '../shared/components/team/carousel'
 import sanityClient from '../shared/client'
 import FooterCommon from '../shared/components/footer_common'
 import Head from 'next/head'
@@ -49,7 +49,7 @@ const Team = () => {
             Meet the team
           </h1>
           <h3 className="text-2xl text-gray-100 text-center">
-          An awesome tech community driven by passion and innovation
+            An awesome tech community driven by passion and innovation
           </h3>
         </div>
         <div className=" text-white rounded-2xl pt-8 px-1 md:p-10 bg-black-200 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 lg:gap-2 md:mx-20 mx-2">
