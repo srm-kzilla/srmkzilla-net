@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React from 'react'
+import { motion } from 'framer-motion'
 
 const make = {
   hidden: { opacity: 0 },
@@ -7,15 +7,14 @@ const make = {
     opacity: 1,
     transition: {
       duration: 4,
-      ease: "easeInOut",
+      ease: 'easeInOut',
     },
   },
-};
+}
 
 const Icons = () => {
   return (
     <div className="absolute top-24 items-center  h-screen w-screen overflow-hidden z-20 lg:block hidden">
-      /
       <motion.svg
         className="absolute w-screen overflow-hidden left-2/4 transform -translate-x-1/2"
         variants={make}
@@ -631,7 +630,7 @@ const Icons = () => {
         />
       </motion.svg>
     </div>
-  );
-};
+  )
+}
 
-export default Icons;
+export default Icons
