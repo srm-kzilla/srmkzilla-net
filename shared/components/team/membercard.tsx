@@ -14,9 +14,9 @@ const MemberCard = (props: cardProps) => {
     <div className="place-self-center">
       <div className="relative left-20 ml-8 z-20 top-20 -mt-24">
         <img
-          src="/images/cloud.svg"
+          src="/images/msg.png"
           alt="cloud"
-          className={`${cloudShow ? 'block' : 'invisible'} w-36 content-center`}
+          className={`${cloudShow ? 'block' : 'invisible'} w-44 h-28 content-center`}
         />
         <p
           className={`${
@@ -29,13 +29,11 @@ const MemberCard = (props: cardProps) => {
       <div
         onMouseOver={() => setCloudShow(true)}
         onMouseOut={() => setCloudShow(false)}
-        className=" hover:bg-black rounded-2xl p-3 overflow-hidden mx-auto cursor-pointer  transition duration-500 ease-in-out  transform hover:-translate-y-1 hover:scale-110"
+        className="hover:bg-black rounded-2xl md:p-3 overflow-hidden mx-auto cursor-pointer  transition duration-500 ease-in-out  transform hover:-translate-y-1 hover:scale-110"
       >
-        <img
-          className="w-44 hover:w-76  rounded-full p-5  transition duration-500 ease-in-out  transform hover:-translate-y-1 hover:scale-110"
-          src={props.src}
-          alt="avatar"
-        />
+        
+          <img className="w-44 h-44 hover:w-76 hover:h-76 rounded-full p-5  transition duration-500 ease-in-out  transform hover:-translate-y-1 hover:scale-110" src={props.src} alt="avatar" />
+        
         <div className={`${cloudShow ? 'block' : 'invisible'} pb-1`}>
           <Player url={props.audiourl} />
         </div>

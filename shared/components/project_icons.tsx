@@ -6,7 +6,6 @@ import { IoMdLock } from "react-icons/io";
 const ProjectIcon = (props: {
   icon: string | undefined;
   title: String;
-  upcomming: Boolean;
 }) => {
   return (
     <motion.div
@@ -20,7 +19,7 @@ const ProjectIcon = (props: {
         alt=""
       />
       <div className="absolute opacity-0 group-hover:opacity-100 transition-opacity rounded-lg left-3/4 -mt-14">
-        {!props.upcomming && (
+      
 
           <div className="text-white text-lg bg-black-200 rounded-lg px-3 py-1 relative">
             {props.title}
@@ -29,16 +28,9 @@ const ProjectIcon = (props: {
               <img src="./images/tri.png" className="w-5" alt="" />
             </div>
           </div>
-        )}
+      
       </div>
-      {props.upcomming && (
-        <div className="absolute blur h-full w-full rounded-full top-0 left-0">
-          <h1>
-            <IoMdLock className="text-white text-right ml-12 mt-9" />
-          </h1>
-          <p className="text-white text-xs text-center">Comming Soon</p>
-        </div>
-      )}
+      
     </motion.div>
   );
 };
