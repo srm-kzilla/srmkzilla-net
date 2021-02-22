@@ -3,7 +3,7 @@ import Navbar from '../shared/components/navbar'
 import MemberCard from '../shared/components/team/membercard'
 import NewCarousel from '../shared/components/team/carousel'
 import sanityClient from '../shared/client'
-import FooterCommon from '../shared/components/footer_common'
+import Footer from '../shared/components/footer'
 import Head from 'next/head'
 
 const Team = () => {
@@ -12,7 +12,7 @@ const Team = () => {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "teamMembers"]{
+        `*[_type == "teamMembers" ] | order(index) {
         name,
         picture{
           asset->{
@@ -27,7 +27,8 @@ const Team = () => {
             url
           }
         },
-        designation
+        designation,
+        index
     }`
       )
       .then((data) => setNewCard(data))
@@ -87,7 +88,7 @@ const Team = () => {
           <NewCarousel />
         </div>
       </div>
-      <FooterCommon />
+      <Footer />
     </>
   )
 }

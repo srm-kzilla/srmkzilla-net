@@ -8,7 +8,7 @@ import {
   Stats,
 } from '../shared/components/services/services'
 
-import FooterCommon from '../shared/components/footer_common'
+import Footer from '../shared/components/footer'
 import { motion, useViewportScroll, useTransform } from 'framer-motion'
 const Services = () => {
   const { scrollYProgress } = useViewportScroll()
@@ -102,7 +102,7 @@ const Services = () => {
         </section>
         {/* Testimonals section ends*/}
       </div>
-      <FooterCommon />
+      <Footer />
     </div>
   )
 }

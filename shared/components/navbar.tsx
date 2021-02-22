@@ -1,19 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import { Search, Menu } from 'react-feather'
-import Link from 'next/link'
+import { Menu } from 'react-feather'
 import Dropdown from './dropdown'
-import { motion } from 'framer-motion'
 
 const Navbar = () => {
   const [search, setSearch] = useState(false)
   const [open, setOpen] = useState(false)
 
   const searchshow = () => {
-    if (window.scrollY >= 200) {
-      setSearch(true)
-    } else {
-      setSearch(false)
-    }
+    window.scrollY >= 200 ? setSearch(true) : setSearch(false)
   }
 
   useEffect(() => {
@@ -51,26 +45,30 @@ const Navbar = () => {
             } md:flex md:items-center md:justify-between w-full flex-1`}
           >
             <div className="flex bg-opacity-20 flex-col md:flex-row md:items-center mx-5">
-              <Link href="/">
-                <div className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent">
-                  Home
-                </div>
-              </Link>
-              <Link href="/about">
-                <div className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent">
-                  About Us
-                </div>
-              </Link>
-              <Link href="/services">
-                <div className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent">
-                  Our Services
-                </div>
-              </Link>
-              <Link href="/team">
-                <div className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent">
-                  Team
-                </div>
-              </Link>
+              <a
+                href="/"
+                className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent"
+              >
+                Home
+              </a>
+              <a
+                href="/about"
+                className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent"
+              >
+                About Us
+              </a>
+              <a
+                href="/services"
+                className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent"
+              >
+                Our Services
+              </a>
+              <a
+                href="/team"
+                className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent"
+              >
+                Team
+              </a>
               <Dropdown
                 name="What's New?"
                 class="absolute md:left-96 md:my-12 md:mx-10 md:top-3 py-2 w-48 rounded-md shadow-md bg-black-200 cursor-pointer"
@@ -78,6 +76,7 @@ const Navbar = () => {
                   {
                     label: 'Events',
                     link: 'https://events.srmkzilla.net/',
+                    newTab: true,
                   },
                   {
                     label: 'Projects',
@@ -86,6 +85,7 @@ const Navbar = () => {
                   {
                     label: 'Everything',
                     link: 'https://everything.srmkzilla.net/',
+                    newTab: true,
                   },
                 ]}
                 nameClass="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out relative z-10 hover:border-orange300 cursor-pointer border-b-2 border-transparent focus:outline-none"
