@@ -49,14 +49,14 @@ const ServicesProvided = () => {
           Services we provide
         </h1>
         <div className="flex flex-col lg:flex-row justify-around p-5 md:p-10 container">
-          <div className="p-1 w-3/4  mr-5  flex-col hidden lg:block mt-14">
+          <div className="p-1 w-11/12 mr-0  flex-col hidden lg:block mt-14">
             <div>
               <h2 className="text-2xl font-semibold text-gray-100 text-left w-full mb-3">
                 {services[activeIndex].title}
               </h2>
             </div>
             <div>
-              <p className="w-3/5 pr-8 text-justify ">
+              <p className="w-11/12 pr-0 text-justify ">
                 {services[activeIndex].head}
                 <br />
                 {services[activeIndex].desc}
@@ -76,7 +76,7 @@ const ServicesProvided = () => {
                         activeIndex == index
                           ? 'bg-orange300 text-black'
                           : 'bg-black-100 text-white'
-                      } lg:px-10 lg:py-6 px-5 py-3 focus:outline-none hover:bg-orange300 cursor-pointer rounded-2xl }`}
+                      } lg:px-6 lg:py-6 px-5 py-3 focus:outline-none hover:bg-orange300 cursor-pointer rounded-2xl }`}
                     >
                       <img
                         draggable={false}
@@ -87,8 +87,8 @@ const ServicesProvided = () => {
                         }`}
                         className="h-8"
                       />
-                      <p className="active:text-black my-2 text-xl font-bold">
-                        {' '}
+                      <p className="active:text-black my-2 text-lg font-bold">
+            
                         {service.title}
                       </p>
                     </div>
