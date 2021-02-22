@@ -13,7 +13,7 @@ const lefttimeline1 = {
   desc:
     'A three-day extravaganza to emanate the power of open source community sprinkled with a load of fun and frolic. MOZOFEST is our annual flagship event that witnesses speakers and developers from the community who educate the young minds about the latest developments in technology. Along with the intriguing tech talks, we organize many more exciting events to provide the perfect respite for people from all walks of life.',
   date: '29-31 March, 2019',
-  chat: 'lorem ipsum',
+  chat: 'Your favorite fiesta. ',
   bg: 'bg-mozofest',
 }
 const righttimeline = {
@@ -29,7 +29,7 @@ const lefttimeline2 = {
   desc:
     'SRMKZILLA is committed to bring forth a change, in all ways possible. In our Social Outreach Programme, we visit orphanages and homes for the differently-abled and spent time with them while sharing happiness and love. We strive our best to bring smiles to their faces in a noble way. ',
   date: '9th feb 2020',
-  chat: 'lorem ipsum',
+  chat: 'Be a part of the change.',
   bg: 'bg-social',
 }
 const values = {
