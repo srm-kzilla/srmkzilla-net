@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { InView, useInView } from 'react-intersection-observer'
+import { InView } from 'react-intersection-observer'
 import axios from 'axios'
 import { AiFillGithub, AiFillInstagram, AiFillYoutube } from 'react-icons/ai'
 
