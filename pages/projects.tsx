@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
-
+import Fade from 'react-reveal/Fade'
 import CardProject from '../shared/components/card_projects'
 import ProjectIcon from '../shared/components/project_icons'
 import sanityClient from '../shared/client'
@@ -44,10 +44,10 @@ const projects = () => {
         <Navbar />
       </div>
       <div className="bg-black pt-28">
-        <h1 className="text-white text-center text-4xl">Projects</h1>
-        <p className="text-white text-center font-light text-xl mt-3 sm:px-auto px-8">
+        <Fade up><h1 className="text-white text-center text-4xl">Projects</h1></Fade>
+        <Fade up><p className="text-white text-center font-light text-xl mt-3 sm:px-auto px-8">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus illo
-        </p>
+        </p></Fade>
         <div className="flex flex-wrap items-center justify-center lg:px-36 md:px-24 px-10 mt-4">
           {projectData &&
             projectData.map(
@@ -62,8 +62,7 @@ const projects = () => {
                   <a>
                     <ProjectIcon
                       icon={project?.logo?.asset?.url}
-                      title={project.title}
-                      upcomming={false}
+                      title={project?.title}
                     />
                   </a>
                 </Link>

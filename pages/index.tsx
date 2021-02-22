@@ -109,11 +109,11 @@ const Home = () => {
             />
           </motion.div>
 
-          <div className="lg:px-60 sm:px-32 px-10 z-30 mt-10">
+          <div className="lg:px-60 group sm:px-32 px-10 z-30 mt-10">
             <h1 className="text-center text-white sm:text-5xl text-4xl sm:mt-auto mt-5 font-semibold ">
               The campus club you love
             </h1>
-            <p className="text-white opacity-25 text-center text-2xl mt-6">
+            <p className="text-white group-hover:opacity-30 opacity-5 text-center text-2xl mt-6">
               We make tech exuberant and open source. We know no limits.
             </p>
           </div>
@@ -138,9 +138,9 @@ const Home = () => {
                   description: String
                 }) => (
                   <Card_home
-                    name={card.title}
-                    image={card.picture.asset.url}
-                    desc={card.description}
+                    name={card?.title}
+                    image={card?.picture?.asset?.url}
+                    desc={card?.description}
                   />
                 )
               )}
@@ -302,7 +302,7 @@ const Home = () => {
         {/* ideation end */}
 
         {/* design */}
-        <Bounce>
+        <Bounce delay={[500]}>
           <div className="lg:mt-0 sm:mt-24 mt-14">
             <Message
               color="baseBlue"
@@ -313,7 +313,7 @@ const Home = () => {
 
         <div className="flex flex-wrap w-full mt-52 relative">
           <div className="xl:w-3/6 lg:w-2/5 w-auto">
-            <Slide right delay={[500]}>
+            <Slide right>
               <div className="lg:-mt-20 mt-16">
                 <span className="text-white text-3xl relative lg:mt-24">
                   Design<span className="text-orange600 text-4xl">.</span>

@@ -8,7 +8,6 @@ const Collaborate = () => {
           Collaboration means challenging our potential and achieving a common
           goal. We can get together and bring out the best in us.
           <p className="mt-3">
-            {' '}
             <span className="font-bold text-orange600">Together</span> we can
             create something magnificent.
           </p>
