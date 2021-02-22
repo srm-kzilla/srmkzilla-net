@@ -360,6 +360,7 @@ const Home = () => {
               </div>
             )}
           </InView>
+
           <motion.svg
             className="absolute top-2/3 -mt-28 z-0"
             width="1007"

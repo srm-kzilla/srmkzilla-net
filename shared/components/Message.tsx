@@ -1,14 +1,28 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { InView, useInView } from "react-intersection-observer";
+import React from 'react'
+import { motion } from 'framer-motion'
+import { InView, useInView } from 'react-intersection-observer'
 
+const container = {
+  hidden: { opacity: 1 },
+  show: {
+    opacity: 0,
+    transition: {
+      duration: 5,
+    },
+  },
+}
 
-const Message = (props: { color: String, message: String }) => {
+const Message = (props: { color: String; message: String }) => {
   return (
     <div
       className={`message bg-${props.color} float-right px-6 sm:mr-24 mr-20 py-5 rounded-xl z-10 relative mt-20`}
     >
-     
+      <motion.div
+        variants={container}
+        initial="hidden"
+        animate="show"
+        className="absolute bg-black-200 h-full w-full top-0 left-0"
+      ></motion.div>
       <p>{props.message}</p>
       <motion.img
         className="absolute right-0 transform left-full ml-5 sm:top-5 top-2/4"
@@ -27,7 +41,7 @@ const Message = (props: { color: String, message: String }) => {
         <motion.div className="block bg-black-200 h-4 w-3 float-right rounded-bl-xl"></motion.div>
       </motion.div>
     </div>
-  );
-};
+  )
+}
 
-export default Message;
+export default Message

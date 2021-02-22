@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from '../shared/components/navbar'
 import MemberCard from '../shared/components/team/membercard'
-import Carousel from '../shared/components/team/carousel'
 import NewCarousel from '../shared/components/team/newCarousel'
 import sanityClient from '../shared/client'
 import FooterCommon from '../shared/components/footer_common'
@@ -37,8 +36,8 @@ const Team = () => {
 
   return (
     <>
-    <Head>
-        <title>SRMKZILLA</title>
+      <Head>
+        <title>SRMKZILLA | Team</title>
         <link rel="icon" href="./images/kzillalogo.png" />
       </Head>
       <div className="bg-black overflow-hidden ">
@@ -74,9 +73,17 @@ const Team = () => {
         </div>
 
         <div className="my-10 px-0 md:px-10">
-          <h1 className="text-4xl font-semibold text-gray-100 text-center my-20">
-            Hear it form the team
-          </h1>
+          <div className="flex flex-col place-items-center my-20">
+            <h1 className="text-4xl font-semibold text-gray-100 text-center">
+              Hear it form the team
+            </h1>
+            <h3 className="text-xl w-2/3 text-gray-100 text-center mt-5">
+              The journey of building an awesome tech community is fuelled by
+              the ardour of its team members. At SRMKZILLA, their ride has been
+              full of incredible experiences to inspire and aspire. Let us hear
+              what they have to say!
+            </h3>
+          </div>
           <NewCarousel />
         </div>
       </div>
