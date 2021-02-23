@@ -44,7 +44,7 @@ const NewCarousel = () => {
 
   return (
     <div>
-      <Carousel enableAutoPlay autoPlaySpeed={3000}>
+      <Carousel enableAutoPlay autoPlaySpeed={3000} isRTL={false}>
         {OldTeamMembers.map((item) => {
           return (
             <div>

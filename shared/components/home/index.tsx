@@ -285,7 +285,7 @@ const Home = () => {
         {/* ideation end */}
 
         {/* design */}
-        <Bounce delay={[500]}>
+        <Bounce delay={500}>
           <div className="lg:mt-0 sm:mt-24 mt-14">
             <Message
               color="baseBlue"
