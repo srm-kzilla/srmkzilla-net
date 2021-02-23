@@ -6,11 +6,7 @@ const ServicePage = dynamic(() => import('../shared/components/services'), {
 })
 
 const index = () => {
-  return (
-    <div>
-      <ServicePage />
-    </div>
-  )
+  return <ServicePage />
 }
 
 export default index

@@ -6,11 +6,7 @@ const HomePage = dynamic(() => import('../shared/components/home'), {
 })
 
 const index = () => {
-  return (
-    <div>
-      <HomePage />
-    </div>
-  )
+  return <HomePage />
 }
 
 export default index

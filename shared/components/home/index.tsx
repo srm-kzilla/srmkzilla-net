@@ -111,12 +111,16 @@ const Home = () => {
           <div className="flex flex-wrap items-center justify-center sm:mt-20 mt-14 pb-10">
             {newCard &&
               newCard.map(
-                (card: {
-                  title: String
-                  picture: { asset: { url: string } }
-                  description: String
-                }) => (
+                (
+                  card: {
+                    title: String
+                    picture: { asset: { url: string } }
+                    description: String
+                  },
+                  index
+                ) => (
                   <Card_home
+                    key={index}
                     name={card?.title}
                     image={card?.picture?.asset?.url}
                     desc={card?.description}
@@ -444,34 +448,29 @@ const Home = () => {
             <h1 className="text-white text-3xl mt-24">
               Technical<span className="text-orange600 text-4xl">.</span>
             </h1>
-            <div>
-              <p className="text-white text-lg my-4">
-                <p className="text-white text-xl font-semibold">Robust Code</p>
+
+            <div className="text-white text-lg my-4">
+              <p className="text-xl font-semibold">Robust Code</p>
+              <p className="text-lg font-normal">
                 We go through endless debugging to ensure our code can withstand
                 a storm.
               </p>
             </div>
-            <div>
-              <p className="text-white text-lg my-4">
-                <p className="text-white text-xl font-semibold">
-                  Spick and Span
-                </p>
-                <p className="text-lg font-normal">
-                  We ensure that we follow the best practices for every project.
-                  Sticking to convention and arranging our work as a beautiful
-                  cheese platter is a priority for us.
-                </p>
+
+            <div className="text-white text-lg my-4">
+              <p className=" text-xl font-semibold">Spick and Span</p>
+              <p className="text-lg font-normal">
+                We ensure that we follow the best practices for every project.
+                Sticking to convention and arranging our work as a beautiful
+                cheese platter is a priority for us.
               </p>
             </div>
-            <div>
-              <p className="text-white text-lg my-4">
-                <p className="text-white text-xl font-semibold">
-                  Open source projects
-                </p>
-                <p className="text-lg text-white font-normal">
-                  Edit and create something of your own from our Github
-                  repositories.
-                </p>
+
+            <div className="text-white text-lg my-4">
+              <p className="text-xl font-semibold">Open source projects</p>
+              <p className="text-lg font-normal">
+                Edit and create something of your own from our Github
+                repositories.
               </p>
             </div>
           </div>

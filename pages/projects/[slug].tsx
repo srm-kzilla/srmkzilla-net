@@ -1,5 +1,4 @@
 import React from 'react'
-import { useRouter } from 'next/router'
 import Head from 'next/head'
 import imageUrlBuilder from '@sanity/image-url'
 import { useState, useEffect } from 'react'
@@ -26,13 +25,13 @@ type Props = {
 const Project = ({
   title,
   desc,
-  link,
   image,
   features,
   instagram,
   youtube,
   techstack,
   instaKey,
+  link
 }: Props) => {
   return (
     <div className="bg-black overflow-hidden">
