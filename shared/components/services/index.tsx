@@ -15,7 +15,6 @@ const Services = () => {
     <div>
       <Head>
         <title>SRMKZILLA | Services</title>
-        <link rel="icon" href="./images/kzillalogo.png" />
       </Head>
       <Navbar />
       <div className="h-screen bg-black-200 bg-light bg-fixed md:pt-40 pt-28 overflow-hidden px-5">

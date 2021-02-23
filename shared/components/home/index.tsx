@@ -74,7 +74,6 @@ const Home = () => {
     <div className="bg-black overflow-hidden">
       <Head>
         <title>SRMKZILLA</title>
-        <link rel="icon" href="./images/kzillalogo.png" />
       </Head>
 
       <section className="hero h-screen bg-hero-pattern bg-fixed overflow-hidden relative">

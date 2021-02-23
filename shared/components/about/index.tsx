@@ -65,7 +65,6 @@ const aboutus = () => {
     <div className="bg-black text-white overflow-hidden">
       <Head>
         <title>SRMKZILLA | About</title>
-        <link rel="icon" href="./images/kzillalogo.png" />
       </Head>
       <Navbar />
 

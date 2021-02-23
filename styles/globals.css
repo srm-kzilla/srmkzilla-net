@@ -74,4 +74,33 @@ a {
   }
 }
 
+::-moz-selection {
+  color: #fff;
+  background: #e9573e;
+}
+
+::selection {
+  color: #fff;
+  background: #e9573e;
+}
+
+/* Scroll bar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #dfdfdf;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fd634e;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fc4830;
+}
+
 @tailwind utilities;
