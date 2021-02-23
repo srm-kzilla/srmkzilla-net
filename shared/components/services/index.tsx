@@ -1,5 +1,3 @@
-//
-
 import React from 'react'
 import Head from 'next/head'
 import Footer from '../footer'
@@ -7,6 +5,7 @@ import { motion, useViewportScroll, useTransform } from 'framer-motion'
 import Stats from './numbers'
 import Navbar from '../navbar'
 import { ServicesProvided, Collaborate, Testimonals } from './services'
+const Fade = require('react-reveal/Fade')
 const Services = () => {
   const { scrollYProgress } = useViewportScroll()
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0])
@@ -44,6 +43,7 @@ const Services = () => {
           className="w-48 mt-16 md:hidden block mx-auto my-20"
           alt="logo"
         />
+    
         <h1 className="text-center text-white font-medium text-6xl md:text-7xl relative z-30 md:hidden block">
           Our Services
         </h1>
@@ -52,9 +52,9 @@ const Services = () => {
       <div className="bg-black overflow-hidden px-3">
         {/* Services Provided section starts*/}
         <section className="my-20 lg:my-24 mx-3 lg:mx-24">
-          <div className="flex flex-col place-items-center">
+        <Fade up><div className="flex flex-col place-items-center">
             <ServicesProvided />
-          </div>
+          </div></Fade>
         </section>
         {/* Services Provided section ends*/}
 
@@ -62,20 +62,20 @@ const Services = () => {
         <section className="min-h-screen my-3 lg:my-10  mx-3 lg:mx-10">
           <div className="flex flex-col place-items-center">
             <div className="text-gray-100 pb-10 mb-10 container">
-              <h1 className="text-4xl font-semibold text-gray-100 text-center mb-5">
+            <Fade up><h1 className="text-4xl font-semibold text-gray-100 text-center mb-5">
                 Let’s talk numbers
               </h1>
               <h3 className="text-xl  text-gray-100 text-center mb-10">
                 Producing Quality. Delivering Finest.
-              </h3>
+              </h3></Fade>
               {/* <Numbers /> */}
               <Stats />
             </div>
 
             <div className="text-gray-100 pb-10">
-              <h1 className="text-4xl font-semibold text-center">
+              <Fade up><h1 className="text-4xl font-semibold text-center">
                 Collaborate with us
-              </h1>
+              </h1></Fade>
             </div>
             <div className="xl:px-16">
               <Collaborate />
@@ -88,12 +88,12 @@ const Services = () => {
         <section className="min-h-screen my-5 lg:my-10 mx-3 lg:mx-10">
           <div className="flex flex-col place-items-center">
             <div className="text-gray-100 pb-10">
-              <h1 className="text-4xl font-semibold text-center mb-5">
+              <Fade up><h1 className="text-4xl font-semibold text-center mb-5">
                 Our website delivers
               </h1>
               <h3 className="text-xl text-center">
                 Don’t take our word for it
-              </h3>
+              </h3></Fade>
             </div>
             <div>
               <Testimonals />

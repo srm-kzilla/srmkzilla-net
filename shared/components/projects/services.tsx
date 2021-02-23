@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import CardProject from './card_projects'
 import sanityClient from '../../client'
-import Fade from 'react-reveal/Fade'
+const Fade = require('react-reveal/Fade') 
 
 const Service = () => {
   const [serviceCard, setServiceCard] = useState([])

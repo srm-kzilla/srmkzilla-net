@@ -2,14 +2,14 @@ import React from 'react'
 
 const Testimonals = () => {
   return (
-    <div className="mb-10">
-      <div className="w-6/7 py-5 flex flex-col flex-wrap bg-black-200 rounded-2xl  text-white text-xl justify-items-center items-center">
-        <div className="flex flex-col lg:flex-row  w-4/5 md:p-10 justify-items-center items-center">
+    <div className="mb-10 md:px-24 px:12">
+      <div className="w-6/7 py-16 flex flex-col flex-wrap bg-black-200 rounded-2xl  text-white text-xl justify-items-center items-center">
+        <div className="flex flex-col lg:flex-row md:mt-5 -mt-5  w-4/5  justify-items-center items-center">
           <div className="flex flex-col">
-            <div className="rounded-full border-white border-2">
+            <div className="rounded-full w-40 p-2 h-40 border-white border-2 ">
               <img
                 src="/images/testimonals_person1.jpg"
-                className="rounded-full p-2"
+                className="rounded-full w-full h-full"
                 draggable={false}
               />
             </div>
@@ -32,7 +32,7 @@ const Testimonals = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-items-center items-center lg:px-20 md:-mt-10">
+          <div className="flex justify-items-center items-center lg:px-20 -mt-10">
             <p className="lg:w-6/7 md:text-lg text-sm text-justify">
               I have been fortunate to use the services of SRMKZILLA for the
               past six months. In this ever changing world of technology,
@@ -45,12 +45,12 @@ const Testimonals = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row mt-20  w-4/5 md:p-10 justify-items-center items-center">
+        <div className="flex mt-16 flex-col lg:flex-row w-4/5 justify-items-center items-center">
           <div className="flex flex-col">
-            <div className="rounded-full border-white border-2">
+            <div className="rounded-full border-white h-40 w-40 p-2 border-2">
               <img
                 src="/images/testimonals_person2.jpg"
-                className="rounded-full p-2"
+                className="rounded-full h-full w-full"
                 draggable={false}
               />
             </div>
@@ -73,7 +73,7 @@ const Testimonals = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-items-center items-center lg:px-20 md:-mt-10">
+          <div className="flex justify-items-center items-center lg:pl-10 lg:pr-20 -mt-10">
             <p className="lg:w-6/7 md:text-lg text-sm text-justify">
               SRMKZILLA did a great job developing our website,
               theelecruisers.in . Whether providing direct development support
