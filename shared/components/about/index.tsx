@@ -100,9 +100,9 @@ const aboutus = () => {
                 <div className=" absolute lg:top-20 invisible md:visible lg:visible md:left-1/2 lg:left-1/2 border-white h-full border"></div>
                 {timeline.map((data, index) =>
                   index % 2 == 0 ? (
-                    <RightTimeline data={data} />
+                    <RightTimeline data={data} key={index} />
                   ) : (
-                    <LeftTimeline data={data} />
+                    <LeftTimeline data={data} key={index} />
                   )
                 )}
               </div>
