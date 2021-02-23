@@ -2,18 +2,18 @@ import React from 'react'
 
 const Testimonals = () => {
   return (
-    <div className="md:px-16 mb-10 px-0">
-      <div className="container flex flex-col flex-wrap bg-black-200 rounded-2xl pb-12 text-white text-xl py-1">
-        <div className="flex flex-col lg:flex-row">
+    <div className="mb-10">
+      <div className="w-6/7 py-5 flex flex-col flex-wrap bg-black-200 rounded-2xl  text-white text-xl justify-items-center items-center">
+        <div className="flex flex-col lg:flex-row  w-4/5 md:p-10 justify-items-center items-center">
           <div className="flex flex-col">
-            <div className="rounded-full">
+            <div className="rounded-full border-white border-2">
               <img
-                src="/images/testimonals_person1.png"
-                className="w-screen mt-5"
+                src="/images/testimonals_person1.jpg"
+                className="rounded-full p-2"
                 draggable={false}
               />
             </div>
-            <div className="flex place-self-center mb-10 md:mb-0">
+            <div className="flex place-self-center mb-10 md:mb-0 py-5 w-44">
               <div className="mr-1">
                 <img
                   src="/images/orangeline.png"
@@ -32,8 +32,8 @@ const Testimonals = () => {
               </div>
             </div>
           </div>
-          <div>
-            <p className="lg:w-4/5 lg:mt-16 px-6 py-5 md:text-lg text-sm text-justify">
+          <div className="flex justify-items-center items-center lg:px-20 md:-mt-10">
+            <p className="lg:w-6/7 md:text-lg text-sm text-justify">
               I have been fortunate to use the services of SRMKZILLA for the
               past six months. In this ever changing world of technology,
               SRMKZILLA has provided quality and timely service to my company.
@@ -45,17 +45,17 @@ const Testimonals = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row">
-          <div className="flex items-center flex-col">
-            <div className="rounded-full mt-5">
+        <div className="flex flex-col lg:flex-row mt-20  w-4/5 md:p-10 justify-items-center items-center">
+          <div className="flex flex-col">
+            <div className="rounded-full border-white border-2">
               <img
-                src="/images/testimonals_person2.png"
-                className="w-screen"
+                src="/images/testimonals_person2.jpg"
+                className="rounded-full p-2"
                 draggable={false}
               />
             </div>
-            <div className="flex items-center place-self-center mb-5 -mt-10">
-              <div className="mr-1 ml-2">
+            <div className="flex place-self-center mb-10 md:mb-0 py-5 w-52">
+              <div className="mr-1">
                 <img
                   src="/images/orangeline.png"
                   className="w-5/6"
@@ -73,8 +73,8 @@ const Testimonals = () => {
               </div>
             </div>
           </div>
-          <div>
-            <p className="lg:w-4/5 text-sm md:text-lg lg:mt-16 px-6 py-5 text-justify">
+          <div className="flex justify-items-center items-center lg:px-20 md:-mt-10">
+            <p className="lg:w-6/7 md:text-lg text-sm text-justify">
               SRMKZILLA did a great job developing our website,
               theelecruisers.in . Whether providing direct development support
               or giving us the opportunity to make our development updates,
