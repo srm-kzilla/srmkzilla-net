@@ -88,7 +88,6 @@ const ServicesProvided = () => {
                         className="h-8"
                       />
                       <p className="active:text-black my-2 text-lg font-bold">
-            
                         {service.title}
                       </p>
                     </div>
@@ -116,7 +115,7 @@ const ServicesProvided = () => {
               <p className="my-2 font-bold">Penny for a Thought</p>
               <p className="my-2 text-sm">
                 Have an amazing idea in mind? Let's discuss it over coffee and
-                bring it to life! <br /> Creativity has no boundaries, and same
+                bring it to life! sCreativity has no boundaries, and same
                 applies to your ideas. Let's work on it together to create
                 something beautiful.
               </p>
