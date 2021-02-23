@@ -1,10 +1,10 @@
-// 
+//
 
 import React from 'react'
 import Head from 'next/head'
 import Footer from '../footer'
 import { motion, useViewportScroll, useTransform } from 'framer-motion'
-import Stats  from './numbers'
+import Stats from './numbers'
 import Navbar from '../navbar'
 import { ServicesProvided, Collaborate, Testimonals } from './services'
 const Services = () => {
@@ -18,10 +18,10 @@ const Services = () => {
       </Head>
       <Navbar />
       <div className="h-screen bg-black-200 bg-light bg-fixed md:pt-40 pt-28 overflow-hidden px-5">
-        <h1 className="text-center text-white font-medium text-6xl md:text-7xl relative z-30">
+        <h1 className="text-center text-white font-medium text-6xl md:text-7xl relative z-30 hidden md:block">
           Our Services
         </h1>
-        <div className="bg-orange300 w-64 md:h-12 h-8 mx-auto -mt-5 md:-mt-8"></div>
+        <div className="bg-orange300 w-64 md:h-12 h-8 mx-auto -mt-5 md:-mt-8 hidden md:block"></div>
         <motion.div
           style={{ scale }}
           className=" md:block hidden relative box w-9/12 h-96 mt-24 mx-auto rounded-3xl border-black-100 border-8"
@@ -41,9 +41,13 @@ const Services = () => {
         </motion.div>
         <img
           src="./images/logowhite.png"
-          className="w-48 mt-16 md:hidden block mx-auto"
+          className="w-48 mt-16 md:hidden block mx-auto my-20"
           alt="logo"
         />
+        <h1 className="text-center text-white font-medium text-6xl md:text-7xl relative z-30 md:hidden block">
+          Our Services
+        </h1>
+        <div className="bg-orange300 w-64 md:h-12 h-8 mx-auto -mt-5 md:-mt-8 md:hidden block"></div>
       </div>
       <div className="bg-black overflow-hidden px-3">
         {/* Services Provided section starts*/}

@@ -16,10 +16,10 @@ const Stats = () => {
         headers: { 'content-type': 'application/json' },
       })
       .then((res) => {
-        setFollowers(res?.data?.graphql?.user?.edge_followed_by.count || '2400')
+        setFollowers(res?.data?.graphql?.user?.edge_followed_by.count)
       })
       .catch((err) => {
-        console.log(err)
+        setFollowers('2400')
       })
     axios
       .get('https://api.github.com/users/srm-kzilla', {
@@ -29,7 +29,7 @@ const Stats = () => {
         setRepos(res.data.public_repos)
       })
       .catch((err) => {
-        console.log(err)
+        setRepos('32')
       })
     axios
       .get(
@@ -43,7 +43,7 @@ const Stats = () => {
         setSubscribers(res.data.items[0].statistics.subscriberCount)
       })
       .catch((err) => {
-        console.log(err)
+        setSubscribers('300')
       })
   }, [])
 
@@ -66,9 +66,7 @@ const Stats = () => {
                   transition={{ duration: 2 }}
                   className="bg-baseGreen rounded-tr-lg relative h-full w-10/12"
                 >
-                  <div className='absolute w-2 bg-baseGreen h-full left-full transform -translate-x-4 z-30'>
-
-                  </div>
+                  <div className="absolute w-2 bg-baseGreen h-full left-full transform -translate-x-4 z-30"></div>
                   <motion.img
                     src="./images/greenwave.gif"
                     draggable={false}
@@ -80,7 +78,7 @@ const Stats = () => {
             </div>
           )}
         </InView>
-        <div className="border border-white h-12 w-12 md:h-16 md:w-16 rounded-full ml-3 md:ml-6 relative">
+        <div className="border-2 border-white h-12 w-12 md:h-16 md:w-16 rounded-full ml-3 md:ml-6 relative">
           <AiFillInstagram className="text-white text-2xl md:text-4xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
         </div>
       </div>
@@ -101,7 +99,7 @@ const Stats = () => {
                   transition={{ duration: 2 }}
                   className="bg-offWhite relative h-full w-9/12"
                 >
-                  <div className='absolute w-2 bg-offWhite h-full transform -translate-x-4 left-full z-30'></div>
+                  <div className="absolute w-2 bg-offWhite h-full transform -translate-x-4 left-full z-30"></div>
                   <motion.img
                     src="./images/whitewave.gif"
                     draggable={false}
@@ -113,7 +111,7 @@ const Stats = () => {
             </div>
           )}
         </InView>
-        <div className="border border-white h-12 w-12 md:h-16 md:w-16 rounded-full ml-3 md:ml-6 relative">
+        <div className="border-2 border-white h-12 w-12 md:h-16 md:w-16 rounded-full ml-3 md:ml-6 relative">
           <AiFillGithub className="text-white text-2xl md:text-4xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
         </div>
       </div>
@@ -134,7 +132,7 @@ const Stats = () => {
                   transition={{ duration: 2 }}
                   className="bg-baseBlue rounded-tr-lg relative h-full w-10/12"
                 >
-                   <div className='absolute w-2 bg-baseBlue h-full transform -translate-x-4 left-full z-30'></div>
+                  <div className="absolute w-2 bg-baseBlue h-full transform -translate-x-4 left-full z-30"></div>
                   <motion.img
                     src="./images/bluewave.gif"
                     draggable={false}
@@ -146,7 +144,7 @@ const Stats = () => {
             </div>
           )}
         </InView>
-        <div className="border border-white h-12 w-12 md:h-16 md:w-16 rounded-full ml-3 md:ml-6 relative">
+        <div className="border-2 border-white h-12 w-12 md:h-16 md:w-16 rounded-full ml-3 md:ml-6 relative">
           <AiFillYoutube className="text-white text-2xl md:text-4xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
         </div>
       </div>
