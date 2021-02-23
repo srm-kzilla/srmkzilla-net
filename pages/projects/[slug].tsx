@@ -134,7 +134,7 @@ const Project = ({
         </h1>
         <div className="flex flex-wrap items-center justify-center px-24">
           {techstack.map((tech: any) => (
-            <div className="mx-5 my-5">
+            <div className="mx-5 my-5" key={tech as string}>
               <img src={`/images/${tech}.png`} alt="" />
             </div>
           ))}
