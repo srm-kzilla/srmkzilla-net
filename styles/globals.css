@@ -18,55 +18,60 @@ a {
   box-sizing: border-box;
 }
 
-.blur{
+.blur {
   background: rgba(31, 30, 36, 0.2);
   backdrop-filter: blur(10px);
 }
 
-.nav{
-  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%)
+.nav {
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
 }
 
-.videoCard{
+.videoCard {
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
 }
 
 .rec.rec-arrow {
-  border-radius: 50%; 
+  border-radius: 50%;
   background-color: transparent !important;
   color: #222221;
   font-size: 15px;
 }
 
-.rec-dot{
+.rec-dot {
   background-color: #222221 !important;
 }
 
-.rec-dot_active{
+.rec-dot_active {
   box-shadow: none !important;
-  background-color:#FF644E !important;
+  background-color: #ff644e !important;
 }
 
-.rec.rec-arrow:focus{
+.rec.rec-arrow:focus {
   outline: none;
 }
 
-.services_text{
-  background-image: linear-gradient(90.34deg, #F0634D 3.29%, #54A870 63.14%, #26BAFF 95.23%);
+.services_text {
+  background-image: linear-gradient(
+    90.34deg,
+    #f0634d 3.29%,
+    #54a870 63.14%,
+    #26baff 95.23%
+  );
   background-size: 100%;
   background-repeat: repeat;
+  background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; 
+  -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 }
 
 @media only screen and (max-width: 400px) {
-  .rec.rec-arrow{
-    display: none
+  .rec.rec-arrow {
+    display: none;
   }
 }
 
 @tailwind utilities;
-

@@ -1,5 +1,4 @@
 import React from 'react'
-import { useRouter } from 'next/router'
 import Head from 'next/head'
 import imageUrlBuilder from '@sanity/image-url'
 import { useState, useEffect } from 'react'
@@ -24,7 +23,6 @@ type Props = {
 const Project = ({
   title,
   desc,
-  link,
   image,
   features,
   instagram,
@@ -33,7 +31,16 @@ const Project = ({
   instaKey,
 }: Props) => {
   const [imageUrl, setImageUrl] = useState('')
-
+  console.log({
+    title,
+    desc,
+    image,
+    features,
+    instagram,
+    youtube,
+    techstack,
+    instaKey,
+  })
   useEffect(() => {
     const imgBuilder = imageUrlBuilder({
       projectId: '4orhaocq',
