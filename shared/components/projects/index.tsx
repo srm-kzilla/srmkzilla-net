@@ -33,7 +33,6 @@ const projects = () => {
     <div className="overflow-hidden">
       <Head>
         <title>SRMKZILLA | Projects</title>
-        <link rel="icon" href="./images/kzillalogo.png" />
       </Head>
       <div className="h-screen bg-black-200">
         <Navbar />
@@ -50,14 +49,15 @@ const projects = () => {
         <div className="flex flex-wrap items-center justify-center lg:px-36 md:px-24 px-10 mt-4">
           {projectData &&
             projectData.map(
-              (
-                project: {
-                  title: String
-                  logo: { asset: { url: string | undefined } }
-                },
-                index: any
-              ) => (
-                <Link href="/projects/[slug]" as={`/projects/${project.title}`}>
+              (project: {
+                title: String
+                logo: { asset: { url: string | undefined } }
+              }) => (
+                <Link
+                  href="/projects/[slug]"
+                  as={`/projects/${project.title}`}
+                  key={project.title as string}
+                >
                   <a>
                     <ProjectIcon
                       icon={project?.logo?.asset?.url}

@@ -144,7 +144,7 @@ const Project = ({
           </div>
           <div className="text-center mb-14">
             <button>
-              <p className="bg-orange600 px-5 py-2 rounded-full font-medium lg:my-5 my-10">
+              <p className="bg-orange300 px-5 py-2 rounded-full font-medium lg:my-5 my-10">
                 Explore {title}
               </p>
             </button>

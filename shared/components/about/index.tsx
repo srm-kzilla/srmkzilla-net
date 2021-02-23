@@ -65,7 +65,6 @@ const aboutus = () => {
     <div className="bg-black text-white overflow-hidden">
       <Head>
         <title>SRMKZILLA | About</title>
-        <link rel="icon" href="./images/kzillalogo.png" />
       </Head>
       <Navbar />
 
@@ -101,9 +100,9 @@ const aboutus = () => {
                 <div className=" absolute lg:top-20 invisible md:visible lg:visible md:left-1/2 lg:left-1/2 border-white h-full border"></div>
                 {timeline.map((data, index) =>
                   index % 2 == 0 ? (
-                    <RightTimeline data={data} />
+                    <RightTimeline data={data} key={index} />
                   ) : (
-                    <LeftTimeline data={data} />
+                    <LeftTimeline data={data} key={index} />
                   )
                 )}
               </div>

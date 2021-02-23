@@ -40,15 +40,13 @@ const Service = () => {
       <div className="flex flex-wrap items-center justify-center sm:mt-20 mt-14 pb-10">
         {serviceCard &&
           serviceCard.map(
-            (
-              card: {
-                title: String
-                logo: { asset: { url: String | undefined } }
-                description: String
-              },
-              index: any
-            ) => (
+            (card: {
+              title: String
+              logo: { asset: { url: String | undefined } }
+              description: String
+            }) => (
               <CardProject
+                key={card.title as string}
                 name={card?.title}
                 desc={card?.description}
                 image={card?.logo?.asset?.url}

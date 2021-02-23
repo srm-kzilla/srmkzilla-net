@@ -74,7 +74,6 @@ const Home = () => {
     <div className="bg-black overflow-hidden">
       <Head>
         <title>SRMKZILLA</title>
-        <link rel="icon" href="./images/kzillalogo.png" />
       </Head>
 
       <section className="hero h-screen bg-hero-pattern bg-fixed overflow-hidden relative">
@@ -285,7 +284,7 @@ const Home = () => {
         {/* ideation end */}
 
         {/* design */}
-        <Bounce delay={[500]}>
+        <Bounce delay={500}>
           <div className="lg:mt-0 sm:mt-24 mt-14">
             <Message
               color="baseBlue"

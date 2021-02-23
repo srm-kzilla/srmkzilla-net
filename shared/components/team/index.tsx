@@ -44,7 +44,6 @@ const Team = () => {
     <>
       <Head>
         <title>SRMKZILLA | Team</title>
-        <link rel="icon" href="./images/kzillalogo.png" />
       </Head>
       <div className="bg-black overflow-hidden ">
         <Navbar />

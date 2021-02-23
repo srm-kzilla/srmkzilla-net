@@ -11,8 +11,8 @@ const Loader = () => {
       </Head>
       <div className="absolute left-1/2 top-1/2 transform -translate-y-1/2 -translate-x-1/2">
         <svg
-          width="89"
-          height="113"
+          width="133.5"
+          height="169.5"
           viewBox="0 0 89 113"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
