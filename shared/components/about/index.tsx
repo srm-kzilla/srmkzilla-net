@@ -2,10 +2,7 @@ import React from 'react'
 import Navbar from '../navbar'
 import Head from 'next/head'
 import SwipeCard from './swipe-cards'
-import {
-  LeftTimeline,
-  RightTimeline,
-} from './timeline'
+import { LeftTimeline, RightTimeline } from './timeline'
 import Footer from '../footer'
 
 const lefttimeline1 = {

@@ -5,6 +5,7 @@ import NewCarousel from './carousel'
 import sanityClient from '../../client'
 import Footer from '../footer'
 import Head from 'next/head'
+import Loader from '../loader'
 
 const Team = () => {
   const [newCard, setNewCard] = useState<any>(null)
@@ -34,6 +35,10 @@ const Team = () => {
       .then((data) => setNewCard(data))
       .catch(console.error)
   }, [])
+
+  while(!newCard){
+      return <Loader />
+  }
 
   return (
     <>

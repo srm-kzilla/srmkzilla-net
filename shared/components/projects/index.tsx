@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
-import Fade from 'react-reveal/Fade'
+const Fade = require('react-reveal/Fade')
 import ProjectIcon from './project_icons'
 import sanityClient from '../../client'
 import Service from './services'
