@@ -91,11 +91,9 @@ const aboutus = () => {
         </div>
 
         <div className="h-auto overflow-hidden bg-black text-white lg:mx-auto mt-14 md:mt-20">
-          <div className=" mx-auto my-4">
-            <h2 className="text-4xl lg:text-5xl text-center text-white ">
-              Our Virtues
-            </h2>
-          </div>
+          <h2 className="mx-auto my-4 text-4xl lg:text-5xl text-center text-white ">
+            Our Virtues
+          </h2>
 
           <div className=" h-auto overflow-hidden flex items-center justify-center bg-black">
             <div className="container  w-full h-full">

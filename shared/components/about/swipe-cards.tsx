@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
 import { BsArrowRightShort } from 'react-icons/bs'
 import { motion } from 'framer-motion'
-import { data } from 'autoprefixer'
 
-const SwipeCard = (data: {
-  data: {
-    name: {} | null | undefined
-    desc1: {} | null | undefined
-    desc3: {} | null | undefined
-    desc2: React.ReactNode
+type Props = {
+  content: {
+    name: string
+    description_1: string
+    description_2: string
+    description_3: string
   }
-}) => {
+}
+const SwipeCard = ({ content }: Props) => {
   const [styleX, setStyleX] = useState(0)
   const [styleY, setStyleY] = useState(0)
   const [rotate, setRotate] = useState(0)
@@ -34,9 +34,9 @@ const SwipeCard = (data: {
   }
   return (
     <div className="bg-black-200 mx-12 relative h-80 w-64 rounded-xl my-5 py-5 px-5">
-      <h1 className="text-white text-2xl text-center mt-2">{data.data.name}</h1>
+      <h1 className="text-white text-2xl text-center mt-2">{content.name}</h1>
       <p className="absolute w-full top-1/2 left-1/2 -translate-x-1/2 transform -translate-y-1/2 text-sm text-white px-6 text-center">
-        {data.data.desc3}
+        {content.description_1}
       </p>
       <motion.div
         initial={{ x: 0, y: 0, opacity: 1 }}
@@ -50,11 +50,9 @@ const SwipeCard = (data: {
             <BsArrowRightShort className="absolute text-white text-xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
           </div>
         </div>
-        <h1 className="text-white text-2xl text-center mt-2">
-          {data.data.name}
-        </h1>
+        <h1 className="text-white text-2xl text-center mt-2">{content.name}</h1>
         <p className="absolute w-full top-1/2 left-1/2 -translate-x-1/2 transform -translate-y-1/2 text-sm text-white px-6 text-center">
-          {data.data.desc2}
+          {content.description_2}
         </p>
       </motion.div>
       <motion.div
@@ -69,11 +67,9 @@ const SwipeCard = (data: {
             <BsArrowRightShort className="absolute text-white text-xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
           </div>
         </div>
-        <h1 className="text-white text-2xl text-center mt-2">
-          {data.data.name}
-        </h1>
+        <h1 className="text-white text-2xl text-center mt-2">{content.name}</h1>
         <p className="absolute w-full top-1/2 left-1/2 -translate-x-1/2 transform -translate-y-1/2 text-sm text-white px-6 text-center">
-          {data.data.desc3}
+          {content.description_3}
         </p>
       </motion.div>
     </div>
