@@ -35,6 +35,11 @@ Start the server
 $ yarn start
 ```
 
+## Shout outs 💥
+
+| <p align="center">![Yaksh Chopra](https://github.com/yakshchopra.png?size=128)<br>[Yaksh Chopra](https://github.com/yakshchopra)</p> | <p align="center">![Sakshi Choudhary](https://github.com/sakshi-choudhary.png?size=128)<br>[Sakshi Choudhary](https://github.com/sakshi-choudhary)</p> | <p align="center">![Suritam Nandy](https://github.com/Suritam-Nandy.png?size=128)<br>[Suritam Nandy](https://github.com/Suritam-Nandy)</p> |
+| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+
 ## License 📜
 
 `Website` is available under the MIT license. See the LICENSE file for more info.
