@@ -33,7 +33,6 @@ const Project = ({
   link,
   github,
 }: Props) => {
-  console.log(github)
   return (
     <div className="bg-black overflow-hidden">
       <Head>
@@ -45,7 +44,7 @@ const Project = ({
         <img
           className="absolute top-0 right-0 sm:h-screen h-2/3 z-0"
           src="../images/bgpro.png"
-          alt=""
+          alt="pattern"
         />
         <div className="flex flex-wrap w-screen items-center content-center">
           <div className="z-10 lg:w-2/4 sm:px-24 px-12 sm:mt-40 mt-20 mx-auto">
@@ -141,7 +140,7 @@ const Project = ({
           <h1 className="text-white text-center text-4xl mt-28">Tech Stack</h1>
           <div className="flex flex-wrap items-center justify-center px-24">
             {techstack.map((tech: any) => (
-              <div className="mx-5 my-5">
+              <div className="mx-5 my-5" key={tech}>
                 <img src={`/images/${tech}.png`} alt="tech stack" />
               </div>
             ))}
