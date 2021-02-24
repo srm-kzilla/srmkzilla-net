@@ -5,7 +5,7 @@ const Collaborate = () => {
   return (
     <>
       <div className="flex flex-col flex-wrap w-full md:flex-row text-white text-xl mx-3 justify-between">
-        <div className="xl:w-3/6 lg:w-2/4 w-auto my-5 flex-3 flex-col">
+        <div className="xl:w-3/6 lg:w-2/5 w-auto my-5 flex-3 flex-col">
           Collaboration means challenging our potential and achieving a common
           goal. We can get together and bring out the best in us.
           <p className="mt-3">
@@ -23,17 +23,8 @@ const Collaborate = () => {
         </div>
         <InView>
           {({ inView, ref }) => (
-            <div
-              ref={ref}
-              className="flex flex-col justify-center items-center -mt-10"
-            >
-              {inView && (
-                <video
-                  autoPlay
-                  className="h-full w-full"
-                  src="./images/thisisus.mp4"
-                ></video>
-              )}
+            <div ref={ref} className="md:w-2/5 -mt-20">
+              {inView && <video autoPlay src="./images/thisisus.mp4"></video>}
             </div>
           )}
         </InView>
