@@ -73,7 +73,6 @@ const NewCarousel = () => {
               designation: string
               reviews: string
             }) => {
-              console.log(slide)
               return (
                 <div>
                   <div className="relative mx-auto bg-black-100 md:w-2/4 w-10/12 rounded-xl pb-14  pt-24">

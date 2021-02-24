@@ -31,30 +31,19 @@ const Project = ({
   instaKey,
 }: Props) => {
   const [imageUrl, setImageUrl] = useState('')
-  console.log({
-    title,
-    desc,
-    image,
-    features,
-    instagram,
-    youtube,
-    techstack,
-    instaKey,
-  })
   useEffect(() => {
     const imgBuilder = imageUrlBuilder({
       projectId: '4orhaocq',
       dataset: 'production',
     })
 
-    setImageUrl(imgBuilder.image(image))
+    setImageUrl(imgBuilder.image(image) as any)
   }, [image])
 
   return (
     <div className="bg-black overflow-hidden">
       <Head>
-        <title>SRMKZILLA</title>
-        <link rel="icon" href="../images/kzillalogo.png" />
+        <title>{title}</title>
       </Head>
 
       <div className="h-screen">
