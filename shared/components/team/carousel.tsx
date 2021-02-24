@@ -3,39 +3,16 @@ import Carousel from 'react-elastic-carousel'
 
 const OldTeamMembers = [
   {
-    name: 'Ayush',
-    src: '/images/ayush.png',
-    designation: 'Secretary',
-    message:
-      'hello jsdbjwqdvhjwd hwjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq wjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq',
+    name: 'Ayush Ashatkar',
+    src: '/images/ayushashatkar.jpg',
+    designation: 'Secretary / Club captain',
+    message: `Srmkzilla is place to grow, code & contribute on open source platform. It was a rollercoaster ride for me, where I learn about both technical and management skills and I can proudly say that it's a team dedication and smart work because of which it is the best technical club in south Indian region.This club play an influential role in my college journey and I'm proud to be a part of the club.`,
   },
   {
-    name: 'kgjkg',
-    src: '/images/ayush.png',
+    name: 'Meenakshi Sharma',
+    src: '/images/meenakshi.jpg',
     designation: 'Secretary',
-    message:
-      'lorem ipsum dolor sit amet. lorem ipsum dolor sit ameat. hjwqdvhjwd hwjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq wjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq',
-  },
-  {
-    name: 'hghjjv',
-    src: '/images/ayush.png',
-    designation: 'Secretary',
-    message:
-      'sjhasxa dxajdlor sit amet. lorem ipsum dolor sit ameat. hjwqdvhjwd hwjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq wjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq',
-  },
-  {
-    name: 'dfgvfd',
-    src: '/images/ayush.png',
-    designation: 'Secretary',
-    message:
-      'ahjfahjafjflorem ipsum dolor sit ameat. hjwqdvhjwd hwjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq wjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq',
-  },
-  {
-    name: 'Ayush',
-    src: '/images/ayush.png',
-    designation: 'Secretary',
-    message:
-      'lorem ipsum dolor sit amet. lorem ipsum dolor sit ameat. hjwqdvhjwd hwjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq wjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq',
+    message: `Srmkzilla has been an integral part of my college experience. Without it, my journey definitely would not have been the same. It introduced me to so many new avenues, and more importantly, to so many amazing and interesting personalities that still continue to teach and influence me. It was, and always will be, an honor to be a part of the club!`,
   },
 ]
 
@@ -44,7 +21,7 @@ const NewCarousel = () => {
 
   return (
     <div>
-      <Carousel enableAutoPlay autoPlaySpeed={3000} isRTL={false}>
+      <Carousel enableAutoPlay autoPlaySpeed={30000} isRTL={false}>
         {OldTeamMembers.map((item) => {
           return (
             <div>
