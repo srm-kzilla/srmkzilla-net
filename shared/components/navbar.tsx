@@ -68,6 +68,12 @@ const Navbar = () => {
               >
                 Team
               </a>
+              <a
+                href="/projects"
+                className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent"
+              >
+                Projects
+              </a>
               <Dropdown
                 name="What's New?"
                 class="absolute md:left-96 md:my-12 md:mx-10 md:top-3 py-2 w-48 rounded-md shadow-md bg-black-200 cursor-pointer"
@@ -76,10 +82,6 @@ const Navbar = () => {
                     label: 'Events',
                     link: 'https://events.srmkzilla.net/',
                     newTab: true,
-                  },
-                  {
-                    label: 'Projects',
-                    link: '/projects',
                   },
                   {
                     label: 'Everything',

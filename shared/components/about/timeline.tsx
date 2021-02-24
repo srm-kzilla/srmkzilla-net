@@ -2,8 +2,15 @@ import React from 'react'
 import Tilt from 'react-tilt'
 
 type Props = {
-  data: { chat: string; bg: string; date: string; title: string; desc: string }
+  data: {
+    chattext: string
+    picture: any
+    date: string
+    title: string
+    description: string
+  }
 }
+
 export const LeftTimeline = ({ data }: Props) => {
   return (
     <>
@@ -12,15 +19,20 @@ export const LeftTimeline = ({ data }: Props) => {
         <div className="order-1 bg-black w-full  lg:py-4">
           <div className="order-1 w-11/12 md:max-w-full lg:w-4/5 bg-baseBlue rounded-xl -mt-3 lg:mt-0 mx-5 lg:ml-20 px-6 py-3 lg:py-4">
             <h3 className=" lg:mb-3 w-full font-bold text-white lg:text-xl">
-              {data.chat}
+              {data.chattext}
             </h3>
           </div>
           <Tilt options={{ max: 25, scale: 1 }}>
             <div className="Tilt-inner ml-4 lg:mx-10">
               <div className="lg:order-1 mt-6 lg:mt-12 ml-3 md:ml-0 lg:ml-16 lg:transform -rotate-2 min-w-96 w-11/12 md:max-w-full lg:w-4/5 h-max bg-black-200 rounded-xl p-4">
-                <div
-                  className={`h-64 lg:h-80 ${data.bg} rounded-xl px-3  lg:px-6 lg:py-4 bg-cover`}
-                ></div>
+                <div className="rounded-xl overflow-hidden">
+                  <img
+                    className="h-11/12"
+                    draggable={false}
+                    src={data.picture.asset.url}
+                    alt="card-image"
+                  />
+                </div>
                 <p className="mt-4 text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
                   {data.date}
                 </p>
@@ -34,7 +46,7 @@ export const LeftTimeline = ({ data }: Props) => {
               {data.title}
             </h3>
             <p className="text-lg lg:leading-relaxed lg:tracking-widest ">
-              {data.desc}
+              {data.description}
             </p>
           </div>
         </div>
@@ -51,15 +63,20 @@ export const RightTimeline = ({ data }: Props) => {
         <div className="order-1 bg-black w-full ">
           <div className="order-1 w-11/12 md:max-w-full lg:w-4/5 bg-orange600 rounded-xl -mt-3 lg:mt-0 mx-4 lg:mx-2 lg:ml-10 px-6 py-3 lg:py-4">
             <h3 className="lg:mb-3 w-full font-bold text-white lg:text-xl">
-              {data.chat}
+              {data.chattext}
             </h3>
           </div>
           <Tilt className="Tilt" options={{ max: 25, scale: 1 }}>
             <div className="Tilt-inner  ml-4 lg:mx-10">
               <div className="order-1 mt-6 lg:mt-12 lg:ml-4 ml-3 md:ml-0  lg:transform rotate-2 min-w-96 w-11/12 md:max-w-full lg:w-4/5 h-max bg-black-200 rounded-xl shadow-xl p-4">
-                <div
-                  className={`h-64 lg:h-80 ${data.bg} rounded-xl shadow-xl px-3  lg:px-6 lg:py-4 bg-cover`}
-                ></div>
+                <div className="rounded-xl overflow-hidden">
+                  <img
+                    className="h-11/12"
+                    draggable={false}
+                    src={data.picture.asset.url}
+                    alt="card-image"
+                  />
+                </div>
                 <p className="mt-5 text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
                   {data.date}
                 </p>
@@ -73,7 +90,7 @@ export const RightTimeline = ({ data }: Props) => {
               {data.title}
             </h3>
             <p className="lg:text-lg leading-relaxed lg:tracking-widest ">
-              {data.desc}
+              {data.description}
             </p>
           </div>
         </div>
