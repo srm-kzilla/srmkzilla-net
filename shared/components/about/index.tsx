@@ -4,17 +4,17 @@ import Head from 'next/head'
 import SwipeCard from './swipe-cards'
 import { LeftTimeline, RightTimeline } from './timeline'
 import Footer from '../footer'
+const Fade = require('react-reveal/Fade')
 import sanityClient from '../../client'
 
 const cards = [
   {
     name: 'Values',
     description_1:
-      'We aim to grow bit by bit by our experiences, ideas, and perspectives manifested by the community of keen individuals',
-    description_2:
-      'To help these individuals create a powerful nation and solve complex technical problems hindering their development.',
+      'As Phil Jackson justly quoted, "Good teams become great ones when the members trust each other enough to surrender the Me for the We"',
+    description_2: 'We at SRMKZILLA intend to move together as one. ',
     description_3:
-      'As a part of Mozilla’s open-source community, our mission is to provide a platform for inquisitive minds by guiding and empowering their aspirations.',
+      'We actively notice our communities and cater to their demands irrespective of the hardships that may hinder our way. ',
   },
   {
     name: 'Mission',
@@ -87,9 +87,11 @@ const AboutUs = () => {
         </div>
 
         <div className="h-auto overflow-hidden bg-black text-white lg:mx-auto mt-14 md:mt-20">
-          <h2 className="mx-auto my-4 text-4xl lg:text-5xl text-center text-white ">
-            Our Virtues
-          </h2>
+          <Fade up>
+            <h2 className="mx-auto font-medium my-4 text-4xl lg:text-5xl text-center text-white ">
+              Our Virtues
+            </h2>
+          </Fade>
 
           <div className=" h-auto overflow-hidden flex items-center justify-center bg-black">
             <div className="container  w-full h-full">

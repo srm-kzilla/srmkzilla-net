@@ -92,6 +92,11 @@ const Navbar = () => {
                     link: 'https://everything.srmkzilla.net/',
                     newTab: true,
                   },
+                  {
+                    label: 'YouTube',
+                    link: 'https://www.youtube.com/srmkzilla',
+                    newTab: true,
+                  },
                 ]}
                 nameClass="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out relative z-10 hover:border-orange300 cursor-pointer border-b-2 border-transparent focus:outline-none"
               />

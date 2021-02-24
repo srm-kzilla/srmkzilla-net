@@ -9,7 +9,7 @@ const CardProject = (props: { name: String; image: any; desc: String }) => {
     >
       <div className="image h-52 rounded-xl overflow-hidden">
         <img
-          className="w-full"
+          className="h-full w-full object-cover"
           draggable={false}
           src={props.image}
           alt="card-image"
