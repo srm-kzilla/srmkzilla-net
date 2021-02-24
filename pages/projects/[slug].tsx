@@ -13,6 +13,7 @@ type Props = {
   image: any
   desc: Text
   link: URL
+  github?: URL
   features: any
   instagram: any
   youtube: any
@@ -30,6 +31,7 @@ const Project = ({
   techstack,
   instaKey,
   link,
+  github,
 }: Props) => {
   return (
     <div className="bg-black overflow-hidden">
@@ -70,15 +72,17 @@ const Project = ({
             </motion.p>
             <div className="mt-7 lg:text-left text-center">
               <a href={`${link}`}>
-                <button className="px-5 py-3 rounded-full bg-black-200 text-white text-sm mb-5">
+                <button className="px-5 py-3 rounded-full bg-black-200 text-white text-sm mb-5 focus:none">
                   View Project
                 </button>
               </a>
-              <a href={``}>
-                <button className="px-8 ml-3 py-3 rounded-full bg-black-200 text-white text-sm">
-                  Github
-                </button>
-              </a>
+              {github && (
+                <a href={`${github}`}>
+                  <button className="px-8 ml-3 py-3 rounded-full bg-black-200 text-white text-sm focus:none">
+                    Github
+                  </button>
+                </a>
+              )}
             </div>
           </div>
           <div className="z-10 lg:w-2/4 sm:w-3/4 w-full relative lg:mx-0 transform lg:translate-x-0 sm:translate-x-5 translate-x-0 mt-44 lg:mt-44 mx-auto">
@@ -135,7 +139,7 @@ const Project = ({
           <div className="flex flex-wrap items-center justify-center px-24">
             {techstack.map((tech: any) => (
               <div className="mx-5 my-5">
-                <img src={`/images/${tech}.png`} alt="" />
+                <img src={`/images/${tech}.png`} alt="tech stack" />
               </div>
             ))}
           </div>
@@ -174,6 +178,7 @@ export const getStaticProps = async (context: { params: { slug: any } }) => {
         alt
       },
       link,
+      github,
       features,
       youtube,
       instagram,
@@ -197,6 +202,7 @@ export const getStaticProps = async (context: { params: { slug: any } }) => {
         title: post.title,
         image: post.logo.asset.url,
         link: post.link,
+        github: post.github,
         features: post.features,
         instagram: post.instagram,
         youtube: post.youtube,
