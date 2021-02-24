@@ -7,40 +7,33 @@ const useAudio = (url: string) => {
 
   useEffect(() => {
     setAudio(new Audio(url))
-    if (audio) {
-      playing ? audio.play() : audio.pause()
-    }
-  }, [playing])
-
-  useEffect(() => {
-    if (audio) {
-      audio.addEventListener('ended', () => setPlaying(false))
-    }
-    return () => {
-      if (audio) {
-        audio.removeEventListener('ended', () => setPlaying(false))
-      }
-    }
   }, [])
 
-  return [playing, setPlaying]
+  const startAudio = () => {
+    audio?.play()
+    setPlaying(true)
+  }
+  const stopAudio = () => {
+    audio?.pause()
+    setPlaying(false)
+  }
+  return [playing, startAudio, stopAudio]
 }
 
 const Player = ({ url }) => {
-  const [playing, setPlaying]: any = useAudio(url)
-
+  const [playing, startAudio, stopAudio]: any = useAudio(url)
+  console.log('p', playing)
   return (
     <div className="absolute right-1 mb-5">
-      <button
-        onClick={() => setPlaying(!playing)}
-        className="focus:outline-none ml-3"
-      >
-        {playing ? (
+      {playing ? (
+        <button onClick={stopAudio} className="focus:outline-none ml-3">
           <Volume2 color="white" size={25} />
-        ) : (
+        </button>
+      ) : (
+        <button onClick={startAudio} className="focus:outline-none ml-3">
           <Volume color="white" size={25} />
-        )}
-      </button>
+        </button>
+      )}
     </div>
   )
 }
