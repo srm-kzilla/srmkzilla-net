@@ -20,7 +20,7 @@ const Card_home = (props: { name: String; image: string; desc: String }) => {
       </h1>
       <p className="text-white font-light px-3 mt-3 text-xs">{props.desc}</p>
       <div className="text-center mt-10 mb-5">
-        <button className="bg-black border rounded-full text-white text-xs px-5 py-1 border-white">
+        <button className="bg-black border rounded-full text-white text-xs px-5 py-1 border-white focus:outline-none">
           Know More
         </button>
       </div>

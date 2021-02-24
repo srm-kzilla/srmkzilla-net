@@ -14,7 +14,7 @@ const Collaborate = () => {
           </p>
           <a href="mailto:hello@srmkzilla.net">
             <div className="my-10">
-              <button className="flex px-5 py-2 rounded-3xl bg-black-200 border-2 border-white focus:outline-none transition duration-500 ease-in-out  transform hover:-translate-y-1">
+              <button className="flex px-5 py-2 rounded-3xl bg-black-200 border-2 border-white  transition duration-500 ease-in-out focus:outline-none  transform hover:-translate-y-1">
                 <p> Let’s team up</p>
                 <img src="/images/rightarrow_icon.png" className="ml-2 my-1" />
               </button>

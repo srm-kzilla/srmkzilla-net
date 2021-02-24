@@ -17,7 +17,9 @@ const Dropdown = (props: DropDownProps) => {
 
   return (
     <div onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
-      <button className={props.nameClass}>{props.name}</button>
+      <button className={`${props.nameClass} focus:outline-none`}>
+        {props.name}
+      </button>
 
       <div className={`${open ? 'block' : 'hidden'}`}>
         <div className={props.class}>
