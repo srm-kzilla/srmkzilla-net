@@ -12,6 +12,10 @@ const useAudio = (url: string) => {
   const startAudio = () => {
     audio?.play()
     setPlaying(true)
+    if (audio)
+      audio.onended = function () {
+        setPlaying(false)
+      }
   }
   const stopAudio = () => {
     audio?.pause()
@@ -22,7 +26,6 @@ const useAudio = (url: string) => {
 
 const Player = ({ url }) => {
   const [playing, startAudio, stopAudio]: any = useAudio(url)
-  console.log('p', playing)
   return (
     <div className="absolute right-1 mb-5">
       {playing ? (
