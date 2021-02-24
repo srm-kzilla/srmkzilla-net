@@ -17,6 +17,7 @@ const MemberCard = (props: cardProps) => {
         <img
           src="/images/msg.png"
           alt="cloud"
+          draggable={false}
           className={`${cloudShow ? 'block' : 'invisible'} w-36 content-center`}
         />
         <p
@@ -36,6 +37,7 @@ const MemberCard = (props: cardProps) => {
           className="w-44 hover:w-76  rounded-full p-5  transition duration-500 ease-in-out  transform hover:-translate-y-1 hover:scale-110"
           src={props.src}
           alt="avatar"
+          draggable={false}
         />
         <div className={`${cloudShow ? 'block' : 'invisible'} pb-1`}>
           <Player url={props.audiourl} />

@@ -45,6 +45,7 @@ const Project = ({
           className="absolute top-0 right-0 sm:h-screen h-2/3 z-0"
           src="../images/bgpro.png"
           alt="pattern"
+          draggable={false}
         />
         <div className="flex flex-wrap w-screen items-center content-center">
           <div className="z-10 lg:w-2/4 sm:px-24 px-12 sm:mt-40 mt-20 mx-auto">
@@ -141,7 +142,11 @@ const Project = ({
           <div className="flex flex-wrap items-center justify-center px-24">
             {techstack.map((tech: any) => (
               <div className="mx-5 my-5" key={tech}>
-                <img src={`/images/${tech}.png`} alt="tech stack" />
+                <img
+                  src={`/images/${tech}.png`}
+                  alt="tech stack"
+                  draggable={false}
+                />
               </div>
             ))}
           </div>
