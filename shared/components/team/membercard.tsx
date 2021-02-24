@@ -10,6 +10,7 @@ interface cardProps {
 
 const MemberCard = (props: cardProps) => {
   const [cloudShow, setCloudShow] = useState(false)
+
   return (
     <div className="place-self-center">
       <div className="relative left-20 ml-8 z-20 top-20 -mt-24">
