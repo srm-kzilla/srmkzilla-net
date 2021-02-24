@@ -52,13 +52,11 @@ const ServicesProvided = () => {
           <div className="p-1 w-11/12 mr-0  flex-col hidden lg:block mt-14">
             <div>
               <h2 className="text-2xl font-semibold text-gray-100 text-left w-full mb-3">
-                {services[activeIndex].title}
+                {services[activeIndex].head}
               </h2>
             </div>
             <div>
               <p className="w-11/12 pr-0 text-justify ">
-                {services[activeIndex].head}
-                <br />
                 {services[activeIndex].desc}
               </p>
             </div>
@@ -100,11 +98,12 @@ const ServicesProvided = () => {
                         activeIndex == index ? 'block lg:hidden' : 'hidden'
                       }`}
                     >
-                      <p className="p-1 text-sm mt-3">
-                        {services[activeIndex].head}
-                        <br />
-                        {services[activeIndex].desc}
-                      </p>
+                      <div className="p-1 text-sm mt-3">
+                        <p>
+                          <strong> {services[activeIndex].head}</strong>
+                        </p>
+                        <p className="my-2">{services[activeIndex].desc}</p>
+                      </div>
                     </div>
                   </div>
                 )
