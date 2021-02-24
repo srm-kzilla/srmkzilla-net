@@ -34,8 +34,14 @@ const projects = () => {
       <Head>
         <title>SRMKZILLA | Projects</title>
       </Head>
-      <div className="h-screen bg-black-200">
+      <div>
         <Navbar />
+        <video
+          autoPlay
+          loop
+          src="/images/projects-hero.mp4"
+          className="h-screen"
+        ></video>
       </div>
       <div className="bg-black pt-28">
         <Fade up>

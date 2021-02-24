@@ -60,7 +60,7 @@ const cards = [
       'A community that discovers and invests in young minds that have the potential to make a difference.',
   },
 ]
-const aboutus = () => {
+const AboutUs = () => {
   return (
     <div className="bg-black text-white overflow-hidden">
       <Head>
@@ -115,4 +115,4 @@ const aboutus = () => {
   )
 }
 
-export default aboutus
+export default AboutUs
