@@ -33,6 +33,7 @@ const projects = () => {
     <div className="overflow-hidden">
       <Head>
         <title>SRMKZILLA | Projects</title>
+        <link rel="icon" href="./images/kzillalogo.png" />
       </Head>
       <div>
         <Navbar />

@@ -1,6 +1,6 @@
 import React from 'react'
 import Tilt from 'react-tilt'
-
+const Fade = require('react-reveal/Fade')
 type Props = {
   data: { chat: string; bg: string; date: string; title: string; desc: string }
 }
@@ -30,10 +30,10 @@ export const LeftTimeline = ({ data }: Props) => {
         </div>
         <div className="lg:mb-20 mt-4 lg:mt-0 mx-4 pr-5 md:px-0 lg:p-0 md:-mr-2 lg:mx-0 w-full">
           <div className="lg:p-8 w-full ">
-            <h3 className="lg:mb-3 w-full lg:mt-auto mt-6 text-white font-bold text-3xl">
+            <Fade up><h3 className="lg:mb-3 w-full lg:mt-auto mt-8 text-white font-bold text-3xl">
               {data.title}
-            </h3>
-            <p className="text-lg lg:leading-relaxed lg:tracking-widest ">
+            </h3></Fade>
+            <p className="text-lg lg:mt-auto mt-3 lg:leading-relaxed lg:tracking-widest ">
               {data.desc}
             </p>
           </div>
@@ -69,10 +69,10 @@ export const RightTimeline = ({ data }: Props) => {
         </div>
         <div className="lg:mb-20 mt-4 lg:mt-0 mx-4 pr-5 md:px-0 lg:p-0 md:ml-0 lg:mx-0 w-full">
           <div className="lg:p-14 w-full ">
-            <h3 className="lg:mb-3 w-full text-white font-bold text-3xl">
+            <Fade up><h3 className="lg:mb-3 w-full lg:mt-auto mt-8 text-white font-bold text-3xl">
               {data.title}
-            </h3>
-            <p className="lg:text-lg leading-relaxed lg:tracking-widest ">
+            </h3></Fade>
+            <p className="lg:text-lg lg:mt-auto mt-3 leading-relaxed lg:tracking-widest ">
               {data.desc}
             </p>
           </div>
