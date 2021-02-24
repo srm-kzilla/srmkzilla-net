@@ -6,32 +6,6 @@ import { LeftTimeline, RightTimeline } from './timeline'
 import Footer from '../footer'
 import sanityClient from '../../client'
 
-// const timeline = [
-//   {
-//     title: 'MOZOFEST',
-//     desc:
-//       'A three-day extravaganza to emanate the power of open source community sprinkled with a load of fun and frolic. MOZOFEST is our annual flagship event that witnesses speakers and developers from the community who educate the young minds about the latest developments in technology. Along with the intriguing tech talks, we organize many more exciting events to provide the perfect respite for people from all walks of life.',
-//     date: '29-31 March, 2019',
-//     chat: 'Your favorite fiesta. ',
-//     bg: 'bg-mozofest',
-//   },
-//   {
-//     title: 'MOZOHACK',
-//     desc:
-//       'A thrilling 24-hour hackathon where students across the nation come together to bring some amazing ideas to life. An event that brings together the experts, enthusiasts, and beginners to put in their game-changing ideas for real-world problems. MOZOHACK is our flagship hackathon that is well received by developers across the globe.',
-//     date: '30-31 March, 2019',
-//     chat: 'Dream it up. Code it down.',
-//     bg: 'bg-mozohack',
-//   },
-//   {
-//     title: 'SOCIAL RESPONSIBILITY',
-//     desc:
-//       'SRMKZILLA is committed to bring forth a change, in all ways possible. In our Social Outreach Programme, we visit orphanages and homes for the differently-abled and spent time with them while sharing happiness and love. We strive our best to bring smiles to their faces in a noble way. ',
-//     date: '9th feb 2020',
-//     chat: 'Be a part of the change.',
-//     bg: 'bg-social',
-//   },
-// ]
 const cards = [
   {
     name: 'Values',
@@ -61,6 +35,7 @@ const cards = [
       'A community that discovers and invests in young minds that have the potential to make a difference.',
   },
 ]
+
 const AboutUs = () => {
   const [timeline, setTimeline] = useState([])
   useEffect(() => {
