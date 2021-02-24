@@ -59,14 +59,18 @@ const Team = () => {
         <div className=" text-white rounded-2xl pt-8 px-1 md:p-10 bg-black-200 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 lg:gap-2 md:mx-20 mx-2">
           {newCard &&
             newCard.map(
-              (member: {
-                picture: { asset: { url: string } }
-                name: string
-                designation: string
-                description: { asset: { url: string } }
-              }) => {
+              (
+                member: {
+                  picture: { asset: { url: string } }
+                  name: string
+                  designation: string
+                  description: { asset: { url: string } }
+                },
+                index
+              ) => {
                 return (
                   <MemberCard
+                    key={index}
                     src={member?.picture?.asset?.url}
                     name={member?.name}
                     designation={member?.designation}

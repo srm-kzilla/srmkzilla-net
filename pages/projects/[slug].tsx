@@ -1,7 +1,5 @@
 import React from 'react'
 import Head from 'next/head'
-import imageUrlBuilder from '@sanity/image-url'
-import { useState, useEffect } from 'react'
 import InstagramEmbed from 'react-instagram-embed'
 import Tilt from 'react-parallax-tilt'
 import Navbar from '../../shared/components/navbar'
@@ -31,13 +29,12 @@ const Project = ({
   youtube,
   techstack,
   instaKey,
-  link
+  link,
 }: Props) => {
   return (
     <div className="bg-black overflow-hidden">
       <Head>
-        <title>SRMKZILLA</title>
-        <link rel="icon" href="../images/kzillalogo.png" />
+        <title>{title}</title>
       </Head>
 
       <div className="h-screen">
