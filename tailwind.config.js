@@ -28,9 +28,6 @@ module.exports = {
         light: 'url(/images/light.png)',
         'home-footer': 'url(/images/herofooter.png)',
         'home-mobile': 'url(/images/mobilehomefooter.png)',
-        mozofest: 'url(/images/mozofest.png)',
-        mozohack: 'url(/images/mozohack.jpg)',
-        social: 'url(/images/social.jpg)',
       }),
       boxShadow: {
         box: '0px 12px 50px 10px rgba(0, 0, 0, 0.65)',

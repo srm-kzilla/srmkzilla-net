@@ -42,8 +42,9 @@ const Services = () => {
           src="./images/logowhite.png"
           className="w-48 mt-16 md:hidden block mx-auto my-20"
           alt="logo"
+          draggable={false}
         />
-    
+
         <h1 className="text-center text-white font-medium text-6xl md:text-7xl relative z-30 md:hidden block">
           Our Services
         </h1>
@@ -52,9 +53,11 @@ const Services = () => {
       <div className="bg-black overflow-hidden px-3">
         {/* Services Provided section starts*/}
         <section className="my-20 lg:my-24 mx-3 lg:mx-24">
-        <Fade up><div className="flex flex-col place-items-center">
-            <ServicesProvided />
-          </div></Fade>
+          <Fade up>
+            <div className="flex flex-col place-items-center">
+              <ServicesProvided />
+            </div>
+          </Fade>
         </section>
         {/* Services Provided section ends*/}
 
@@ -62,20 +65,24 @@ const Services = () => {
         <section className="min-h-screen my-3 lg:my-10  mx-3 lg:mx-10">
           <div className="flex flex-col place-items-center">
             <div className="text-gray-100 pb-10 mb-10 container">
-            <Fade up><h1 className="text-4xl font-semibold text-gray-100 text-center mb-5">
-                Let’s talk numbers
-              </h1>
-              <h3 className="text-xl  text-gray-100 text-center mb-10">
-                Producing Quality. Delivering Finest.
-              </h3></Fade>
+              <Fade up>
+                <h1 className="text-4xl font-semibold text-gray-100 text-center mb-5">
+                  Let’s talk numbers
+                </h1>
+                <h3 className="text-xl  text-gray-100 text-center mb-10">
+                  Producing Quality. Delivering Finest.
+                </h3>
+              </Fade>
               {/* <Numbers /> */}
               <Stats />
             </div>
 
             <div className="text-gray-100 pb-10">
-              <Fade up><h1 className="text-4xl font-semibold text-center">
-                Collaborate with us
-              </h1></Fade>
+              <Fade up>
+                <h1 className="text-4xl font-semibold text-center">
+                  Collaborate with us
+                </h1>
+              </Fade>
             </div>
             <div className="xl:px-16">
               <Collaborate />
@@ -88,12 +95,14 @@ const Services = () => {
         <section className="min-h-screen my-5 lg:my-10 mx-3 lg:mx-10">
           <div className="flex flex-col place-items-center">
             <div className="text-gray-100 pb-10">
-              <Fade up><h1 className="text-4xl font-semibold text-center mb-5">
-                Our website delivers
-              </h1>
-              <h3 className="text-xl text-center">
-                Don’t take our word for it
-              </h3></Fade>
+              <Fade up>
+                <h1 className="text-4xl font-semibold text-center mb-5">
+                  Our website delivers
+                </h1>
+                <h3 className="text-xl text-center">
+                  Don’t take our word for it
+                </h3>
+              </Fade>
             </div>
             <div>
               <Testimonals />
