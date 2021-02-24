@@ -52,11 +52,11 @@ const Team = () => {
           <h1 className="text-4xl font-semibold text-gray-100 text-center mb-10 mx-2">
             Meet the team
           </h1>
-          <h3 className="text-2xl text-gray-100 text-center">
+          <h3 className="text-2xl text-gray-100 text-center px-5">
             An awesome tech community driven by passion and innovation
           </h3>
         </div>
-        <div className=" text-white rounded-2xl pt-8 px-1 md:p-10 bg-black-200 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 lg:gap-2 md:mx-20 mx-2">
+        <div className=" text-white rounded-2xl mx-10 pt-8 px-1 md:p-10 bg-black-200 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 lg:gap-2 md:mx-20 mx-2">
           {newCard &&
             newCard.map(
               (
@@ -86,7 +86,7 @@ const Team = () => {
             <h1 className="text-4xl font-semibold text-gray-100 text-center">
               Hear it form the team
             </h1>
-            <h3 className="text-xl w-2/3 text-gray-100 text-center mt-5">
+            <h3 className="w-2/3 text-sm md:text-lg text-gray-100 text-center mt-5">
               The journey of building an awesome tech community is fuelled by
               the ardour of its team members. At SRMKZILLA, their ride has been
               full of incredible experiences to inspire and aspire. Let us hear

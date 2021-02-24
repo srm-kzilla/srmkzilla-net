@@ -20,7 +20,7 @@ const Services = () => {
         <h1 className="text-center text-white font-medium text-6xl md:text-7xl relative z-30 hidden md:block">
           Our Services
         </h1>
-        <div className="bg-orange300 w-64 md:h-12 h-8 mx-auto -mt-5 md:-mt-8 hidden md:block"></div>
+        <div className="bg-orange300 w-64 md:h-10 h-6 mx-auto -mt-5 md:-mt-8 hidden md:block"></div>
         <motion.div
           style={{ scale }}
           className=" md:block hidden relative box w-9/12 h-96 mt-24 mx-auto rounded-3xl border-black-100 border-8"

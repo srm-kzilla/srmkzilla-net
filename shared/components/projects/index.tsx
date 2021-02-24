@@ -40,7 +40,7 @@ const projects = () => {
           autoPlay
           loop
           src="/images/projects-hero.mp4"
-          className="h-screen"
+          className="h-screen relative"
         ></video>
       </div>
       <div className="bg-black pt-28">

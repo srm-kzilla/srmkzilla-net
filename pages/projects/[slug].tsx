@@ -33,7 +33,7 @@ const Project = ({
   link,
   github,
 }: Props) => {
-  console.log(github)
+  
   return (
     <div className="bg-black overflow-hidden">
       <Head>
@@ -45,43 +45,43 @@ const Project = ({
         <img
           className="absolute top-0 right-0 sm:h-screen h-2/3 z-0"
           src="../images/bgpro.png"
-          alt=""
+          alt="background"
+          draggable={false}
         />
         <div className="flex flex-wrap w-screen items-center content-center">
-          <div className="z-10 lg:w-2/4 sm:px-24 px-12 sm:mt-40 mt-20 mx-auto">
+          <div className="z-10 lg:w-2/4 sm:px-24 px-5 sm:mt-40 mt-20 mx-auto">
             {image && (
-              <motion.img
-                initial={{ y: 100 }}
-                animate={{ y: 0 }}
-                className="lg:relative lg:mx-0 mx-auto"
+              <img
+                
+                className="lg:relative h-24 lg:mx-0 mx-auto"
                 src={image}
+                alt="logo"
+                draggable={false}
               />
             )}
-            <motion.h1
-              initial={{ y: 100 }}
-              animate={{ y: 0 }}
+            <h1
+              
               className="text-white text-5xl lg:text-left text-center font-semibold mt-10"
             >
               {title}
-            </motion.h1>
-            <motion.p
-              initial={{ y: 100 }}
-              animate={{ y: 0 }}
+            </h1>
+            <p
+              
               className="text-white lg:text-left text-center mt-4"
             >
               {desc}
-            </motion.p>
+            </p>
             <div className="mt-7 lg:text-left text-center">
               {link && (
                 <a href={link}>
-                  <button className="px-5 py-3 rounded-full bg-black-200 text-white text-sm mb-5 focus:none">
+                  <button className="px-5 py-3 border border-white transform transition-transform duration-200 hover:-translate-y-1 rounded-full bg-black-200 text-white text-sm mb-5 focus:none">
                     View Project
                   </button>
                 </a>
               )}
               {github && (
                 <a href={github}>
-                  <button className="px-8 ml-3 py-3 rounded-full bg-black-200 text-white text-sm focus:none">
+                  <button className="px-8 border border-white transform transition-transform duration-200 hover:-translate-y-1 ml-3 py-3 rounded-full bg-black-200 text-white text-sm focus:none">
                     Github
                   </button>
                 </a>
@@ -92,14 +92,14 @@ const Project = ({
             <div className="absolute videoCard h-64 z-0 w-2/3 left-2/4 top-2/3 transform -rotate-3 rounded-lg sm:block hidden -translate-y-1/2 -translate-x-1/2"></div>
             <Tilt>
               <div className="absolute bg-white sm:h-64 h-56 z-20 sm:w-2/3 w-3/4 sm:mx-auto left-2/4 top-3/4 transform  rounded-lg -translate-y-36 sm:-translate-x-64  -translate-x-1/2 overflow-hidden">
-                <iframe
+                {youtube && (<iframe
                   width="100%"
                   height="100%"
                   src={youtube as string}
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
-                ></iframe>
+                ></iframe>)}
               </div>
             </Tilt>
           </div>
@@ -111,7 +111,7 @@ const Project = ({
             <div className="lg:w-2/4 sm:w-96 w-full h-96 relative mx-auto">
               <div className=" absolute overflow-hidden sm:w-96 w-full sm:h-96 h-72 lg:right-16 right-auto top-2/3 transform -translate-y-2/3 lg:mt-0 sm:mt-20 mt-0 rounded-xl">
                 <div className="">
-                  <InstagramEmbed
+                  {instagram && (<InstagramEmbed
                     url={instagram}
                     clientAccessToken={instaKey}
                     className="absolute w-full -top-12 transform -translate-y-1"
@@ -119,7 +119,7 @@ const Project = ({
                     containerTagName="div"
                     protocol=""
                     injectScript
-                  />
+                  />)}
                 </div>
               </div>
             </div>
@@ -140,9 +140,9 @@ const Project = ({
         <div>
           <h1 className="text-white text-center text-4xl mt-28">Tech Stack</h1>
           <div className="flex flex-wrap items-center justify-center px-24">
-            {techstack.map((tech: any) => (
+            {techstack && techstack.map((tech: any) => (
               <div className="mx-5 my-5">
-                <img src={`/images/${tech}.png`} alt="tech stack" />
+                <img src={`/images/tech_stack/${tech}.png`} draggable={false} alt="tech stack" />
               </div>
             ))}
           </div>
