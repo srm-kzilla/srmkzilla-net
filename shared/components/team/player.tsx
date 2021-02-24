@@ -5,13 +5,12 @@ const useAudio = (url: string) => {
   const [audio, setAudio] = useState<HTMLAudioElement>()
   const [playing, setPlaying] = useState(false)
 
-  const Toggle = () =>
-    useEffect(() => {
-      setAudio(new Audio(url))
-      if (audio) {
-        playing ? audio.play() : audio.pause()
-      }
-    }, [playing])
+  useEffect(() => {
+    setAudio(new Audio(url))
+    if (audio) {
+      playing ? audio.play() : audio.pause()
+    }
+  }, [playing])
 
   useEffect(() => {
     if (audio) {
@@ -24,15 +23,18 @@ const useAudio = (url: string) => {
     }
   }, [])
 
-  return [playing, Toggle]
+  return [playing, setPlaying]
 }
 
 const Player = ({ url }) => {
-  const [playing, Toggle] = useAudio(url)
+  const [playing, setPlaying]: any = useAudio(url)
 
   return (
     <div className="absolute right-1 mb-5">
-      <button onClick={Toggle} className="focus:outline-none ml-3">
+      <button
+        onClick={() => setPlaying(!playing)}
+        className="focus:outline-none ml-3"
+      >
         {playing ? (
           <Volume2 color="white" size={25} />
         ) : (

@@ -4,21 +4,21 @@ import InstagramEmbed from 'react-instagram-embed'
 import Tilt from 'react-parallax-tilt'
 import Navbar from '../../shared/components/navbar'
 import Footer from '../../shared/components/footer'
-const BlockContent = require('@sanity/block-content-to-react')
+import * as BlockContent from '@sanity/block-content-to-react'
 const Fade = require('react-reveal/Fade')
 import { motion } from 'framer-motion'
 
 type Props = {
-  title: String
+  title: string
   image: any
-  desc: Text
-  link: URL
-  github?: URL
+  desc: string
+  link?: string | null
+  github?: string | null
   features: any
-  instagram: any
-  youtube: any
-  techstack: []
-  instaKey: any
+  instagram: string
+  youtube?: string | null
+  techstack: string[]
+  instaKey: string
 }
 
 const Project = ({
@@ -33,6 +33,7 @@ const Project = ({
   link,
   github,
 }: Props) => {
+  console.log(github)
   return (
     <div className="bg-black overflow-hidden">
       <Head>
@@ -71,13 +72,15 @@ const Project = ({
               {desc}
             </motion.p>
             <div className="mt-7 lg:text-left text-center">
-              <a href={`${link}`}>
-                <button className="px-5 py-3 rounded-full bg-black-200 text-white text-sm mb-5 focus:none">
-                  View Project
-                </button>
-              </a>
+              {link && (
+                <a href={link}>
+                  <button className="px-5 py-3 rounded-full bg-black-200 text-white text-sm mb-5 focus:none">
+                    View Project
+                  </button>
+                </a>
+              )}
               {github && (
-                <a href={`${github}`}>
+                <a href={github}>
                   <button className="px-8 ml-3 py-3 rounded-full bg-black-200 text-white text-sm focus:none">
                     Github
                   </button>
@@ -92,7 +95,7 @@ const Project = ({
                 <iframe
                   width="100%"
                   height="100%"
-                  src={youtube}
+                  src={youtube as string}
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -201,11 +204,11 @@ export const getStaticProps = async (context: { params: { slug: any } }) => {
         desc: post.description,
         title: post.title,
         image: post.logo.asset.url,
-        link: post.link,
-        github: post.github,
+        link: post?.link || null,
+        github: post?.github || null,
         features: post.features,
-        instagram: post.instagram,
-        youtube: post.youtube,
+        instagram: post?.instagram || null,
+        youtube: post?.youtube || null,
         techstack: post.techstack,
         instaKey: process.env.INSTA_KEY,
       },
