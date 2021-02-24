@@ -73,14 +73,14 @@ const Project = ({
             </motion.p>
             <div className="mt-7 lg:text-left text-center">
               {link && (
-                <a href={link}>
+                <a href={link} target="_blank">
                   <button className="px-5 py-3 rounded-full bg-black-200 text-white text-sm mb-5 focus:outline-none">
                     View Project
                   </button>
                 </a>
               )}
               {github && (
-                <a href={github}>
+                <a href={github} target="_blank">
                   <button className="px-8 ml-3 py-3 rounded-full bg-black-200 text-white text-sm focus:outline-none">
                     Github
                   </button>
