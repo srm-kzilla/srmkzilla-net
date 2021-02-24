@@ -164,7 +164,7 @@ const Home = () => {
             <img
               src="./images/bulb.png"
               className="w-5/6 h-auto z-10 -ml-16 -mt-10 lg:block hidden relative"
-              draggable="false"
+              draggable={false}
               alt=""
             />
           </div>

@@ -16,8 +16,12 @@ const ProjectIcon = (props: { icon: string | undefined; title: String }) => {
         <div className="text-white text-lg bg-black-200 rounded-lg px-3 py-1 relative">
           {props.title}
           <div className="absolute left-2">
-            {' '}
-            <img src="./images/tri.png" className="w-5" alt="" />
+            <img
+              src="./images/tri.png"
+              className="w-5"
+              alt=""
+              draggable={false}
+            />
           </div>
         </div>
       </div>

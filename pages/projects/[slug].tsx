@@ -33,7 +33,6 @@ const Project = ({
   link,
   github,
 }: Props) => {
-  console.log(github)
   return (
     <div className="bg-black overflow-hidden">
       <Head>
@@ -45,7 +44,8 @@ const Project = ({
         <img
           className="absolute top-0 right-0 sm:h-screen h-2/3 z-0"
           src="../images/bgpro.png"
-          alt=""
+          alt="pattern"
+          draggable={false}
         />
         <div className="flex flex-wrap w-screen items-center content-center">
           <div className="z-10 lg:w-2/4 sm:px-24 px-12 sm:mt-40 mt-20 mx-auto">
@@ -73,15 +73,15 @@ const Project = ({
             </motion.p>
             <div className="mt-7 lg:text-left text-center">
               {link && (
-                <a href={link}>
-                  <button className="px-5 py-3 rounded-full bg-black-200 text-white text-sm mb-5 focus:none">
+                <a href={link} target="_blank">
+                  <button className="px-5 py-3 rounded-full bg-black-200 text-white text-sm mb-5 focus:outline-none">
                     View Project
                   </button>
                 </a>
               )}
               {github && (
-                <a href={github}>
-                  <button className="px-8 ml-3 py-3 rounded-full bg-black-200 text-white text-sm focus:none">
+                <a href={github} target="_blank">
+                  <button className="px-8 ml-3 py-3 rounded-full bg-black-200 text-white text-sm focus:outline-none">
                     Github
                   </button>
                 </a>
@@ -141,13 +141,17 @@ const Project = ({
           <h1 className="text-white text-center text-4xl mt-28">Tech Stack</h1>
           <div className="flex flex-wrap items-center justify-center px-24">
             {techstack.map((tech: any) => (
-              <div className="mx-5 my-5">
-                <img src={`/images/${tech}.png`} alt="tech stack" />
+              <div className="mx-5 my-5" key={tech}>
+                <img
+                  src={`/images/${tech}.png`}
+                  alt="tech stack"
+                  draggable={false}
+                />
               </div>
             ))}
           </div>
           <div className="text-center mb-14">
-            <button>
+            <button className="focus:outline-none">
               <p className="bg-orange300 px-5 py-2 rounded-full font-medium lg:my-5 my-10">
                 Explore {title}
               </p>
