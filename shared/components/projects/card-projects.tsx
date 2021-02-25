@@ -24,9 +24,11 @@ const CardProject = (props: {
       <p className="text-white font-light px-3 mt-3 text-xs">{props.desc}</p>
       <div className="text-right mr-5 my-5">
         <a target="_blank" href={`${props.link}`}>
-          <button className="bg-black border rounded-full text-white text-xs px-5 py-1 border-white focus:outline-none">
-            Check out
-          </button>
+          {props.link && (
+            <button className="bg-black border rounded-full text-white text-xs px-5 py-1 border-white focus:outline-none">
+              Check out
+            </button>
+          )}
         </a>
       </div>
     </motion.div>
