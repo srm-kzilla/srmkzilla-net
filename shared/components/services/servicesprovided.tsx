@@ -19,7 +19,7 @@ const ServicesProvided = () => {
               </h2>
             </div>
             <div>
-              <p className="w-11/12 pr-0 text-justify ">
+              <p className="w-11/12 pr-0 text-justify">
                 {SERVICES[activeIndex].desc}
               </p>
             </div>
@@ -81,6 +81,17 @@ const ServicesProvided = () => {
                 to your ideas. Let's work on it together to create something
                 beautiful.
               </p>
+              <button
+                onClick={() => {
+                  window.scrollTo({
+                    top: 2200,
+                    behavior: 'smooth',
+                  })
+                }}
+                className="float-right bg-black border rounded-full text-white text-xs px-5 py-1 transform transition-transform duration-200 hover:-translate-y-1 border-white focus:outline-none"
+              >
+                know more
+              </button>
             </div>
           </div>
         </div>
