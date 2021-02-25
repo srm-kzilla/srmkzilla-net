@@ -20,6 +20,7 @@ module.exports = {
         logoRed: '#F0634D',
         logoGreen: '#54A870',
         logoBlue: '#26BAFF',
+        bg404: '#272727'
       },
       backgroundImage: (theme) => ({
         'hero-pattern': "url('/images/herobg.png')",
@@ -28,6 +29,7 @@ module.exports = {
         light: 'url(/images/light.png)',
         'home-footer': 'url(/images/herofooter.png)',
         'home-mobile': 'url(/images/mobilehomefooter.png)',
+        
       }),
       boxShadow: {
         box: '0px 12px 50px 10px rgba(0, 0, 0, 0.65)',
