@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { BsArrowRightShort } from 'react-icons/bs'
 import { motion } from 'framer-motion'
 
@@ -35,7 +35,6 @@ const SwipeCard = ({ content }: Props) => {
   }
   return (
     <div className="bg-black-200 mx-12 relative h-80 w-64 rounded-xl my-5 py-5 px-5">
-      {console.log(content)}
       <h1 className="text-white text-2xl text-center mt-2">{content.name}</h1>
       <p className="absolute w-full top-1/2 left-1/2 -translate-x-1/2 transform -translate-y-1/2 text-sm text-white px-6 text-center">
         {content.description_1}

@@ -1,31 +1,8 @@
-import React, { useEffect, useState } from 'react'
-import CardProject from './card_projects'
-import sanityClient from '../../client'
-const Fade = require('react-reveal/Fade') 
+const Fade = require('react-reveal/Fade')
 
-const Service = () => {
-  const [serviceCard, setServiceCard] = useState([])
+import CardProject from './card-projects'
 
-  useEffect(() => {
-    sanityClient
-      .fetch(
-        `*[_type == "services"]{
-        title,
-        logo{
-          asset->{
-            _id,
-            url
-          },
-          alt
-        },
-        description,
-        link
-    }`
-      )
-      .then((data) => setServiceCard(data))
-      .catch(console.error)
-  }, [])
-
+const Service = ({ serviceProjects }) => {
   return (
     <div className="mt-36">
       <Fade up>
@@ -38,8 +15,8 @@ const Service = () => {
       </Fade>
 
       <div className="flex flex-wrap items-center justify-center sm:mt-20 mt-14 pb-10">
-        {serviceCard &&
-          serviceCard.map(
+        {serviceProjects &&
+          serviceProjects.map(
             (card: {
               title: String
               logo: { asset: { url: String | undefined } }

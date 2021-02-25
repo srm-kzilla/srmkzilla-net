@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Menu } from 'react-feather'
+import Link from 'next/link'
+
 import Dropdown from './dropdown'
 
 const Navbar = () => {
@@ -48,36 +50,31 @@ const Navbar = () => {
             } md:flex md:items-center md:justify-between w-full flex-1`}
           >
             <div className="flex bg-opacity-20 flex-col md:flex-row md:items-center mx-5">
-              <a
-                href="/"
-                className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent"
-              >
-                Home
-              </a>
-              <a
-                href="/about"
-                className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent"
-              >
-                About Us
-              </a>
-              <a
-                href="/services"
-                className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent"
-              >
-                Our Services
-              </a>
-              <a
-                href="/team"
-                className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent"
-              >
-                Team
-              </a>
-              <a
-                href="/projects"
-                className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent"
-              >
-                Projects
-              </a>
+              <Link href="/">
+                <p className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent">
+                  Home
+                </p>
+              </Link>
+              <Link href="/about">
+                <p className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent">
+                  About Us
+                </p>
+              </Link>
+              <Link href="/services">
+                <p className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent">
+                  Our Services
+                </p>
+              </Link>
+              <Link href="/team">
+                <p className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent">
+                  Team
+                </p>
+              </Link>
+              <Link href="/projects">
+                <p className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent">
+                  Projects
+                </p>
+              </Link>
               <Dropdown
                 name="What's New?"
                 class="absolute md:left-96 md:ml-20 md:my-12 md:mx-10 md:top-3 py-2 w-48 rounded-md shadow-md bg-black-200 cursor-pointer"
