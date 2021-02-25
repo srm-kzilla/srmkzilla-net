@@ -27,6 +27,7 @@ const Service = ({ serviceProjects }) => {
                 name={card?.title}
                 desc={card?.description}
                 image={card?.logo?.asset?.url}
+                link={card?.link}
               />
             )
           )}
