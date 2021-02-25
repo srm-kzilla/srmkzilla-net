@@ -4,6 +4,8 @@ import { FiInstagram, FiMail } from 'react-icons/fi'
 import { IoCall } from 'react-icons/io5'
 import { BsArrowLeft } from 'react-icons/bs'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
+
 const Footer = () => {
   const { pathname: path } = useRouter()
   return (
@@ -70,44 +72,51 @@ const Footer = () => {
               <div className="absolute top-full h-1 mt-2 w-16 md:w-24 bg-baseBlue left-0"></div>
             </h1>
             <div className="mt-8 text-sm md:text-lg">
-              <a
-                href="/"
-                className={`${
-                  path === '/' && 'text-logoGreen'
-                } block mt-2 cursor-pointer  transition duration-75`}
-              >
-                Home
-              </a>
-              <a
-                href="/projects"
-                className={`block mt-2 cursor-pointer  transition duration-75`}
-              >
-                Projects
-              </a>
-              <a
-                href="/about"
-                className={`${
-                  path === '/about' && 'text-logoGreen'
-                } block mt-2 cursor-pointer  transition duration-75`}
-              >
-                About Us
-              </a>
-              <a
-                href="/services"
-                className={`${
-                  path === '/services' && 'text-logoGreen'
-                } block mt-2 cursor-pointer  transition duration-75`}
-              >
-                Our services
-              </a>
-              <a
-                href="/team"
-                className={`${
-                  path === '/team' && 'text-logoGreen'
-                } block mt-2 cursor-pointer  transition duration-75`}
-              >
-                Team
-              </a>
+              <Link href="/">
+                <p
+                  className={`${
+                    path === '/' && 'text-logoGreen'
+                  } block mt-2 cursor-pointer  transition duration-75`}
+                >
+                  Home
+                </p>
+              </Link>
+              <Link href="/projects">
+                <p
+                  className={`${
+                    path === '/projects' && 'text-logoGreen'
+                  } block mt-2 cursor-pointer  transition duration-75`}
+                >
+                  Projects
+                </p>
+              </Link>
+              <Link href="/about">
+                <p
+                  className={`${
+                    path === '/about' && 'text-logoGreen'
+                  } block mt-2 cursor-pointer  transition duration-75`}
+                >
+                  About Us
+                </p>
+              </Link>
+              <Link href="/services">
+                <p
+                  className={`${
+                    path === '/services' && 'text-logoGreen'
+                  } block mt-2 cursor-pointer  transition duration-75`}
+                >
+                  Our services
+                </p>
+              </Link>
+              <Link href="/team">
+                <p
+                  className={`${
+                    path === '/team' && 'text-logoGreen'
+                  } block mt-2 cursor-pointer  transition duration-75`}
+                >
+                  Team
+                </p>
+              </Link>
             </div>
           </div>
           <div>

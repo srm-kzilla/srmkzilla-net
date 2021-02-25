@@ -26,11 +26,13 @@ const Navbar = () => {
         <div className="md:flex md:items-center md:justify-between">
           <div className="flex justify-between items-center">
             <div>
-              <img
-                className="w-10"
-                src="/images/kzillalogo.png"
-                draggable={false}
-              />
+              <Link href="/">
+                <img
+                  className="w-10"
+                  src="/images/kzillalogo.png"
+                  draggable={false}
+                />
+              </Link>
             </div>
 
             <div className="flex md:hidden">
