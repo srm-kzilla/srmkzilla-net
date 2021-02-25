@@ -79,11 +79,10 @@ const Footer = () => {
                 Home
               </a>
               <a
-                href="https://events.srmkzilla.net/"
-                target="_blank"
+                href="/projects"
                 className={`block mt-2 cursor-pointer  transition duration-75`}
               >
-                Events
+                Projects
               </a>
               <a
                 href="/about"
