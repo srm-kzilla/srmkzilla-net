@@ -40,7 +40,7 @@ const MemberCard = (props: cardProps) => {
           draggable={false}
         />
         <div className={`${cloudShow ? 'block' : 'invisible'} pb-1`}>
-          <Player url={props.audiourl} />
+          {props.audiourl && <Player url={props.audiourl} />}
         </div>
         <span
           className={`${
