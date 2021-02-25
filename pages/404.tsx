@@ -18,7 +18,7 @@ const Error = () => {
       </div>
       <img
         src="./images/404bg.png"
-        className="z-20 w-auto xl:h-auto h-96 object-fill absolute bottom-0 xl:-mb-20 mb-0 left-0"
+        className="z-20 w-full xl:h-auto h-96 object-fill absolute bottom-0 xl:-mb-20 mb-0 left-0"
         alt=""
       />
       <motion.img
