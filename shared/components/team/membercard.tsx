@@ -12,44 +12,45 @@ const MemberCard = (props: cardProps) => {
   const [cloudShow, setCloudShow] = useState(false)
 
   return (
-    <div className="place-self-center">
-      <div className="relative left-20 ml-8 z-20 top-20 -mt-24">
+    <div
+      className="place-self-center p-3 m-1 relative hover:bg-black rounded-2xl cursor-pointer  transition duration-500 ease-in-out  transform hover:-translate-y-1 hover:scale-110"
+      onMouseOver={() => setCloudShow(true)}
+      onMouseOut={() => setCloudShow(false)}
+    >
+      <div className="absolute left-20 ml-8 top-20 -mt-28 z-50">
         <img
           src="/images/msg.png"
           alt="cloud"
           draggable={false}
-          className={`${cloudShow ? 'block' : 'invisible'} w-36 content-center`}
+          className={`${
+            cloudShow ? 'block' : 'invisible'
+          } h-24 max-w-screen-xl content-center`}
         />
         <p
           className={`${
             cloudShow ? 'block' : 'invisible'
-          } text-black mx-4 mb-1 relative -top-20 text-xs w-3/5`}
+          } text-black mx-4 mb-1 relative -top-20 mt-2 text-xs w-4/5`}
         >
           Hey! I'm {props.name}.
         </p>
       </div>
-      <div
-        onMouseOver={() => setCloudShow(true)}
-        onMouseOut={() => setCloudShow(false)}
-        className=" hover:bg-black rounded-2xl p-3 overflow-hidden mx-auto cursor-pointer  transition duration-500 ease-in-out  transform hover:-translate-y-1 hover:scale-110"
-      >
-        <img
-          className="w-44 hover:w-76  rounded-full p-5  transition duration-500 ease-in-out  transform hover:-translate-y-1 hover:scale-110"
-          src={props.src}
-          alt="avatar"
-          draggable={false}
-        />
-        <div className={`${cloudShow ? 'block' : 'invisible'} pb-1`}>
-          {props.audiourl && <Player url={props.audiourl} />}
-        </div>
-        <span
-          className={`${
-            cloudShow ? 'block' : 'invisible'
-          } text-xs text-gray-100 text-center mb-2`}
-        >
-          {props.designation}
-        </span>
+
+      <img
+        className="w-44 hover:w-76 z-0 rounded-full p-5  transition duration-500 ease-in-out  transform hover:-translate-y-1 hover:scale-110"
+        src={props.src}
+        alt="avatar"
+        draggable={false}
+      />
+      <div className={`${cloudShow ? 'block' : 'invisible'} pb-1`}>
+        {props.audiourl && <Player url={props.audiourl} />}
       </div>
+      <span
+        className={`${
+          cloudShow ? 'block' : 'invisible'
+        } text-xs text-gray-100 text-center mb-1`}
+      >
+        {props.designation}
+      </span>
     </div>
   )
 }
