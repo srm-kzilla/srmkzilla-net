@@ -21,7 +21,7 @@ const Projects = ({ projects, serviceProjects }) => {
           autoPlay
           loop
           src="/images/projects-hero.mp4"
-          className="h-screen relative"
+          className="h-screen mx-auto"
         ></video>
       </div>
       <div className="bg-black pt-28">
