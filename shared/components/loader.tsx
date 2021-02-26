@@ -7,7 +7,7 @@ const Loader = () => {
     <div className="relative h-screen w-screen bg-light bg-black-200">
       <Head>
         <title>SRMKZILLA</title>
-        <link rel="icon" href="./images/kzillalogo.webp" />
+        <link rel="icon" href="./images/kzillalogo.png" />
       </Head>
       <div className="absolute left-1/2 top-1/2 transform -translate-y-1/2 -translate-x-1/2">
         <svg

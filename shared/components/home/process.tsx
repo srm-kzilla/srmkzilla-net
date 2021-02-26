@@ -73,7 +73,7 @@ const Process = () => (
           boss until the final model gets drafted.
         </p>
         <img
-          src="./images/bulb.webp"
+          src="./images/bulb.png"
           className="w-5/6 h-auto z-10 -ml-16 -mt-10 lg:block hidden relative"
           draggable={false}
           alt="bulb"
@@ -211,7 +211,7 @@ const Process = () => (
             <span className="text-white text-3xl relative lg:mt-24">
               Design<span className="text-orange600 text-4xl">.</span>
               <img
-                src="./images/arrow.webp"
+                src="./images/arrow.png"
                 className="absolute top-full left-full h-5 transform -translate-y-2"
                 alt="arrow"
               />

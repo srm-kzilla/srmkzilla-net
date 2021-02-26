@@ -16,7 +16,7 @@ const Team = ({ teamMembers }) => {
           content="SRMKZILLA is a community of young tech enthusiasts, Meet the team,
             An awesome tech community driven by passion and innovation "
         />
-        <link rel="icon preload canonical" href="./images/kzillalogo.webp" />
+        <link rel="icon preload canonical" href="./images/kzillalogo.png" />
       </Head>
       <div className="bg-black overflow-hidden ">
         <Navbar />

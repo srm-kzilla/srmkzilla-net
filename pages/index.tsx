@@ -14,7 +14,7 @@ const Home = ({ updatesCard }) => (
         name="description"
         content="SRMKZILLA is a community of young tech enthusiasts who eat, sleep and breath technology. We organize everything from technical workshops to gaming events, you name it & we do it. "
       />
-      <link rel="icon preload canonical" href="./images/kzillalogo.webp" />
+      <link rel="icon preload canonical" href="./images/kzillalogo.png" />
     </Head>
     <FirstFold />
     <WhatsNew cardContent={updatesCard} />

@@ -8,7 +8,7 @@ const Testimonals = () => {
           <div className="flex flex-col">
             <div className="rounded-full w-40 p-2 h-40 border-white border-2 ">
               <img
-                src="/images/testimonals_person1.webp"
+                src="/images/testimonals_person1.jpg"
                 className="rounded-full w-full h-full"
                 draggable={false}
                 alt="testimonals person 1"
@@ -17,7 +17,7 @@ const Testimonals = () => {
             <div className="flex place-self-center mb-10 md:mb-0 py-5 w-44">
               <div className="mr-1">
                 <img
-                  src="/images/orangeline.webp"
+                  src="/images/orangeline.png"
                   className="w-5/6"
                   draggable={false}
                   alt="line"
@@ -51,7 +51,7 @@ const Testimonals = () => {
           <div className="flex flex-col">
             <div className="rounded-full border-white h-40 w-40 p-2 border-2">
               <img
-                src="/images/testimonals_person2.webp"
+                src="/images/testimonals_person2.jpg"
                 className="rounded-full h-full w-full"
                 draggable={false}
                 alt="testimonals person 2"
@@ -60,7 +60,7 @@ const Testimonals = () => {
             <div className="flex place-self-center mb-10 md:mb-0 py-5 w-52">
               <div className="mr-1">
                 <img
-                  src="/images/orangeline.webp"
+                  src="/images/orangeline.png"
                   className="w-5/6"
                   draggable={false}
                   alt="line"

@@ -23,7 +23,7 @@ const Services = () => {
           name="description"
           content="SRMKZILLA is a community of young tech enthusiasts who eat, sleep and breath technology. We organize everything from technical workshops to gaming events, you name it & we do it. "
         />
-        <link rel="icon preload canonical" href="./images/kzillalogo.webp" />
+        <link rel="icon preload canonical" href="./images/kzillalogo.png" />
       </Head>
       <Navbar />
       <div className="h-screen bg-black-200 bg-light bg-fixed md:pt-40 pt-28 overflow-hidden px-5">
@@ -49,7 +49,7 @@ const Services = () => {
           </h1>
         </motion.div>
         <img
-          src="./images/logowhite.webp"
+          src="./images/logowhite.png"
           className="w-48 mt-16 md:hidden block mx-auto my-20"
           alt="logo"
           draggable={false}

@@ -45,7 +45,7 @@ const Project = ({
         <Navbar />
         <img
           className="absolute top-0 right-0 xl:h-screen h-2/4 z-0"
-          src="../images/projectbg.webp"
+          src="../images/projectbg.png"
           alt="background"
           draggable={false}
         />

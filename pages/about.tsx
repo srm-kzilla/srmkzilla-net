@@ -18,7 +18,7 @@ const AboutUs = ({ timelineData }) => {
           name="description"
           content="As a part of Mozilla’s open-source community, our mission is to provide a platform for inquisitive minds by guiding and empowering their aspirations."
         />
-        <link rel="icon preload canonical" href="./images/kzillalogo.webp" />
+        <link rel="icon preload canonical" href="./images/kzillalogo.png" />
       </Head>
       <Navbar />
 
@@ -26,7 +26,7 @@ const AboutUs = ({ timelineData }) => {
         <div className="md:h-screen h-auto items-center flex justify-center">
           <div className="md:h-3/4 h-full sm:w-10/12 w-full md:mb-16 mb-8 rounded-none md:rounded-xl overflow-hidden">
             <img
-              src="/images/mozofest.webp"
+              src="/images/mozofest.png"
               draggable={false}
               alt="about cover image"
               className="object-contain"

@@ -18,7 +18,7 @@ const ProjectIcon = (props: { icon: string | undefined; title: String }) => {
           {props.title}
           <div className="absolute left-2">
             <img
-              src="./images/tri.webp"
+              src="./images/tri.png"
               className="w-5"
               alt="pointer"
               draggable={false}

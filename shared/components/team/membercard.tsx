@@ -19,7 +19,7 @@ const MemberCard = (props: cardProps) => {
     >
       <div className="absolute left-20 ml-8 top-20 -mt-28 z-50">
         <img
-          src="/images/msg.webp"
+          src="/images/msg.png"
           alt="cloud"
           draggable={false}
           className={`${

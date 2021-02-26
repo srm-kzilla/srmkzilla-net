@@ -12,7 +12,7 @@ const NewCarousel = () => {
               <div className="relative mx-auto bg-black-100 md:w-2/4 w-10/12 rounded-xl pb-14  pt-24">
                 <img
                   className="absolute top-7 left-1/2 transform -translate-x-1/2"
-                  src="./images/car.webp"
+                  src="./images/car.png"
                   alt="quote"
                   draggable={false}
                 />

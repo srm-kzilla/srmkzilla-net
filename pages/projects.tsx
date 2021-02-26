@@ -17,7 +17,7 @@ const Projects = ({ projects, serviceProjects }) => {
           name="description"
           content="SRMKZILLA is a community of young tech enthusiasts who eat, sleep and breath technology. We organize everything from technical workshops to gaming events, you name it & we do it. "
         />
-        <link rel="icon" href="./images/kzillalogo.webp" />
+        <link rel="icon" href="./images/kzillalogo.png" />
       </Head>
       <div>
         <Navbar />
