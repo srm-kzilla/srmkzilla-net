@@ -9,7 +9,7 @@ export const alumniReviews = [
     name: 'Meenakshi Sharma',
     src: '/images/meenakshi.jpg',
     designation: 'Secretary',
-    message: `SSRMKZILLA has been an integral part of my college experience. Without it, my journey definitely would not have been the same. It introduced me to so many new avenues, and more importantly, to so many amazing and interesting personalities that still continue to teach and influence me. It was, and always will be, an honor to be a part of the club!`,
+    message: `SRMKZILLA has been an integral part of my college experience. Without it, my journey definitely would not have been the same. It introduced me to so many new avenues, and more importantly, to so many amazing and interesting personalities that still continue to teach and influence me. It was, and always will be, an honor to be a part of the club!`,
   },
   {
     name: 'Parv',
