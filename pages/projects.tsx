@@ -13,7 +13,7 @@ const Projects = ({ projects, serviceProjects }) => {
     <div className="overflow-hidden">
       <Head>
         <title>SRMKZILLA | Projects</title>
-        <link rel="icon" href="./images/kzillalogo.png" />
+        <link rel="icon" href="./images/kzillalogo.webp" />
       </Head>
       <div>
         <Navbar />

@@ -25,7 +25,7 @@ const Message = (props: { color: String; message: String }) => {
       <p>{props.message}</p>
       <motion.img
         className="absolute right-0 transform left-full ml-5 sm:top-5 top-2/4"
-        src="./images/messageLogo.png"
+        src="./images/messageLogo.webp"
         alt="logo"
         draggable={false}
       />

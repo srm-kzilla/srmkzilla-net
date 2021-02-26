@@ -18,7 +18,7 @@ const Error = () => {
         </Link>
       </div>
       <img
-        src="./images/404bg.png"
+        src="./images/404bg.webp"
         className="z-20 w-full xl:h-auto h-96 object-fill absolute bottom-0 xl:-mb-20 mb-0 left-0"
         alt="404 background"
       />
@@ -26,13 +26,13 @@ const Error = () => {
         initial={{ opacity: 1 }}
         animate={{ opacity: 0.3 }}
         transition={{ yoyo: Infinity, duration: 2 }}
-        src="./images/404stars.png"
+        src="./images/404stars.webp"
         className="absolute top-0 left-0 w-screen h-screen object-cover z-0"
         alt="stars"
       />
       <img
         className="absolute z-10 xl:w-5/12 w-9/12 top-96 left-1/2 transform -translate-y-1/2 -translate-x-1/2"
-        src="./images/err.png"
+        src="./images/err.webp"
         alt="404"
       />
     </div>

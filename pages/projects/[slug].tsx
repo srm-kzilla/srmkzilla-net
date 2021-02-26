@@ -45,7 +45,7 @@ const Project = ({
         <Navbar />
         <img
           className="absolute top-0 right-0 xl:h-screen h-2/4 z-0"
-          src="../images/projectbg.png"
+          src="../images/projectbg.webp"
           alt="background"
           draggable={false}
         />
@@ -65,14 +65,14 @@ const Project = ({
             <p className="text-white lg:text-left text-center mt-4">{desc}</p>
             <div className="mt-7 lg:text-left text-center">
               {link && (
-                <a href={link} target="_blank">
+                <a href={link} target="_blank" rel="noopener noreferrer">
                   <button className="px-5 py-3 border border-white transform transition-transform duration-200 hover:-translate-y-1 rounded-full bg-black-200 text-white text-sm mb-5 focus:none">
                     View Project
                   </button>
                 </a>
               )}
               {github && (
-                <a href={github} target="_blank">
+                <a href={github} target="_blank" rel="noopener noreferrer">
                   <button className="px-8 border border-white transform transition-transform duration-200 hover:-translate-y-1 ml-3 py-3 rounded-full bg-black-200 text-white text-sm focus:none">
                     Github
                   </button>
@@ -90,17 +90,16 @@ const Project = ({
                     height="100%"
                     src={youtube as string}
                     frameBorder="0"
+                    title="youtube video"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   ></iframe>
                 ) : (
-                  <div>
-                    <img
-                      className="w-full h-full object-cover"
-                      src={poster}
-                      alt="poster"
-                    />
-                  </div>
+                  <img
+                    className="w-full h-full object-cover"
+                    src={poster}
+                    alt="poster"
+                  />
                 )}
               </div>
             </Tilt>
@@ -159,7 +158,7 @@ const Project = ({
           </div>
           <div className="text-center mb-14">
             {link && (
-              <a href={link} target="_blank">
+              <a href={link} target="_blank" rel="noopener noreferrer">
                 <button className="focus:outline-none transform transition-transform duration-200 hover:-translate-y-1">
                   <p className="bg-orange300 px-5 py-2 rounded-full font-bold lg:my-5 my-10">
                     Explore {title}

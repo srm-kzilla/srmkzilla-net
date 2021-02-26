@@ -8,17 +8,19 @@ const Testimonals = () => {
           <div className="flex flex-col">
             <div className="rounded-full w-40 p-2 h-40 border-white border-2 ">
               <img
-                src="/images/testimonals_person1.jpg"
+                src="/images/testimonals_person1.webp"
                 className="rounded-full w-full h-full"
                 draggable={false}
+                alt="testimonals person 1"
               />
             </div>
             <div className="flex place-self-center mb-10 md:mb-0 py-5 w-44">
               <div className="mr-1">
                 <img
-                  src="/images/orangeline.png"
+                  src="/images/orangeline.webp"
                   className="w-5/6"
                   draggable={false}
+                  alt="line"
                 />
               </div>
               <div className="flex flex-col">
@@ -49,17 +51,19 @@ const Testimonals = () => {
           <div className="flex flex-col">
             <div className="rounded-full border-white h-40 w-40 p-2 border-2">
               <img
-                src="/images/testimonals_person2.jpg"
+                src="/images/testimonals_person2.webp"
                 className="rounded-full h-full w-full"
                 draggable={false}
+                alt="testimonals person 2"
               />
             </div>
             <div className="flex place-self-center mb-10 md:mb-0 py-5 w-52">
               <div className="mr-1">
                 <img
-                  src="/images/orangeline.png"
+                  src="/images/orangeline.webp"
                   className="w-5/6"
                   draggable={false}
+                  alt="line"
                 />
               </div>
               <div className="flex flex-col">

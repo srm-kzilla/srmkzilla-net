@@ -21,6 +21,7 @@ const Service = ({ serviceProjects }) => {
               title: String
               logo: { asset: { url: String | undefined } }
               description: String
+              link: String
             }) => (
               <CardProject
                 key={card.title as string}

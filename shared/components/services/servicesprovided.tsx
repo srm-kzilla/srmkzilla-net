@@ -47,6 +47,7 @@ const ServicesProvided = () => {
                             : `${service.img_light}`
                         }`}
                         className="h-8"
+                        alt="service icon"
                       />
                       <p className="active:text-black my-2 text-lg font-bold">
                         {service.title}

@@ -21,9 +21,9 @@ const AboutUs = ({ timelineData }) => {
         <div className="md:h-screen h-auto items-center flex justify-center">
           <div className="md:h-3/4 h-full sm:w-10/12 w-full md:mb-16 mb-8 rounded-none md:rounded-xl overflow-hidden">
             <img
-              src="/images/mozofest.png"
+              src="/images/mozofest.webp"
               draggable={false}
-              alt="image"
+              alt="about cover image"
               className="object-contain"
             />
           </div>
@@ -39,7 +39,7 @@ const AboutUs = ({ timelineData }) => {
         </div>
 
         <div className="h-auto relative overflow-hidden bg-black text-white lg:mx-auto mt-14 md:mt-20">
-        <div className="z-30 w-2 h-5 absolute left-1/2 transform -translate-x-1/2 bottom-0"></div>
+          <div className="z-30 w-2 h-5 absolute left-1/2 transform -translate-x-1/2 bottom-0"></div>
           <Fade up>
             <h2 className="mx-auto font-medium my-4 text-4xl lg:text-5xl text-center text-white ">
               Our Virtues

@@ -19,7 +19,7 @@ const MemberCard = (props: cardProps) => {
     >
       <div className="absolute left-20 ml-8 top-20 -mt-28 z-50">
         <img
-          src="/images/msg.png"
+          src="/images/msg.webp"
           alt="cloud"
           draggable={false}
           className={`${
@@ -38,7 +38,7 @@ const MemberCard = (props: cardProps) => {
       <img
         className="w-44 hover:w-76 z-0 rounded-full p-5  transition duration-500 ease-in-out  transform hover:-translate-y-1 hover:scale-110"
         src={props.src}
-        alt="avatar"
+        alt="team member avatar"
         draggable={false}
       />
       <div className={`${cloudShow ? 'block' : 'invisible'} pb-1`}>

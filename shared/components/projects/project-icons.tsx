@@ -10,16 +10,17 @@ const ProjectIcon = (props: { icon: string | undefined; title: String }) => {
       <img
         src={props.icon}
         className="absolute w-3/5 h-3/5 left-2/4 top-2/4 transform -translate-x-1/2 -translate-y-1/2"
-        alt=""
+        alt="project logo"
+        draggable={false}
       />
       <div className="absolute opacity-0 group-hover:opacity-100 transition-opacity rounded-lg left-3/4 -mt-14">
         <div className="text-white text-lg bg-black-200 rounded-lg px-3 py-1 relative">
           {props.title}
           <div className="absolute left-2">
             <img
-              src="./images/tri.png"
+              src="./images/tri.webp"
               className="w-5"
-              alt=""
+              alt="pointer"
               draggable={false}
             />
           </div>

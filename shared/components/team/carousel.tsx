@@ -12,7 +12,7 @@ const NewCarousel = () => {
               <div className="relative mx-auto bg-black-100 md:w-2/4 w-10/12 rounded-xl pb-14  pt-24">
                 <img
                   className="absolute top-7 left-1/2 transform -translate-x-1/2"
-                  src="./images/car.png"
+                  src="./images/car.webp"
                   alt="quote"
                   draggable={false}
                 />
@@ -24,6 +24,7 @@ const NewCarousel = () => {
                 src={item.src}
                 draggable={false}
                 className="avatar mx-auto h-32 w-32 mt-12 rounded-full"
+                alt="alumni avatar"
               />
               <h1 className="text-center text-2xl text-white mt-2">
                 {item.name}

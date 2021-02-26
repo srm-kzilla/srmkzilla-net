@@ -44,7 +44,7 @@ const Services = () => {
           </h1>
         </motion.div>
         <img
-          src="./images/logowhite.png"
+          src="./images/logowhite.webp"
           className="w-48 mt-16 md:hidden block mx-auto my-20"
           alt="logo"
           draggable={false}

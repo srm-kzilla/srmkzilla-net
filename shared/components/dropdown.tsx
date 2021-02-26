@@ -28,6 +28,7 @@ const Dropdown = (props: DropDownProps) => {
               return item.newTab ? (
                 <a
                   href={item.link}
+                  rel="noopener noreferrer"
                   className="block px-4 py-2 text-sm text-white hover:bg-orange300"
                   key={item.label}
                   target="_blank"
@@ -39,6 +40,7 @@ const Dropdown = (props: DropDownProps) => {
                   href={item.link}
                   className="block px-4 py-2 text-sm text-white hover:bg-orange300"
                   key={item.label}
+                  rel="noopener noreferrer"
                 >
                   {item.label}
                 </a>

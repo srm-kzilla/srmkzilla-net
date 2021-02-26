@@ -71,7 +71,7 @@ const Stats = () => {
                     src="./images/greenwave.gif"
                     draggable={false}
                     className="absolute left-full -translate-y-3 -mt-1 transform -translate-x-3"
-                    alt=""
+                    alt="green wave"
                   />
                 </motion.div>
               )}
@@ -104,7 +104,7 @@ const Stats = () => {
                     src="./images/whitewave.gif"
                     draggable={false}
                     className="absolute left-full -translate-y-3 -mt-1 transform -translate-x-3"
-                    alt=""
+                    alt="white wave"
                   />
                 </motion.div>
               )}
@@ -137,7 +137,7 @@ const Stats = () => {
                     src="./images/bluewave.gif"
                     draggable={false}
                     className="absolute left-full -translate-y-3 -mt-1 transform -translate-x-3"
-                    alt=""
+                    alt="blue wave"
                   />
                 </motion.div>
               )}

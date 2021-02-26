@@ -36,6 +36,7 @@ const Footer = () => {
       <div className="relative">
         <div className="absolute flex text-white md:text-2xl text-xl md:top-20 md:bottom-auto top-auto bottom-24 right-1/2 transform translate-x-1/2 md:translate-x-0 md:right-16">
           <a
+            rel="noopener noreferrer"
             href="https://www.instagram.com/srmkzilla/"
             target="_blank"
             className="md:h-12 group h-10 relative md:w-12 w-10 border-2 hover:border-logoGreen border-white rounded-full mr-3"
@@ -43,6 +44,7 @@ const Footer = () => {
             <FiInstagram className="absolute group-hover:text-logoGreen left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer" />
           </a>
           <a
+            rel="noopener noreferrer"
             href="https://m.facebook.com/SRMKZILLA/"
             target="_blank"
             className="md:h-12 group h-10 relative md:w-12 w-10 border-2 hover:border-logoGreen border-white rounded-full mr-3"
@@ -50,6 +52,7 @@ const Footer = () => {
             <FaFacebookF className="absolute group-hover:text-logoGreen left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer" />
           </a>
           <a
+            rel="noopener noreferrer"
             href="https://twitter.com/SRMKZILLA_Club"
             target="_blank"
             className="md:h-12 group h-10 relative md:w-12 w-10 border-2 hover:border-logoGreen border-white rounded-full mr-3"
@@ -57,6 +60,7 @@ const Footer = () => {
             <FaTwitter className="absolute group-hover:text-logoGreen left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer" />
           </a>
           <a
+            rel="noopener noreferrer"
             href="https://www.linkedin.com/company/srmkzilla/"
             target="_blank"
             className="md:h-12 group h-10 relative md:w-12 w-10 border-2 hover:border-logoGreen border-white rounded-full mr-3"
@@ -127,6 +131,7 @@ const Footer = () => {
             </h1>
             <div className="mt-8 text-sm md:text-lg">
               <a
+                rel="noopener noreferrer"
                 href="mailto:hello@srmkzilla.net"
                 className="cursor-pointer flex items-center"
               >
@@ -134,19 +139,21 @@ const Footer = () => {
                 hello@srmkzilla.net
               </a>
               <a
+                rel="noopener noreferrer"
                 href="tel:7869858868"
                 className="mt-2 cursor-pointer flex items-center"
               >
                 <IoCall className="text-green-500 mr-2" />
                 Akshat Sinha
               </a>
-              <a href="tel:9685159058">
+              <a rel="noopener noreferrer" href="tel:9685159058">
                 <p className="mt-2 cursor-pointer flex items-center">
                   <IoCall className="text-green-500 mr-2" />
                   Ishan Chabbra
                 </p>
               </a>
               <a
+                rel="noopener noreferrer"
                 href="tel:7978309039"
                 className="mt-2 cursor-pointer flex items-center"
               >

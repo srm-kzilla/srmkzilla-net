@@ -23,12 +23,12 @@ module.exports = {
         gray500: '#272727',
       },
       backgroundImage: (theme) => ({
-        'hero-pattern': "url('/images/herobg.png')",
-        'footer-pattern': "url('/images/newfooter.png')",
-        'mobile-footer-pattern': 'url(/images/mobilefooter.png)',
-        light: 'url(/images/light.png)',
-        'home-footer': 'url(/images/herofooter.png)',
-        'home-mobile': 'url(/images/mobilehomefooter.png)',
+        'hero-pattern': "url('/images/herobg.webp')",
+        'footer-pattern': "url('/images/newfooter.webp')",
+        'mobile-footer-pattern': 'url(/images/mobilefooter.webp)',
+        light: 'url(/images/light.webp)',
+        'home-footer': 'url(/images/herofooter.webp)',
+        'home-mobile': 'url(/images/mobilehomefooter.webp)',
       }),
       boxShadow: {
         box: '0px 12px 50px 10px rgba(0, 0, 0, 0.65)',

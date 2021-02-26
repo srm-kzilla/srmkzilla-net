@@ -6,14 +6,13 @@ const HomeCard = (props: { name: String; image: string; desc: String }) => {
       className="bg-black-200 sm:w-72 w-64 rounded-xl xl:mx-12 mx-6 p-2 mb-10 shadow-box"
       whileHover={{ scale: 1.05 }}
     >
-      <div className="image h-44 rounded-xl overflow-hidden">
-        <img
-          className="h-full w-full object-cover"
-          draggable={false}
-          src={props.image}
-          alt="card-image"
-        />
-      </div>
+      <img
+        className="h-full w-full object-cover rounded-xl overflow-hidden"
+        draggable={false}
+        src={props.image}
+        alt="card-image"
+      />
+
       <h1 className="text-white text-center text-xl font-medium mt-5">
         {props.name}
       </h1>

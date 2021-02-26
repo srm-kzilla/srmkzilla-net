@@ -29,8 +29,9 @@ const Navbar = () => {
               <Link href="/">
                 <img
                   className="w-10"
-                  src="/images/kzillalogo.png"
+                  src="/images/kzillalogo.webp"
                   draggable={false}
+                  alt="srmkzilla logo"
                 />
               </Link>
             </div>

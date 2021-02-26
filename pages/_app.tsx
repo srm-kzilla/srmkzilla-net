@@ -5,50 +5,62 @@ import '../styles/globals.css'
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div>
-      <Head>
-        <meta name="title" content="SRMKZILLA" />
-        <meta property="og:title" content="SRMKZILLA" />
-        <meta property="twitter:title" content="SRMKZILLA" />
+      <html lang="en">
+        <Head>
+          <title>SRMKZILLA</title>
+          <meta name="title" content="SRMKZILLA" />
+          <meta property="og:title" content="SRMKZILLA" />
+          <meta property="twitter:title" content="SRMKZILLA" />
+          <meta http-equiv="refresh" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta
+            name="description"
+            content="SRMKZILLA is a community of young tech enthusiasts who eat, sleep and breath technology. We organize everything from technical workshops to gaming events, you name it & we do it. "
+          />
+          <meta
+            name="keywords"
+            content="SRMKZILLA, MOZILLA, SRM UNIVERSITY, Technical Club, Mozilla Campus Club"
+          />
+          <meta name="robots" content="index, follow" />
+          <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+          <meta name="language" content="English" />
+          <meta name="revisit-after" content="10 days" />
+          <meta name="author" content="SRMKZILLA" />
+          <meta
+            name="copyright"
+            content="All rights reserved,2021. SRMKZILLA"
+          />
+          <meta httpEquiv="content-language" content="en" />
+          <meta name="application-name" content="SRMKZILLA" />
 
-        <meta
-          name="description"
-          content="SRMKZILLA is a community of young tech enthusiasts who eat, sleep and breath technology. We organize everything from technical workshops to gaming events, you name it & we do it. "
-        />
-        <meta
-          name="keywords"
-          content="SRMKZILLA, MOZILLA, SRM UNIVERSITY, Technical Club, Mozilla Campus Club"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="language" content="English" />
-        <meta name="revisit-after" content="10 days" />
-        <meta name="author" content="SRMKZILLA" />
-        <meta name="copyright" content="All rights reserved,2021. SRMKZILLA" />
-        <meta httpEquiv="content-language" content="en" />
+          {/* Open Graph / Facebook */}
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://srmkzilla.net/" />
+          <meta
+            property="og:description"
+            content="SRMKZILLA is a community of young tech enthusiasts who eat, sleep and breath technology. We organize everything from technical workshops to gaming events, you name it & we do it. "
+          />
 
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://srmkzilla.net/" />
-        <meta
-          property="og:description"
-          content="SRMKZILLA is a community of young tech enthusiasts who eat, sleep and breath technology. We organize everything from technical workshops to gaming events, you name it & we do it. "
-        />
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="twitter:url" content="https://srmkzilla.net/" />
+          <meta property="twitter:site" content="@SRMKZILLA_Club" />
 
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://srmkzilla.net/" />
-        <meta property="twitter:site" content="@SRMKZILLA_Club" />
+          <meta
+            property="twitter:description"
+            content="SRMKZILLA is a community of young tech enthusiasts who eat, sleep and breath technology. We organize everything from technical workshops to gaming events, you name it & we do it. "
+          />
+          <link rel="icon preload" href="./images/kzillalogo.webp" />
 
-        <meta
-          property="twitter:description"
-          content="SRMKZILLA is a community of young tech enthusiasts who eat, sleep and breath technology. We organize everything from technical workshops to gaming events, you name it & we do it. "
-        />
-        <link rel="icon" href="./images/kzillalogo.png" />
-
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-        <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content="#000" />
-      </Head>
-      <Component {...pageProps} />
+          <link
+            rel="mask-icon preload"
+            href="/safari-pinned-tab.svg"
+            color="#5bbad5"
+          />
+          <meta name="msapplication-TileColor" content="#da532c" />
+          <meta name="theme-color" content="#000" />
+        </Head>
+        <Component {...pageProps} />
+      </html>
     </div>
   )
 }
