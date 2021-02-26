@@ -206,7 +206,7 @@ const Process = () => (
 
     <div className="flex flex-wrap w-full mt-52 relative">
       <div className="xl:w-3/6 lg:w-2/5 w-auto">
-        <Slide right>
+        <InView>{({ inView, ref, entry }) => ( <div ref={ref}><Slide right>
           <div className="lg:-mt-20 mt-16">
             <span className="text-white text-3xl relative lg:mt-24">
               Design<span className="text-orange600 text-4xl">.</span>
@@ -224,9 +224,9 @@ const Process = () => (
           designs. The design puts flesh and blood to the existing idea. These
           designs help turn our dreams into reality.
         </p>
-        <InView>
-          {({ inView, ref, entry }) => (
-            <div ref={ref}>
+        
+          
+            <div>
               {inView && (
                 <video
                   src="./images/pendrop.mp4"
@@ -235,7 +235,7 @@ const Process = () => (
                 />
               )}
             </div>
-          )}
+          </div>)}
         </InView>
       </div>
       <InView>
@@ -385,11 +385,11 @@ const Process = () => (
       </div>
       <InView>
         {({ inView, ref }) => (
-          <div ref={ref} className="lg:mt-24 mt-0 md:mb-24 mb-14">
+          <div ref={ref} className="lg:mt-24 lg:w-1/2 w-auto mt-0 md:mb-24 mb-14">
             {inView && (
               <video
                 src="./images/technical.mp4"
-                className="lg:w-96 w-screen lg:ml-24 sm:mx-auto mx-auto lg:mt-0 mt-16"
+                className="lg:w-3/4 w-screen lg:ml-24 sm:mx-auto mx-auto lg:mt-0 mt-16"
                 autoPlay
               />
             )}
