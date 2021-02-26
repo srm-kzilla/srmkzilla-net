@@ -66,14 +66,14 @@ const Project = ({
             <div className="mt-7 lg:text-left text-center">
               {link && (
                 <a href={link} target="_blank" rel="noopener noreferrer">
-                  <button className="px-5 py-3 border border-white transform transition-transform duration-200 hover:-translate-y-1 rounded-full bg-black-200 text-white text-sm mb-5 focus:none">
+                  <button className="px-5 py-3 border border-white transform transition-transform duration-200 hover:-translate-y-1 rounded-full bg-black-200 text-white text-sm mb-5 focus:outline-none">
                     View Project
                   </button>
                 </a>
               )}
               {github && (
                 <a href={github} target="_blank" rel="noopener noreferrer">
-                  <button className="px-8 border border-white transform transition-transform duration-200 hover:-translate-y-1 ml-3 py-3 rounded-full bg-black-200 text-white text-sm focus:none">
+                  <button className="px-8 border border-white transform transition-transform duration-200 hover:-translate-y-1 ml-3 py-3 rounded-full bg-black-200 text-white text-sm focus:outline-none">
                     Github
                   </button>
                 </a>
