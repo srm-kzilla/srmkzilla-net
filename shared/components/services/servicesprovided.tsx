@@ -91,7 +91,7 @@ const ServicesProvided = () => {
                 }}
                 className="float-right bg-black border rounded-full text-white text-xs px-5 py-1 transform transition-transform duration-200 hover:-translate-y-1 border-white focus:outline-none"
               >
-                know more
+                Know more
               </button>
             </div>
           </div>

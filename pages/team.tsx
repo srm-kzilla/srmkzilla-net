@@ -25,11 +25,11 @@ const Team = ({ teamMembers }) => {
           <h1 className="text-4xl font-semibold text-gray-100 text-center mb-10 mx-2">
             Meet the team
           </h1>
-          <h3 className="text-2xl text-gray-100 text-center px-5">
+          <h3 className="text-xl text-gray-100 text-center px-5">
             An awesome tech community driven by passion and innovation
           </h3>
         </div>
-        <div className=" text-white rounded-2xl pt-8 px-1 md:p-10 bg-black-200 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 lg:gap-2 md:mx-20 mx-2">
+        <div className=" text-white rounded-2xl pt-8 px-1  md:p-10 bg-black-200 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 lg:gap-2 md:mx-20 mx-5">
           {teamMembers.length > 0 &&
             teamMembers.map(
               (
