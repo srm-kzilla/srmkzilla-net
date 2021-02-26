@@ -7,7 +7,7 @@ module.exports = {
         black: {
           DEFAULT: '#000',
           100: '#1F1E24',
-          200: '#141418',
+          200: 'rgb(19,19,26)',
         },
         orange600: '#E9573E',
         orange300: '#FF644E',
@@ -15,7 +15,7 @@ module.exports = {
         baseGray: '#C4C4C4',
         icon: '#262430',
         borderBlue: '#22415e',
-        baseGreen: '#5acc94',
+        baseGreen: '#22D296',
         offWhite: '#fff1ca',
         logoRed: '#F0634D',
         logoGreen: '#5ed493',
