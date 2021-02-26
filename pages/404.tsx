@@ -1,10 +1,16 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Head from 'next/head'
 
 const Error = () => {
   return (
     <div className="bg-gray500 h-screen w-screen overflow-hidden z-30 relative">
+      <Head>
+        <title>404</title>
+        <meta name="description" content="404 page" />
+        <link rel="icon preload canonical" href="./images/kzillalogo.webp" />
+      </Head>
       <div className="z-30 relative">
         <h1 className="text-center text-white text-4xl mt-16">Oops..</h1>
 

@@ -51,7 +51,7 @@ const SwipeCard = ({ content }: Props) => {
             <BsArrowRightShort className="absolute text-white text-xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
           </div>
         </div>
-        <h1 className="text-white text-2xl text-center mt-2">{content.name}</h1>
+        <h2 className="text-white text-2xl text-center mt-2">{content.name}</h2>
         <p className="absolute w-full top-1/2 left-1/2 -translate-x-1/2 transform -translate-y-1/2 text-sm text-white px-6 text-center">
           {content.description_2}
         </p>
@@ -68,7 +68,7 @@ const SwipeCard = ({ content }: Props) => {
             <BsArrowRightShort className="absolute text-white text-xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
           </div>
         </div>
-        <h1 className="text-white text-2xl text-center mt-2">{content.name}</h1>
+        <h2 className="text-white text-2xl text-center mt-2">{content.name}</h2>
         <p className="absolute w-full top-1/2 left-1/2 -translate-x-1/2 transform -translate-y-1/2 text-sm text-white px-6 text-center">
           {content.description_3}
         </p>

@@ -9,7 +9,12 @@ import { getNewUpdates } from '@lib/sanity-api'
 const Home = ({ updatesCard }) => (
   <div className="bg-black overflow-hidden">
     <Head>
-      <title>SRMKZILLA</title>
+      <title>SRMKZILLA | Home</title>
+      <meta
+        name="description"
+        content="SRMKZILLA is a community of young tech enthusiasts who eat, sleep and breath technology. We organize everything from technical workshops to gaming events, you name it & we do it. "
+      />
+      <link rel="icon preload canonical" href="./images/kzillalogo.webp" />
     </Head>
     <FirstFold />
     <WhatsNew cardContent={updatesCard} />

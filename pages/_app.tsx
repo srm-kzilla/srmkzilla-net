@@ -13,10 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <meta property="twitter:title" content="SRMKZILLA" />
           <meta http-equiv="refresh" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta
-            name="description"
-            content="SRMKZILLA is a community of young tech enthusiasts who eat, sleep and breath technology. We organize everything from technical workshops to gaming events, you name it & we do it. "
-          />
+
           <meta
             name="keywords"
             content="SRMKZILLA, MOZILLA, SRM UNIVERSITY, Technical Club, Mozilla Campus Club"
@@ -49,10 +46,10 @@ function MyApp({ Component, pageProps }: AppProps) {
             property="twitter:description"
             content="SRMKZILLA is a community of young tech enthusiasts who eat, sleep and breath technology. We organize everything from technical workshops to gaming events, you name it & we do it. "
           />
-          <link rel="icon preload" href="./images/kzillalogo.webp" />
+          <link rel="icon preload canonical" href="./images/kzillalogo.webp" />
 
           <link
-            rel="mask-icon preload"
+            rel="mask-icon preload canonical"
             href="/safari-pinned-tab.svg"
             color="#5bbad5"
           />

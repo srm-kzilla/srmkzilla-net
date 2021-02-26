@@ -26,9 +26,9 @@ const NewCarousel = () => {
                 className="avatar mx-auto h-32 w-32 mt-12 rounded-full"
                 alt="alumni avatar"
               />
-              <h1 className="text-center text-2xl text-white mt-2">
+              <h2 className="text-center text-2xl text-white mt-2">
                 {item.name}
-              </h1>
+              </h2>
               <p className="text-center text-sm text-white mt-1">
                 {item.designation}
               </p>

@@ -14,6 +14,11 @@ const AboutUs = ({ timelineData }) => {
     <div className="bg-black text-white overflow-hidden">
       <Head>
         <title>SRMKZILLA | About</title>
+        <meta
+          name="description"
+          content="As a part of Mozilla’s open-source community, our mission is to provide a platform for inquisitive minds by guiding and empowering their aspirations."
+        />
+        <link rel="icon preload canonical" href="./images/kzillalogo.webp" />
       </Head>
       <Navbar />
 

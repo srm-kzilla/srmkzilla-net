@@ -56,9 +56,9 @@ const Stats = () => {
               ref={ref}
               className="instagram relative h-16 rounded-xl w-10/12 bg-black-200 overflow-hidden"
             >
-              <h1 className="text-black absolute top-1/2 transform -translate-y-1/2 z-50 right-1/4">
+              <h3 className="text-black absolute top-1/2 transform -translate-y-1/2 z-50 right-1/4">
                 {followers} followers
-              </h1>
+              </h3>
               {inView && (
                 <motion.div
                   initial={{ x: -500 }}
@@ -89,9 +89,9 @@ const Stats = () => {
               ref={ref}
               className="instagram relative h-16 rounded-xl w-8/12 bg-black-200 overflow-hidden"
             >
-              <h1 className="text-black absolute top-1/2 transform -translate-y-1/2 z-40 right-1/4">
+              <h3 className="text-black absolute top-1/2 transform -translate-y-1/2 z-40 right-1/4">
                 {repos} Repositories
-              </h1>
+              </h3>
               {inView && (
                 <motion.div
                   initial={{ x: -500 }}
@@ -122,9 +122,9 @@ const Stats = () => {
               ref={ref}
               className="instagram relative h-16 rounded-xl w-10/12 bg-black-200 overflow-hidden"
             >
-              <h1 className="text-black absolute top-1/2 transform -translate-y-1/2 z-40 right-1/4">
+              <h3 className="text-black absolute top-1/2 transform -translate-y-1/2 z-40 right-1/4">
                 {subscribers} Subscribers
-              </h1>
+              </h3>
               {inView && (
                 <motion.div
                   initial={{ x: -500 }}
