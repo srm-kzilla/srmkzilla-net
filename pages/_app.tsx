@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <meta name="title" content="SRMKZILLA" />
           <meta property="og:title" content="SRMKZILLA" />
           <meta property="twitter:title" content="SRMKZILLA" />
-          <meta http-equiv="refresh" />
+          <meta httpEquiv="refresh" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
 
           <meta
