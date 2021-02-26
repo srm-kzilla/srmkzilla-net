@@ -76,7 +76,7 @@ const Process = () => (
           src="./images/bulb.png"
           className="w-5/6 h-auto z-10 -ml-16 -mt-10 lg:block hidden relative"
           draggable={false}
-          alt=""
+          alt="bulb"
         />
       </div>
 
@@ -213,7 +213,7 @@ const Process = () => (
               <img
                 src="./images/arrow.png"
                 className="absolute top-full left-full h-5 transform -translate-y-2"
-                alt=""
+                alt="arrow"
               />
             </span>
           </div>

@@ -14,6 +14,11 @@ const AboutUs = ({ timelineData }) => {
     <div className="bg-black text-white overflow-hidden">
       <Head>
         <title>SRMKZILLA | About</title>
+        <meta
+          name="description"
+          content="As a part of Mozilla’s open-source community, our mission is to provide a platform for inquisitive minds by guiding and empowering their aspirations."
+        />
+        <link rel="icon preload canonical" href="./images/kzillalogo.png" />
       </Head>
       <Navbar />
 
@@ -23,7 +28,7 @@ const AboutUs = ({ timelineData }) => {
             <img
               src="/images/mozofest.png"
               draggable={false}
-              alt="image"
+              alt="about cover image"
               className="object-contain"
             />
           </div>
@@ -39,7 +44,7 @@ const AboutUs = ({ timelineData }) => {
         </div>
 
         <div className="h-auto relative overflow-hidden bg-black text-white lg:mx-auto mt-14 md:mt-20">
-        <div className="z-30 w-2 h-5 absolute left-1/2 transform -translate-x-1/2 bottom-0"></div>
+          <div className="z-30 w-2 h-5 absolute left-1/2 transform -translate-x-1/2 bottom-0"></div>
           <Fade up>
             <h2 className="mx-auto font-medium my-4 text-4xl lg:text-5xl text-center text-white ">
               Our Virtues

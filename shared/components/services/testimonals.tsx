@@ -11,6 +11,7 @@ const Testimonals = () => {
                 src="/images/testimonals_person1.jpg"
                 className="rounded-full w-full h-full"
                 draggable={false}
+                alt="testimonals person 1"
               />
             </div>
             <div className="flex place-self-center mb-10 md:mb-0 py-5 w-44">
@@ -19,6 +20,7 @@ const Testimonals = () => {
                   src="/images/orangeline.png"
                   className="w-5/6"
                   draggable={false}
+                  alt="line"
                 />
               </div>
               <div className="flex flex-col">
@@ -52,6 +54,7 @@ const Testimonals = () => {
                 src="/images/testimonals_person2.jpg"
                 className="rounded-full h-full w-full"
                 draggable={false}
+                alt="testimonals person 2"
               />
             </div>
             <div className="flex place-self-center mb-10 md:mb-0 py-5 w-52">
@@ -60,6 +63,7 @@ const Testimonals = () => {
                   src="/images/orangeline.png"
                   className="w-5/6"
                   draggable={false}
+                  alt="line"
                 />
               </div>
               <div className="flex flex-col">

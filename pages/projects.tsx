@@ -13,6 +13,10 @@ const Projects = ({ projects, serviceProjects }) => {
     <div className="overflow-hidden">
       <Head>
         <title>SRMKZILLA | Projects</title>
+        <meta
+          name="description"
+          content="SRMKZILLA is a community of young tech enthusiasts who eat, sleep and breath technology. We organize everything from technical workshops to gaming events, you name it & we do it. "
+        />
         <link rel="icon" href="./images/kzillalogo.png" />
       </Head>
       <div>
@@ -21,7 +25,7 @@ const Projects = ({ projects, serviceProjects }) => {
           autoPlay
           loop
           src="/images/projects-hero.mp4"
-          className="h-screen relative"
+          className="h-screen mx-auto"
         ></video>
       </div>
       <div className="bg-black pt-28">

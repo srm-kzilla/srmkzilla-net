@@ -15,13 +15,11 @@ const ServicesProvided = () => {
           <div className="p-1 w-11/12 mr-0  flex-col hidden lg:block mt-14">
             <div>
               <h2 className="text-2xl font-semibold text-gray-100 text-left w-full mb-3">
-                {SERVICES[activeIndex].title}
+                {SERVICES[activeIndex].head}
               </h2>
             </div>
             <div>
-              <p className="w-11/12 pr-0 text-justify ">
-                {SERVICES[activeIndex].head}
-                <br />
+              <p className="w-11/12 pr-0 text-justify">
                 {SERVICES[activeIndex].desc}
               </p>
             </div>
@@ -49,6 +47,7 @@ const ServicesProvided = () => {
                             : `${service.img_light}`
                         }`}
                         className="h-8"
+                        alt="service icon"
                       />
                       <p className="active:text-black my-2 text-lg font-bold">
                         {service.title}
@@ -63,11 +62,12 @@ const ServicesProvided = () => {
                         activeIndex == index ? 'block lg:hidden' : 'hidden'
                       }`}
                     >
-                      <p className="p-1 text-sm mt-3">
-                        {SERVICES[activeIndex].head}
-                        <br />
-                        {SERVICES[activeIndex].desc}
-                      </p>
+                      <div className="p-1 text-sm mt-3">
+                        <p>
+                          <strong> {SERVICES[activeIndex].head}</strong>
+                        </p>
+                        <p className="my-2">{SERVICES[activeIndex].desc}</p>
+                      </div>
                     </div>
                   </div>
                 )
@@ -82,6 +82,17 @@ const ServicesProvided = () => {
                 to your ideas. Let's work on it together to create something
                 beautiful.
               </p>
+              <button
+                onClick={() => {
+                  window.scrollTo({
+                    top: 2200,
+                    behavior: 'smooth',
+                  })
+                }}
+                className="float-right bg-black border rounded-full text-white text-xs px-5 py-1 transform transition-transform duration-200 hover:-translate-y-1 border-white focus:outline-none"
+              >
+                know more
+              </button>
             </div>
           </div>
         </div>

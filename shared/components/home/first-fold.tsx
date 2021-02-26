@@ -10,6 +10,7 @@ const FirstFold = () => (
           className="sm:h-64 h-52 absolute left-2/4 transform -translate-x-1/2"
           src="./images/hero_logo.gif"
           draggable="false"
+          alt="srmkzilla hero logo"
         />
       </motion.div>
 

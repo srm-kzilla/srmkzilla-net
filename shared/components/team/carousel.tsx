@@ -1,51 +1,12 @@
 import React from 'react'
 import Carousel from 'react-elastic-carousel'
-
-const OldTeamMembers = [
-  {
-    name: 'Ayush',
-    src: '/images/ayush.png',
-    designation: 'Secretary',
-    message:
-      'hello jsdbjwqdvhjwd hwjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq wjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq',
-  },
-  {
-    name: 'kgjkg',
-    src: '/images/ayush.png',
-    designation: 'Secretary',
-    message:
-      'lorem ipsum dolor sit amet. lorem ipsum dolor sit ameat. hjwqdvhjwd hwjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq wjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq',
-  },
-  {
-    name: 'hghjjv',
-    src: '/images/ayush.png',
-    designation: 'Secretary',
-    message:
-      'sjhasxa dxajdlor sit amet. lorem ipsum dolor sit ameat. hjwqdvhjwd hwjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq wjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq',
-  },
-  {
-    name: 'dfgvfd',
-    src: '/images/ayush.png',
-    designation: 'Secretary',
-    message:
-      'ahjfahjafjflorem ipsum dolor sit ameat. hjwqdvhjwd hwjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq wjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq',
-  },
-  {
-    name: 'Ayush',
-    src: '/images/ayush.png',
-    designation: 'Secretary',
-    message:
-      'lorem ipsum dolor sit amet. lorem ipsum dolor sit ameat. hjwqdvhjwd hwjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq wjdvxhw dwhqdgjwkdvjkwq wmqsvejwqhvdejwqvdejkwq',
-  },
-]
+import { alumniReviews } from '@lib/data/reviews'
 
 const NewCarousel = () => {
-  const myArrow = () => {}
-
   return (
     <div>
-      <Carousel enableAutoPlay autoPlaySpeed={3000} isRTL={false}>
-        {OldTeamMembers.map((item) => {
+      <Carousel enableAutoPlay autoPlaySpeed={30000} isRTL={false}>
+        {alumniReviews.map((item) => {
           return (
             <div>
               <div className="relative mx-auto bg-black-100 md:w-2/4 w-10/12 rounded-xl pb-14  pt-24">
@@ -63,10 +24,11 @@ const NewCarousel = () => {
                 src={item.src}
                 draggable={false}
                 className="avatar mx-auto h-32 w-32 mt-12 rounded-full"
+                alt="alumni avatar"
               />
-              <h1 className="text-center text-2xl text-white mt-2">
+              <h2 className="text-center text-2xl text-white mt-2">
                 {item.name}
-              </h1>
+              </h2>
               <p className="text-center text-sm text-white mt-1">
                 {item.designation}
               </p>

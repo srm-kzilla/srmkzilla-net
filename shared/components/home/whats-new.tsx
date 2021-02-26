@@ -19,6 +19,7 @@ const WhatsNew = ({ cardContent }) => (
                 title: String
                 picture: { asset: { url: string } }
                 description: String
+                link: String
               },
               index
             ) => (
@@ -27,6 +28,7 @@ const WhatsNew = ({ cardContent }) => (
                 name={card?.title}
                 image={card?.picture?.asset?.url}
                 desc={card?.description}
+                link={card?.link}
               />
             )
           )}

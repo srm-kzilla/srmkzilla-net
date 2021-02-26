@@ -31,6 +31,7 @@ const Navbar = () => {
                   className="w-10"
                   src="/images/kzillalogo.png"
                   draggable={false}
+                  alt="srmkzilla logo"
                 />
               </Link>
             </div>
@@ -79,7 +80,7 @@ const Navbar = () => {
               </Link>
               <Dropdown
                 name="What's New?"
-                class="absolute md:left-96 md:my-12 md:mx-10 md:top-3 py-2 w-48 rounded-md shadow-md bg-black-200 cursor-pointer"
+                class="absolute md:left-96 md:ml-20 md:my-12 md:mx-10 md:top-3 py-2 w-48 rounded-md shadow-md bg-black-200 cursor-pointer"
                 items={[
                   {
                     label: 'Events',
