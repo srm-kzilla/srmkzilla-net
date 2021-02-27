@@ -2,7 +2,7 @@ export const alumniReviews = [
   {
     name: 'Ayush Ashatkar',
     src: '/images/ayushashatkar.jpg',
-    designation: 'Secretary / Club captain',
+    designation: 'Secretary / Club Captain',
     message: `SRMKZILLA is place to grow, code & contribute on open source platform. It was a rollercoaster ride for me, where I learn about both technical and management skills and I can proudly say that it's a team dedication and smart work because of which it is the best technical club in south Indian region.This club play an influential role in my college journey and I'm proud to be a part of the club.`,
   },
   {

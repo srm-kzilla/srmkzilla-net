@@ -7,7 +7,7 @@ module.exports = {
         black: {
           DEFAULT: '#000',
           100: '#1F1E24',
-          200: '#141318',
+          200: '#151319',
         },
         orange600: '#E9573E',
         orange300: '#FF644E',
