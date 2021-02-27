@@ -21,7 +21,7 @@ export const SERVICES = [
     title: 'Graphic Designing',
     head: 'You call it illustration, we call it a sweeping victory.',
     desc: `
-      Design is thinking made visual. If the aesthetics are not spot-on, your audience will not give you a second glance. At SRMKZILLA, our Graphic Designing team ensures their outputs are a blend of knock-out graphics and smart marketing strategies. From a wide range of logos, brochures, banners, to design that empowers your web identity, we bring art to the cart. 
+      Design is thinking made visual. If the aesthetics are not spot-on, your audience will not give you a second glance. At SRMKZILLA, our graphic designing team ensures their outputs are a blend of knock-out graphics and smart marketing strategies. From a wide range of logos, brochures, banners, to design that empowers your web identity, we bring art to the cart. 
       `,
     img_light: '/images/gfx.png',
     img_dark: '/images/Black-gfx.png',
