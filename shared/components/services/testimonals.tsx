@@ -14,7 +14,7 @@ const Testimonals = () => {
                 alt="testimonals person 1"
               />
             </div>
-            <div className="flex place-self-center mb-10 md:mb-0 py-5 w-44">
+            <div className="flex place-self-center mb-10 lg:mb-0 py-5 w-44">
               <div className="mr-1">
                 <img
                   src="/images/orangeline.png"
@@ -57,7 +57,7 @@ const Testimonals = () => {
                 alt="testimonals person 2"
               />
             </div>
-            <div className="flex place-self-center mb-10 md:mb-0 py-5 w-52">
+            <div className="flex place-self-center mb-10 lg:mb-0 py-5 w-52">
               <div className="mr-1">
                 <img
                   src="/images/orangeline.png"
