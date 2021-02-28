@@ -57,7 +57,7 @@ const Team = ({ teamMembers }) => {
         <div className="my-10 px-0 md:px-10">
           <div className="flex flex-col place-items-center my-20">
             <h1 className="text-4xl font-semibold text-gray-100 text-center">
-              Hear it form the team
+              Hear it from the team
             </h1>
             <h3 className="w-2/3 text-sm md:text-lg text-gray-100 text-center mt-5">
               The journey of building an awesome tech community is fuelled by
