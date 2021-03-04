@@ -1,5 +1,4 @@
 import Head from 'next/head'
-
 import Navbar from '@shared/components/navbar'
 import MemberCard from '@shared/components/team/membercard'
 import NewCarousel from '@shared/components/team/carousel'
@@ -29,29 +28,188 @@ const Team = ({ teamMembers }) => {
             An awesome tech community driven by passion and innovation
           </h3>
         </div>
-        <div className=" text-white rounded-2xl pt-8 px-1  md:p-10 bg-black-200 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 lg:gap-2 md:mx-20 mx-5">
-          {teamMembers.length > 0 &&
-            teamMembers.map(
-              (
-                member: {
-                  picture: { asset: { url: string } }
-                  name: string
-                  designation: string
-                  description: { asset: { url: string } }
-                },
-                index
-              ) => {
-                return (
-                  <MemberCard
-                    key={index}
-                    src={member?.picture?.asset?.url}
-                    name={member?.name}
-                    designation={member?.designation}
-                    audiourl={member?.description?.asset?.url}
-                  />
-                )
-              }
-            )}
+        <div className=" text-white rounded-2xl pt-8 px-1  md:p-10 bg-black-200  md:mx-20 mx-5">
+          <div className="my-10">
+            <h2 className="text-center  text-xl md:text-3xl font-bold pb-5 relative z-30">
+              CORE
+            </h2>
+            <div className="bg-orange300 w-20 h-3  mx-auto -mt-9 mb-4"></div>
+            <h5 className="text-center team_text text-sm md:text-xl  pb-20">
+              The captains of our ship
+            </h5>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 lg:gap-2 items-center">
+              {teamMembers.map(
+                (
+                  member: {
+                    picture: { asset: { url: string } }
+                    name: string
+                    domain: string
+                    designation: string
+                    description: { asset: { url: string } }
+                  },
+                  index
+                ) => {
+                  if (member.domain == 'Core') {
+                    return (
+                      <MemberCard
+                        key={index}
+                        src={member?.picture?.asset?.url}
+                        name={member?.name}
+                        designation={member?.designation}
+                        audiourl={member?.description?.asset?.url}
+                      />
+                    )
+                  }
+                }
+              )}
+            </div>
+          </div>
+          <div className="mb-10 mt-20">
+            <h2 className="text-center  text-xl md:text-3xl font-bold pb-5 relative z-30">
+              TECHNICAL
+            </h2>
+            <div className="bg-orange300 w-32 h-3  mx-auto -mt-9 mb-4"></div>
+            <h5 className="text-center team_text text-sm md:text-xl  pb-20">
+              We set the server up and running
+            </h5>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 lg:gap-2 items-center">
+              {teamMembers.map(
+                (
+                  member: {
+                    picture: { asset: { url: string } }
+                    name: string
+                    designation: string
+                    domain: string
+                    description: { asset: { url: string } }
+                  },
+                  index
+                ) => {
+                  if (member.domain == 'Technical') {
+                    return (
+                      <MemberCard
+                        key={index}
+                        src={member?.picture?.asset?.url}
+                        name={member?.name}
+                        designation={member?.designation}
+                        audiourl={member?.description?.asset?.url}
+                      />
+                    )
+                  }
+                }
+              )}
+            </div>
+          </div>
+          <div className="mb-10 mt-20">
+            <h2 className="text-center  text-xl md:text-3xl font-bold pb-5 relative z-30">
+              EDITORIAL
+            </h2>
+            <div className="bg-orange300 w-32 h-3  mx-auto -mt-9 mb-4"></div>
+            <h5 className="text-center team_text text-sm md:text-xl  pb-20">
+              We add purpose to pixels
+            </h5>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 lg:gap-2 items-center">
+              {teamMembers.map(
+                (
+                  member: {
+                    picture: { asset: { url: string } }
+                    name: string
+                    domain: string
+                    designation: string
+                    description: { asset: { url: string } }
+                  },
+                  index
+                ) => {
+                  if (member.domain == 'Editorial') {
+                    return (
+                      <MemberCard
+                        key={index}
+                        src={member?.picture?.asset?.url}
+                        name={member?.name}
+                        designation={member?.designation}
+                        audiourl={member?.description?.asset?.url}
+                      />
+                    )
+                  }
+                }
+              )}
+            </div>
+          </div>
+          <div className="mb-10 mt-20">
+            <h2 className="text-center  text-xl md:text-3xl font-bold pb-5 relative z-30">
+              SPONSORSHIP
+            </h2>
+            <div className="bg-orange300 w-44 h-3  mx-auto -mt-9 mb-4"></div>
+            <h5 className="text-center team_text text-sm md:text-xl  pb-20">
+              We got the vault and the deals
+            </h5>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 lg:gap-2 items-center">
+              {teamMembers.map(
+                (
+                  member: {
+                    picture: { asset: { url: string } }
+                    name: string
+                    domain: string
+                    designation: string
+                    description: { asset: { url: string } }
+                  },
+                  index
+                ) => {
+                  if (member.domain == 'Sponsorship') {
+                    return (
+                      <MemberCard
+                        key={index}
+                        src={member?.picture?.asset?.url}
+                        name={member?.name}
+                        designation={member?.designation}
+                        audiourl={member?.description?.asset?.url}
+                      />
+                    )
+                  }
+                }
+              )}
+            </div>
+          </div>
+
+          <div className="my-10">
+            <h2 className="text-center  text-xl md:text-3xl font-bold pb-5 relative z-30">
+              EVENTS
+            </h2>
+            <div className="bg-orange300 w-24 h-3  mx-auto -mt-9 mb-4"></div>
+            <h5 className="text-center team_text text-sm md:text-xl  pb-20">
+              We set the stage, mic drop
+            </h5>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 lg:gap-2 items-center">
+              {teamMembers.map(
+                (
+                  member: {
+                    picture: { asset: { url: string } }
+                    name: string
+                    domain: string
+                    designation: string
+                    description: { asset: { url: string } }
+                  },
+                  index
+                ) => {
+                  if (member.domain == 'Events') {
+                    return (
+                      <MemberCard
+                        key={index}
+                        src={member?.picture?.asset?.url}
+                        name={member?.name}
+                        designation={member?.designation}
+                        audiourl={member?.description?.asset?.url}
+                      />
+                    )
+                  }
+                }
+              )}
+            </div>
+          </div>
         </div>
 
         <div className="my-10 px-0 md:px-10">

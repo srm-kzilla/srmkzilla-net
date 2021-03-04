@@ -41,6 +41,7 @@ export const getTeamMembers = async () => {
           }
         },
         designation,
+        domain,
         index
     }`
     )

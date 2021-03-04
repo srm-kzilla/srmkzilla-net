@@ -24,12 +24,12 @@ const MemberCard = (props: cardProps) => {
           draggable={false}
           className={`${
             cloudShow ? 'block' : 'invisible'
-          } h-24 max-w-screen-xl content-center`}
+          } h-28 max-w-screen-xl content-center`}
         />
         <p
           className={`${
             cloudShow ? 'block' : 'invisible'
-          } text-black mx-4 mb-1 relative -top-20 mt-2 text-xs w-4/5`}
+          } text-black mx-4 mb-2 relative -top-20 mt-1 text-xs w-4/5`}
         >
           Hey! I'm {props.name}.
         </p>
