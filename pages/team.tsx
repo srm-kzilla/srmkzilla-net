@@ -30,11 +30,14 @@ const Team = ({ teamMembers }) => {
         </div>
         <div className=" text-white rounded-2xl pt-8 px-1  md:p-10 bg-black-200  md:mx-20 mx-5">
           <div className="my-10">
-            <h2 className="text-center  text-3xl md:text-4xl font-bold pb-5 relative z-30">
-              CORE
-            </h2>
-            <div className="bg-orange300 w-20 h-3  mx-auto -mt-9 mb-4"></div>
-            <h5 className="text-center team_text text-lg md:text-2xl  pb-20">
+            <div className="mx-5 lg:mx-36">
+              <hr
+                className="text-center hr-text text-3xl md:text-4xl font-bold pb-10"
+                data-content="CORE"
+              />
+            </div>
+
+            <h5 className="text-center team_text text-lg text-gray-300 md:text-xl  pb-20">
               The captains of our ship
             </h5>
 
@@ -66,11 +69,14 @@ const Team = ({ teamMembers }) => {
             </div>
           </div>
           <div className="mb-10 mt-20">
-            <h2 className="text-center  text-3xl md:text-4xl font-bold pb-5 relative z-30">
-              TECHNICAL
-            </h2>
-            <div className="bg-orange300 w-32 h-3  mx-auto -mt-9 mb-4"></div>
-            <h5 className="text-center team_text text-lg md:text-2xl  pb-20">
+            <div className="mx-5 lg:mx-36">
+              <hr
+                className="text-center hr-text text-3xl md:text-4xl font-bold pb-10"
+                data-content="TECHNICAL"
+              />
+            </div>
+
+            <h5 className="text-center team_text  text-gray-300 text-lg md:text-xl  pb-20">
               We set the server up and running
             </h5>
 
@@ -102,11 +108,14 @@ const Team = ({ teamMembers }) => {
             </div>
           </div>
           <div className="mb-10 mt-20">
-            <h2 className="text-center  text-3xl md:text-4xl font-bold pb-5 relative z-30">
-              EDITORIAL
-            </h2>
-            <div className="bg-orange300 w-32 h-3  mx-auto -mt-9 mb-4"></div>
-            <h5 className="text-center team_text text-lg md:text-2xl  pb-20">
+            <div className="mx-5 lg:mx-36">
+              <hr
+                className="text-center hr-text text-3xl md:text-4xl font-bold pb-10"
+                data-content="EDITORIAL"
+              />
+            </div>
+
+            <h5 className="text-center team_text text-lg text-gray-300 md:text-xl  pb-20">
               We add purpose to pixels
             </h5>
 
@@ -138,11 +147,14 @@ const Team = ({ teamMembers }) => {
             </div>
           </div>
           <div className="mb-10 mt-20">
-            <h2 className="text-center  text-3xl md:text-4xl font-bold pb-5 relative z-30">
-              SPONSORSHIP
-            </h2>
-            <div className="bg-orange300 w-44 h-3  mx-auto -mt-9 mb-4"></div>
-            <h5 className="text-center team_text text-lg md:text-2xl  pb-20">
+            <div className="mx-5 lg:mx-36">
+              <hr
+                className="text-center hr-text text-3xl md:text-4xl font-bold pb-10"
+                data-content="SPONSORSHIP"
+              />
+            </div>
+
+            <h5 className="text-center team_text text-lg text-gray-300 md:text-xl  pb-20">
               We got the vault and the deals
             </h5>
 
@@ -175,11 +187,14 @@ const Team = ({ teamMembers }) => {
           </div>
 
           <div className="my-10">
-            <h2 className="text-center  text-3xl md:text-4xl font-bold pb-5 relative z-30">
-              EVENTS
-            </h2>
-            <div className="bg-orange300 w-24 h-3  mx-auto -mt-9 mb-4"></div>
-            <h5 className="text-center team_text text-lg md:text-2xl  pb-20">
+            <div className="mx-5 lg:mx-36">
+              <hr
+                className="text-center hr-text text-3xl md:text-4xl font-bold pb-10"
+                data-content="EVENTS"
+              />
+            </div>
+
+            <h5 className="text-center text-lg text-gray-300 md:text-xl pb-20">
               We set the stage, mic drop
             </h5>
 
@@ -212,7 +227,7 @@ const Team = ({ teamMembers }) => {
           </div>
         </div>
 
-        <div className="my-10 px-0 md:px-10">
+        <div className="my-32 px-0 md:px-10">
           <div className="flex flex-col place-items-center my-20">
             <h1 className="text-4xl font-semibold text-gray-100 text-center">
               Hear it from the team
