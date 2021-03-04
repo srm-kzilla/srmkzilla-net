@@ -65,7 +65,7 @@ const Team = ({ teamMembers }) => {
               )}
             </div>
           </div>
-          <div className="my-10">
+          <div className="mb-10 mt-20">
             <h2 className="text-center  text-xl md:text-3xl font-bold pb-5 relative z-30">
               TECHNICAL
             </h2>
@@ -101,7 +101,7 @@ const Team = ({ teamMembers }) => {
               )}
             </div>
           </div>
-          <div className="my-10">
+          <div className="mb-10 mt-20">
             <h2 className="text-center  text-xl md:text-3xl font-bold pb-5 relative z-30">
               EDITORIAL
             </h2>
@@ -137,7 +137,7 @@ const Team = ({ teamMembers }) => {
               )}
             </div>
           </div>
-          <div className="my-10">
+          <div className="mb-10 mt-20">
             <h2 className="text-center  text-xl md:text-3xl font-bold pb-5 relative z-30">
               SPONSORSHIP
             </h2>
