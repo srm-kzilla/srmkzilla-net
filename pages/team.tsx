@@ -4,6 +4,8 @@ import MemberCard from '@shared/components/team/membercard'
 import NewCarousel from '@shared/components/team/carousel'
 import Footer from '@shared/components/footer'
 import { getTeamMembers } from '@lib/sanity-api'
+import { DOMAINS } from '@lib/data/domains'
+import { domain } from 'node:process'
 
 const Team = ({ teamMembers }) => {
   return (
@@ -29,202 +31,47 @@ const Team = ({ teamMembers }) => {
           </h3>
         </div>
         <div className=" text-white rounded-2xl pt-8 px-1  md:p-10 bg-black-200  md:mx-20 mx-5">
-          <div className="my-10">
-            <div className="mx-5 lg:mx-36">
-              <hr
-                className="text-center hr-text text-3xl md:text-4xl font-bold pb-10"
-                data-content="CORE"
-              />
-            </div>
+          {DOMAINS.map((domain) => (
+            <div className="mb-10 mt-20">
+              <div className="mx-5 lg:mx-36">
+                <hr
+                  className="text-center uppercase hr-text text-3xl md:text-4xl font-bold pb-10"
+                  data-content={domain.name}
+                />
+              </div>
 
-            <h5 className="text-center team_text text-lg text-gray-300 md:text-xl  pb-20">
-              The captains of our ship
-            </h5>
+              <h5 className="text-center team_text text-lg text-gray-300 md:text-xl  pb-20">
+                {domain.desc}
+              </h5>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 lg:gap-2 items-center">
-              {teamMembers.map(
-                (
-                  member: {
-                    picture: { asset: { url: string } }
-                    name: string
-                    domain: string
-                    designation: string
-                    description: { asset: { url: string } }
-                  },
-                  index
-                ) => {
-                  if (member.domain == 'Core') {
-                    return (
-                      <MemberCard
-                        key={index}
-                        src={member?.picture?.asset?.url}
-                        name={member?.name}
-                        designation={member?.designation}
-                        audiourl={member?.description?.asset?.url}
-                      />
-                    )
+              <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 lg:gap-2 items-center">
+                {teamMembers.map(
+                  (
+                    member: {
+                      picture: { asset: { url: string } }
+                      name: string
+                      domain: string
+                      designation: string
+                      description: { asset: { url: string } }
+                    },
+                    index
+                  ) => {
+                    if (member.domain == `${domain.name}`) {
+                      return (
+                        <MemberCard
+                          key={index}
+                          src={member?.picture?.asset?.url}
+                          name={member?.name}
+                          designation={member?.designation}
+                          audiourl={member?.description?.asset?.url}
+                        />
+                      )
+                    }
                   }
-                }
-              )}
+                )}
+              </div>
             </div>
-          </div>
-          <div className="mb-10 mt-20">
-            <div className="mx-5 lg:mx-36">
-              <hr
-                className="text-center hr-text text-3xl md:text-4xl font-bold pb-10"
-                data-content="TECHNICAL"
-              />
-            </div>
-
-            <h5 className="text-center team_text  text-gray-300 text-lg md:text-xl  pb-20">
-              We set the server up and running
-            </h5>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 lg:gap-2 items-center">
-              {teamMembers.map(
-                (
-                  member: {
-                    picture: { asset: { url: string } }
-                    name: string
-                    designation: string
-                    domain: string
-                    description: { asset: { url: string } }
-                  },
-                  index
-                ) => {
-                  if (member.domain == 'Technical') {
-                    return (
-                      <MemberCard
-                        key={index}
-                        src={member?.picture?.asset?.url}
-                        name={member?.name}
-                        designation={member?.designation}
-                        audiourl={member?.description?.asset?.url}
-                      />
-                    )
-                  }
-                }
-              )}
-            </div>
-          </div>
-          <div className="mb-10 mt-20">
-            <div className="mx-5 lg:mx-36">
-              <hr
-                className="text-center hr-text text-3xl md:text-4xl font-bold pb-10"
-                data-content="EDITORIAL"
-              />
-            </div>
-
-            <h5 className="text-center team_text text-lg text-gray-300 md:text-xl  pb-20">
-              We add purpose to pixels
-            </h5>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 lg:gap-2 items-center">
-              {teamMembers.map(
-                (
-                  member: {
-                    picture: { asset: { url: string } }
-                    name: string
-                    domain: string
-                    designation: string
-                    description: { asset: { url: string } }
-                  },
-                  index
-                ) => {
-                  if (member.domain == 'Editorial') {
-                    return (
-                      <MemberCard
-                        key={index}
-                        src={member?.picture?.asset?.url}
-                        name={member?.name}
-                        designation={member?.designation}
-                        audiourl={member?.description?.asset?.url}
-                      />
-                    )
-                  }
-                }
-              )}
-            </div>
-          </div>
-          <div className="mb-10 mt-20">
-            <div className="mx-5 lg:mx-36">
-              <hr
-                className="text-center hr-text text-3xl md:text-4xl font-bold pb-10"
-                data-content="SPONSORSHIP"
-              />
-            </div>
-
-            <h5 className="text-center team_text text-lg text-gray-300 md:text-xl  pb-20">
-              We got the vault and the deals
-            </h5>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 lg:gap-2 items-center">
-              {teamMembers.map(
-                (
-                  member: {
-                    picture: { asset: { url: string } }
-                    name: string
-                    domain: string
-                    designation: string
-                    description: { asset: { url: string } }
-                  },
-                  index
-                ) => {
-                  if (member.domain == 'Sponsorship') {
-                    return (
-                      <MemberCard
-                        key={index}
-                        src={member?.picture?.asset?.url}
-                        name={member?.name}
-                        designation={member?.designation}
-                        audiourl={member?.description?.asset?.url}
-                      />
-                    )
-                  }
-                }
-              )}
-            </div>
-          </div>
-
-          <div className="my-10">
-            <div className="mx-5 lg:mx-36">
-              <hr
-                className="text-center hr-text text-3xl md:text-4xl font-bold pb-10"
-                data-content="EVENTS"
-              />
-            </div>
-
-            <h5 className="text-center text-lg text-gray-300 md:text-xl pb-20">
-              We set the stage, mic drop
-            </h5>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 lg:gap-2 items-center">
-              {teamMembers.map(
-                (
-                  member: {
-                    picture: { asset: { url: string } }
-                    name: string
-                    domain: string
-                    designation: string
-                    description: { asset: { url: string } }
-                  },
-                  index
-                ) => {
-                  if (member.domain == 'Events') {
-                    return (
-                      <MemberCard
-                        key={index}
-                        src={member?.picture?.asset?.url}
-                        name={member?.name}
-                        designation={member?.designation}
-                        audiourl={member?.description?.asset?.url}
-                      />
-                    )
-                  }
-                }
-              )}
-            </div>
-          </div>
+          ))}
         </div>
 
         <div className="my-32 px-0 md:px-10">
