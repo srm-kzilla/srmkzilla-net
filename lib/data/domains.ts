@@ -1,6 +1,6 @@
 export const DOMAINS = [
   {
-    name: 'Core',
+    name: 'Leadership',
     desc: 'The captains of our ship',
   },
   {
@@ -18,5 +18,9 @@ export const DOMAINS = [
   {
     name: 'Events',
     desc: 'We set the stage, mic drop',
+  },
+  {
+    name: 'Growth',
+    desc: 'Keep em soaring',
   },
 ]
