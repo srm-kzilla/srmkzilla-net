@@ -1,8 +1,9 @@
 import React from 'react'
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa'
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaDiscord } from 'react-icons/fa'
 import { FiInstagram, FiMail } from 'react-icons/fi'
 import { IoCall } from 'react-icons/io5'
 import { BsArrowLeft } from 'react-icons/bs'
+import { RiDiscordLine } from "react-icons/ri"
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
@@ -35,6 +36,14 @@ const Footer = () => {
       </div>
       <div className="relative">
         <div className="absolute flex text-white md:text-2xl text-xl md:top-20 md:bottom-auto top-auto bottom-24 right-1/2 transform translate-x-1/2 md:translate-x-0 md:right-16">
+        <a
+            rel="noopener noreferrer"
+            href="https://community.srmkzilla.net"
+            target="_blank"
+            className="md:h-12 group h-10 relative md:w-12 w-10 border-2 hover:border-logoGreen border-white rounded-full mr-3"
+          >
+            <RiDiscordLine className="absolute group-hover:text-logoGreen left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer" />
+          </a>
           <a
             rel="noopener noreferrer"
             href="https://www.instagram.com/srmkzilla/"
