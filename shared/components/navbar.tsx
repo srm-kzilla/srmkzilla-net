@@ -84,7 +84,7 @@ const Navbar = () => {
                 items={[
                   {
                     label: 'Events',
-                    link: 'https://events.srmkzilla.net/',
+                    link: 'https://srmkzilla.net/events',
                     newTab: true,
                   },
                   {
