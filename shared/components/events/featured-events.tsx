@@ -4,7 +4,7 @@ import Card from '@shared/components/events/featured-events-card'
 
 const WhatsNew = ({ cardContent }) => (
   <section className="works">
-    <div className="bg-black sm:pt-32 pt-24">
+    <div className="bg-black sm:pt-26 pt-24">
       <Fade up>
         <h1 className="text-white font-medium text-center text-4xl">
           Featured Events

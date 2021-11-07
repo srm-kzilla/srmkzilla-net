@@ -20,6 +20,7 @@ const Events = ({ header, events, featuredEvents }) => {
         <link rel="icon" href="./images/kzillalogo.png" />
       </Head>
       <Navbar />
+      sa
       <div>
         <img
           src="./images/events-bg.png"

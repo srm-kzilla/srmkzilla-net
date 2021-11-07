@@ -7,7 +7,7 @@ const WhatsNew = ({ cardContent }) => (
     <div className="bg-black sm:pt-32 pt-24">
       <Fade up>
         <h1 className="text-white font-medium text-center text-4xl">
-          Our Events
+          What's New
         </h1>
       </Fade>
 
