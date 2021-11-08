@@ -20,7 +20,6 @@ const Events = ({ header, events, featuredEvents }) => {
         <link rel="icon" href="./images/kzillalogo.png" />
       </Head>
       <Navbar />
-      sa
       <div>
         <img
           src="./images/events-bg.png"
@@ -28,15 +27,6 @@ const Events = ({ header, events, featuredEvents }) => {
           draggable={false}
           className="m-auto mt-28 rounded-3x1 px-9"
         />
-        {/* <div className="relative bottom-24 float-right mr-12 bg-white p-5 rounded-xl bg-opacity-40 backdrop-blur-lg text-white z-10 md:mr-44 mb-14">
-          SSsdasdasdasd
-          <br />
-          asdasdasdsdasdsdSSsdasdasdasd
-          <br />
-          asdasdasdsdasdsdSSsdasdasdasd
-          <br />
-          asdasdasdsdasdsd
-        </div> */}
       </div>
       <WhatsNew cardContent={events} />
       <FeaturedEvents cardContent={featuredEvents} />
