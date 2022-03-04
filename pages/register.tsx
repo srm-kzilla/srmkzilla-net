@@ -174,7 +174,7 @@ const Register = ({ title, description, eventCover, slug }: EventProps) => {
     </div>
   )
 }
-export async function getServerSideProps(context) {
+export async function getServerSideProps(context: { query: { event: any } }) {
   const eventSlug = context.query != undefined ? context.query.event : null
   let checkIfEventExist: EventProps
   if (eventSlug == null) return { notFound: true }
