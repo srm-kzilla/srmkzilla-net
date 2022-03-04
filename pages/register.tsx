@@ -75,7 +75,7 @@ const Register = ({ title, description, eventCover, slug }: EventProps) => {
                 {title}
               </h1>
 
-              <h4 className="w-full ml-2 text-white text-xl font-extralight lg:text-base xl:w-2/3 sm:font-light">
+              <h4 className="w-full ml-2 text-white text-lg font-thin lg:text-base xl:w-2/3 sm:font-light">
                 {description}
               </h4>
             </div>

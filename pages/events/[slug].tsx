@@ -69,7 +69,9 @@ const Events = ({ title, description, icons, slug }: EventProps) => {
               </div>
               <div className="text-center mb-14">
                 {slug && (
-                  <Link href="/register">
+                  <Link
+                    href={{ pathname: '/register', query: { event: slug } }}
+                  >
                     <button className="focus:outline-none transform transition-transform duration-200 hover:-translate-y-1">
                       <p className="bg-orange300 px-5 py-2 rounded-full font-bold lg:my-5 my-10">
                         REGISTER HERE
