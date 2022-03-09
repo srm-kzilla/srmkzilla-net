@@ -1,9 +1,8 @@
 import axios, { AxiosResponse } from 'axios'
-import { API_BASE_URL } from './constants'
-
+const baseUrl = process.env.BASE_URL || 'http://localhost:8000/api'
 export const getEvent = async (slug: string) => {
   try {
-    const fetchEvent = await axios.get(`${API_BASE_URL}/event/${slug}`)
+    const fetchEvent = await axios.get(`${baseUrl}/event/${slug}`)
     return fetchEvent.data
   } catch (err) {
     throw err
@@ -13,7 +12,7 @@ export const register = async (data: any) => {
   try {
     const postData: AxiosResponse = await axios({
       method: 'POST',
-      url: `${API_BASE_URL}/register`,
+      url: `${baseUrl}/register`,
       data: data,
     })
     return postData

@@ -11,7 +11,7 @@ export const registerValidationSchema = yup.object({
     .trim()
     .email('Invalid email')
     .required('This is a required field'),
-  registrationNumber: yup.string().trim().required('This is a required field'),
+  registrationNumber: yup.string().trim(),
   phoneNumber: yup
     .string()
     .trim()
