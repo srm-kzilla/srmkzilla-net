@@ -161,5 +161,12 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: #fc4830;
 }
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+input[data-autocompleted] {
+  background-color: transparent !important;
+}
 
 @tailwind utilities;
