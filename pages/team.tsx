@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Navbar from '@shared/components/navbar'
+
 import MemberCard from '@shared/components/team/membercard'
 import NewCarousel from '@shared/components/team/carousel'
 import Footer from '@shared/components/footer'
@@ -20,7 +20,6 @@ const Team = ({ teamMembers }) => {
         <link rel="icon preload canonical" href="./images/kzillalogo.png" />
       </Head>
       <div className="bg-black overflow-hidden ">
-        <Navbar />
         <p>fhjfvk</p>
         <div className="my-20">
           <h1 className="text-4xl font-semibold text-gray-100 text-center mb-10 mx-2">

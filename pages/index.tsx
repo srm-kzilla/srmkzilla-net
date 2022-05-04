@@ -7,7 +7,7 @@ import Footer from '@shared/components/footer'
 import { getNewUpdates } from '@lib/sanity-api'
 
 const Home = ({ updatesCard }) => (
-  <div className="bg-black overflow-hidden">
+  <>
     <Head>
       <title>SRMKZILLA | Home</title>
       <meta
@@ -16,11 +16,13 @@ const Home = ({ updatesCard }) => (
       />
       <link rel="icon preload canonical" href="./images/kzillalogo.png" />
     </Head>
-    <FirstFold />
-    <WhatsNew cardContent={updatesCard} />
-    <Process />
-    <Footer />
-  </div>
+    <div className="bg-black overflow-hidden">
+      <FirstFold />
+      <WhatsNew cardContent={updatesCard} />
+      <Process />
+      <Footer />
+    </div>
+  </>
 )
 
 export async function getStaticProps() {

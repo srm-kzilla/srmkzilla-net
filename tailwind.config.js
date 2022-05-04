@@ -21,8 +21,10 @@ module.exports = {
         logoGreen: '#5ed493',
         logoBlue: '#26BAFF',
         gray500: '#272727',
+        registerGreen: '#5ED493',
       },
       backgroundImage: (theme) => ({
+        'register-event': "url('/images/banner.png')",
         'hero-pattern': "url('/images/herobg.png')",
         'footer-pattern': "url('/images/newfooter.png')",
         'mobile-footer-pattern': 'url(/images/mobilefooter.png)',

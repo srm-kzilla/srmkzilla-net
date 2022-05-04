@@ -4,7 +4,6 @@ import Link from 'next/link'
 import Head from 'next/head'
 import Image from 'next/image'
 import Footer from '@shared/components/footer'
-import Navbar from '@shared/components/navbar'
 import WhatsNew from '@shared/components/events/whats-new'
 import FeaturedEvents from '@shared/components/events/featured-events'
 
@@ -19,7 +18,7 @@ const Events = ({ header, events, featuredEvents }) => {
         />
         <link rel="icon" href="./images/kzillalogo.png" />
       </Head>
-      <Navbar />
+
       <div>
         <img
           src="./images/events-bg.png"
@@ -47,8 +46,7 @@ export async function getStaticProps() {
       picture:
         'https://certificates-ta.s3.ap-south-1.amazonaws.com/Rectangle+6.png',
       title: 'Mozofest',
-      link:
-        'https://certificates-ta.s3.ap-south-1.amazonaws.com/Rectangle+6.png',
+      link: 'https://certificates-ta.s3.ap-south-1.amazonaws.com/Rectangle+6.png',
       description:
         'SRMKZILLA did a great job developing our website, theelecruisers.in . Whether providing direct development support or giving us the opportunity to ',
     },
@@ -56,8 +54,7 @@ export async function getStaticProps() {
       picture:
         'https://certificates-ta.s3.ap-south-1.amazonaws.com/Rectangle+6.png',
       title: 'Mozofest',
-      link:
-        'https://certificates-ta.s3.ap-south-1.amazonaws.com/Rectangle+6.png',
+      link: 'https://certificates-ta.s3.ap-south-1.amazonaws.com/Rectangle+6.png',
       description:
         'SRMKZILLA did a great job developing our website, theelecruisers.in . Whether providing direct development support or giving us the opportunity to ',
     },
@@ -65,8 +62,7 @@ export async function getStaticProps() {
       picture:
         'https://certificates-ta.s3.ap-south-1.amazonaws.com/Rectangle+6.png',
       title: 'Mozofest',
-      link:
-        'https://certificates-ta.s3.ap-south-1.amazonaws.com/Rectangle+6.png',
+      link: 'https://certificates-ta.s3.ap-south-1.amazonaws.com/Rectangle+6.png',
       description:
         'SRMKZILLA did a great job developing our website, theelecruisers.in . Whether providing direct development support or giving us the opportunity to ',
     },
@@ -76,8 +72,7 @@ export async function getStaticProps() {
       picture:
         'https://certificates-ta.s3.ap-south-1.amazonaws.com/Rectangle+2.png',
       title: 'Mozofest',
-      link:
-        'https://certificates-ta.s3.ap-south-1.amazonaws.com/Rectangle+6.png',
+      link: 'https://certificates-ta.s3.ap-south-1.amazonaws.com/Rectangle+6.png',
       eventCompleted: false,
       date: 1636281415000,
       subTitle: 'with phalana dhimkana',
@@ -88,8 +83,7 @@ export async function getStaticProps() {
       picture:
         'https://certificates-ta.s3.ap-south-1.amazonaws.com/Rectangle+2.png',
       title: 'Mozofest',
-      link:
-        'https://certificates-ta.s3.ap-south-1.amazonaws.com/Rectangle+6.png',
+      link: 'https://certificates-ta.s3.ap-south-1.amazonaws.com/Rectangle+6.png',
       eventCompleted: false,
       date: 1636281415000,
       subTitle: 'with phalana dhimkana',

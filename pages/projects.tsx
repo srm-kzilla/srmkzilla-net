@@ -4,7 +4,6 @@ const Fade = require('react-reveal/Fade')
 
 import ProjectIcon from '@shared/components/projects/project-icons'
 import Service from '@shared/components/projects/services'
-import Navbar from '@shared/components/navbar'
 import Footer from '@shared/components/footer'
 import { getProjects, getServiceProjects } from '@lib/sanity-api'
 
@@ -20,7 +19,6 @@ const Projects = ({ projects, serviceProjects }) => {
         <link rel="icon" href="./images/kzillalogo.png" />
       </Head>
       <div>
-        <Navbar />
         <video
           autoPlay
           loop

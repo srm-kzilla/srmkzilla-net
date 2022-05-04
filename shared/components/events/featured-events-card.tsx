@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import dayjs from 'dayjs'
 import Image from 'next/image'
+import { formatDate } from 'utils/formatDate'
 const HomeCard = (props: {
   name: String
   image: string
@@ -95,11 +96,3 @@ const HomeCard = (props: {
 }
 
 export default HomeCard
-
-const formatDate = (date: number) => {
-  return {
-    day: dayjs(new Date(date)).format('DD'),
-    month: dayjs(new Date(date)).format('MMM'),
-    year: dayjs(new Date(date)).format('YYYY'),
-  }
-}

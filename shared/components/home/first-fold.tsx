@@ -1,9 +1,7 @@
 import { motion } from 'framer-motion'
-import Navbar from '../navbar'
 
 const FirstFold = () => (
   <section className="hero h-screen bg-hero-pattern bg-fixed overflow-hidden relative">
-    <Navbar />
     <div className="absolute top-2/4 transform -translate-y-1/2">
       <motion.div className="relative w-screen sm:h-64 h-52 z-30">
         <motion.img
