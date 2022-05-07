@@ -23,7 +23,7 @@ const WhatsNew = ({ cardContent }: { cardContent: Card[] }) => (
 
       <div className="flex flex-wrap items-center justify-center sm:mt-20 mt-14 pb-10">
         {cardContent &&
-          cardContent.map((card: Card, index) => (
+          cardContent.map((card, index) => (
             <Card
               key={index}
               name={card?.title}
