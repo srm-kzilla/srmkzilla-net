@@ -47,7 +47,7 @@ export async function getServerSideProps(context: { params: { slug: any } }) {
   let featuredEvents: Events
   try {
     featuredEvents = await allEvents()
-    console.log(featuredEvents)
+    // console.log(featuredEvents)
   } catch (err) {
     throw err
   }

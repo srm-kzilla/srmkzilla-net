@@ -8,7 +8,7 @@ interface Card {
   description: String
   slug: String
   eventCompleted: boolean
-  date: number
+  startDate: string
   subTitle: String
 }
 
@@ -32,7 +32,7 @@ const WhatsNew = ({ cardContent }: { cardContent: Card[] }) => (
               slug={card?.slug}
               eventCompleted={card.eventCompleted}
               subTitle={card.subTitle}
-              date={card.date}
+              startDate={card.startDate}
             />
           ))}
       </div>

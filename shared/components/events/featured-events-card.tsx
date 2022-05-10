@@ -3,25 +3,26 @@ import dayjs from 'dayjs'
 import Image from 'next/image'
 import { formatDate } from 'utils/FormatDate'
 import Link from 'next/link'
+import { Home } from 'react-feather'
 const HomeCard = (props: {
   name: String
   image: string
   desc: String
   slug: String
   eventCompleted: boolean
-  date: number
+  startDate: string
   subTitle: String
 }) => {
-  const date = formatDate(props.date)
+  // const date = formatDate(props.date)
   return (
     <div className=" w-full px-14 md:px-28 py-4">
       <div className="bg-black-200 rounded-lg py-1 px-2 hidden md:flex">
         <div className=" md:flex">
           <div className="md:flex ">
             <div className="pl-6 my-auto text-center pr-6">
-              <div className="text-base"> {date.month}</div>
-              <div className="text-3xl"> {date.day} </div>
-              <div className="text-base">{date.year} </div>
+              {/* <div className="text-base"> {date.month}</div>
+              <div className="text-3xl"> {date.day} </div> */}
+              <div className="text-base">{props.startDate} </div>
             </div>
             <div className="mt-3">
               <Image
@@ -70,9 +71,9 @@ const HomeCard = (props: {
             {props.subTitle}
             <div className="flex justify-evenly py-4">
               <div className="my-auto">
-                <div className="text-base"> {date.month}</div>
-                <div className="text-3xl"> {date.day} </div>
-                <div className="text-base">{date.year} </div>
+                {/* <div className="text-base"> {date.month}</div>
+                <div className="text-3xl"> {date.day} </div> */}
+                <div className="text-base">{props.startDate} </div>
               </div>
               <Image
                 src="/images/borderline.png"
