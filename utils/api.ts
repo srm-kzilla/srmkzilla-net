@@ -1,5 +1,7 @@
 import axios, { AxiosResponse } from 'axios'
 const baseUrl = process.env.BASE_URL || 'http://localhost:8000/api'
+
+
 export const getEvent = async (slug: string) => {
   try {
     const fetchEvent = await axios.get(`${baseUrl}/event/${slug}`)
@@ -20,3 +22,16 @@ export const register = async (data: any) => {
     return { status: 502 }
   }
 }
+
+export const allEvents = async ()=>{
+  try{
+    const events =await axios.get(`${baseUrl}/events`)
+    return events.data
+  }
+  catch(err){
+throw err
+
+
+  }
+}
+

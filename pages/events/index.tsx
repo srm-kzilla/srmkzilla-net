@@ -1,11 +1,21 @@
 import React from 'react'
-import { motion } from 'framer-motion'
-import Link from 'next/link'
 import Head from 'next/head'
-import Image from 'next/image'
 import Footer from '@shared/components/footer'
-import WhatsNew from '@shared/components/events/whats-new'
 import FeaturedEvents from '@shared/components/events/featured-events'
+import { allEvents } from '../../utils/api'
+
+type Events = {
+  id: string
+  title: string
+  slug: string
+  image: any
+  description: string
+  icons: string[]
+  startDate: string
+  features: any
+  eventCover: string
+  isCompleted: false
+}
 
 const Events = ({ header, events, featuredEvents }) => {
   return (
@@ -27,72 +37,21 @@ const Events = ({ header, events, featuredEvents }) => {
           className="m-auto mt-28 rounded-3x1 px-9"
         />
       </div>
-      <WhatsNew cardContent={events} />
+      {/* <WhatsNew cardContent={featuredEvents} /> */}
       <FeaturedEvents cardContent={featuredEvents} />
       <Footer />
     </div>
   )
 }
-export async function getStaticProps() {
-  const header = {
-    imageUrl:
-      'https://certificates-ta.s3.ap-south-1.amazonaws.com/Rectangle+6.png',
-    headline: 'Mozofest',
-    description:
-      'SRMKZILLA did a great job developing our website, theelecruisers.in . Whether providing direct development support or giving us the opportunity to ',
+export async function getServerSideProps(context: { params: { slug: any } }) {
+  let featuredEvents: Events
+  try {
+    featuredEvents = await allEvents()
+    console.log(featuredEvents)
+  } catch (err) {
+    throw err
   }
-  const events = [
-    {
-      picture:
-        'https://certificates-ta.s3.ap-south-1.amazonaws.com/Rectangle+6.png',
-      title: 'Mozofest',
-      link: 'https://certificates-ta.s3.ap-south-1.amazonaws.com/Rectangle+6.png',
-      description:
-        'SRMKZILLA did a great job developing our website, theelecruisers.in . Whether providing direct development support or giving us the opportunity to ',
-    },
-    {
-      picture:
-        'https://certificates-ta.s3.ap-south-1.amazonaws.com/Rectangle+6.png',
-      title: 'Mozofest',
-      link: 'https://certificates-ta.s3.ap-south-1.amazonaws.com/Rectangle+6.png',
-      description:
-        'SRMKZILLA did a great job developing our website, theelecruisers.in . Whether providing direct development support or giving us the opportunity to ',
-    },
-    {
-      picture:
-        'https://certificates-ta.s3.ap-south-1.amazonaws.com/Rectangle+6.png',
-      title: 'Mozofest',
-      link: 'https://certificates-ta.s3.ap-south-1.amazonaws.com/Rectangle+6.png',
-      description:
-        'SRMKZILLA did a great job developing our website, theelecruisers.in . Whether providing direct development support or giving us the opportunity to ',
-    },
-  ]
-  const featuredEvents = [
-    {
-      picture:
-        'https://certificates-ta.s3.ap-south-1.amazonaws.com/Rectangle+2.png',
-      title: 'Mozofest',
-      link: 'https://certificates-ta.s3.ap-south-1.amazonaws.com/Rectangle+6.png',
-      eventCompleted: false,
-      date: 1636281415000,
-      subTitle: 'with phalana dhimkana',
-      description:
-        'SRMKZILLA did a great job developing our website, theelecruisers.in . Whether providing direct development support or giving us the opportunity to ',
-    },
-    {
-      picture:
-        'https://certificates-ta.s3.ap-south-1.amazonaws.com/Rectangle+2.png',
-      title: 'Mozofest',
-      link: 'https://certificates-ta.s3.ap-south-1.amazonaws.com/Rectangle+6.png',
-      eventCompleted: false,
-      date: 1636281415000,
-      subTitle: 'with phalana dhimkana',
-      description:
-        'SRMKZILLA did a great job developing our website, theelecruisers.in . Whether providing direct development support or giving us the opportunity to ',
-    },
-  ]
-  return {
-    props: { header, events, featuredEvents },
-  }
+  return { props: { featuredEvents } }
 }
+
 export default Events

@@ -6,7 +6,7 @@ interface Card {
   title: String
   picture: string
   description: String
-  link: String
+  slug: String
   eventCompleted: boolean
   date: number
   subTitle: String
@@ -29,7 +29,7 @@ const WhatsNew = ({ cardContent }: { cardContent: Card[] }) => (
               name={card?.title}
               image={card?.picture}
               desc={card?.description}
-              link={card?.link}
+              slug={card?.slug}
               eventCompleted={card.eventCompleted}
               subTitle={card.subTitle}
               date={card.date}

@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion'
 
 interface HomeCardProps {
-  name: String
+  title: String
   image: string
   desc: String
-  link: String
+  slug: String
 }
 
 const HomeCard = (props: HomeCardProps) => {
@@ -13,20 +13,20 @@ const HomeCard = (props: HomeCardProps) => {
       className="bg-black-200 sm:w-72 w-64 rounded-xl xl:mx-12 mx-6 p-2 mb-10 shadow-box"
       whileHover={{ scale: 1.05 }}
     >
-      <img
+      {/* <img
         className="h-full w-full object-cover rounded-xl overflow-hidden"
         draggable={false}
         src={props.image}
         alt="card-image"
-      />
+      /> */}
 
       <h1 className="text-white text-center text-xl font-medium mt-5">
-        {props.name}
+        {props.title}
       </h1>
       <p className="text-white font-light px-3 mt-3 text-xs">{props.desc}</p>
       <div className="text-center mt-10 mb-5">
         <a
-          href={props.link as string}
+          href={props.slug as string}
           target="_blank"
           rel="noopener noreferrer"
         >

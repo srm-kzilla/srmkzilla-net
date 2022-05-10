@@ -65,7 +65,7 @@ const Register = ({ title, description, eventCover, slug }: EventProps) => {
 
         <div className="flex justify-center mt-16">
           <div
-            className="flex flex-col w-5/6 justify-center items-center mt-12  rounded-2xl sm:flex-row"
+            className="flex flex-col w-5/6 justify-center items-center mt-12  rounded-2xl sm:flex-row  bg-cover backdrop-blur-xl"
             style={{
               backgroundImage: `url(${banner})`,
             }}

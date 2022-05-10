@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion'
 import dayjs from 'dayjs'
 import Image from 'next/image'
-import { formatDate } from 'utils/formatDate'
+import { formatDate } from 'utils/FormatDate'
+import Link from 'next/link'
 const HomeCard = (props: {
   name: String
   image: string
   desc: String
-  link: String
+  slug: String
   eventCompleted: boolean
   date: number
   subTitle: String
@@ -34,27 +35,29 @@ const HomeCard = (props: {
           <div className="my-auto pt-2 pl-8">
             <div className="md:flex">
               <div>
-                <Image
+                {/* <Image
                   src={props.image}
                   alt="Picture of the author"
                   width={80}
                   height={80}
-                />
+                /> */}
               </div>
               <div className="pl-6">
                 <div className="text-4xl pb-1 font-medium">{props.name}</div>
                 <div className="text-xl">{props.subTitle}</div>
               </div>
               <div className="absolute right-32 pt-4">
-                <button
-                  className={`${
-                    props.eventCompleted
-                      ? `bg-logoGreen hover:bg-logoBlue`
-                      : `bg-logoBlue hover:bg-logoGreen`
-                  } text-white font-bold py-2 px-4 rounded-lg`}
-                >
-                  {props.eventCompleted ? 'Get Certificate' : 'Register Now'}
-                </button>
+                <Link href={`/register?event=${props.slug}`}>
+                  <button
+                    className={`${
+                      props.eventCompleted
+                        ? `bg-logoGreen hover:bg-logoBlue`
+                        : `bg-logoBlue hover:bg-logoGreen`
+                    } text-white font-bold py-2 px-4 rounded-lg`}
+                  >
+                    {props.eventCompleted ? 'Get Certificate' : 'Register Now'}
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -79,15 +82,17 @@ const HomeCard = (props: {
               />
               <img src={props.image} className="" />
             </div>
-            <button
-              className={`${
-                props.eventCompleted
-                  ? `bg-logoGreen hover:bg-logoBlue`
-                  : `bg-logoBlue hover:bg-logoGreen`
-              } text-white font-bold py-2 px-4 rounded-lg float-left`}
-            >
-              {props.eventCompleted ? 'Get Certificate' : 'Register Now'}
-            </button>
+            <Link href={`/register?event=${props.slug}`}>
+              <button
+                className={`${
+                  props.eventCompleted
+                    ? `bg-logoGreen hover:bg-logoBlue`
+                    : `bg-logoBlue hover:bg-logoGreen`
+                } text-white font-bold py-2 px-4 rounded-lg float-left`}
+              >
+                {props.eventCompleted ? 'Get Certificate' : 'Register Now'}
+              </button>
+            </Link>
           </div>
         </div>
       </div>
