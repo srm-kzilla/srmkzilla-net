@@ -26,7 +26,7 @@ const Events = ({ title, description, icons, slug }: EventProps) => {
         <title>{title}</title>
       </Head>
 
-      <div className="xl:h-auto h-auto">
+      <div className="xl:h-auto h-auto min-h-screen">
         <img
           className="absolute top-0 right-0 xl:h-screen h-2/4 z-0"
           src="../images/projectbg.png"
@@ -55,7 +55,7 @@ const Events = ({ title, description, icons, slug }: EventProps) => {
           <TiltCard />
         </div>
       </div>
-      <div className="xl:h-auto h-auto">
+      {/* <div className="xl:h-auto h-auto">
         <img
           className="absolute top-0 right-0 xl:h-screen h-2/4 z-0"
           src="../images/projectbg.png"
@@ -83,7 +83,7 @@ const Events = ({ title, description, icons, slug }: EventProps) => {
 
           <TiltCard />
         </div>
-      </div>
+      </div> */}
 
       <Footer />
     </div>
