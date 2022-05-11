@@ -25,10 +25,10 @@ const WhatsNew = ({ cardContent }) => (
             ) => (
               <Card
                 key={index}
-                name={card?.title}
+                title={card?.title}
                 image={card?.picture}
                 desc={card?.description}
-                link={card?.link}
+                slug={card?.link}
               />
             )
           )}

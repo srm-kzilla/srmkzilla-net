@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Footer from '@shared/components/footer'
 import FeaturedEvents from '@shared/components/events/featured-events'
+import WhatsNew from '@shared/components/home/whats-new'
 import { allEvents } from '../../utils/api'
 
 type Events = {
@@ -37,8 +38,8 @@ const Events = ({ header, events, featuredEvents }) => {
           className="m-auto mt-28 rounded-3x1 px-9"
         />
       </div>
-      {/* <WhatsNew cardContent={featuredEvents} /> */}
-      <FeaturedEvents cardContent={featuredEvents} />
+      <WhatsNew cardContent={featuredEvents} />
+      {/* <FeaturedEvents cardContent={featuredEvents} /> */}
       <Footer />
     </div>
   )
@@ -47,7 +48,7 @@ export async function getServerSideProps(context: { params: { slug: any } }) {
   let featuredEvents: Events
   try {
     featuredEvents = await allEvents()
-    // console.log(featuredEvents)
+    console.log(featuredEvents)
   } catch (err) {
     throw err
   }
