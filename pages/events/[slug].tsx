@@ -26,15 +26,15 @@ const Events = ({ title, description, icons, slug }: EventProps) => {
         <title>{title}</title>
       </Head>
 
-      <div className="xl:h-auto h-auto min-h-screen">
+      <div className="min-h-screen">
         <img
           className="absolute top-0 right-0 xl:h-screen h-2/4 z-0"
           src="../images/projectbg.png"
           alt="background"
           draggable={false}
         />
-        <div className="flex flex-row flex-nowrap w-screen items-start justify-start">
-          <div className="w-full flex w-full md:items-start items-center md:mx-0 md:w-2/3 justify-center md:justify-start flex-col z-10  md:px-24 px-5 md:mt-28 mt-16 lg:mt-32 w-2/3 mx-10">
+        <div className="flex flex-col md:flex-row items-center justify-center w-full">
+          <div className="w-full flex md:items-start items-center md:mx-0 md:w-2/3 justify-center md:justify-start flex-col z-10  md:px-24 px-5 md:mt-28 mt-16 lg:mt-32 mx-10">
             <h1 className="text-white text-3xl sm:text-5xl  font-semibold mt-10">
               {title}
             </h1>

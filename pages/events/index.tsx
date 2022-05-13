@@ -2,10 +2,10 @@ import React from 'react'
 import Head from 'next/head'
 import Footer from '@shared/components/footer'
 import FeaturedEvents from '@shared/components/events/featured-events'
-import WhatsNew from '@shared/components/home/whats-new'
+import WhatsNew from '@shared/components/events/whats-new'
 import { allEvents } from '../../utils/api'
 
-type Events = {
+export type EventType = {
   id: string
   title: string
   slug: string
@@ -18,7 +18,11 @@ type Events = {
   isCompleted: false
 }
 
-const Events = ({ header, events, featuredEvents }) => {
+interface EventsProps {
+  featuredEvents: EventType[]
+}
+
+const Events = ({ featuredEvents }: EventsProps) => {
   return (
     <div className="bg-black h-full w-full overflow-hidden text-white">
       <Head>
@@ -30,22 +34,20 @@ const Events = ({ header, events, featuredEvents }) => {
         <link rel="icon" href="./images/kzillalogo.png" />
       </Head>
 
-      <div>
-        <img
-          src="./images/events-bg.png"
-          alt="background"
-          draggable={false}
-          className="m-auto mt-28 rounded-3x1 px-9"
-        />
-      </div>
+      <img
+        src="./images/events-bg.png"
+        alt="background"
+        draggable={false}
+        className="m-auto py-24 px-6 md:p-20"
+      />
       <WhatsNew cardContent={featuredEvents} />
       {/* <FeaturedEvents cardContent={featuredEvents} /> */}
       <Footer />
     </div>
   )
 }
-export async function getServerSideProps(context: { params: { slug: any } }) {
-  let featuredEvents: Events
+export async function getServerSideProps() {
+  let featuredEvents: EventType[]
   try {
     featuredEvents = await allEvents()
   } catch (err) {

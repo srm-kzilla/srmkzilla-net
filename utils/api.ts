@@ -1,6 +1,5 @@
 import axios, { AxiosResponse } from 'axios'
-const baseUrl = process.env.BASE_URL || 'http://localhost:8000/api'
-
+const baseUrl = 'http://events-api.srmkzilla.net/api'
 
 export const getEvent = async (slug: string) => {
   try {
@@ -12,6 +11,8 @@ export const getEvent = async (slug: string) => {
 }
 export const register = async (data: any) => {
   try {
+    console.log(data)
+
     const postData: AxiosResponse = await axios({
       method: 'POST',
       url: `${baseUrl}/register`,
@@ -23,15 +24,11 @@ export const register = async (data: any) => {
   }
 }
 
-export const allEvents = async ()=>{
-  try{
-    const events =await axios.get(`${baseUrl}/events`)
+export const allEvents = async () => {
+  try {
+    const events = await axios.get(`${baseUrl}/events`)
     return events.data
-  }
-  catch(err){
-throw err
-
-
+  } catch (err) {
+    throw err
   }
 }
-
