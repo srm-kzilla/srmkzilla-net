@@ -1,11 +1,11 @@
-import React from 'react'
-import Head from 'next/head'
-const Fade = require('react-reveal/Fade')
+import { CARDS } from '@lib/data/about'
+import { getTimeline } from '@lib/sanity-api'
 import SwipeCard from '@shared/components/about/swipe-cards'
 import { LeftTimeline, RightTimeline } from '@shared/components/about/timeline'
 import Footer from '@shared/components/footer'
-import { getTimeline } from '@lib/sanity-api'
-import { CARDS } from '@lib/data/about'
+import Head from 'next/head'
+import React from 'react'
+const Fade = require('react-reveal/Fade')
 
 const AboutUs = ({ timelineData }) => {
   return (

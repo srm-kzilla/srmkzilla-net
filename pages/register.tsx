@@ -1,14 +1,12 @@
-import React from 'react'
+import { Field, Form, Formik } from 'formik'
 import Head from 'next/head'
-import Navbar from '../shared/components/navbar'
-import Footer from '../shared/components/footer'
 import Router from 'next/router'
-import { getEvent, register } from '../utils/api'
-import { Field } from 'formik'
-import { ToastContainer, toast } from 'react-toastify'
+import React from 'react'
+import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import Footer from '../shared/components/footer'
+import { getEvent, register } from '../utils/api'
 import { registerFormData, registerValidationSchema } from '../utils/schema'
-import { Formik, Form } from 'formik'
 type EventProps = {
   title: string
   description: string

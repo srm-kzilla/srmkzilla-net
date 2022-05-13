@@ -1,10 +1,9 @@
-import Head from 'next/head'
-
-import FirstFold from '@shared/components/home/first-fold'
-import WhatsNew from '@shared/components/home/whats-new'
-import Process from '@shared/components/home/process'
-import Footer from '@shared/components/footer'
 import { getNewUpdates } from '@lib/sanity-api'
+import Footer from '@shared/components/footer'
+import FirstFold from '@shared/components/home/first-fold'
+import Process from '@shared/components/home/process'
+import WhatsNew from '@shared/components/home/whats-new'
+import Head from 'next/head'
 
 const Home = ({ updatesCard }) => (
   <>

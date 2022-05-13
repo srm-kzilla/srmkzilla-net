@@ -1,6 +1,5 @@
-import Fade from 'react-reveal/Fade'
-
 import Card from '@shared/components/home/card'
+import Fade from 'react-reveal/Fade'
 
 const WhatsNew = ({ cardContent }) => (
   <section className="works">

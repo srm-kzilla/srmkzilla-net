@@ -1,9 +1,8 @@
-import Bounce from 'react-reveal/Bounce'
-import Slide from 'react-reveal/Slide'
-import Fade from 'react-reveal/Fade'
-import { InView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
-
+import { InView } from 'react-intersection-observer'
+import Bounce from 'react-reveal/Bounce'
+import Fade from 'react-reveal/Fade'
+import Slide from 'react-reveal/Slide'
 import Message from './Message'
 
 const container = {
@@ -206,36 +205,39 @@ const Process = () => (
 
     <div className="flex flex-wrap w-full mt-52 relative">
       <div className="xl:w-3/6 lg:w-2/5 w-auto">
-        <InView>{({ inView, ref, entry }) => ( <div ref={ref}><Slide right>
-          <div className="lg:-mt-20 mt-16">
-            <span className="text-white text-3xl relative lg:mt-24">
-              Design<span className="text-orange600 text-4xl">.</span>
-              <img
-                src="./images/arrow.png"
-                className="absolute top-full left-full h-5 transform -translate-y-2"
-                alt="arrow"
-              />
-            </span>
-          </div>
-        </Slide>
+        <InView>
+          {({ inView, ref, entry }) => (
+            <div ref={ref}>
+              <Slide right>
+                <div className="lg:-mt-20 mt-16">
+                  <span className="text-white text-3xl relative lg:mt-24">
+                    Design<span className="text-orange600 text-4xl">.</span>
+                    <img
+                      src="./images/arrow.png"
+                      className="absolute top-full left-full h-5 transform -translate-y-2"
+                      alt="arrow"
+                    />
+                  </span>
+                </div>
+              </Slide>
 
-        <p className="text-white text-lg my-4">
-          Getting our creative juices flowing helps us create magnificent
-          designs. The design puts flesh and blood to the existing idea. These
-          designs help turn our dreams into reality.
-        </p>
-        
-          
-            <div>
-              {inView && (
-                <video
-                  src="./images/pendrop.mp4"
-                  className="w-full mt-16 mx-auto"
-                  autoPlay
-                />
-              )}
+              <p className="text-white text-lg my-4">
+                Getting our creative juices flowing helps us create magnificent
+                designs. The design puts flesh and blood to the existing idea.
+                These designs help turn our dreams into reality.
+              </p>
+
+              <div>
+                {inView && (
+                  <video
+                    src="./images/pendrop.mp4"
+                    className="w-full mt-16 mx-auto"
+                    autoPlay
+                  />
+                )}
+              </div>
             </div>
-          </div>)}
+          )}
         </InView>
       </div>
       <InView>
@@ -385,7 +387,10 @@ const Process = () => (
       </div>
       <InView>
         {({ inView, ref }) => (
-          <div ref={ref} className="lg:mt-24 lg:w-1/2 w-auto mt-0 md:mb-24 mb-14">
+          <div
+            ref={ref}
+            className="lg:mt-24 lg:w-1/2 w-auto mt-0 md:mb-24 mb-14"
+          >
             {inView && (
               <video
                 src="./images/technical.mp4"

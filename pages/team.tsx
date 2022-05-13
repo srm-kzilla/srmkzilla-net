@@ -1,11 +1,9 @@
-import Head from 'next/head'
-
-import MemberCard from '@shared/components/team/membercard'
-import NewCarousel from '@shared/components/team/carousel'
-import Footer from '@shared/components/footer'
-import { getTeamMembers } from '@lib/sanity-api'
 import { DOMAINS } from '@lib/data/domains'
-import { domain } from 'node:process'
+import { getTeamMembers } from '@lib/sanity-api'
+import Footer from '@shared/components/footer'
+import NewCarousel from '@shared/components/team/carousel'
+import MemberCard from '@shared/components/team/membercard'
+import Head from 'next/head'
 
 const Team = ({ teamMembers }) => {
   return (

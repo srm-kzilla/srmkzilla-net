@@ -1,7 +1,7 @@
+import { EventType } from '@pages/events'
+import Card from '@shared/components/events/card'
 import Fade from 'react-reveal/Fade'
 
-import Card from '@shared/components/events/card'
-import { EventType } from '@pages/events'
 interface WhatsNewProps {
   cardContent: EventType[]
 }

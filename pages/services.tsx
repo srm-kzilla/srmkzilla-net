@@ -1,12 +1,11 @@
-import React from 'react'
-import Head from 'next/head'
-import { motion, useViewportScroll, useTransform } from 'framer-motion'
-
 import Footer from '@shared/components/footer'
+import Collaborate from '@shared/components/services/collaborate'
 import Stats from '@shared/components/services/numbers'
 import ServicesProvided from '@shared/components/services/servicesprovided'
-import Collaborate from '@shared/components/services/collaborate'
 import Testimonials from '@shared/components/services/testimonals'
+import { motion, useTransform, useViewportScroll } from 'framer-motion'
+import Head from 'next/head'
+import React from 'react'
 
 const Fade = require('react-reveal/Fade')
 

@@ -1,8 +1,5 @@
-import { motion } from 'framer-motion'
-import dayjs from 'dayjs'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Home } from 'react-feather'
 const HomeCard = (props: {
   name: String
   image: string
