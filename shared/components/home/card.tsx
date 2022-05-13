@@ -4,9 +4,7 @@ const HomeCard = (props: {
   name: String
   image: string
   desc: String
-  slug: String
-  eventCompleted: boolean
-  startDate: string
+  link: String
 }) => {
   return (
     <motion.div
@@ -24,15 +22,10 @@ const HomeCard = (props: {
         {props.name}
       </h1>
       <p className="text-white font-light px-3 mt-3 text-xs">{props.desc}</p>
-      <div className="text-center mt-10 mb-5 flex gap-x-5 justify-center items-center">
-        <a href={`events/${props.slug}`} rel="noopener noreferrer">
+      <div className="text-center mt-10 mb-5">
+        <a href={`${props.link}`} target="_blank" rel="noopener noreferrer">
           <button className="bg-black border rounded-full text-white text-xs px-5 py-1 border-white focus:outline-none">
             Know More
-          </button>
-        </a>
-        <a href={`/register?event=${props.slug}`} rel="noopener noreferrer">
-          <button className="bg-black border rounded-full text-white text-xs px-5 py-1 border-white focus:outline-none">
-            Register Now
           </button>
         </a>
       </div>
