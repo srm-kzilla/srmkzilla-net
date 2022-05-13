@@ -29,6 +29,16 @@ const Register = ({ title, description, eventCover, slug }: EventProps) => {
   }
   const banner = eventCover ? eventCover : '/public/images/banner.png'
   const handleSubmit = async (values: registerFormData) => {
+    console.log({
+      user: {
+        name: values.name,
+        email: values.email,
+        phoneNumber: values.phoneNumber && parseInt(values.phoneNumber),
+        regNumber: values.registrationNumber,
+      },
+      eventSlug: slug,
+    })
+
     try {
       setLoading(true)
       const postData = {
