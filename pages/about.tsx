@@ -18,7 +18,6 @@ const AboutUs = ({ timelineData }) => {
         />
         <link rel="icon preload canonical" href="./images/kzillalogo.png" />
       </Head>
-      \
       <div className="md:mt-12">
         <div className="md:h-screen h-auto items-center flex justify-center">
           <div className="md:h-3/4 h-full sm:w-10/12 w-full md:mb-16 mb-8 rounded-none md:rounded-xl overflow-hidden">
