@@ -21,6 +21,13 @@ type EventProps = {
 }
 
 const Events = ({ title, description, icons, slug }: EventProps) => {
+  const timeline = [
+    {
+      title: 'title',
+      date: '20/10/20',
+      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet excepturi placeat quibusdam! Eos voluptatibus provident,et repellat tempora qui consequuntur laudantium. Tempora esse sedquisquam, porro soluta deleniti perferendis veritatis?',
+    },
+  ]
   return (
     <div className="bg-black overflow-hidden">
       <Head>
@@ -58,7 +65,7 @@ const Events = ({ title, description, icons, slug }: EventProps) => {
                 </button>
               </Link>
             </div>
-            <EventTimeline />
+            <EventTimeline timeline={timeline} />
             <h1 className="text-white text-2xl sm:text-5xl  font-semibold mt-10">
               {/* {speaker.length>1?Speakers:Speaker} */}
               Speaker
