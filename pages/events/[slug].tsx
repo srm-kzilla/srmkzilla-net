@@ -1,3 +1,4 @@
+import EventDetails from '@shared/components/events/event-details'
 import SpeakerPage from '@shared/components/events/event-speaker'
 import EventTimeline from '@shared/components/events/event-timeline'
 import TiltCard from '@shared/components/events/tilt-card'
@@ -21,6 +22,7 @@ type EventProps = {
 }
 
 const Events = ({ title, description, icons, slug }: EventProps) => {
+  console.log(slug)
   const DummyDataSpeaker = [
     {
       name: 'Pratham',
@@ -53,24 +55,7 @@ const Events = ({ title, description, icons, slug }: EventProps) => {
         />
         <div className="flex flex-col md:flex-row items-center justify-center w-full">
           <div className="w-full flex md:items-start items-center md:mx-0 md:w-2/3 justify-center md:justify-start flex-col z-10  md:px-24 px-5 md:mt-28 mt-16 lg:mt-32 mx-10">
-            <div>
-              <h1 className="text-white text-3xl sm:text-5xl  font-semibold mt-10">
-                {title}
-              </h1>
-              <p className="text-white  sm:text-xl mt-4 text-center md:text-left text-sm">
-                {description}
-              </p>
-            </div>
-
-            <div className="mt-4 ">
-              <Link href={{ pathname: '/register', query: { event: slug } }}>
-                <button className="focus:outline-none transform transition-transform duration-200 hover:-translate-y-1">
-                  <p className="bg-orange300 px-9 py-3 rounded-full font-bold lg:my-10 my-10 text-white ">
-                    REGISTER
-                  </p>
-                </button>
-              </Link>
-            </div>
+            <EventDetails title={title} description={description} slug={slug} />
             <EventTimeline timeline={timeline} />
             <SpeakerPage SpeakerData={DummyDataSpeaker} />
           </div>
