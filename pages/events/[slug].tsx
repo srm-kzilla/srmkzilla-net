@@ -1,3 +1,5 @@
+import EventTimeline from '@shared/components/events/event-timeline'
+import SpeakerPage from '@shared/components/events/speaker-card'
 import TiltCard from '@shared/components/events/tilt-card'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -56,19 +58,7 @@ const Events = ({ title, description, icons, slug }: EventProps) => {
                 </button>
               </Link>
             </div>
-            <h1 className="text-white text-3xl sm:text-5xl  font-semibold mt-10">
-              Timeline
-            </h1>
-            <p className="text-white sm:text-xl mt-4 text-center md:text-left text-sm">
-              Title
-            </p>
-            <p className="text-white mt-3">Date: 20/10/22</p>
-            <p className="text-white mt-3">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-              earum mollitia laudantium repudiandae velit porro iure aliquam
-              praesentium nostrum quasi! Incidunt dolores eum ab debitis
-              quisquam itaque exercitationem excepturi repudiandae?
-            </p>
+            <EventTimeline />
             <h1 className="text-white text-2xl sm:text-5xl  font-semibold mt-10">
               {/* {speaker.length>1?Speakers:Speaker} */}
               Speaker
@@ -88,6 +78,11 @@ const Events = ({ title, description, icons, slug }: EventProps) => {
             }
           />
         </div>
+        <SpeakerPage
+          name={'Pratham'}
+          about={'undefined'}
+          linkedIn={'undefined'}
+        />
       </div>
 
       <Footer />
@@ -106,7 +101,7 @@ export async function getServerSideProps(context: { params: { slug: any } }) {
     }
   }
   return {
-    props: eventDetails,
+    props: eventDetails[0],
   }
 }
 export default Events
