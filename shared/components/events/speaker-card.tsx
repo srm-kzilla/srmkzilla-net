@@ -8,7 +8,7 @@ const SpeakerPage = (props: {
 }) => {
   return (
     <motion.div
-      className="bg-black-200 sm:w-72 w-64 rounded-xl xl:mx-12 mx-6 p-2 mb-10 shadow-box"
+      className="bg-black-200 sm:w-72 w-60 px-10 rounded-xl xl:mx-12 mx-6 p-2 mb-10 shadow-box"
       whileHover={{ scale: 1.05 }}
     >
       {props.image ? (

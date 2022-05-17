@@ -21,6 +21,16 @@ type EventProps = {
 }
 
 const Events = ({ title, description, icons, slug }: EventProps) => {
+  const DummyDataSpeaker = [
+    {
+      name: 'Pratham',
+      about: 'lorme ispus',
+      linkedin: 'link',
+      image: 'some image',
+    },
+    { name: 'Pratham', about: 'lorme ispus', linkedin: 'link' },
+    { name: 'Pratham', about: 'lorme ispus', linkedin: 'link' },
+  ]
   return (
     <div className="bg-black overflow-hidden">
       <Head>
@@ -78,11 +88,17 @@ const Events = ({ title, description, icons, slug }: EventProps) => {
             }
           />
         </div>
-        <SpeakerPage
-          name={'Pratham'}
-          about={'undefined'}
-          linkedIn={'undefined'}
-        />
+        <div className="flex flex-row mt-10 justify-center">
+          {DummyDataSpeaker.map((i) => {
+            return (
+              <SpeakerPage
+                name={i.name}
+                about={i.about}
+                linkedIn={i.linkedin}
+              />
+            )
+          })}
+        </div>
       </div>
 
       <Footer />

@@ -5,8 +5,15 @@ const EventSpeaker = () => {
   return (
     <div>
       <h1 className="text-white text-2xl sm:text-5xl  font-semibold mt-10">
-        {/* {speaker.length>1?Speakers:Speaker} */}
-        Speaker
+        {DummySpeakerData.length > 1 ? (
+          <h1 className="text-white text-2xl sm:text-5xl  font-semibold mt-10">
+            Speakers
+          </h1>
+        ) : (
+          <h1 className="text-white text-2xl sm:text-5xl  font-semibold mt-10">
+            Speaker
+          </h1>
+        )}
       </h1>
       <p className="text-white mt-3">Name</p>
       <p className="text-white mt-3">
