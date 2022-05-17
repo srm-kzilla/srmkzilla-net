@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 
-const SpeakerPage = (props: {
+const SpeakerCard = (props: {
   name: String
   image?: string
   about: String
@@ -35,4 +35,4 @@ const SpeakerPage = (props: {
   )
 }
 
-export default SpeakerPage
+export default SpeakerCard
