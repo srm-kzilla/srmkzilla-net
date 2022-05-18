@@ -21,7 +21,7 @@ const WhatsNew = ({ cardContent }: WhatsNewProps) => (
             <Card
               key={index}
               name={card?.title}
-              image={card?.image}
+              eventCover={card?.eventCover}
               desc={card?.description}
               slug={card?.slug}
               eventCompleted={false}

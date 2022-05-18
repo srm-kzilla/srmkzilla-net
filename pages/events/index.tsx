@@ -5,10 +5,24 @@ import FeaturedEvents from '@shared/components/events/featured-events'
 import WhatsNew from '@shared/components/events/whats-new'
 import { allEvents } from '../../utils/api'
 
+export type SpeakerType = {
+  name: string
+  email?: string
+  slug: string
+  linkedIn?: string
+  githubLink?: string
+  image?: string
+  about?: string
+}
+
 export type EventType = {
   id: string
   title: string
   slug: string
+  tagline: string
+
+  timeline: { date: string; description: string; title: string }[]
+  speakers: SpeakerType[]
   image: any
   description: string
   icons: string[]

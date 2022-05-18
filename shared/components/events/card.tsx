@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 
 const HomeCard = (props: {
   name: String
-  image: string
+  eventCover: string
   desc: String
   slug: String
   eventCompleted: boolean
@@ -16,7 +16,7 @@ const HomeCard = (props: {
       <img
         className="h-full w-full object-cover rounded-xl overflow-hidden"
         draggable={false}
-        src={props.image}
+        src={props.eventCover}
         alt="card-image"
       />
 

@@ -20,6 +20,9 @@ type EventProps = {
 }
 
 const Register = ({ title, description, eventCover, slug }: EventProps) => {
+  const FieldClass =
+    'border-b-2 border-l-2 md:border-l-0 md:border-r-2 border-white bg-transparent placeholder-gray-500 text-right font-normal focus:outline-none xl:w-72 p-3'
+
   const [loading, setLoading] = React.useState<boolean>(false)
   const initialValues: registerFormData = {
     name: '',
@@ -72,7 +75,7 @@ const Register = ({ title, description, eventCover, slug }: EventProps) => {
         <title>{title} Registration</title>
       </Head>
       <ToastContainer />
-      <div className="relative h-screen max-h-screen">
+      <div className="relative h-screen max-h-screen text-white">
         <img
           src={banner}
           alt="event banner"
@@ -80,7 +83,7 @@ const Register = ({ title, description, eventCover, slug }: EventProps) => {
           style={{ filter: 'blur(8px)' }}
         />
 
-        <div className="z-20 h-full absolute inset-0 flex flex-col md:flex-row items-center justify-center gap-24 p-4 md:p-8">
+        <div className="z-20 h-full absolute inset-0 flex flex-col md:flex-row items-center justify-center gap-24 p-4 md:p-8 max-w-7xl mx-auto">
           <div className="">
             <h1 className="text-white text-4xl r font-bold p-2 mb-6 lg:text-5xl ">
               {title}
@@ -92,66 +95,53 @@ const Register = ({ title, description, eventCover, slug }: EventProps) => {
           </div>
 
           <Formik
-            className="flex flex-col p-2 m-2"
             initialValues={initialValues}
             onSubmit={handleSubmit}
             validationSchema={registerValidationSchema}
             enableReinitialize
           >
             {({ errors, touched }) => (
-              <Form>
-                <div className="h-14 flex flex-col items-start sm:items-end mb-2">
-                  <Field
-                    className="border-b-2  border-white w-56 text-white placeholder-white sm:text-right font-normal focus:outline-none xl:w-72  outline-none   appearance-none bg-transparent "
-                    placeholder="Full Name"
-                    name="name"
-                    type="text"
-                  />
-                  {touched.name && errors.name && (
-                    <div className="text-red-500 mt-2 text-sm">
-                      {errors.name}
-                    </div>
-                  )}
-                </div>
-                <div className="h-14 flex flex-col items-start sm:items-end mb-2">
-                  <Field
-                    className="border-b-2  border-white w-56 bg-transparent text-white placeholder-white sm:text-right font-normal focus:outline-none xl:w-72 "
-                    placeholder="Email"
-                    name="email"
-                    type="email"
-                  />
-                  {touched.email && errors.email && (
-                    <div className="text-red-500 mt-2 text-sm">
-                      {errors.email}
-                    </div>
-                  )}
-                </div>
-                <div className="h-14 flex flex-col items-start sm:items-end mb-2">
-                  <Field
-                    className="border-b-2 border-white w-56 bg-transparent text-white placeholder-white sm:text-right font-normal focus:outline-none xl:w-72 "
-                    placeholder="Registration Number"
-                    name="registrationNumber"
-                    type="text"
-                  />
-                  {touched.registrationNumber && errors.registrationNumber && (
-                    <div className="text-red-500 mt-2 text-sm">
-                      {errors.registrationNumber}
-                    </div>
-                  )}
-                </div>
-                <div className="h-14 flex flex-col items-start sm:items-end mb-2">
-                  <Field
-                    className="border-b-2   border-white w-56 bg-transparent text-white placeholder-white sm:text-right font-normal focus:outline-none xl:w-72 "
-                    placeholder="Mobile Number"
-                    name="phoneNumber"
-                    type="text"
-                  />
-                  {touched.phoneNumber && errors.phoneNumber && (
-                    <div className="text-red-500 mt-2 text-sm">
-                      {errors.phoneNumber}
-                    </div>
-                  )}
-                </div>
+              <Form className="flex flex-col gap-y-4 mr-auto md:mr-0 w-full md:w-auto ">
+                <Field
+                  className={FieldClass}
+                  placeholder="Full Name"
+                  name="name"
+                  type="text"
+                />
+                {touched.name && errors.name && (
+                  <div className="text-red-500 text-sm">{errors.name}</div>
+                )}
+                <Field
+                  className={FieldClass}
+                  placeholder="Email"
+                  name="email"
+                  type="email"
+                />
+                {touched.email && errors.email && (
+                  <div className="text-red-500 text-sm">{errors.email}</div>
+                )}
+                <Field
+                  className={FieldClass}
+                  placeholder="Registration Number"
+                  name="registrationNumber"
+                  type="text"
+                />
+                {touched.registrationNumber && errors.registrationNumber && (
+                  <div className="text-red-500 text-sm">
+                    {errors.registrationNumber}
+                  </div>
+                )}
+                <Field
+                  className={FieldClass}
+                  placeholder="Mobile Number"
+                  name="phoneNumber"
+                  type="text"
+                />
+                {touched.phoneNumber && errors.phoneNumber && (
+                  <div className="text-red-500 text-sm">
+                    {errors.phoneNumber}
+                  </div>
+                )}
                 <button
                   disabled={Object.keys(errors).length > 0 || loading}
                   className={`w-full m-1 sm:w-48 flex justify-around items-center py-1 bg-registerGreen rounded-md px-2 cursor-pointer  ${
@@ -176,6 +166,8 @@ const Register = ({ title, description, eventCover, slug }: EventProps) => {
 }
 export async function getServerSideProps(context: { query: { event: any } }) {
   const eventSlug = context.query != undefined ? context.query.event : null
+  console.log(eventSlug)
+
   let checkIfEventExist: EventProps
   if (eventSlug == null) return { notFound: true }
   try {
@@ -186,7 +178,7 @@ export async function getServerSideProps(context: { query: { event: any } }) {
     }
   }
   return {
-    props: checkIfEventExist,
+    props: checkIfEventExist[0],
   }
 }
 
