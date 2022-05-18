@@ -4,7 +4,9 @@ const EventTimeline = ({ event }: { event: EventType }) => {
   const { timeline } = event
   return (
     <div className="text-white ">
-      <h1 className="text-3xl sm:text-5xl font-semibold mt-10">Timeline</h1>
+      <h1 className="text-3xl sm:text-5xl text-center font-semibold mt-10">
+        Timeline
+      </h1>
       <ul className="md:m-4 flex w-full flex-col md:flex-row gap-8 lg:gap-16">
         {timeline &&
           timeline.map((i, id) => {

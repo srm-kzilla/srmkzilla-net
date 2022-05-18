@@ -73,13 +73,13 @@ const Register = ({ title, description, eventCover, slug }: EventProps) => {
           style={{ filter: 'blur(8px)' }}
         />
 
-        <div className="z-20 h-full absolute inset-0 flex flex-col md:flex-row items-center justify-center gap-24 p-4 md:p-8 max-w-7xl mx-auto">
+        <div className="z-20 h-full absolute inset-0 flex flex-col md:flex-row items-center justify-center gap-24 p-4 md:p-8 max-w-7xl mx-auto pt-10">
           <div className="">
-            <h1 className="text-white text-4xl r font-bold p-2 mb-6 lg:text-5xl ">
+            <h1 className="text-white  w-full text-center text-4xl  font-bold py-2 mb-6 lg:text-5xl ">
               {title}
             </h1>
 
-            <h4 className="w-full ml-2 text-white text-lg font-thin lg:text-base xl:w-2/3 sm:font-light">
+            <h4 className="w-full  text-white text-lg font-thin text-center lg:text-base  sm:font-light">
               {description}
             </h4>
           </div>
@@ -134,7 +134,7 @@ const Register = ({ title, description, eventCover, slug }: EventProps) => {
                 )}
                 <button
                   disabled={Object.keys(errors).length > 0 || loading}
-                  className={`w-full m-1 sm:w-48 flex justify-around items-center py-1 bg-registerGreen rounded-md px-2 cursor-pointer  ${
+                  className={`w-full m-1 sm:w-48 flex justify-around items-center py-1 bg-registerGreen text-black rounded-md px-2 cursor-pointer  ${
                     Object.keys(errors).length > 0 ||
                     (loading && 'cursor-not-allowed')
                   }`}

@@ -22,7 +22,7 @@ const WhatsNew = ({ cardContent }: WhatsNewProps) => (
               key={index}
               name={card?.title}
               eventCover={card?.eventCover}
-              desc={card?.description}
+              tagline={card?.tagline}
               slug={card?.slug}
               eventCompleted={false}
               startDate={''}

@@ -38,7 +38,7 @@ const SpeakerCard = ({ speaker }: { speaker: SpeakerType }) => {
   return (
     <div className="bg-black-200 bg-opacity-95 p-6 rounded-xl xl:mx-12 mb-10 shadow-box flex flex-col md:flex-row text-left relative w-full items- justify-between mx-auto">
       <div>
-        <h1 className="text-white text-center md:text-left text-5xl  font-medium mt-5">
+        <h1 className="text-white text-center md:text-left text-3xl sm:text-5xl  font-medium mt-5">
           {name}
         </h1>
         <p className="text-white font-light md:pr-8 mt-3 md:max-w-xl">
