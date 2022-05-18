@@ -44,6 +44,7 @@ const SpeakerCard = ({ speaker }: { speaker: SpeakerType }) => {
         <p className="text-white font-light md:pr-8 mt-3 md:max-w-xl">
           {about}
         </p>
+        <div className="h-24"></div>
         <div className="flex md:absolute bottom-6 gap-4 mx-auto justify-center md:justify-start">
           {linkedIn && <LinkElement link={linkedIn} {...social.linkedIn} />}
           {githubLink && <LinkElement link={githubLink} {...social.github} />}
