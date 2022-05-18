@@ -15,18 +15,13 @@ const EventDetails = (props: { event: EventType }) => {
           </p>
         </div>
         <div className="flex items-center md:items-start justify-center md:justify-start">
-          <Link
-            href={{
-              pathname: '/register',
-              query: { event: 'multiverse_of_iot' },
-            }}
-          >
+          <a href={`/register?event=${slug}`} rel="noopener noreferrer">
             <button className="focus:outline-none transform transition-transform duration-200 hover:-translate-y-1">
               <p className="bg-orange300 px-9 py-3 rounded-full font-bold lg:my-10 my-10 text-white ">
                 REGISTER
               </p>
             </button>
-          </Link>
+          </a>
         </div>
       </div>
 
