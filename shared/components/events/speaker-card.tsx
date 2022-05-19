@@ -38,14 +38,14 @@ const SpeakerCard = ({ speaker }: { speaker: SpeakerType }) => {
   return (
     <div className="bg-black-200 bg-opacity-95 p-4 rounded-xl xl:mx-12 mb-10 shadow-box flex flex-col md:flex-row text-left relative w-full items- justify-between mx-auto  ">
      
-       {image && (
+      <div> {image && (
         <img
           className="h-full object-cover rounded-xl overflow-hidden w-64 mx-auto "
           draggable={false}
           src={image}
           alt="card-image"
         />
-      ) }
+      ) }</div>
       <div className='md:pl-10'>
         <h1 className="text-white text-center md:text-left text-3xl sm:text-3xl  font-medium mt-5">
           {name}

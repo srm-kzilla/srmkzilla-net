@@ -7,7 +7,7 @@ const EventTimeline = ({ event }: { event: EventType }) => {
   return (
     <Fade up>
     <div className="text-white mt-16 lg:mt-0">
-      <h1 className="text-6xl sm:text-6xl text-center font-semibold  mb-24">
+      <h1 className="text-6xl sm:text-6xl text-center font-semibold  mb-24 ">
         Timeline
       </h1>
       <ul className="md:m-4 flex w-full flex-col md:flex-row gap-8 lg:gap-16">

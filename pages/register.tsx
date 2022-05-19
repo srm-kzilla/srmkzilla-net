@@ -1,12 +1,14 @@
 import { Field, Form, Formik } from 'formik'
 import Head from 'next/head'
 import Router from 'next/router'
-import React from 'react'
+import React, {useState} from 'react'
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Footer from '../shared/components/footer'
 import { getEvent, register } from '../utils/api'
 import { registerFormData, registerValidationSchema } from '../utils/schema'
+import { useReward } from 'react-rewards';
+
 type EventProps = {
   title: string
   description: string
@@ -19,9 +21,12 @@ type EventProps = {
   err?: string
 }
 
-const Register = ({ title, description, eventCover, slug }: EventProps) => {
+const Register = ( { title, description, eventCover, slug }: EventProps ) =>
+{
+  const { reward, isAnimating } = useReward('rewardId', 'confetti');
+  const [ registerText, setRegisterText ] = useState( "REGISTER" );
   const FieldClass =
-    'border-b-2 border-l-2 md:border-l-0 md:border-r-2 border-white bg-transparent placeholder-gray-500 text-right font-normal focus:outline-none xl:w-72 p-3'
+    'border-b-2 border-white bg-transparent placeholder-gray-500 text-right font-normal focus:outline-none xl:w-72 p-3 font-subHeading'
 
   const [loading, setLoading] = React.useState<boolean>(false)
   const initialValues: registerFormData = {
@@ -45,36 +50,50 @@ const Register = ({ title, description, eventCover, slug }: EventProps) => {
       }
       const registerUser = await register(postData)
       if (registerUser.status == 201) {
-        setLoading(false)
-        toast.success('Registered successfully !')
-        setTimeout(() => {
-          Router.push('/')
-        }, 1000)
-      } else {
-        toast.warn('Oops ! Something went wrong !')
-        setLoading(false)
+        setLoading( false );
+        setRegisterText("REGISTERED");
+        toast.success('Wohoooo, you have been registered successfully, Check your email!', {
+          position: "top-right",
+          autoClose: 10000,
+          hideProgressBar: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        } )
+        reward()
+
+      } else if(registerUser.status===502) {
+        toast.warn('Easy enthusiastic soldier, you have already been registered!')
+        setLoading( false )
+
       }
     } catch (error) {
-      toast.warn('Oops ! Something went wrong !')
-      setLoading(false)
+      toast.warn('Oops, Something went wrong! Refresh the page and contact us.')
+      setLoading( false )
+
     }
   }
   return (
     <div className="bg-black overflow-hidden">
-      <Head>
-        <title>{title} Registration</title>
+       <Head>
+        <title>SRMKZILLA | Register</title>
+        <meta
+          name="description"
+          content="SRMKZILLA is a community of young tech enthusiasts who eat, sleep and breath technology. We organize everything from technical workshops to gaming events, you name it & we do it. "
+        />
+        <link rel="icon" href="./images/kzillalogo.png" />
       </Head>
       <ToastContainer />
-      <div className="relative h-screen max-h-screen text-white">
         <img
-          src={banner}
-          alt="event banner"
-          className="absolute object-cover object-center top-1/2 md:top-0 opacity-50"
-          style={{ filter: 'blur(8px)' }}
+          className="bg-opacity-40 absolute top-0 left-0 xl:h-screen h-2/4 z-0"
+          src="../images/projectbg-alt.png"
+          alt="background"
+          draggable={false}
         />
-
-        <div className="z-20 h-full absolute inset-0 flex flex-col md:flex-row items-center justify-center gap-24 p-4 md:p-8 max-w-7xl mx-auto pt-10">
-          <div className="">
+      <div className="relative h-screen max-h-screen text-white">
+      
+        <div className="z-20 h-full absolute inset-0 flex flex-col md:flex-row items-center justify-center gap-24 p-4 md:p-8 max-w-6xl mx-auto pt-72 md:pt-10 ">
+          <div className="pr-0 md:pr-0">
             <h1 className="text-white  w-full text-center text-4xl  font-bold py-2 mb-6 lg:text-5xl ">
               {title}
             </h1>
@@ -82,8 +101,10 @@ const Register = ({ title, description, eventCover, slug }: EventProps) => {
             <h4 className="w-full  text-white text-lg font-thin text-center lg:text-base  sm:font-light">
               {description}
             </h4>
+            
           </div>
 
+          
           <Formik
             initialValues={initialValues}
             onSubmit={handleSubmit}
@@ -111,7 +132,7 @@ const Register = ({ title, description, eventCover, slug }: EventProps) => {
                   <div className="text-red-500 text-sm">{errors.email}</div>
                 )}
                 <Field
-                  className={FieldClass}
+                  className={`${FieldClass}`}
                   placeholder="Registration Number"
                   name="registrationNumber"
                   type="text"
@@ -134,14 +155,14 @@ const Register = ({ title, description, eventCover, slug }: EventProps) => {
                 )}
                 <button
                   disabled={Object.keys(errors).length > 0 || loading}
-                  className={`w-full m-1 sm:w-48 flex justify-around items-center py-1 bg-registerGreen text-black rounded-md px-2 cursor-pointer  ${
+                  className={`w-full mt-10 m-1 sm:w-48 flex justify-around items-center py-2 bg-registerGreen text-black rounded-md px-2 cursor-pointer  ${
                     Object.keys(errors).length > 0 ||
                     (loading && 'cursor-not-allowed')
                   }`}
                   type="submit"
                 >
-                  <span className="text-lg font-medium">
-                    {loading ? 'Please wait...' : 'REGISTER'}
+                  <span id="rewardId" className="text-lg font-medium">
+                    {loading ? 'Please wait...' : registerText}
                   </span>
                   <img src="../images/register_vector.png"></img>
                 </button>
@@ -150,6 +171,7 @@ const Register = ({ title, description, eventCover, slug }: EventProps) => {
           </Formik>
         </div>
       </div>
+      <div className='h-32'></div>
       <Footer />
     </div>
   )

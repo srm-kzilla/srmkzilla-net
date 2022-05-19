@@ -13,7 +13,12 @@ const Events = (props: EventType) => {
   return (
     <div className="bg-black overflow-hidden text-white">
       <Head>
-        <title>{title}</title>
+        <title>SRMKZILLA | { title}</title>
+        <meta
+          name="description"
+          content="SRMKZILLA is a community of young tech enthusiasts who eat, sleep and breath technology. We organize everything from technical workshops to gaming events, you name it & we do it. "
+        />
+        <link rel="icon" href="./images/kzillalogo.png" />
       </Head>
 
       <div className="min-h-screen">
