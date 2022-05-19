@@ -1,10 +1,13 @@
 import { EventType } from '@pages/events'
 import React from 'react'
+const Fade = require('react-reveal/Fade')
+
 const EventTimeline = ({ event }: { event: EventType }) => {
   const { timeline } = event
   return (
-    <div className="text-white ">
-      <h1 className="text-3xl sm:text-5xl text-center font-semibold mt-10">
+    <Fade up>
+    <div className="text-white mt-16 lg:mt-0">
+      <h1 className="text-6xl sm:text-6xl text-center font-semibold  mb-24">
         Timeline
       </h1>
       <ul className="md:m-4 flex w-full flex-col md:flex-row gap-8 lg:gap-16">
@@ -22,7 +25,8 @@ const EventTimeline = ({ event }: { event: EventType }) => {
             )
           })}
       </ul>
-    </div>
+      </div>
+      </Fade>
   )
 }
 export default EventTimeline

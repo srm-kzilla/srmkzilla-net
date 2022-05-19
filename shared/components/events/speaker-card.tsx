@@ -26,7 +26,7 @@ const SpeakerCard = ({ speaker }: { speaker: SpeakerType }) => {
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="w-max flex items-center justify-center p-4 rounded-2xl gap-4 my-4 transform hover:scale-105 duration-100 ease-linear"
+        className="w-max flex items-center justify-center p-3 rounded-2xl gap-4 my-4 transform hover:scale-105 duration-100 ease-linear"
         style={{ backgroundColor: color }}
       >
         {element({ size: 24 })}
@@ -36,29 +36,31 @@ const SpeakerCard = ({ speaker }: { speaker: SpeakerType }) => {
   }
 
   return (
-    <div className="bg-black-200 bg-opacity-95 p-6 rounded-xl xl:mx-12 mb-10 shadow-box flex flex-col md:flex-row text-left relative w-full items- justify-between mx-auto">
-      <div>
-        <h1 className="text-white text-center md:text-left text-3xl sm:text-5xl  font-medium mt-5">
-          {name}
-        </h1>
-        <p className="text-white font-light md:pr-8 mt-3 md:max-w-xl">
-          {about}
-        </p>
-        <div className="h-24"></div>
-        <div className="flex md:absolute bottom-6 gap-4 mx-auto justify-center md:justify-start">
-          {linkedIn && <LinkElement link={linkedIn} {...social.linkedIn} />}
-          {githubLink && <LinkElement link={githubLink} {...social.github} />}
-          {email && <LinkElement link={`mailto:${email}`} {...social.mail} />}
-        </div>
-      </div>
-      {image && (
+    <div className="bg-black-200 bg-opacity-95 p-4 rounded-xl xl:mx-12 mb-10 shadow-box flex flex-col md:flex-row text-left relative w-full items- justify-between mx-auto  ">
+     
+       {image && (
         <img
-          className="h-full object-cover rounded-xl overflow-hidden w-96 mx-auto"
+          className="h-full object-cover rounded-xl overflow-hidden w-64 mx-auto "
           draggable={false}
           src={image}
           alt="card-image"
         />
-      )}
+      ) }
+      <div className='md:pl-10'>
+        <h1 className="text-white text-center md:text-left text-3xl sm:text-3xl  font-medium mt-5">
+          {name}
+        </h1>
+        <p className="text-white font-light md:pr-8 mt-3 max-w-xs md:max-w-xl">
+          {about}
+        </p>
+        <div className="h-10 md:h-32"></div>
+        <div className="grid md:absolute bottom-6 gap-3 grid-cols-2 md:grid-cols-3 md:gap-4 mx-auto justify-center md:justify-start">
+        <div>  {linkedIn && <LinkElement link={linkedIn} {...social.linkedIn} />}</div>
+         <div>     {githubLink && <LinkElement link={githubLink} {...social.github} />}</div>
+          <div>    {email && <LinkElement link={`mailto:${email}`} {...social.mail} />}</div>
+        </div>
+      </div>
+    
     </div>
   )
 }

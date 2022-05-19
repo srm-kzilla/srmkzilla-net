@@ -24,7 +24,7 @@ const Events = (props: EventType) => {
           draggable={false}
         />
         <div className="flex flex-col md:flex-row items-center justify-center w-full">
-          <div className="w-full lg:w-11/12 flex md:items-start items-center md:mx-0 justify-center md:justify-start flex-col z-10  md:px-12 px-5 md:mt-28 mt-16 lg:mt-32 mx-10">
+          <div className="mt-10 sm:mt-32 lg:mt-0 w-full lg:w-11/12 flex md:items-start items-center md:mx-0 justify-center md:justify-start flex-col z-10  md:px-12 px-5 mx-10">
             <EventDetails event={props} />
             {props.timeline.length > 0 && <EventTimeline event={props} />}
             {props.speakers.length > 0 && <SpeakerPage event={props} />}

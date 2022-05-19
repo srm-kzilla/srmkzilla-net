@@ -5,7 +5,7 @@ import TiltCard from '@shared/components/events/tilt-card'
 const EventDetails = (props: { event: EventType }) => {
   const { title, tagline, description, slug, eventCover } = props.event
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center md:gap-14 lg:gap-24">
+    <div className=" h-screen flex flex-col md:flex-row items-center justify-center md:gap-14 lg:gap-24">
       <div className="w-full md:w-1/2">
         <div className="mb-4 text-center md:text-left">
           <h1 className="text-3xl sm:text-5xl  font-semibold mt-10">{title}</h1>
