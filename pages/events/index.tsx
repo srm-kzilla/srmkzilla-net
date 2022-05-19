@@ -48,10 +48,11 @@ const Events = ({ featuredEvents }: EventsProps) => {
         <link rel="icon" href="./images/kzillalogo.png" />
       </Head>
       <img
-        src="./images/events-bg.png"
+        src="./images/events-cover-2.jpeg"
         alt="background"
-        draggable={false}
-        className=" opacity-40 rounded-xl xl:h-screen h-screen object-cover "
+        draggable={ false }
+        style={{ filter: 'blur(2px)' }}
+        className=" opacity-60 rounded-xl xl:h-screen h-screen w-screen object-cover "
       />
       <div className='absolute left-0 pl-10 md:pl-32 top-1/3 text-left'>
         <h1 className='text-6xl uppercase'>Events</h1>
