@@ -1,13 +1,11 @@
-import React from 'react'
-import Head from 'next/head'
-import { motion, useViewportScroll, useTransform } from 'framer-motion'
-
 import Footer from '@shared/components/footer'
-import Navbar from '@shared/components/navbar'
+import Collaborate from '@shared/components/services/collaborate'
 import Stats from '@shared/components/services/numbers'
 import ServicesProvided from '@shared/components/services/servicesprovided'
-import Collaborate from '@shared/components/services/collaborate'
 import Testimonials from '@shared/components/services/testimonals'
+import { motion, useTransform, useViewportScroll } from 'framer-motion'
+import Head from 'next/head'
+import React from 'react'
 
 const Fade = require('react-reveal/Fade')
 
@@ -25,7 +23,7 @@ const Services = () => {
         />
         <link rel="icon preload canonical" href="./images/kzillalogo.png" />
       </Head>
-      <Navbar />
+
       <div className="h-screen bg-black-200 bg-light bg-fixed md:pt-40 pt-28 overflow-hidden px-5">
         <h1 className="text-center text-white font-medium text-6xl md:text-7xl relative z-30 hidden md:block">
           Our Services

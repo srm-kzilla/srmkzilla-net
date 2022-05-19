@@ -1,13 +1,11 @@
-import React from 'react'
-import Head from 'next/head'
-const Fade = require('react-reveal/Fade')
-
-import Navbar from '@shared/components/navbar'
+import { CARDS } from '@lib/data/about'
+import { getTimeline } from '@lib/sanity-api'
 import SwipeCard from '@shared/components/about/swipe-cards'
 import { LeftTimeline, RightTimeline } from '@shared/components/about/timeline'
 import Footer from '@shared/components/footer'
-import { getTimeline } from '@lib/sanity-api'
-import { CARDS } from '@lib/data/about'
+import Head from 'next/head'
+import React from 'react'
+const Fade = require('react-reveal/Fade')
 
 const AboutUs = ({ timelineData }) => {
   return (
@@ -20,8 +18,6 @@ const AboutUs = ({ timelineData }) => {
         />
         <link rel="icon preload canonical" href="./images/kzillalogo.png" />
       </Head>
-      <Navbar />
-
       <div className="md:mt-12">
         <div className="md:h-screen h-auto items-center flex justify-center">
           <div className="md:h-3/4 h-full sm:w-10/12 w-full md:mb-16 mb-8 rounded-none md:rounded-xl overflow-hidden">

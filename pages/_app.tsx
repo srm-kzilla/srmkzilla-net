@@ -1,3 +1,4 @@
+import Navbar from '@shared/components/navbar'
 import { AppProps } from 'next/dist/next-server/lib/router/router'
 import Head from 'next/head'
 import '../styles/globals.css'
@@ -70,6 +71,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             }}
           />
         </Head>
+        <Navbar />
         <Component {...pageProps} />
       </html>
     </div>

@@ -78,13 +78,18 @@ const Navbar = () => {
                   Projects
                 </p>
               </Link>
+              <Link href="/events">
+                <p className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent">
+                  Events
+                </p>
+              </Link>
               <Dropdown
                 name="What's New?"
                 class="absolute md:left-96 md:ml-10 ml-14 md:my-12 md:mx-10 md:top-3 py-2 w-48 rounded-md shadow-md bg-black-200 cursor-pointer"
                 items={[
                   {
                     label: 'Events',
-                    link: 'https://events.srmkzilla.net/',
+                    link: 'https://srmkzilla.net/events',
                     newTab: true,
                   },
                   {

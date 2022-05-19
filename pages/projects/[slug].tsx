@@ -2,7 +2,6 @@ import React from 'react'
 import Head from 'next/head'
 import InstagramEmbed from 'react-instagram-embed'
 import Tilt from 'react-parallax-tilt'
-import Navbar from '../../shared/components/navbar'
 import Footer from '../../shared/components/footer'
 import * as BlockContent from '@sanity/block-content-to-react'
 const Fade = require('react-reveal/Fade')
@@ -42,7 +41,6 @@ const Project = ({
       </Head>
 
       <div className="xl:h-screen h-auto">
-        <Navbar />
         <img
           className="absolute top-0 right-0 xl:h-screen h-2/4 z-0"
           src="../images/projectbg.png"
