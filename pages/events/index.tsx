@@ -56,8 +56,31 @@ const Events = ({ featuredEvents }: EventsProps) => {
       <div className='absolute left-0 pl-10 md:pl-32 top-1/3 text-left'>
         <h1 className='text-6xl uppercase'>Events</h1>
         <p className='text-xl font-light	mt-4 max-w-2xl'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis mauris in nulla molestie, id euismod est aliquet. Donec pretium lacus id nisi congue imperdiet. </p>
+   
+      </div>
+      <div className='mt-6 animate-bounce absolute bottom-6 right-1/2 cursor-pointer' onClick={ () =>
+      {
+          window.scrollTo({
+                    top: window.innerHeight,
+                    behavior: 'smooth',
+                  })
+      }}>
+         <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  className="w-12 h-12"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M19 13l-7 7-7-7m14-8l-7 7-7-7"
+                  />{" "}
+                </svg>
         </div>
-      <WhatsNew cardContent={featuredEvents} />
+      <WhatsNew cardContent={ featuredEvents } />
       {/* <FeaturedEvents cardContent={featuredEvents} /> */}
       <Footer />
     </div>
