@@ -63,6 +63,9 @@ const Register = ({ title, description, eventCover, slug }: EventProps) => {
           }
         )
         reward()
+        setTimeout(() => {
+          Router.push('/')
+        }, 2000)
       } else if (registerUser.status === 502) {
         toast.warn(
           'Easy enthusiastic soldier, you have already been registered!'
