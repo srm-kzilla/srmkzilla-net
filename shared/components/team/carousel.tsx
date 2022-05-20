@@ -6,9 +6,9 @@ const NewCarousel = () => {
   return (
     <div>
       <Carousel enableAutoPlay autoPlaySpeed={30000} isRTL={false}>
-        {alumniReviews.map((item) => {
+        {alumniReviews.map((item, idx) => {
           return (
-            <div>
+            <div key={idx}>
               <div className="relative mx-auto bg-black-100 md:w-2/4 w-10/12 rounded-xl pb-14  pt-24">
                 <img
                   className="absolute top-7 left-1/2 transform -translate-x-1/2"

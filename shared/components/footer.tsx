@@ -3,7 +3,7 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaDiscord } from 'react-icons/fa'
 import { FiInstagram, FiMail } from 'react-icons/fi'
 import { IoCall } from 'react-icons/io5'
 import { BsArrowLeft } from 'react-icons/bs'
-import { RiDiscordLine } from "react-icons/ri"
+import { RiDiscordLine } from 'react-icons/ri'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
@@ -12,12 +12,12 @@ const Footer = () => {
   return (
     <div
       className={`${
-        path === '/'
+        path === '/events' || path === '/'
           ? 'lg:bg-home-footer bg-home-mobile'
           : 'lg:bg-footer-pattern bg-mobile-footer-pattern'
       } relative bg-cover`}
     >
-      {path != '/' && (
+      {path != '/' && path != '/events' && (
         <div className="absolute w-full h-1 bg-black top-0"></div>
       )}
       <div
@@ -36,7 +36,7 @@ const Footer = () => {
       </div>
       <div className="relative">
         <div className="absolute flex text-white md:text-2xl text-xl md:top-20 md:bottom-auto top-auto bottom-24 right-1/2 transform translate-x-1/2 md:translate-x-0 md:right-16">
-        <a
+          <a
             rel="noopener noreferrer"
             href="https://community.srmkzilla.net"
             target="_blank"
