@@ -48,10 +48,10 @@ const Events = ({ featuredEvents }: EventsProps) => {
         <link rel="icon" href="./images/kzillalogo.png" />
       </Head>
       <img
-        src="./images/events-cover-2.jpeg"
+        src="./images/events-cover-3.jpeg"
         alt="background"
         draggable={ false }
-        style={{ filter: 'blur(2px)' }}
+        style={{ filter: 'blur(4px)' }}
         className=" opacity-60 rounded-xl xl:h-screen h-screen w-screen object-cover "
       />
       <div className='absolute left-0 pl-10 md:pl-32 top-1/3 text-left'>
@@ -59,13 +59,14 @@ const Events = ({ featuredEvents }: EventsProps) => {
         <p className='text-xl font-light	mt-4 max-w-2xl'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis mauris in nulla molestie, id euismod est aliquet. Donec pretium lacus id nisi congue imperdiet. </p>
    
       </div>
-      <div className='mt-6 animate-bounce absolute bottom-6 right-1/2 cursor-pointer' onClick={ () =>
+      <div className='mt-6 animate-bounce absolute bottom-6  w-full object-center cursor-pointer' onClick={ () =>
       {
           window.scrollTo({
                     top: window.innerHeight,
                     behavior: 'smooth',
                   })
-      }}>
+      } }>
+        <span className='flex justify-center'>
          <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -79,7 +80,8 @@ const Events = ({ featuredEvents }: EventsProps) => {
                     strokeWidth="2"
                     d="M19 13l-7 7-7-7m14-8l-7 7-7-7"
                   />{" "}
-                </svg>
+          </svg>
+          </span>
         </div>
       <WhatsNew cardContent={ featuredEvents } />
       {/* <FeaturedEvents cardContent={featuredEvents} /> */}

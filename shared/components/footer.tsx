@@ -7,17 +7,19 @@ import { RiDiscordLine } from "react-icons/ri"
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
-const Footer = () => {
+const Footer = () =>
+{
   const { pathname: path } = useRouter()
+  console.log(path)
   return (
     <div
       className={`${
-        path === '/'
+        path === '/events' || path === '/'
           ? 'lg:bg-home-footer bg-home-mobile'
           : 'lg:bg-footer-pattern bg-mobile-footer-pattern'
       } relative bg-cover`}
     >
-      {path != '/' && (
+      {path != '/' && path!='/events' && (
         <div className="absolute w-full h-1 bg-black top-0"></div>
       )}
       <div

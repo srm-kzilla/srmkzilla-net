@@ -26,7 +26,7 @@ const SpeakerCard = ({ speaker }: { speaker: SpeakerType }) => {
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="w-max flex items-center justify-center p-3 rounded-2xl gap-4 my-4 transform hover:scale-105 duration-100 ease-linear"
+        className="w-26 md:w-42 flex items-center justify-center p-3 rounded-2xl gap-4 my-0 transform hover:scale-105 duration-100 ease-linear"
         style={{ backgroundColor: color }}
       >
         {element({ size: 24 })}
@@ -54,7 +54,7 @@ const SpeakerCard = ({ speaker }: { speaker: SpeakerType }) => {
           {about}
         </p>
         <div className="h-10 md:h-32"></div>
-        <div className="grid md:absolute bottom-6 gap-3 grid-cols-2 md:grid-cols-3 md:gap-4 mx-auto justify-center md:justify-start">
+        <div className="grid md:absolute bottom-6 gap-3 grid-cols-2 md:grid-cols-3 md:gap-4 mx-auto justify-center md:justify-start mb-4 md:mb-0">
         <div>  {linkedIn && <LinkElement link={linkedIn} {...social.linkedIn} />}</div>
          <div>     {githubLink && <LinkElement link={githubLink} {...social.github} />}</div>
           <div>    {email && <LinkElement link={`mailto:${email}`} {...social.mail} />}</div>
