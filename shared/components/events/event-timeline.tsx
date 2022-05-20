@@ -1,56 +1,55 @@
 import { EventType } from '@pages/events'
 import React from 'react'
 const Fade = require('react-reveal/Fade')
-import { Chrono } from "react-chrono";
+import { Chrono } from 'react-chrono'
 
 const EventTimeline = ({ event }: { event: EventType }) => {
   const { timeline } = event
-  const arrangeChronoData = () =>
-  {
-    const newArray = timeline.map( ( e, i ) =>
-    {
+  const arrangeChronoData = () => {
+    const newArray = timeline.map((e, i) => {
       return {
         cardDetailedText: e.description,
-        cardTitle: e.title ,
-        title: e.date
+        cardTitle: e.title,
+        title: e.date,
       }
-    } )
-    return newArray;
+    })
+    return newArray
   }
   return (
     <Fade up>
-    <div className="mx-auto md:mt-16 mt-0">
-      <h1 className="text-6xl sm:text-6xl font-semibold mt-10 mx-auto text-center md:mb-20 mb-20">
-        Timeline
-      </h1>
-      <ul className="md:m-4 flex w-full flex-col md:flex-row gap-8 lg:gap-16">
-        {timeline &&
+      <div className="mx-auto md:mt-16 mt-0">
+        <h1 className="text-6xl sm:text-6xl font-semibold mt-10 mx-auto text-center md:mb-20 mb-20">
+          Timeline
+        </h1>
+        <ul className="md:m-4 flex w-full flex-col md:flex-row gap-8 lg:gap-16">
+          {timeline && (
             <Chrono
-            items={ arrangeChronoData() }
-            mode="VERTICAL_ALTERNATING"
-            disableNavOnKey
-            useReadMore={ true }
-            scrollable={false}
-            hideControls
-            borderLessCards = {true}
-            disableClickOnCircle
-            cardHeight={"160"}
-            fontSizes={ {
+              items={arrangeChronoData()}
+              mode="VERTICAL_ALTERNATING"
+              disableNavOnKey
+              useReadMore={true}
+              scrollable={false}
+              hideControls
+              borderLessCards={true}
+              disableClickOnCircle
+              cardHeight={160}
+              fontSizes={{
                 cardSubtitle: '1.6rem',
                 cardText: '1rem',
                 cardTitle: '1.4rem',
-                }}
+              }}
               theme={{
-                primary: "white",
-                secondary:  "#FF644E",
-                cardBgColor: "#151319",
-                cardForeColor: "white",
-                titleColor:"white",
-              }} />
-}
-      </ul>
+                primary: 'white',
+                secondary: '#FF644E',
+                cardBgColor: '#151319',
+                cardForeColor: 'white',
+                titleColor: 'white',
+              }}
+            />
+          )}
+        </ul>
       </div>
-      </Fade>
+    </Fade>
   )
 }
 export default EventTimeline

@@ -42,7 +42,10 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      borderColor: ['active', 'focus'],
+      backgroundColor: ['active', 'focus'],
+    },
   },
   plugins: [],
 }

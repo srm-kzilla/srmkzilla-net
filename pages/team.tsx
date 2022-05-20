@@ -28,8 +28,8 @@ const Team = ({ teamMembers }) => {
           </h3>
         </div>
         <div className=" text-white rounded-2xl pt-8 px-1  md:p-10 bg-black-200  md:mx-20 mx-5">
-          {DOMAINS.map((domain) => (
-            <div className="mb-10 mt-20">
+          {DOMAINS.map((domain, idx) => (
+            <div className="mb-10 mt-20" key={idx}>
               <div className="mx-5 lg:mx-36">
                 <hr
                   className="text-center uppercase hr-text text-3xl md:text-4xl font-bold pb-10"
