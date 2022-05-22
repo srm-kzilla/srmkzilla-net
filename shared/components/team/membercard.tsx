@@ -1,13 +1,5 @@
 import React, { useState } from 'react'
 import Player from './player'
-import imageUrlBuilder from '@sanity/image-url'
-import sanityClient from '../../client'
-
-// Get a pre-configured url-builder from your sanity client
-const builder = imageUrlBuilder(sanityClient)
-function urlFor(source) {
-  return builder.image(source)
-}
 
 interface cardProps {
   audiourl: string
@@ -44,8 +36,8 @@ const MemberCard = (props: cardProps) => {
       </div>
 
       <img
-        className="w-44 hover:w-76 z-0 rounded-full p-5  transition duration-500 ease-in-out  transform hover:-translate-y-1 hover:scale-110 "
-        src={urlFor(props.src).width(200).height(200).url()}
+        className="w-44 hover:w-76 z-0 rounded-full p-5  transition duration-500 ease-in-out  transform hover:-translate-y-1 hover:scale-110"
+        src={props.src}
         alt="team member avatar"
         draggable={false}
       />
