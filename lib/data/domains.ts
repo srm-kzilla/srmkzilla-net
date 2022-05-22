@@ -12,15 +12,11 @@ export const DOMAINS = [
     desc: 'We add purpose to pixels',
   },
   {
-    name: 'Sponsorship',
+    name: 'Corporate',
     desc: 'We got the vault and the deals',
   },
   {
     name: 'Events',
     desc: 'We set the stage, mic drop',
-  },
-  {
-    name: 'Growth',
-    desc: 'Keep em soaring',
   },
 ]
