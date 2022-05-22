@@ -85,7 +85,7 @@ const Navbar = () => {
               </Link>
               <Dropdown
                 name="What's New?"
-                class="absolute md:left-96 md:ml-10 ml-14 md:my-12 md:mx-10 md:top-3 py-2 w-48 rounded-md shadow-md bg-black-200 cursor-pointer"
+                class="absolute md:left-100 md:ml-10 ml-14 md:my-12 md:mx-10 md:top-3 py-2 w-48 rounded-md shadow-md bg-black-200 cursor-pointer"
                 items={[
                   {
                     label: 'Events',
