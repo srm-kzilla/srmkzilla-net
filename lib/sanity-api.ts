@@ -32,6 +32,7 @@ export const getTeamMembers = async () => {
             _id,
             url
           },
+          hotspot,
           alt
         },
         description{
