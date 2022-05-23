@@ -1,13 +1,13 @@
 import { Field, Form, Formik } from 'formik'
 import Head from 'next/head'
 import Router from 'next/router'
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Footer from '../shared/components/footer'
 import { getEvent, register } from '../utils/api'
 import { registerFormData, registerValidationSchema } from '../utils/schema'
-import { useReward } from 'react-rewards';
+import { useReward } from 'react-rewards'
 
 type EventProps = {
   title: string
@@ -21,10 +21,9 @@ type EventProps = {
   err?: string
 }
 
-const Register = ( { title, description, eventCover, slug }: EventProps ) =>
-{
-  const { reward, isAnimating } = useReward('rewardId', 'confetti');
-  const [ registerText, setRegisterText ] = useState( "REGISTER" );
+const Register = ({ title, description, eventCover, slug }: EventProps) => {
+  const { reward, isAnimating } = useReward('rewardId', 'confetti')
+  const [registerText, setRegisterText] = useState('REGISTER')
   const FieldClass =
     'border-b-2 border-white bg-transparent placeholder-gray-500 text-right font-normal focus:outline-none xl:w-72 p-3 font-subHeading'
 
@@ -50,32 +49,34 @@ const Register = ( { title, description, eventCover, slug }: EventProps ) =>
       }
       const registerUser = await register(postData)
       if (registerUser.status == 201) {
-        setLoading( false );
-        setRegisterText("REGISTERED");
-        toast.success('Wohoooo, you have been registered successfully, Check your email!', {
-          position: "top-right",
-          autoClose: 10000,
-          hideProgressBar: false,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        } )
+        setLoading(false)
+        setRegisterText('REGISTERED')
+        toast.success(
+          'Wohoooo, you have been registered successfully, Check your email!',
+          {
+            position: 'top-right',
+            autoClose: 10000,
+            hideProgressBar: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          }
+        )
         reward()
-
-      } else if(registerUser.status===502) {
-        toast.warn('Easy enthusiastic soldier, you have already been registered!')
-        setLoading( false )
-
+      } else if (registerUser.status === 502) {
+        toast.warn(
+          'Easy enthusiastic soldier, you have already been registered!'
+        )
+        setLoading(false)
       }
     } catch (error) {
       toast.warn('Oops, Something went wrong! Refresh the page and contact us.')
-      setLoading( false )
-
+      setLoading(false)
     }
   }
   return (
     <div className="bg-black overflow-hidden">
-       <Head>
+      <Head>
         <title>SRMKZILLA | Register</title>
         <meta
           name="description"
@@ -84,27 +85,24 @@ const Register = ( { title, description, eventCover, slug }: EventProps ) =>
         <link rel="icon" href="./images/kzillalogo.png" />
       </Head>
       <ToastContainer />
-        <img
-          className="bg-opacity-40 absolute top-0 left-0 xl:h-screen h-2/4 z-0"
-          src="../images/projectbg-alt.png"
-          alt="background"
-          draggable={false}
-        />
+      <img
+        className="bg-opacity-40 absolute top-0 left-0 xl:h-screen h-2/4 z-0"
+        src="../images/projectbg-alt.png"
+        alt="background"
+        draggable={false}
+      />
       <div className="relative h-screen max-h-screen text-white">
-      
         <div className="z-20 h-full absolute inset-0 flex flex-col md:flex-row items-center justify-center gap-24 p-4 md:p-8 max-w-6xl mx-auto pt-72 md:pt-10 ">
           <div className="pr-0 md:pr-0">
             <h1 className="text-white  w-full text-center text-4xl  font-bold py-2 mb-6 lg:text-5xl ">
               {title}
             </h1>
 
-            <h4 className="w-full  text-white text-lg font-thin text-center lg:text-base  sm:font-light">
+            <h4 className="w-full  text-white text-lg font-thin lg:text-base  sm:font-light">
               {description}
             </h4>
-            
           </div>
 
-          
           <Formik
             initialValues={initialValues}
             onSubmit={handleSubmit}
@@ -171,7 +169,7 @@ const Register = ( { title, description, eventCover, slug }: EventProps ) =>
           </Formik>
         </div>
       </div>
-      <div className='h-32'></div>
+      <div className="h-32"></div>
       <Footer />
     </div>
   )

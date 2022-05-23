@@ -38,7 +38,6 @@ const SpeakerCard = ({ speaker }: { speaker: SpeakerType }) => {
   return (
     <div className="bg-black-200 bg-opacity-95 p-4 rounded-xl xl:mx-12 mb-10 shadow-box flex flex-col md:flex-row text-left relative w-full items- justify-between mx-auto  ">
       <div>
-        {' '}
         {image && (
           <img
             className="h-full object-cover rounded-xl overflow-hidden w-64 mx-auto "
@@ -58,15 +57,12 @@ const SpeakerCard = ({ speaker }: { speaker: SpeakerType }) => {
         <div className="h-10 md:h-32"></div>
         <div className="grid md:absolute bottom-6 gap-3 grid-cols-2 md:grid-cols-3 md:gap-4 mx-auto justify-center md:justify-start">
           <div>
-            {' '}
             {linkedIn && <LinkElement link={linkedIn} {...social.linkedIn} />}
           </div>
           <div>
-            {' '}
             {githubLink && <LinkElement link={githubLink} {...social.github} />}
           </div>
           <div>
-            {' '}
             {email && <LinkElement link={`mailto:${email}`} {...social.mail} />}
           </div>
         </div>
