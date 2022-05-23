@@ -144,8 +144,8 @@ const Project = ({
           </h1>
           <div className="flex flex-wrap items-center justify-center px-24">
             {techstack &&
-              techstack.map((tech: any) => (
-                <div className="mx-5 my-5">
+              techstack.map((tech: any, idx) => (
+                <div className="mx-5 my-5" key={idx}>
                   <img
                     src={`/images/tech_stack/${tech}.png`}
                     draggable={false}

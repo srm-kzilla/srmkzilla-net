@@ -25,7 +25,7 @@ const Register = ({ title, description, eventCover, slug }: EventProps) => {
   const { reward, isAnimating } = useReward('rewardId', 'confetti')
   const [registerText, setRegisterText] = useState('REGISTER')
   const FieldClass =
-    'border-b-2 border-white bg-transparent placeholder-gray-500 text-right font-normal focus:outline-none xl:w-72 p-3 font-subHeading'
+    'border-b-2 border-white bg-transparent placeholder-gray-500 text-right font-normal focus:outline-none xl:w-72 p-3 font-subHeading focus:border-green-500 focus:bg-black-100 bg-gray-900 bg-opacity-10 '
 
   const [loading, setLoading] = React.useState<boolean>(false)
   const initialValues: registerFormData = {
@@ -63,6 +63,9 @@ const Register = ({ title, description, eventCover, slug }: EventProps) => {
           }
         )
         reward()
+        setTimeout(() => {
+          Router.push('/')
+        }, 2000)
       } else if (registerUser.status === 502) {
         toast.warn(
           'Easy enthusiastic soldier, you have already been registered!'
@@ -86,7 +89,7 @@ const Register = ({ title, description, eventCover, slug }: EventProps) => {
       </Head>
       <ToastContainer />
       <img
-        className="bg-opacity-40 absolute top-0 left-0 xl:h-screen h-2/4 z-0"
+        className="opacity-70 absolute top-0 left-0 xl:h-screen z-0 object-contain "
         src="../images/projectbg-alt.png"
         alt="background"
         draggable={false}
@@ -153,16 +156,16 @@ const Register = ({ title, description, eventCover, slug }: EventProps) => {
                 )}
                 <button
                   disabled={Object.keys(errors).length > 0 || loading}
-                  className={`w-full mt-10 m-1 sm:w-48 flex justify-around items-center py-2 bg-registerGreen text-black rounded-md px-2 cursor-pointer  ${
+                  className={`mt-10 m-1 sm:w-36 w-36 flex justify-around items-center py-2 bg-registerGreen text-black rounded-md px-2 cursor-pointer  ${
                     Object.keys(errors).length > 0 ||
                     (loading && 'cursor-not-allowed')
                   }`}
                   type="submit"
                 >
+                  <img src="../images/register_vector.png"></img>
                   <span id="rewardId" className="text-lg font-medium">
                     {loading ? 'Please wait...' : registerText}
                   </span>
-                  <img src="../images/register_vector.png"></img>
                 </button>
               </Form>
             )}

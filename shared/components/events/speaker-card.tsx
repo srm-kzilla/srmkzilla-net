@@ -26,7 +26,7 @@ const SpeakerCard = ({ speaker }: { speaker: SpeakerType }) => {
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="w-max flex items-center justify-center px-5 py-3 rounded-3xl gap-3 my-4 transform hover:scale-105 duration-100 ease-linear"
+        className="w-26 md:w-42 flex items-center justify-center p-3 rounded-2xl gap-4 my-0 transform hover:scale-105 duration-100 ease-linear"
         style={{ backgroundColor: color }}
       >
         {element({ size: 24 })}
