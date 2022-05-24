@@ -5,10 +5,12 @@ import { Chrono } from 'react-chrono'
 
 const EventTimeline = ({ event }: { event: EventType }) => {
   const { timeline } = event
+  console.log(timeline.map((e) => e.description.split('\n')))
+
   const arrangeChronoData = () => {
     const newArray = timeline.map((e, i) => {
       return {
-        cardDetailedText: e.description,
+        cardDetailedText: [...e.description.split('\n'), ''],
         cardTitle: e.title,
         title: e.date,
       }
@@ -17,7 +19,7 @@ const EventTimeline = ({ event }: { event: EventType }) => {
   }
   return (
     <Fade up>
-      <div className="mx-auto md:mt-16 mt-0">
+      <div className="mx-auto md:mt-16 mt-0 md:w-4/6">
         <h1 className="text-6xl sm:text-6xl font-semibold mt-10 mx-auto text-center md:mb-20 mb-20">
           Timeline
         </h1>
@@ -34,9 +36,9 @@ const EventTimeline = ({ event }: { event: EventType }) => {
               disableClickOnCircle
               cardHeight={160}
               fontSizes={{
-                cardSubtitle: '1.6rem',
-                cardText: '1rem',
-                cardTitle: '1.4rem',
+                cardSubtitle: '1.3rem',
+                cardText: '0.9rem',
+                cardTitle: '1.2rem',
               }}
               theme={{
                 primary: 'white',

@@ -169,4 +169,8 @@ input[data-autocompleted] {
   background-color: transparent !important;
 }
 
+.show-less {
+  max-height: none !important;
+}
+
 @tailwind utilities;
