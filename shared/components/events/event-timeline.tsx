@@ -5,7 +5,6 @@ import { Chrono } from 'react-chrono'
 
 const EventTimeline = ({ event }: { event: EventType }) => {
   const { timeline } = event
-  console.log(timeline.map((e) => e.description.split('\n')))
 
   const arrangeChronoData = () => {
     const newArray = timeline.map((e, i) => {

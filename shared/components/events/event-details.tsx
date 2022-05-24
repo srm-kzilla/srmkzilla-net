@@ -9,7 +9,7 @@ const EventDetails = (props: { event: EventType }) => {
       <div className="w-full md:w-1/2">
         <div className="mb-4 text-center md:text-left">
           <h1 className="text-3xl sm:text-5xl  font-semibold mt-10">{title}</h1>
-          <h3>{tagline}</h3>
+          {/* <h3>{tagline}</h3> */}
           <p className="sm:text-xl mt-4 text-center md:text-left text-sm">
             {description}
           </p>

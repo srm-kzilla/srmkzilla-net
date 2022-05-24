@@ -19,13 +19,20 @@ type EventProps = {
   eventCover: string
   isCompleted: boolean
   err?: string
+  tagline: string
 }
 
-const Register = ({ title, description, eventCover, slug }: EventProps) => {
+const Register = ({
+  title,
+  description,
+  tagline,
+  eventCover,
+  slug,
+}: EventProps) => {
   const { reward, isAnimating } = useReward('rewardId', 'confetti')
   const [registerText, setRegisterText] = useState('REGISTER')
   const FieldClass =
-    'border-b-2 border-white bg-transparent placeholder-gray-500 md:text-right font-normal focus:outline-none xl:w-72 p-3 font-subHeading focus:border-green-500 focus:bg-black-100 bg-gray-900 bg-opacity-10 '
+    'border-b-2 border-white bg-transparent placeholder-gray-500 md:text-right font-normal focus:outline-none xl:w-96 p-3 font-subHeading focus:border-green-500 focus:bg-black-100 bg-gray-900 bg-opacity-10 w-full'
 
   const [loading, setLoading] = React.useState<boolean>(false)
   const initialValues: registerFormData = {
@@ -64,7 +71,7 @@ const Register = ({ title, description, eventCover, slug }: EventProps) => {
         )
         reward()
         setTimeout(() => {
-          Router.push('/')
+          Router.push('/events')
         }, 2000)
       } else if (registerUser.status === 502) {
         toast.warn(
@@ -95,15 +102,21 @@ const Register = ({ title, description, eventCover, slug }: EventProps) => {
         draggable={false}
       />
       <div className="relative h-screen max-h-screen text-white">
-        <div className="z-20 h-full absolute inset-0 flex flex-col md:flex-row items-center justify-center gap-24 p-4 md:p-8 max-w-6xl mx-auto pt-72 md:pt-10 ">
-          <div className="pr-0 md:pr-0">
+        <div className="z-20 h-full absolute inset-0 flex flex-col md:flex-row items-center justify-center gap-24 p-4 md:p-8 max-w-7xl mx-auto pt-72 md:pt-10 ">
+          <div className="pr-0 md:pr-0 max-w-xl">
             <h1 className="text-white  w-full text-center text-4xl  font-bold py-2 mb-6 lg:text-5xl ">
               {title}
             </h1>
 
             <h4 className="w-full  text-white text-lg font-thin lg:text-base  sm:font-light">
-              {description}
+              {tagline}
             </h4>
+            <br />
+            <br />
+            <p>
+              Join us for a thrilling adventure in the multiverse of IoT.
+              Register below to boggle your mind up like never before!
+            </p>
           </div>
 
           <Formik
@@ -113,7 +126,7 @@ const Register = ({ title, description, eventCover, slug }: EventProps) => {
             enableReinitialize
           >
             {({ errors, touched }) => (
-              <Form className="flex flex-col gap-y-4 mr-auto md:mr-0 w-full md:w-auto ">
+              <Form className="flex flex-col gap-y-4 mr-auto md:mr-0 w-full xl:w-min">
                 <Field
                   className={FieldClass}
                   placeholder="What do we call you?"
@@ -125,7 +138,7 @@ const Register = ({ title, description, eventCover, slug }: EventProps) => {
                 )}
                 <Field
                   className={FieldClass}
-                  placeholder="Won't spam your mail section either, but your mail id is"
+                  placeholder="Your mail id (no spam🤞)"
                   name="email"
                   type="email"
                 />
@@ -156,7 +169,7 @@ const Register = ({ title, description, eventCover, slug }: EventProps) => {
                 )}
                 <button
                   disabled={Object.keys(errors).length > 0 || loading}
-                  className={`mt-10 m-1 sm:w-36 w-36 flex justify-around items-center py-2 bg-registerGreen text-black rounded-md px-2 cursor-pointer  ${
+                  className={`mt-10 m-1  flex justify-center items-center py-2 bg-registerGreen text-black rounded-md px-2 cursor-pointer w-full xl:w-96 gap-6 ${
                     Object.keys(errors).length > 0 ||
                     (loading && 'cursor-not-allowed')
                   }`}
