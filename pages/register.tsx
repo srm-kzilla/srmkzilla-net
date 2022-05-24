@@ -25,7 +25,7 @@ const Register = ({ title, description, eventCover, slug }: EventProps) => {
   const { reward, isAnimating } = useReward('rewardId', 'confetti')
   const [registerText, setRegisterText] = useState('REGISTER')
   const FieldClass =
-    'border-b-2 border-white bg-transparent placeholder-gray-500 text-right font-normal focus:outline-none xl:w-72 p-3 font-subHeading focus:border-green-500 focus:bg-black-100 bg-gray-900 bg-opacity-10 '
+    'border-b-2 border-white bg-transparent placeholder-gray-500 md:text-right font-normal focus:outline-none xl:w-72 p-3 font-subHeading focus:border-green-500 focus:bg-black-100 bg-gray-900 bg-opacity-10 '
 
   const [loading, setLoading] = React.useState<boolean>(false)
   const initialValues: registerFormData = {
@@ -116,7 +116,7 @@ const Register = ({ title, description, eventCover, slug }: EventProps) => {
               <Form className="flex flex-col gap-y-4 mr-auto md:mr-0 w-full md:w-auto ">
                 <Field
                   className={FieldClass}
-                  placeholder="Full Name"
+                  placeholder="What do we call you?"
                   name="name"
                   type="text"
                 />
@@ -125,7 +125,7 @@ const Register = ({ title, description, eventCover, slug }: EventProps) => {
                 )}
                 <Field
                   className={FieldClass}
-                  placeholder="Email"
+                  placeholder="Won't spam your mail section either, but your mail id is"
                   name="email"
                   type="email"
                 />
@@ -145,7 +145,7 @@ const Register = ({ title, description, eventCover, slug }: EventProps) => {
                 )}
                 <Field
                   className={FieldClass}
-                  placeholder="Mobile Number"
+                  placeholder="Won't prank, but your cell number?"
                   name="phoneNumber"
                   type="text"
                 />

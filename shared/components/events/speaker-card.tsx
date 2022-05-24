@@ -1,13 +1,14 @@
 import { EventType, SpeakerType } from '@pages/events'
 import { motion } from 'framer-motion'
 import { AiFillLinkedin, AiFillGithub, AiFillMail } from 'react-icons/ai'
+import { FiMail } from 'react-icons/fi'
 
 const SpeakerCard = ({ speaker }: { speaker: SpeakerType }) => {
   const { image, name, about, linkedIn, githubLink, email } = speaker
   const social = {
     linkedIn: { color: '#0966c3', element: AiFillLinkedin, text: 'LinkedIn' },
     github: { color: '#161b22', element: AiFillGithub, text: 'GitHub' },
-    mail: { color: '#EA4335', element: AiFillMail, text: 'Mail' },
+    mail: { color: '#EA4335', element: FiMail, text: 'Mail' },
   }
 
   const LinkElement = ({
