@@ -54,38 +54,56 @@ const Navbar = () => {
           >
             <div className="flex bg-opacity-20 flex-col md:flex-row md:items-center mx-5">
               <Link href="/">
-                <p className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent">
+                <p
+                  onClick={() => setOpen(!open)}
+                  className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent"
+                >
                   Home
                 </p>
               </Link>
               <Link href="/about">
-                <p className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent">
+                <p
+                  onClick={() => setOpen(!open)}
+                  className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent"
+                >
                   About Us
                 </p>
               </Link>
               <Link href="/services">
-                <p className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent">
+                <p
+                  onClick={() => setOpen(!open)}
+                  className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent"
+                >
                   Our Services
                 </p>
               </Link>
               <Link href="/team">
-                <p className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent">
+                <p
+                  onClick={() => setOpen(!open)}
+                  className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent"
+                >
                   Team
                 </p>
               </Link>
               <Link href="/projects">
-                <p className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent">
+                <p
+                  onClick={() => setOpen(!open)}
+                  className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent"
+                >
                   Projects
                 </p>
               </Link>
               <Link href="/events">
-                <p className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent">
+                <p
+                  onClick={() => setOpen(!open)}
+                  className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent"
+                >
                   Events
                 </p>
               </Link>
               <Dropdown
                 name="What's New?"
-                class="absolute md:left-96 md:ml-10 ml-14 md:my-12 md:mx-10 md:top-3 py-2 w-48 rounded-md shadow-md bg-black-200 cursor-pointer"
+                class="absolute md:left-100 md:ml-10 ml-14 md:my-12 md:mx-10 md:top-3 py-2 w-48 rounded-md shadow-md bg-black-200 cursor-pointer"
                 items={[
                   {
                     label: 'Events',
