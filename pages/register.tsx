@@ -20,6 +20,7 @@ type EventProps = {
   isCompleted: boolean
   err?: string
   tagline: string
+  isRegClosed:boolean
 }
 
 const Register = ({
@@ -28,6 +29,7 @@ const Register = ({
   tagline,
   eventCover,
   slug,
+  isRegClosed
 }: EventProps) => {
   const { reward, isAnimating } = useReward('rewardId', 'confetti')
   const [registerText, setRegisterText] = useState('REGISTER')
@@ -96,13 +98,34 @@ const Register = ({
       </Head>
       <ToastContainer />
       <img
-        className="opacity-70 absolute top-0 left-0 xl:h-screen z-0 object-contain "
+        className="opacity-60 absolute top-0 left-0 xl:h-screen z-0 object-contain "
         src="../images/projectbg-alt.png"
         alt="background"
         draggable={false}
       />
       <div className="relative h-screen max-h-screen text-white">
-        <div className="z-20 h-full absolute inset-0 flex flex-col md:flex-row items-center justify-center gap-24 p-4 md:p-8 max-w-7xl mx-auto pt-72 md:pt-10 ">
+        { isRegClosed
+          ?
+          <div className="z-20 h-full absolute inset-0 flex flex-col md:flex-row items-center justify-center gap-24 p-4 md:p-8 max-w-7xl mx-auto pt-72 md:pt-10 ">
+          <div className="pr-0 md:pr-0 max-w-xl">
+            <h1 className="text-white  w-full text-center text-4xl  font-bold py-2 mb-6 lg:text-5xl ">
+              {title}
+            </h1>
+
+            <h4 className="w-full  text-white text-lg font-thin lg:text-base  sm:font-light">
+             The registrations for this event have been closed. If you have already registered, we'll be sending you an RSVP email shortly. If you were unable to Register, fret not. We have many more events in the pipeline
+            </h4>
+            <br />
+            <br />
+            <p>
+              If you are facing any issues, contact @SRMKZILLA on Instagram or email us!
+            </p>
+          </div>
+
+         
+        </div>
+          :
+          <div className="z-20 h-full absolute inset-0 flex flex-col md:flex-row items-center justify-center gap-24 p-4 md:p-8 max-w-7xl mx-auto pt-72 md:pt-10 ">
           <div className="pr-0 md:pr-0 max-w-xl">
             <h1 className="text-white  w-full text-center text-4xl  font-bold py-2 mb-6 lg:text-5xl ">
               {title}
@@ -183,7 +206,7 @@ const Register = ({
               </Form>
             )}
           </Formik>
-        </div>
+        </div>}
       </div>
       <div className="h-32"></div>
       <Footer />
