@@ -45,7 +45,7 @@ const MemberCard = (props: cardProps) => {
 
       <img
         className="w-44 hover:w-76 z-0 rounded-full p-5  transition duration-500 ease-in-out  transform hover:-translate-y-1 hover:scale-110 h-44 object-cover object-top"
-        src={urlFor(props.src).url()}
+        src={(urlFor(props.src).url()) as string | undefined}
         alt="team member avatar"
         draggable={false}
       />
