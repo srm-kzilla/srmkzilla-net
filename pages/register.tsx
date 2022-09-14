@@ -137,7 +137,7 @@ const Register = ({
             <br />
             <br />
             <p>
-              Join us for a thrilling adventure in the multiverse of IoT.
+              Ready to Git Set and Go?
               Register below to boggle your mind up like never before!
             </p>
           </div>
