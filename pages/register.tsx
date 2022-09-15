@@ -20,16 +20,18 @@ type EventProps = {
   isCompleted: boolean
   err?: string
   tagline: string
-  isRegClosed:boolean
+  isRegClosed: boolean
+  description2?: string
 }
 
 const Register = ({
   title,
   description,
+  description2,
   tagline,
   eventCover,
   slug,
-  isRegClosed
+  isRegClosed,
 }: EventProps) => {
   const { reward, isAnimating } = useReward('rewardId', 'confetti')
   const [registerText, setRegisterText] = useState('REGISTER')
@@ -104,109 +106,108 @@ const Register = ({
         draggable={false}
       />
       <div className="relative h-screen max-h-screen text-white">
-        { isRegClosed
-          ?
+        {isRegClosed ? (
           <div className="z-20 h-full absolute inset-0 flex flex-col md:flex-row items-center justify-center gap-24 p-4 md:p-8 max-w-7xl mx-auto pt-72 md:pt-10 ">
-          <div className="pr-0 md:pr-0 max-w-xl">
-            <h1 className="text-white  w-full text-center text-4xl  font-bold py-2 mb-6 lg:text-5xl ">
-              {title}
-            </h1>
+            <div className="pr-0 md:pr-0 max-w-xl">
+              <h1 className="text-white  w-full text-center text-4xl  font-bold py-2 mb-6 lg:text-5xl ">
+                {title}
+              </h1>
 
-            <h4 className="w-full  text-white text-lg font-thin lg:text-base  sm:font-light">
-             The registrations for this event have been closed. If you have already registered, we'll be sending you an RSVP email shortly. If you were unable to Register, fret not. We have many more events in the pipeline
-            </h4>
-            <br />
-            <br />
-            <p>
-              If you are facing any issues, contact @SRMKZILLA on Instagram or email us!
-            </p>
+              <h4 className="w-full  text-white text-lg font-thin lg:text-base  sm:font-light">
+                The registrations for this event have been closed. If you have
+                already registered, we'll be sending you an RSVP email shortly.
+                If you were unable to Register, fret not. We have many more
+                events in the pipeline
+              </h4>
+              <br />
+              <br />
+              <p>
+                If you are facing any issues, contact @SRMKZILLA on Instagram or
+                email us!
+              </p>
+            </div>
           </div>
-
-         
-        </div>
-          :
+        ) : (
           <div className="z-20 h-full absolute inset-0 flex flex-col md:flex-row items-center justify-center gap-24 p-4 md:p-8 max-w-7xl mx-auto pt-72 md:pt-10 ">
-          <div className="pr-0 md:pr-0 max-w-xl">
-            <h1 className="text-white  w-full text-center text-4xl  font-bold py-2 mb-6 lg:text-5xl ">
-              {title}
-            </h1>
+            <div className="pr-0 md:pr-0 max-w-xl">
+              <h1 className="text-white  w-full text-center text-4xl  font-bold py-2 mb-6 lg:text-5xl ">
+                {title}
+              </h1>
 
-            <h4 className="w-full  text-white text-lg font-thin lg:text-base  sm:font-light">
-              {tagline}
-            </h4>
-            <br />
-            <br />
-            <p>
-              Ready to Git Set and Go?
-              Register below to boggle your mind up like never before!
-            </p>
+              <h4 className="w-full  text-white text-lg font-thin lg:text-base  sm:font-light">
+                {tagline}
+              </h4>
+              <br />
+              <br />
+              <p>{description2 ? description2 : ''}</p>
+            </div>
+
+            <Formik
+              initialValues={initialValues}
+              onSubmit={handleSubmit}
+              validationSchema={registerValidationSchema}
+              enableReinitialize
+            >
+              {({ errors, touched }) => (
+                <Form className="flex flex-col gap-y-4 mr-auto md:mr-0 w-full xl:w-min">
+                  <Field
+                    className={FieldClass}
+                    placeholder="What do we call you?"
+                    name="name"
+                    type="text"
+                  />
+                  {touched.name && errors.name && (
+                    <div className="text-red-500 text-sm">{errors.name}</div>
+                  )}
+                  <Field
+                    className={FieldClass}
+                    placeholder="Your mail id (no spam🤞)"
+                    name="email"
+                    type="email"
+                  />
+                  {touched.email && errors.email && (
+                    <div className="text-red-500 text-sm">{errors.email}</div>
+                  )}
+                  <Field
+                    className={`${FieldClass}`}
+                    placeholder="Registration Number"
+                    name="registrationNumber"
+                    type="text"
+                  />
+                  {touched.registrationNumber && errors.registrationNumber && (
+                    <div className="text-red-500 text-sm">
+                      {errors.registrationNumber}
+                    </div>
+                  )}
+                  <Field
+                    className={FieldClass}
+                    placeholder="Won't prank, but your cell number?"
+                    name="phoneNumber"
+                    type="text"
+                  />
+                  {touched.phoneNumber && errors.phoneNumber && (
+                    <div className="text-red-500 text-sm">
+                      {errors.phoneNumber}
+                    </div>
+                  )}
+                  <button
+                    disabled={Object.keys(errors).length > 0 || loading}
+                    className={`mt-10 m-1  flex justify-center items-center py-2 bg-registerGreen text-black rounded-md px-2 cursor-pointer w-full xl:w-96 gap-6 ${
+                      Object.keys(errors).length > 0 ||
+                      (loading && 'cursor-not-allowed')
+                    }`}
+                    type="submit"
+                  >
+                    <img src="../images/register_vector.png"></img>
+                    <span id="rewardId" className="text-lg font-medium">
+                      {loading ? 'Please wait...' : registerText}
+                    </span>
+                  </button>
+                </Form>
+              )}
+            </Formik>
           </div>
-
-          <Formik
-            initialValues={initialValues}
-            onSubmit={handleSubmit}
-            validationSchema={registerValidationSchema}
-            enableReinitialize
-          >
-            {({ errors, touched }) => (
-              <Form className="flex flex-col gap-y-4 mr-auto md:mr-0 w-full xl:w-min">
-                <Field
-                  className={FieldClass}
-                  placeholder="What do we call you?"
-                  name="name"
-                  type="text"
-                />
-                {touched.name && errors.name && (
-                  <div className="text-red-500 text-sm">{errors.name}</div>
-                )}
-                <Field
-                  className={FieldClass}
-                  placeholder="Your mail id (no spam🤞)"
-                  name="email"
-                  type="email"
-                />
-                {touched.email && errors.email && (
-                  <div className="text-red-500 text-sm">{errors.email}</div>
-                )}
-                <Field
-                  className={`${FieldClass}`}
-                  placeholder="Registration Number"
-                  name="registrationNumber"
-                  type="text"
-                />
-                {touched.registrationNumber && errors.registrationNumber && (
-                  <div className="text-red-500 text-sm">
-                    {errors.registrationNumber}
-                  </div>
-                )}
-                <Field
-                  className={FieldClass}
-                  placeholder="Won't prank, but your cell number?"
-                  name="phoneNumber"
-                  type="text"
-                />
-                {touched.phoneNumber && errors.phoneNumber && (
-                  <div className="text-red-500 text-sm">
-                    {errors.phoneNumber}
-                  </div>
-                )}
-                <button
-                  disabled={Object.keys(errors).length > 0 || loading}
-                  className={`mt-10 m-1  flex justify-center items-center py-2 bg-registerGreen text-black rounded-md px-2 cursor-pointer w-full xl:w-96 gap-6 ${
-                    Object.keys(errors).length > 0 ||
-                    (loading && 'cursor-not-allowed')
-                  }`}
-                  type="submit"
-                >
-                  <img src="../images/register_vector.png"></img>
-                  <span id="rewardId" className="text-lg font-medium">
-                    {loading ? 'Please wait...' : registerText}
-                  </span>
-                </button>
-              </Form>
-            )}
-          </Formik>
-        </div>}
+        )}
       </div>
       <div className="h-32"></div>
       <Footer />
