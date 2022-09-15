@@ -149,7 +149,7 @@ const Footer = () => {
               </a>
               <a
                 rel="noopener noreferrer"
-                href="tel:90223 25882"
+                href="tel:72688 44302"
                 className="mt-2 cursor-pointer flex items-center"
               >
                 <IoCall className="text-green-500 mr-2" />
