@@ -139,7 +139,11 @@ const Register = ({
               </h4>
               <br />
               <br />
-              <p>{description2 ? description2 : ''}</p>
+              {description2
+                ? description2
+                    .split('\n')
+                    .map((item, key) => <p key={key}>{item}</p>)
+                : ''}
             </div>
 
             <Formik
