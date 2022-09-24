@@ -24,7 +24,7 @@ const WhatsNew = ({ cardContent }: WhatsNewProps) => (
               eventCover={card?.eventCover}
               tagline={card?.tagline  }
               slug={card?.slug}
-              eventCompleted={false}
+              eventCompleted={card.isCompleted}
               startDate={''}
             />
           ))}

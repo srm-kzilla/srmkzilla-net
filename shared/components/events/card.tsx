@@ -30,11 +30,17 @@ const HomeCard = (props: {
             Know More
           </button>
         </a>
-        <a href={`/register?event=${props.slug}`} rel="noopener noreferrer">
-          <button className="bg-black border rounded-full text-white text-xs px-5 py-1 border-white focus:outline-none">
-            Register Now
-          </button>
-        </a>
+        {props.eventCompleted ? (
+            <div className="bg-black border rounded-full text-red-500 text-xs px-5 py-1 border-red-500 focus:outline-none">
+              Event Ended
+            </div>
+        ) : (
+          <a href={`/register?event=${props.slug}`} rel="noopener noreferrer">
+            <button className="bg-black border rounded-full text-red-500 text-xs px-5 py-1 border-red-500 focus:outline-none">
+              Register Now
+            </button>
+          </a>
+        )}
       </div>
     </motion.div>
   )

@@ -29,7 +29,8 @@ export type EventType = {
   startDate: string
   features: any
   eventCover: string
-  isCompleted: false
+  isCompleted: boolean
+  isRegClosed: boolean
 }
 
 interface EventsProps {
