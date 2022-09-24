@@ -6,6 +6,7 @@ const HomeCard = (props: {
   tagline: String
   slug: String
   eventCompleted: boolean
+  registrationCompleted: boolean
   startDate: string
 }) => {
   return (
@@ -30,10 +31,14 @@ const HomeCard = (props: {
             Know More
           </button>
         </a>
-        {props.eventCompleted ? (
-            <div className="bg-black border rounded-full text-red-500 text-xs px-5 py-1 border-red-500 focus:outline-none">
-              Event Ended
-            </div>
+        {props.eventCompleted && props.registrationCompleted ? (
+          <div className="bg-black border rounded-full text-red-500 text-xs px-5 py-1 border-red-500 focus:outline-none">
+            Event Ended
+          </div>
+        ) : props.registrationCompleted ? (
+          <div className="bg-black border rounded-full text-red-500 text-xs px-5 py-1 border-red-500 focus:outline-none">
+            Registration Closed
+          </div>
         ) : (
           <a href={`/register?event=${props.slug}`} rel="noopener noreferrer">
             <button className="bg-black border rounded-full text-red-500 text-xs px-5 py-1 border-red-500 focus:outline-none">
