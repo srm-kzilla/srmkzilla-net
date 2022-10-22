@@ -3,7 +3,15 @@ import Link from 'next/link'
 import TiltCard from '@shared/components/events/tilt-card'
 
 const EventDetails = (props: { event: EventType }) => {
-  const { title, tagline, description, slug, eventCover } = props.event
+  const {
+    title,
+    tagline,
+    description,
+    slug,
+    eventCover,
+    isCompleted,
+    isRegClosed,
+  } = props.event
   return (
     <div className=" h-screen flex flex-col md:flex-row items-center justify-center md:gap-14 lg:gap-24">
       <div className="w-full md:w-1/2">
@@ -15,13 +23,29 @@ const EventDetails = (props: { event: EventType }) => {
           </p>
         </div>
         <div className="flex items-center md:items-start justify-center md:justify-start">
-          <a href={`/register?event=${slug}`} rel="noopener noreferrer">
-            <button className="focus:outline-none transform transition-transform duration-200 hover:-translate-y-1">
-              <p className="bg-orange300 px-9 py-3 rounded-full font-bold lg:my-10 my-10 text-white ">
-                REGISTER
+          {isCompleted && isRegClosed ? (
+            <div className="">
+              <p className=" bg-gray-600 px-9 py-3 rounded-full font-bold lg:my-10 my-10 text-white ">
+                Event Ended
               </p>
-            </button>
-          </a>
+            </div>
+          ) : isRegClosed ? (
+            <a href={`/register?event=${slug}`} rel="noopener noreferrer">
+              <button className="focus:outline-none transform transition-transform duration-200 hover:-translate-y-1">
+                <p className="bg-gray-600 px-9 py-3 rounded-full font-bold lg:my-10 my-10 text-white ">
+                  Registration Closed
+                </p>
+              </button>
+            </a>
+          ) : (
+            <a href={`/register?event=${slug}`} rel="noopener noreferrer">
+              <button className="focus:outline-none transform transition-transform duration-200 hover:-translate-y-1">
+                <p className="bg-orange300 px-9 py-3 rounded-full font-bold lg:my-10 my-10 text-white ">
+                  REGISTER
+                </p>
+              </button>
+            </a>
+          )}
         </div>
       </div>
 
