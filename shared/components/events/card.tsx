@@ -32,7 +32,7 @@ const HomeCard = (props: {
           </button>
         </a>
         {props.eventCompleted && props.registrationCompleted ? (
-          <div className="bg-black border rounded-full text-red-500 text-xs px-5 py-1 border-red-500 focus:outline-none">
+          <div className="bg-black border rounded-full text-gray-100 text-xs px-5 py-1 border-gray-100 opacity-30 focus:outline-none">
             Event Ended
           </div>
         ) : props.registrationCompleted ? (
