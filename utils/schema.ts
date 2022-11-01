@@ -17,6 +17,11 @@ export const registerValidationSchema = yup.object({
     .trim()
     .length(10, 'Invalid mobile number')
     .required('This is a required field'),
+  department: yup
+    .string()
+    .trim()
+    .required('This is a required field')
+    .oneOf(['DSBS', 'CINTEL', 'CTECH', 'NWC', 'Not in CSE']),
 })
 export type registerFormData = Partial<
   yup.InferType<typeof registerValidationSchema>

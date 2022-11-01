@@ -44,6 +44,7 @@ const Register = ({
     registrationNumber: '',
     email: '',
     phoneNumber: '',
+    department : 'DSBS'
   }
   const banner = eventCover ? eventCover : '/public/images/banner.png'
   const handleSubmit = async (values: registerFormData) => {
@@ -55,6 +56,8 @@ const Register = ({
           email: values.email,
           phoneNumber: values.phoneNumber && parseInt(values.phoneNumber),
           regNumber: values.registrationNumber,
+          department: values.department
+    
         },
         eventSlug: slug,
       }
@@ -194,6 +197,12 @@ const Register = ({
                       {errors.phoneNumber}
                     </div>
                   )}
+                  <Field
+                    className={FieldClass}
+                    placeholder="Department please?"
+                    name="department"
+                    type="text"
+                  />
                   <button
                     disabled={Object.keys(errors).length > 0 || loading}
                     className={`mt-10 m-1  flex justify-center items-center py-2 bg-registerGreen text-black rounded-md px-2 cursor-pointer w-full xl:w-96 gap-6 ${

@@ -15,12 +15,19 @@ export type SpeakerType = {
   about?: string
 }
 
+export type PrizeType = {
+  amount: string
+  descripotion: string
+  asset: string
+  sponsor: string
+}
+
 export type EventType = {
   id: string
   title: string
   slug: string
   tagline: string
-
+  prizes: PrizeType[]
   timeline: { date: string; description: string; title: string }[]
   speakers: SpeakerType[]
   image: any
