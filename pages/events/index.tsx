@@ -4,6 +4,7 @@ import Footer from '@shared/components/footer'
 import FeaturedEvents from '@shared/components/events/featured-events'
 import WhatsNew from '@shared/components/events/whats-new'
 import { allEvents } from '../../utils/api'
+import EventPrizes from '@shared/components/events/event-prizes'
 
 export type SpeakerType = {
   name: string
@@ -17,7 +18,7 @@ export type SpeakerType = {
 
 export type PrizeType = {
   amount: string
-  descripotion: string
+  descripition: string
   asset: string
   sponsor: string
 }
@@ -97,6 +98,7 @@ const Events = ({ featuredEvents }: EventsProps) => {
       </div>
       <WhatsNew cardContent={featuredEvents} />
       {/* <FeaturedEvents cardContent={featuredEvents} /> */}
+
       <Footer />
     </div>
   )

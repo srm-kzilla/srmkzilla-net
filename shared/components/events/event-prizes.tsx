@@ -1,10 +1,22 @@
 import { EventType } from '@pages/events'
-import Link from 'next/link'
-import TiltCard from '@shared/components/events/tilt-card'
+import { PrizeCard } from './prize-card'
 
-const EventPrizes = (props: {event:EventType})=>{
-const {prizes} = props.event
-return (<></>)
+const EventPrizes = (props: { event: EventType }) => {
+  const { prizes } = props.event
+
+  return (
+    <>
+      {prizes.map((prize, index) => {
+        <PrizeCard
+          key={index}
+          amount={prize.amount}
+          descripition={prize.descripition}
+          asset={prize.asset}
+          sponsor={prize.sponsor}
+        />
+      })}
+    </>
+  )
 }
 
-export default EventPrizes;
+export default EventPrizes

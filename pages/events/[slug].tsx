@@ -36,6 +36,7 @@ const Events = (props: EventType) => {
             {props.speakers.length > 0 && <SpeakerPage event={props} />}
             {props.prizes.length > 0 && <EventPrizes event={props}/>}
             
+            
             <div className="flex items-center justify-center w-full mt-4 md:mt-10">
               <a href={`/register?event=${slug}`} rel="noopener noreferrer">
                 <button className="focus:outline-none transform transition-transform duration-200 hover:-translate-y-1">
