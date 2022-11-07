@@ -24,7 +24,7 @@ export const PrizeCard = (props: {
         {props.descripition}
       </p>
       <h1 className="text-white text-center text-xl font-medium mt-5">
-        Sponsor <br /> {props.amount}
+        Sponsor <br /> {props.sponsor}
       </h1>
     </motion.div>
   )
