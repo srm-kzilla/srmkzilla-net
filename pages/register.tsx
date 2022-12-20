@@ -114,7 +114,7 @@ const Register = ({
               </h1>
 
               <h4 className="w-full  text-white text-lg font-thin lg:text-base  sm:font-light">
-                The registrations for this event have been closed. If you have
+                The registration for this event has been closed. If you have
                 already registered, we'll be sending you an RSVP email shortly.
                 If you were unable to Register, fret not. We have many more
                 events in the pipeline
