@@ -44,6 +44,7 @@ const Register = ({
     registrationNumber: '',
     email: '',
     phoneNumber: '',
+    department: '',
   }
   const banner = eventCover ? eventCover : '/public/images/banner.png'
   const handleSubmit = async (values: registerFormData) => {
@@ -55,6 +56,7 @@ const Register = ({
           email: values.email,
           phoneNumber: values.phoneNumber && parseInt(values.phoneNumber),
           regNumber: values.registrationNumber,
+          department: values.department,
         },
         eventSlug: slug,
       }
@@ -152,7 +154,7 @@ const Register = ({
               validationSchema={registerValidationSchema}
               enableReinitialize
             >
-              {({ errors, touched }) => (
+              {({ errors, touched, values }) => (
                 <Form className="flex flex-col gap-y-4 mr-auto md:mr-0 w-full xl:w-min">
                   <Field
                     className={FieldClass}
@@ -181,6 +183,37 @@ const Register = ({
                   {touched.registrationNumber && errors.registrationNumber && (
                     <div className="text-red-500 text-sm">
                       {errors.registrationNumber}
+                    </div>
+                  )}
+                  <Field
+                    component="select"
+                    name="department"
+                    className={`${FieldClass} ${
+                      values.department ? 'text-white' : 'text-gray-500'
+                    }`}
+                  >
+                    <option value="" disabled selected hidden>
+                      Please select an option
+                    </option>
+                    <option className="text-white" value="CTECH">
+                      CTECH
+                    </option>
+                    <option className="text-white" value="NWC">
+                      NWC
+                    </option>
+                    <option className="text-white" value="CINTEL">
+                      CINTEL
+                    </option>
+                    <option className="text-white" value="DSBS">
+                      DSBS
+                    </option>
+                    <option className="text-white" value="Others">
+                      Others
+                    </option>
+                  </Field>
+                  {touched.department && errors.department && (
+                    <div className="text-red-500 text-sm">
+                      {errors.department}
                     </div>
                   )}
                   <Field
