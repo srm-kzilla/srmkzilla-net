@@ -217,8 +217,12 @@ const Register = ({
                     <a
                       href="https://shashank-srmkzilla.notion.site/CSE-Departments-66def3c57b7f4ded9a43f8e4ad2635e3"
                       title="Don't know which Department you're in? Click Me!"
+                      target="_blank"
                     >
-                      <IoInformationCircleOutline size="2rem" color="white" />
+                      <IoInformationCircleOutline
+                        size="2rem"
+                        className="text-white hover:text-green-500"
+                      />
                     </a>
                   </div>
                   {touched.department && errors.department && (
