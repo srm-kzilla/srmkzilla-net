@@ -8,6 +8,7 @@ import Footer from '../shared/components/footer'
 import { getEvent, register } from '../utils/api'
 import { registerFormData, registerValidationSchema } from '../utils/schema'
 import { useReward } from 'react-rewards'
+import { IoInformationCircleOutline } from 'react-icons/io5'
 
 type EventProps = {
   title: string
@@ -37,7 +38,8 @@ const Register = ({
   const [registerText, setRegisterText] = useState('REGISTER')
   const FieldClass =
     'border-b-2 border-white bg-transparent placeholder-gray-500 md:text-right font-normal focus:outline-none xl:w-96 p-3 font-subHeading focus:border-green-500 focus:bg-black-100 bg-gray-900 bg-opacity-10 w-full'
-
+  const FieldClassDropDown =
+    'basis-3/4 w-full border-b-2 border-white bg-transparent placeholder-gray-500 md:text-right font-normal focus:outline-none p-3 font-subHeading focus:border-green-500 focus:bg-black-100 bg-gray-900 bg-opacity-10 w-full'
   const [loading, setLoading] = React.useState<boolean>(false)
   const initialValues: registerFormData = {
     name: '',
@@ -185,32 +187,40 @@ const Register = ({
                       {errors.registrationNumber}
                     </div>
                   )}
-                  <Field
-                    component="select"
-                    name="department"
-                    className={`${FieldClass} ${
-                      values.department ? 'text-white' : 'text-gray-500'
-                    }`}
-                  >
-                    <option value="" disabled selected hidden>
-                      Please select an option
-                    </option>
-                    <option className="text-white" value="CTECH">
-                      CTECH
-                    </option>
-                    <option className="text-white" value="NWC">
-                      NWC
-                    </option>
-                    <option className="text-white" value="CINTEL">
-                      CINTEL
-                    </option>
-                    <option className="text-white" value="DSBS">
-                      DSBS
-                    </option>
-                    <option className="text-white" value="Others">
-                      Others
-                    </option>
-                  </Field>
+                  <div className="flex w-full justify-between items-center gap-x-2">
+                    <Field
+                      component="select"
+                      name="department"
+                      className={`${FieldClassDropDown} ${
+                        values.department ? 'text-white' : 'text-gray-500'
+                      }`}
+                    >
+                      <option value="" disabled selected hidden>
+                        Department
+                      </option>
+                      <option className="text-white" value="CTECH">
+                        CTECH
+                      </option>
+                      <option className="text-white" value="NWC">
+                        NWC
+                      </option>
+                      <option className="text-white" value="CINTEL">
+                        CINTEL
+                      </option>
+                      <option className="text-white" value="DSBS">
+                        DSBS
+                      </option>
+                      <option className="text-white" value="Others">
+                        Others
+                      </option>
+                    </Field>
+                    <a
+                      href="https://shashank-srmkzilla.notion.site/CSE-Departments-66def3c57b7f4ded9a43f8e4ad2635e3"
+                      title="Don't know which Department you're in? Click Me!"
+                    >
+                      <IoInformationCircleOutline size="2rem" color="white" />
+                    </a>
+                  </div>
                   {touched.department && errors.department && (
                     <div className="text-red-500 text-sm">
                       {errors.department}
