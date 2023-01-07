@@ -10,7 +10,6 @@ import { getEvent } from '../../utils/api'
 
 const Events = (props: EventType) => {
   const { title, slug } = props
-  console.log(props)
 
   return (
     <div className="bg-black overflow-hidden text-white">
