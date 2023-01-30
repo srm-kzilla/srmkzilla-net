@@ -44,7 +44,7 @@ const Events = (props: EventType) => {
               </a>
             </div>
             <PrizePage event={props} />
-          </div>
+      </div>
         </div>
       </div>
 
