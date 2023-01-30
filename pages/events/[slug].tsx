@@ -1,6 +1,7 @@
 import EventDetails from '@shared/components/events/event-details'
 import SpeakerPage from '@shared/components/events/event-speaker'
 import EventTimeline from '@shared/components/events/event-timeline'
+import PrizePage from '@shared/components/events/event-prizes'
 import Head from 'next/head'
 import React from 'react'
 import { EventType } from '.'
@@ -33,6 +34,7 @@ const Events = (props: EventType) => {
             <EventDetails event={props} />
             {props.timeline.length > 0 && <EventTimeline event={props} />}
             {props.speakers.length > 0 && <SpeakerPage event={props} />}
+            <PrizePage event={props} />
             {!props.isRegClosed && (
               <div className="flex items-center justify-center w-full mt-4 md:mt-10">
                 <a href={`/register?event=${slug}`} rel="noopener noreferrer">
