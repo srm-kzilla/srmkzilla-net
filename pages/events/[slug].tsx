@@ -34,17 +34,19 @@ const Events = (props: EventType) => {
             <EventDetails event={props} />
             {props.timeline.length > 0 && <EventTimeline event={props} />}
             {props.speakers.length > 0 && <SpeakerPage event={props} />}
-            <div className="flex items-center justify-center w-full mt-4 md:mt-10">
-              <a href={`/register?event=${slug}`} rel="noopener noreferrer">
-                <button className="focus:outline-none transform transition-transform duration-200 hover:-translate-y-1">
-                  <p className="bg-orange300 px-9 py-3 rounded-full font-bold lg:my-10 my-10 text-white ">
-                    REGISTER NOW
-                  </p>
-                </button>
-              </a>
-            </div>
             <PrizePage event={props} />
-      </div>
+            {!props.isRegClosed && (
+              <div className="flex items-center justify-center w-full mt-4 md:mt-10">
+                <a href={`/register?event=${slug}`} rel="noopener noreferrer">
+                  <button className="focus:outline-none transform transition-transform duration-200 hover:-translate-y-1">
+                    <p className="bg-orange300 px-9 py-3 rounded-full font-bold lg:my-10 my-10 text-white ">
+                      REGISTER NOW
+                    </p>
+                  </button>
+                </a>
+              </div>
+            )}
+          </div>
         </div>
       </div>
 
