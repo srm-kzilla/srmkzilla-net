@@ -60,7 +60,7 @@ const Events = ({ featuredEvents }: EventsProps) => {
         src="./images/events-cover-3.jpeg"
         alt="background"
         draggable={false}
-        style={{ filter: 'blur(4px)' }}
+        style={{ filter: 'blur(2px)' }}
         className=" opacity-60 rounded-xl xl:h-screen h-screen w-screen object-cover "
       />
       <div className="absolute left-0 pl-10 md:pl-32 top-1/3 text-left">
