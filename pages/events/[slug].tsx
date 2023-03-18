@@ -6,7 +6,7 @@ import Head from 'next/head'
 import React from 'react'
 import { EventType } from '.'
 import Footer from '../../shared/components/footer'
-import { getEvent } from '../../utils/api'
+import { getEvent, allEvents } from '../../utils/api'
 
 const Events = (props: EventType) => {
   const { title, slug } = props
@@ -55,7 +55,25 @@ const Events = (props: EventType) => {
   )
 }
 
-export async function getServerSideProps(context: { params: { slug: any } }) {
+export async function getStaticPaths() {
+  let datas: EventType[]
+  try {
+    datas = await allEvents()
+  } catch (err) {
+    throw err
+  }
+  const paths = datas.map((data) => {
+    return {
+      params: { slug: data.slug },
+    }
+  })
+  return {
+    paths,
+    fallback: false,
+  }
+}
+
+export async function getStaticProps(context: { params: { slug: any } }) {
   let eventDetails: EventType
   const pageSlug = context.params.slug
   try {
