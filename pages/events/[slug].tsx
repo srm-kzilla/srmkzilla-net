@@ -56,15 +56,15 @@ const Events = (props: EventType) => {
 }
 
 export async function getStaticPaths() {
-  let datas: EventType[]
+  let events: EventType[]
   try {
-    datas = await allEvents()
+    events = await allEvents()
   } catch (err) {
     throw err
   }
-  const paths = datas.map((data) => {
+  const paths = events.map(({ slug }) => {
     return {
-      params: { slug: data.slug },
+      params: { slug: slug },
     }
   })
   return {
@@ -73,7 +73,7 @@ export async function getStaticPaths() {
   }
 }
 
-export async function getStaticProps(context: { params: { slug: any } }) {
+export async function getStaticProps(context: { params: { slug: string } }) {
   let eventDetails: EventType
   const pageSlug = context.params.slug
   try {

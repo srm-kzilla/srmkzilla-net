@@ -6,6 +6,7 @@ import Footer from '../../shared/components/footer'
 import * as BlockContent from '@sanity/block-content-to-react'
 const Fade = require('react-reveal/Fade')
 import { motion } from 'framer-motion'
+import { title } from 'process'
 
 type Props = {
   title: string
@@ -238,11 +239,12 @@ export const getStaticProps = async (context: { params: { slug: any } }) => {
 export async function getStaticPaths(): Promise<unknown> {
   const query = encodeURIComponent(`*[ _type == "project"]{title,slug}`)
   const url = `https://${process.env.SANITY_ID}.api.sanity.io/v1/data/query/production?query=${query}`
-  const result = await fetch(url).then((res) => res.json())
-  const path = result.result
+  const { result } = await fetch(url).then((res) => res.json())
 
-  const paths = path.map((project: { title: any }) => {
-    return { params: { slug: project.title } }
+  const paths = result?.map((project: { title: any }) => {
+    return {
+      params: { slug: project.title },
+    }
   })
   if (!paths) {
     return {
