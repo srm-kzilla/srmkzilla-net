@@ -5,8 +5,6 @@ import Tilt from 'react-parallax-tilt'
 import Footer from '../../shared/components/footer'
 import * as BlockContent from '@sanity/block-content-to-react'
 const Fade = require('react-reveal/Fade')
-import { motion } from 'framer-motion'
-import { title } from 'process'
 
 type Props = {
   title: string
