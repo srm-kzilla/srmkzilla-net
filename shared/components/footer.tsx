@@ -141,28 +141,28 @@ const Footer = () => {
             <div className="mt-8 text-sm md:text-lg">
               <a
                 rel="noopener noreferrer"
-                href="mailto:hello@srmkzilla.net"
+                href="mailto:technical@srmkzilla.net"
                 className="cursor-pointer flex items-center"
               >
                 <FiMail className="text-green-500 mr-2" />
-                hello@srmkzilla.net
+                technical@srmkzilla.net
               </a>
               <a
                 rel="noopener noreferrer"
-                href="tel:72688 44302"
+                href="tel:87178 49390"
                 className="mt-2 cursor-pointer flex items-center"
               >
                 <IoCall className="text-green-500 mr-2" />
-                Anshika Singh
+                Nandini Nigam
               </a>
 
               <a
                 rel="noopener noreferrer"
-                href="tel:70940 80200"
+                href="tel:97672 46968"
                 className="mt-2 cursor-pointer flex items-center"
               >
                 <IoCall className="text-green-500 mr-2" />
-                Krishna Priya
+                Devansh Multani
               </a>
             </div>
           </div>
