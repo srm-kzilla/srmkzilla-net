@@ -102,7 +102,7 @@ const Events = ({ featuredEvents }: EventsProps) => {
     </div>
   )
 }
-export async function getServerSideProps() {
+export async function getStaticProps() {
   let featuredEvents: EventType[]
   try {
     featuredEvents = await allEvents()
