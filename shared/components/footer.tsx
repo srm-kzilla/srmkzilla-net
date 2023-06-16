@@ -168,7 +168,7 @@ const Footer = () => {
           </div>
         </div>
         <h1 className="text-center text-white mt-16 text-sm md:mt-auto pb-5">
-          &#169; crafted with ❤️ by SRMKZILLA 2021
+          &#169; crafted with ❤️ by SRMKZILLA 2023
         </h1>
       </div>
     </div>
