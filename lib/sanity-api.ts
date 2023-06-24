@@ -91,6 +91,42 @@ export const getProjects = async () => {
   return results
 }
 
+export const getProjectSlugs = async () => {
+  return await sanityClient
+    .fetch(
+      `*[_type == "project"]{'slug': slug.current}`
+    )
+    .catch((err) => console.log(err))
+}
+
+export const getProjectDetails = async (slug) => {
+  return await sanityClient.fetch(`*[ _type == "project" && slug.current == "${slug}" ][0]{
+      title,
+      slug,
+      logo{
+        asset->{
+          _id,
+          url
+        },
+        alt
+      },
+      link,
+      github,
+      features,
+      youtube,
+      instagram,
+      techstack,
+      description,
+      poster{
+        asset->{
+          _id,
+          url
+        },
+        alt
+      }
+    }`).catch((err) => console.log(err));
+}
+
 export const getServiceProjects = async () => {
   const results = await sanityClient
     .fetch(
