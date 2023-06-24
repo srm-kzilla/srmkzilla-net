@@ -1,0 +1,772 @@
+[
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/aniruddha-chatterjee-president",
+    "name": "Aniruddha Chatterjee",
+    "designation": "President",
+    "domain": "Leadership",
+    "index": 0
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/krishna-priya-vice-president",
+    "name": "Krishna Priya",
+    "designation": "Vice President",
+    "domain": "Leadership",
+    "index": 1
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/anshika-singh-vice-president",
+    "name": "Anshika Singh",
+    "designation": "Vice President",
+    "domain": "Leadership",
+    "index": 2
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/sagnik-biswas-head-of-technical",
+    "name": "Sagnik Biswas",
+    "designation": "Head of Technical",
+    "domain": "Leadership",
+    "index": 3
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/seerat-parmar-editor-in-chief",
+    "name": "Seerat Parmar",
+    "designation": "Editor in chief",
+    "domain": "Leadership",
+    "index": 4
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/renita-pathaneni-head-of-events",
+    "name": "Renita Pathaneni",
+    "designation": "Head of Events",
+    "domain": "Leadership",
+    "index": 5
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/reeti-jha-head-of-corporate",
+    "name": "Reeti Jha",
+    "designation": "Head of corporate",
+    "domain": "Leadership",
+    "index": 6
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/khushi-goyal-head-of-corporate",
+    "name": "Khushi Goyal",
+    "designation": "Head of corporate",
+    "domain": "Leadership",
+    "index": 7
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/viraj-agarwal-lead",
+    "name": "Viraj Agarwal",
+    "designation": "Lead",
+    "domain": "Technical",
+    "index": 8
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/shashank-lead",
+    "name": "Shashank",
+    "designation": "Lead",
+    "domain": "Technical",
+    "index": 9
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/ojas-sinha-lead",
+    "name": "Ojas Sinha",
+    "designation": "Lead",
+    "domain": "Technical",
+    "index": 10
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/satvik-kumar-associate-lead",
+    "name": "Satvik Kumar ",
+    "designation": "Associate Lead",
+    "domain": "Technical",
+    "index": 11
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/eshan-singh-associate-lead",
+    "name": " Eshan Singh",
+    "designation": "Associate Lead",
+    "domain": "Technical",
+    "index": 12
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/mohd-zaid-associate-lead",
+    "name": "Mohd Zaid",
+    "designation": "Associate Lead",
+    "domain": "Technical",
+    "index": 13
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/mohammed-farhaan-associate-lead",
+    "name": "Mohammed Farhaan",
+    "designation": "Associate Lead",
+    "domain": "Technical",
+    "index": 14
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/utkarsh-associate-lead",
+    "name": "Utkarsh ",
+    "designation": "Associate Lead",
+    "domain": "Technical",
+    "index": 15
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/mohamed-sami-associate-lead",
+    "name": "Mohamed Sami",
+    "designation": "Associate Lead",
+    "domain": "Technical",
+    "index": 16
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/harsh-srivastava-associate-lead",
+    "name": "Harsh Srivastava",
+    "designation": "Associate Lead",
+    "domain": "Technical",
+    "index": 17
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/aryan-singh-associate-lead",
+    "name": "Aryan Singh",
+    "designation": "Associate Lead",
+    "domain": "Technical",
+    "index": 18
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/pratham-bhatnagar-associate-lead",
+    "name": "Pratham Bhatnagar",
+    "designation": "Associate Lead",
+    "domain": "Technical",
+    "index": 19
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/rushi-patel-associate-lead",
+    "name": "Rushi Patel ",
+    "designation": "Associate Lead",
+    "domain": "Technical",
+    "index": 20
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/lakshya-dhariwal-associate-lead",
+    "name": "Lakshya Dhariwal ",
+    "designation": "Associate Lead",
+    "domain": "Technical",
+    "index": 21
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/divyanshu-member",
+    "name": "Divyanshu",
+    "designation": "Member",
+    "domain": "Technical",
+    "index": 22
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/anas-y-member",
+    "name": "Anas Y",
+    "designation": "Member",
+    "domain": "Technical",
+    "index": 23
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/jatin-member",
+    "name": "Jatin",
+    "designation": "Member",
+    "domain": "Technical",
+    "index": 24
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/anouska-jhunjhunwala-member",
+    "name": "Anouska Jhunjhunwala",
+    "designation": "Member",
+    "domain": "Technical",
+    "index": 25
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/nikhil-narayanan-member",
+    "name": "Nikhil Narayanan",
+    "designation": "Member",
+    "domain": "Technical",
+    "index": 26
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/shail-antani-member",
+    "name": "Shail Antani",
+    "designation": "Member",
+    "domain": "Technical",
+    "index": 27
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/manaya-pachpor-member",
+    "name": "Manaya Pachpor",
+    "designation": "Member",
+    "domain": "Technical",
+    "index": 28
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/johan-mathew-joseph-member",
+    "name": "Johan Mathew Joseph",
+    "designation": "Member",
+    "domain": "Technical",
+    "index": 29
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/ajay-ram-s-member",
+    "name": "Ajay ram S",
+    "designation": "Member",
+    "domain": "Technical",
+    "index": 30
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/alvin-ben-george-member",
+    "name": "Alvin Ben George",
+    "designation": "Member",
+    "domain": "Technical",
+    "index": 31
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/albert-sebastian-member",
+    "name": "Albert Sebastian",
+    "designation": "Member",
+    "domain": "Technical",
+    "index": 32
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/shivam-bansal-member",
+    "name": "Shivam Bansal",
+    "designation": "Member",
+    "domain": "Technical",
+    "index": 33
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/harsh-n-patel-member",
+    "name": "Harsh N Patel",
+    "designation": "Member",
+    "domain": "Technical",
+    "index": 34
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/aakash-rawat-member",
+    "name": "Aakash Rawat",
+    "designation": "Member",
+    "domain": "Technical",
+    "index": 35
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/ankush-dutta-member",
+    "name": "Ankush Dutta",
+    "designation": "Member",
+    "domain": "Technical",
+    "index": 36
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/saanvi-kumar-member",
+    "name": "Saanvi Kumar",
+    "designation": "Member",
+    "domain": "Technical",
+    "index": 37
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/khushi-singh-member",
+    "name": "Khushi Singh",
+    "designation": "Member",
+    "domain": "Technical",
+    "index": 38
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/aditya-gupta-member",
+    "name": "Aditya Gupta",
+    "designation": "Member",
+    "domain": "Technical",
+    "index": 39
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/vaibhav-raj-member",
+    "name": "Vaibhav Raj",
+    "designation": "Member",
+    "domain": "Technical",
+    "index": 40
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/pradyumna-d-member",
+    "name": "Pradyumna D",
+    "designation": "Member",
+    "domain": "Technical",
+    "index": 41
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/utkarshini-narayan-member",
+    "name": "Utkarshini Narayan",
+    "designation": "Member",
+    "domain": "Technical",
+    "index": 42
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/utkarsh-rastogi-lead",
+    "name": "Utkarsh Rastogi",
+    "designation": "Lead",
+    "domain": "Editorial",
+    "index": 43
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/akshita-singh-lead",
+    "name": "Akshita Singh",
+    "designation": "Lead",
+    "domain": "Editorial",
+    "index": 44
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/vaidehi-deshmukh-lead",
+    "name": "Vaidehi Deshmukh",
+    "designation": "Lead",
+    "domain": "Editorial",
+    "index": 45
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/vaarshith-n-associate-lead",
+    "name": "Vaarshith N",
+    "designation": "Associate Lead",
+    "domain": "Editorial",
+    "index": 46
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/chenna-vanshika-associate-lead",
+    "name": "Chenna Vanshika ",
+    "designation": "Associate Lead",
+    "domain": "Editorial",
+    "index": 47
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/yash-bohra-associate-lead",
+    "name": "Yash Bohra",
+    "designation": "Associate Lead",
+    "domain": "Editorial",
+    "index": 48
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/srishti-chatterjee-associate-lead",
+    "name": "Srishti Chatterjee",
+    "designation": "Associate Lead",
+    "domain": "Editorial",
+    "index": 49
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/panya-sharma-associate-lead",
+    "name": "Panya Sharma",
+    "designation": "Associate Lead",
+    "domain": "Editorial",
+    "index": 50
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/shreyus-r-associate-lead",
+    "name": "Shreyus R",
+    "designation": "Associate Lead",
+    "domain": "Editorial",
+    "index": 51
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/priyanshi-sharma-associate-lead",
+    "name": "Priyanshi Sharma",
+    "designation": "Associate Lead",
+    "domain": "Editorial",
+    "index": 52
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/rajdeep-chatterjee-associate-lead",
+    "name": "Rajdeep Chatterjee ",
+    "designation": "Associate Lead",
+    "domain": "Editorial",
+    "index": 53
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/asmi-bandyopadhyay-member",
+    "name": "Asmi Bandyopadhyay",
+    "designation": "Member",
+    "domain": "Editorial",
+    "index": 54
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/aaditya-baruah-member",
+    "name": "Aaditya Baruah",
+    "designation": "Member",
+    "domain": "Editorial",
+    "index": 55
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/taranjeet-singh-bedi-member",
+    "name": "Taranjeet Singh Bedi",
+    "designation": "Member",
+    "domain": "Editorial",
+    "index": 56
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/abhinav-singh-member",
+    "name": "Abhinav Singh",
+    "designation": "Member",
+    "domain": "Editorial",
+    "index": 57
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/shaurya-awasthi-member",
+    "name": "Shaurya Awasthi",
+    "designation": "Member",
+    "domain": "Editorial",
+    "index": 58
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/ankitha-ragesh-member",
+    "name": "Ankitha Ragesh",
+    "designation": "Member",
+    "domain": "Editorial",
+    "index": 59
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/pratinav-tewari-member",
+    "name": "Pratinav Tewari",
+    "designation": "Member",
+    "domain": "Editorial",
+    "index": 60
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/aparna-jaiswal-member",
+    "name": "Aparna Jaiswal",
+    "designation": "Member",
+    "domain": "Editorial",
+    "index": 61
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/tia-raizada-member",
+    "name": "Tia Raizada",
+    "designation": "Member",
+    "domain": "Editorial",
+    "index": 62
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/subhranka-debnath-member",
+    "name": "Subhranka Debnath",
+    "designation": "Member",
+    "domain": "Editorial",
+    "index": 63
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/adityasankar-sengupta-member",
+    "name": "Adityasankar Sengupta",
+    "designation": "Member",
+    "domain": "Editorial",
+    "index": 64
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/navdeep-singh-jakhar-member",
+    "name": "Navdeep Singh Jakhar",
+    "designation": "Member",
+    "domain": "Editorial",
+    "index": 65
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/devesh-patel-member",
+    "name": "Devesh Patel",
+    "designation": "Member",
+    "domain": "Editorial",
+    "index": 66
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/varun-singh-member",
+    "name": "Varun Singh",
+    "designation": "Member",
+    "domain": "Editorial",
+    "index": 67
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/nandini-nigam-lead",
+    "name": " Nandini Nigam",
+    "designation": "Lead",
+    "domain": "Events",
+    "index": 68
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/riya-ann-thomas-lead",
+    "name": "Riya Ann Thomas ",
+    "designation": "Lead",
+    "domain": "Events",
+    "index": 69
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/shreya-khera-lead",
+    "name": "Shreya Khera",
+    "designation": "Lead",
+    "domain": "Events",
+    "index": 70
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/aditi-malik-associate-lead",
+    "name": "Aditi Malik",
+    "designation": "Associate Lead",
+    "domain": "Events",
+    "index": 71
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/advait-singh-associate-lead",
+    "name": " Advait Singh ",
+    "designation": "Associate Lead",
+    "domain": "Events",
+    "index": 72
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/rishabh-vyas-associate-lead",
+    "name": "Rishabh Vyas",
+    "designation": "Associate Lead",
+    "domain": "Events",
+    "index": 73
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/aditya-krishnan-associate-lead",
+    "name": "Aditya Krishnan",
+    "designation": "Associate Lead",
+    "domain": "Events",
+    "index": 74
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/aadhya-mathur-associate-lead",
+    "name": "Aadhya Mathur",
+    "designation": "Associate Lead",
+    "domain": "Events",
+    "index": 75
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/manaswita-verma-associate-lead",
+    "name": " Manaswita Verma",
+    "designation": "Associate Lead",
+    "domain": "Events",
+    "index": 76
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/sanjeev-sitaraman-member",
+    "name": "Sanjeev Sitaraman",
+    "designation": "Member",
+    "domain": "Events",
+    "index": 77
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/pratyush-jha-member",
+    "name": "Pratyush Jha",
+    "designation": "Member",
+    "domain": "Events",
+    "index": 78
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/kumar-vaibhav-member",
+    "name": "Kumar Vaibhav",
+    "designation": "Member",
+    "domain": "Events",
+    "index": 79
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/pal-patel-member",
+    "name": "Pal Patel",
+    "designation": "Member",
+    "domain": "Events",
+    "index": 80
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/arnav-madan-member",
+    "name": "Arnav Madan",
+    "designation": "Member",
+    "domain": "Events",
+    "index": 81
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/patralika-bardhan-member",
+    "name": "Patralika Bardhan",
+    "designation": "Member",
+    "domain": "Events",
+    "index": 82
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/aryan-raj-member",
+    "name": "Aryan Raj",
+    "designation": "Member",
+    "domain": "Events",
+    "index": 83
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/akarsh-ghildyal-member",
+    "name": "Akarsh Ghildyal",
+    "designation": "Member",
+    "domain": "Events",
+    "index": 84
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/aman-bharati-member",
+    "name": "Aman Bharati",
+    "designation": "Member",
+    "domain": "Events",
+    "index": 85
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/kamalika-balasubramanian-member",
+    "name": "Kamalika Balasubramanian",
+    "designation": "Member",
+    "domain": "Events",
+    "index": 86
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/kamalika-p-member",
+    "name": "Kamalika P",
+    "designation": "Member",
+    "domain": "Events",
+    "index": 87
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/ekanika-shah-member",
+    "name": "Ekanika Shah",
+    "designation": "Member",
+    "domain": "Events",
+    "index": 88
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/devansh-multani-lead",
+    "name": " Devansh Multani",
+    "designation": "Lead",
+    "domain": "Corporate",
+    "index": 89
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/aniket-mishra-lead",
+    "name": " Aniket Mishra",
+    "designation": "Lead",
+    "domain": "Corporate",
+    "index": 90
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/omisha-gupta-associate-lead",
+    "name": "Omisha Gupta ",
+    "designation": "Associate Lead",
+    "domain": "Corporate",
+    "index": 91
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/rishabh-agrawal-associate-lead",
+    "name": "Rishabh Agrawal",
+    "designation": "Associate Lead",
+    "domain": "Corporate",
+    "index": 92
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/prajin-chopra-associate-lead",
+    "name": "Prajin Chopra ",
+    "designation": "Associate Lead",
+    "domain": "Corporate",
+    "index": 93
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/astitva-veer-garg-associate-lead",
+    "name": "Astitva Veer Garg ",
+    "designation": "Associate Lead",
+    "domain": "Corporate",
+    "index": 94
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/faaris-khan-associate-lead",
+    "name": "Faaris Khan",
+    "designation": "Associate Lead",
+    "domain": "Corporate",
+    "index": 95
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/nehal-balakumar-member",
+    "name": "Nehal Balakumar",
+    "designation": "Member",
+    "domain": "Corporate",
+    "index": 96
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/jayatri-banerjee-member",
+    "name": "Jayatri Banerjee",
+    "designation": "Member",
+    "domain": "Corporate",
+    "index": 97
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/g.avinashh-member",
+    "name": "G.Avinashh",
+    "designation": "Member",
+    "domain": "Corporate",
+    "index": 98
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/derill-sebiraj-member",
+    "name": "Derill Sebiraj",
+    "designation": "Member",
+    "domain": "Corporate",
+    "index": 99
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/himanshu-bhadani-member",
+    "name": "Himanshu Bhadani",
+    "designation": "Member",
+    "domain": "Corporate",
+    "index": 100
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/mythili-prakash-member",
+    "name": "Mythili Prakash",
+    "designation": "Member",
+    "domain": "Corporate",
+    "index": 101
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/sourabh-dhar-member",
+    "name": "Sourabh Dhar",
+    "designation": "Member",
+    "domain": "Corporate",
+    "index": 102
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/ameya-verma-member",
+    "name": "Ameya Verma",
+    "designation": "Member",
+    "domain": "Corporate",
+    "index": 103
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/manavi-lahoti-member",
+    "name": "Manavi Lahoti",
+    "designation": "Member",
+    "domain": "Corporate",
+    "index": 104
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/shinjan-patra-member",
+    "name": "Shinjan Patra",
+    "designation": "Member",
+    "domain": "Corporate",
+    "index": 105
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/nitin-nagar-member",
+    "name": "Nitin Nagar",
+    "designation": "Member",
+    "domain": "Corporate",
+    "index": 106
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/harinarayanan-member",
+    "name": "Harinarayanan",
+    "designation": "Member",
+    "domain": "Corporate",
+    "index": 107
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/aman-varma-member",
+    "name": "Aman varma",
+    "designation": "Member",
+    "domain": "Corporate",
+    "index": 108
+  },
+  {
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2022/anjali-dubey-member",
+    "name": "Anjali Dubey",
+    "designation": "Member",
+    "domain": "Corporate",
+    "index": 109
+  }
+]

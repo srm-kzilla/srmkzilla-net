@@ -1,27 +1,35 @@
 import { DOMAINS } from '@lib/data/domains'
-import { getTeamMembers } from '@lib/sanity-api'
 import Footer from '@shared/components/footer'
-import NewCarousel from '@shared/components/team/carousel'
 import MemberCard from '@shared/components/team/membercard'
 import Head from 'next/head'
+import type { GetStaticPropsContext } from "next";
 
-const Team = ({ teamMembers }) => {
+import * as fs from "fs";
+import * as path from "path";
+
+interface Member {
+  url: string;
+  name: string;
+  designation: string;
+  domain: string;
+}
+
+const Team = ({ year, teamMembers }: { year: string, teamMembers: Array<Member> }) => {
   return (
     <>
       <Head>
-        <title>SRMKZILLA | Team</title>
+        <title>SRMKZILLA | Team of {year}</title>
         <meta
           name="description"
           content="SRMKZILLA is a community of young tech enthusiasts, Meet the team,
             An awesome tech community driven by passion and innovation "
         />
-        <link rel="icon preload canonical" href="./images/kzillalogo.png" />
+        <link rel="icon preload canonical" href="/images/kzillalogo.png" />
       </Head>
       <div className="bg-black overflow-hidden ">
-        <p>fhjfvk</p>
-        <div className="my-20">
+        <div className="mt-24 mb-20">
           <h1 className="text-4xl font-semibold text-gray-100 text-center mb-10 mx-2">
-            Meet the team
+            Team of {year}
           </h1>
           <h3 className="text-xl text-gray-100 text-center px-5">
             An awesome tech community driven by passion and innovation
@@ -44,23 +52,16 @@ const Team = ({ teamMembers }) => {
               <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 lg:gap-2 items-center">
                 {teamMembers.map(
                   (
-                    member: {
-                      picture: { asset: { url: string } }
-                      name: string
-                      domain: string
-                      designation: string
-                      description: { asset: { url: string } }
-                    },
+                    member,
                     index
                   ) => {
                     if (member.domain == `${domain.name}`) {
                       return (
                         <MemberCard
                           key={index}
-                          src={member?.picture?.asset?.url}
-                          name={member?.name}
-                          designation={member?.designation}
-                          audiourl={member?.description?.asset?.url}
+                          src={member.url}
+                          name={member.name}
+                          designation={member.designation}
                         />
                       )
                     }
@@ -70,32 +71,29 @@ const Team = ({ teamMembers }) => {
             </div>
           ))}
         </div>
-
-        <div className="my-32 px-0 md:px-10">
-          <div className="flex flex-col place-items-center my-20">
-            <h1 className="text-4xl font-semibold text-gray-100 text-center">
-              Hear it from the team
-            </h1>
-            <h3 className="w-2/3 text-sm md:text-lg text-gray-100 text-center mt-5">
-              The journey of building an awesome tech community is fuelled by
-              the ardour of its team members. At SRMKZILLA, their ride has been
-              full of incredible experiences to inspire and aspire. Let us hear
-              what they have to say!
-            </h3>
-          </div>
-          <NewCarousel />
-        </div>
       </div>
       <Footer />
     </>
   )
 }
 
-export async function getStaticProps() {
-  const teamMembers = await getTeamMembers()
+export async function getStaticPaths() {
+  const filePath = path.resolve(process.cwd(), "pages", "team", "data");
+  const years = fs.readdirSync(filePath).map((file) => file.replace(/\.json$/, ''));
+
+  const paths = years.map(year => ({
+    params: { year },
+  }))
+
+  return { paths, fallback: false }
+}
+
+export async function getStaticProps(context: GetStaticPropsContext) {
+  const year = context.params?.year as string;
+  const teamMembers = JSON.parse(fs.readFileSync(path.join(process.cwd(), "pages", "team", "data", `${year}.json`), 'utf8'));
 
   return {
-    props: { teamMembers },
+    props: { year, teamMembers },
   }
 }
 
