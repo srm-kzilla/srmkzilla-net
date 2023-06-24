@@ -2,7 +2,7 @@ import { EventType } from '@pages/events'
 import PrizesCard from './prizes-card'
 import Fade from 'react-reveal/Fade'
 
-const PrizePage = ({ event }: { event: EventType }) => {
+const PrizeComponent = ({ event }: { event: EventType }) => {
   const { title, description, slug, prizes } = event
   return (
     <Fade up>
@@ -24,4 +24,4 @@ const PrizePage = ({ event }: { event: EventType }) => {
   )
 }
 
-export default PrizePage
+export default PrizeComponent
