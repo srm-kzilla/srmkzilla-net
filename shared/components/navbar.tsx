@@ -77,14 +77,36 @@ const Navbar = () => {
                   Our Services
                 </p>
               </Link>
-              <Link href="/team">
+              {/* <Link href="/team">
                 <p
                   onClick={() => setOpen(!open)}
                   className="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out hover:border-orange300 cursor-pointer border-b-2 border-transparent"
                 >
                   Team
                 </p>
-              </Link>
+              </Link> */}
+              <Dropdown
+                name="Team"
+                class="absolute md:ml-0 ml-14 md:my-12 md:mx-10 md:top-3 py-2 w-48 rounded-md shadow-md bg-black-200 cursor-pointer"
+                items={[
+                  // {
+                  //   label: 'Events',
+                  //   link: 'https://srmkzilla.net/events',
+                  //   newTab: true,
+                  // },
+                  {
+                    label: 'Current',
+                    link: '/team',
+                    newTab: false,
+                  },
+                  {
+                    label: '2022',
+                    link: '/team/2022',
+                    newTab: false,
+                  },
+                ]}
+                nameClass="md:my-2 mx-2 my-2 px-2 py-1 transition duration-500 ease-in-out relative z-10 hover:border-orange300 cursor-pointer border-b-2 border-transparent focus:outline-none"
+              />
               <Link href="/projects">
                 <p
                   onClick={() => setOpen(!open)}
