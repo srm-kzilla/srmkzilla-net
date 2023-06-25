@@ -4,6 +4,7 @@ import InstagramEmbed from 'react-instagram-embed'
 import Tilt from 'react-parallax-tilt'
 import Footer from '../../shared/components/footer'
 import * as BlockContent from '@sanity/block-content-to-react'
+import {getProjectDetails, getProjects, getProjectSlugs} from "@lib/sanity-api";
 const Fade = require('react-reveal/Fade')
 
 type Props = {
@@ -180,37 +181,8 @@ export const getStaticProps = async (context: { params: { slug: any } }) => {
     }
   }
 
-  const query = encodeURIComponent(
-    `*[ _type == "project" && slug.current == "${pageSlug}" ]{
-      title,
-      slug,
-      logo{
-        asset->{
-          _id,
-          url
-        },
-        alt
-      },
-      link,
-      github,
-      features,
-      youtube,
-      instagram,
-      techstack,
-      description,
-      poster{
-        asset->{
-          _id,
-          url
-        },
-        alt
-      }
-    }`
-  )
-  const url = `https://${process.env.SANITY_ID}.api.sanity.io/v1/data/query/production?query=${query}`
+  const post = await getProjectDetails(pageSlug);
 
-  const result = await fetch(url).then((res) => res.json())
-  const post = result.result[0]
   if (!post) {
     return {
       notFound: true,
@@ -235,15 +207,14 @@ export const getStaticProps = async (context: { params: { slug: any } }) => {
 }
 
 export async function getStaticPaths(): Promise<unknown> {
-  const query = encodeURIComponent(`*[ _type == "project"]{title,slug}`)
-  const url = `https://${process.env.SANITY_ID}.api.sanity.io/v1/data/query/production?query=${query}`
-  const { result } = await fetch(url).then((res) => res.json())
+  const result = await getProjectSlugs();
 
-  const paths = result?.map((project: { title: any }) => {
+  const paths = result.map((project: { slug: string }) => {
     return {
-      params: { slug: project.title },
+      params: { slug: project.slug },
     }
   })
+
   if (!paths) {
     return {
       notFound: true,
