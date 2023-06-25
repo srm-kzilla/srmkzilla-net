@@ -5,13 +5,6 @@ import NewCarousel from '@shared/components/team/carousel'
 import MemberCard from '@shared/components/team/membercard'
 import Head from 'next/head'
 
-import imageUrlBuilder from '@sanity/image-url'
-import sanityClient from '../../shared/client'
-
-function imageUrl(src) {
-  return imageUrlBuilder(sanityClient).image(src)
-}
-
 const Team = ({ teamMembers }) => {
   return (
     <>
@@ -63,7 +56,7 @@ const Team = ({ teamMembers }) => {
                       return (
                         <MemberCard
                           key={index}
-                          src={imageUrl(member?.picture?.asset?.url).url()}
+                          src={member?.picture?.asset?.url}
                           name={member?.name}
                           designation={member?.designation}
                           audioUrl={member?.description?.asset?.url}

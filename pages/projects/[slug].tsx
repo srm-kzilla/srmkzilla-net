@@ -4,7 +4,7 @@ import InstagramEmbed from 'react-instagram-embed'
 import Tilt from 'react-parallax-tilt'
 import Footer from '../../shared/components/footer'
 import * as BlockContent from '@sanity/block-content-to-react'
-import {getProjectDetails, getProjects, getProjectSlugs} from "@lib/sanity-api";
+import { getProjectDetails , getProjectSlugs } from "@lib/sanity-api";
 const Fade = require('react-reveal/Fade')
 
 type Props = {
