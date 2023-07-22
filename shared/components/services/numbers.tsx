@@ -6,7 +6,7 @@ import axios from 'axios'
 import { AiFillGithub, AiFillInstagram, AiFillYoutube } from 'react-icons/ai'
 
 const Stats = () => {
-  const [followers, setFollowers] = useState('3540')
+  const [followers, setFollowers] = useState('3722')
   const [repos, setRepos] = useState('')
   const [subscribers, setSubscribers] = useState('')
 
