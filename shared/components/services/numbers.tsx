@@ -6,11 +6,22 @@ import axios from 'axios'
 import { AiFillGithub, AiFillInstagram, AiFillYoutube } from 'react-icons/ai'
 
 const Stats = () => {
-  const [followers, setFollowers] = useState('3722')
+  const [followers, setFollowers] = useState('')
   const [repos, setRepos] = useState('')
   const [subscribers, setSubscribers] = useState('')
 
   useEffect(() => {
+    axios
+      .get('https://srmkzilla.net/api/instagram', {
+        // .get('http://localhost:3000/api/instagram', {    // uncomment this line to test on development
+        headers: { 'content-type': 'application/json' },
+      })
+      .then((res) => {
+        setFollowers(res.data.data.user.edge_followed_by.count)
+      })
+      .catch((err) => {
+        setFollowers('3722')
+      })
     axios
       .get('https://api.github.com/users/srm-kzilla', {
         headers: { 'content-type': 'application/json' },
