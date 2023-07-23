@@ -16,12 +16,10 @@ export default async function handler(
         },
       }
     )
-
     // Extract the relevant data from the Axios response
     const data = response.data
     res.status(200).json({ data })
   } catch (error) {
-    console.error(error)
     res.status(500).json({ error: 'An error occurred while fetching data' })
   }
 }
