@@ -84,7 +84,7 @@ const Services = (props) => {
               {/* <Numbers /> */}
               <Stats
                 followers={
-                  props.data?.data.data.user.edge_followed_by.count || 3720
+                  props.data?.data?.user?.edge_followed_by?.count || 3720
                 }
               />
             </div>
@@ -133,10 +133,11 @@ export default Services
 export async function getServerSideProps() {
   try {
     const response = await axios.get(
-      'https://www.srmkzilla.net/api/instagram',
+      `https://i.instagram.com/api/v1/users/web_profile_info/?username=srmkzilla`,
       {
         headers: {
-          'content-type': 'application/json',
+          'User-Agent':
+            'Instagram 76.0.0.15.395 Android (24/7.0; 640dpi; 1440x2560; samsung; SM-G930F; herolte; samsungexynos8890; en_US; 138226743)',
         },
       }
     )
