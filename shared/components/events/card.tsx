@@ -41,7 +41,7 @@ const HomeCard = (props: {
           </div>
         ) : (
           <a href={`/register?event=${props.slug}`} rel="noopener noreferrer">
-            <button className="bg-black border rounded-full text-red-500 text-xs px-5 py-1 border-red-500 focus:outline-none">
+            <button className="bg-black border rounded-full text-registerGreen text-xs px-5 py-1 border-registerGreen focus:outline-none">
               Register Now
             </button>
           </a>
