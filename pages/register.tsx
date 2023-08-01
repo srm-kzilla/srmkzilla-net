@@ -79,7 +79,7 @@ const Register = ({
         )
         reward()
         setTimeout(() => {
-          Router.push('/events')
+          Router.push('/events/register/success')
         }, 2000)
       } else if (registerUser.status === 502) {
         toast.warn(
