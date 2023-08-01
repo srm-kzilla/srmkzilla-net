@@ -4,11 +4,12 @@ import Router from 'next/router'
 import React, { useState } from 'react'
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import Footer from '../shared/components/footer'
-import { getEvent, register } from '../utils/api'
-import { registerFormData, registerValidationSchema } from '../utils/schema'
+import Footer from '../../shared/components/footer'
+import { getEvent, register } from '../../utils/api'
+import { registerFormData, registerValidationSchema } from '../../utils/schema'
 import { useReward } from 'react-rewards'
 import { IoInformationCircleOutline } from 'react-icons/io5'
+import { encode } from 'querystring'
 
 type EventProps = {
   title: string
@@ -79,7 +80,7 @@ const Register = ({
         )
         reward()
         setTimeout(() => {
-          Router.push('/events/register/success')
+          Router.push('/register/success/?title=' + encodeURIComponent(title))
         }, 2000)
       } else if (registerUser.status === 502) {
         toast.warn(
