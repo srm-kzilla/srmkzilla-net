@@ -22,7 +22,7 @@ const Success = () => {
         <h1 className="text-center text-white text-4xl mt-16">Success</h1>
 
         <p className="text-center text-white text-3xl">
-            You have successfully registered for the event
+          You have successfully registered for the event
         </p>
       </div>
       <img
