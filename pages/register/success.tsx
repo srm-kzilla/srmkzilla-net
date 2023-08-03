@@ -7,9 +7,6 @@ import Image from 'next/image'
 const Success = () => {
   const router = useRouter()
   const { title } = router.query
-  
-
-
   return (
     <div className="bg-gray-900 h-screen w-screen overflow-hidden z-30 relative">
       <Head>

@@ -79,7 +79,7 @@ const Register = ({
         )
         reward()
         setTimeout(() => {
-          Router.push('/register/success/?title=' + encodeURIComponent(title)) // redirects to the success page
+          Router.push('/register/success/?title=' + encodeURIComponent(title)) 
         }, 2000)
       } else if (registerUser.status === 502) {
         toast.warn(
