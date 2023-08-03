@@ -9,7 +9,6 @@ import { getEvent, register } from '../../utils/api'
 import { registerFormData, registerValidationSchema } from '../../utils/schema'
 import { useReward } from 'react-rewards'
 import { IoInformationCircleOutline } from 'react-icons/io5'
-import { encode } from 'querystring'
 
 type EventProps = {
   title: string
