@@ -7,11 +7,7 @@ import Image from 'next/image'
 const Success = () => {
   const router = useRouter()
   const { title } = router.query
-  useEffect(() => {
-    setTimeout(() => {
-      router.push('/events')
-    }, 3000)
-  }, [])
+  
 
 
   return (
