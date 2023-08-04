@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 import Head from 'next/head'
-import Image from 'next/image'
 
 const Success = () => {
   const router = useRouter()
-  const { title } = router.query
+  let { title } = router.query
+  if (!title) title = "the event";
   return (
     <div className="bg-gray-900 h-screen w-screen overflow-hidden z-30 relative">
       <Head>
