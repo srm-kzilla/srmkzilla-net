@@ -13,6 +13,7 @@ export type SpeakerType = {
   githubLink?: string
   image?: string
   about?: string
+  instagramLink?: string
 }
 
 export type PrizeType = {
