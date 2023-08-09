@@ -109,7 +109,7 @@ const Register = ({
         alt="background"
         draggable={false}
       />
-      <div className="relative min-h-screen md:max-h-screen text-white">
+      <div className="relative min-h-screen md:max-h-screen text-white mt-0 md:mt-32">
         {isRegClosed ? (
           <div className="z-20 h-full inset-0 flex flex-col md:flex-row items-center justify-center gap-24 p-4 md:p-8 max-w-7xl mx-auto pt-72 md:pt-10 ">
             <div className="pr-0 md:pr-0 max-w-xl">
@@ -132,7 +132,7 @@ const Register = ({
             </div>
           </div>
         ) : (
-          <div className="z-20 h-full inset-0 flex flex-col md:flex-row items-center justify-center gap-24 p-4 md:p-8 max-w-7xl mx-auto pt-72 md:pt-10 ">
+          <div className="z-20 h-full inset-0 flex flex-col md:flex-row items-center justify-center gap-24 p-4 md:p-8 max-w-7xl mx-auto pt-32 md:pt-10 ">
             <div className="pr-0 md:pr-0 max-w-xl">
               <h1 className="text-white  w-full text-center text-4xl  font-bold py-2 mb-6 lg:text-5xl ">
                 {title}
