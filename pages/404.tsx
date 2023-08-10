@@ -33,7 +33,7 @@ const Error = () => {
         initial={{ opacity: 1 }}
         animate={{ opacity: 0.3 }}
         transition={{ yoyo: Infinity, duration: 2 }}
-        src="./images/404stars.png"
+        src="/images/404stars.png"
         className="absolute top-0 left-0 w-screen h-screen object-cover z-0"
         alt="stars"
       />
