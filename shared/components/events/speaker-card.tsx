@@ -1,14 +1,15 @@
 import { EventType, SpeakerType } from '@pages/events'
 import { motion } from 'framer-motion'
-import { AiFillLinkedin, AiFillGithub, AiFillMail } from 'react-icons/ai'
+import { AiFillLinkedin, AiFillGithub, AiFillMail, AiFillInstagram } from 'react-icons/ai'
 import { FiMail } from 'react-icons/fi'
 
 const SpeakerCard = ({ speaker }: { speaker: SpeakerType }) => {
-  const { image, name, about, linkedIn, githubLink, email } = speaker
+  const { image, name, about, linkedIn, githubLink, email, instagramLink } = speaker
   const social = {
     linkedIn: { color: '#0966c3', element: AiFillLinkedin, text: 'LinkedIn' },
     github: { color: '#161b22', element: AiFillGithub, text: 'GitHub' },
     mail: { color: '#EA4335', element: FiMail, text: 'Mail' },
+    instagram: { color: '#833AB4', element: AiFillInstagram, text: 'Instagram' },
   }
 
   const LinkElement = ({
@@ -57,15 +58,18 @@ const SpeakerCard = ({ speaker }: { speaker: SpeakerType }) => {
         </p>
         <div className="h-10 md:h-32"></div>
         <div className="grid md:absolute bottom-6 gap-3 grid-cols-2 md:grid-cols-3 md:gap-4 mx-auto justify-center md:justify-start">
-          <div>
-            {linkedIn && <LinkElement link={linkedIn} {...social.linkedIn} />}
-          </div>
-          <div>
-            {githubLink && <LinkElement link={githubLink} {...social.github} />}
-          </div>
-          <div>
-            {email && <LinkElement link={`mailto:${email}`} {...social.mail} />}
-          </div>
+          {linkedIn && <div>
+            {<LinkElement link={linkedIn} {...social.linkedIn} />}
+          </div>}
+          {githubLink && <div>
+            <LinkElement link={githubLink} {...social.github} />
+          </div>}
+          {instagramLink && <div>
+            {<LinkElement link={instagramLink} {...social.instagram} />}
+          </div>}
+          {email && <div>
+            {<LinkElement link={`mailto:${email}`} {...social.mail} />}
+          </div>}
         </div>
       </div>
     </div>

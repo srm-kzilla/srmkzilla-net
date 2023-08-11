@@ -58,7 +58,7 @@ const Register = ({
           email: values.email,
           phoneNumber: values.phoneNumber && parseInt(values.phoneNumber),
           regNumber: values.registrationNumber,
-          department: values.department,
+          department: 'others',
         },
         eventSlug: slug,
       }
@@ -109,7 +109,7 @@ const Register = ({
         alt="background"
         draggable={false}
       />
-      <div className="relative min-h-screen md:max-h-screen text-white">
+      <div className="relative min-h-screen md:max-h-screen text-white mt-0 md:mt-32">
         {isRegClosed ? (
           <div className="z-20 h-full inset-0 flex flex-col md:flex-row items-center justify-center gap-24 p-4 md:p-8 max-w-7xl mx-auto pt-72 md:pt-10 ">
             <div className="pr-0 md:pr-0 max-w-xl">
@@ -132,7 +132,7 @@ const Register = ({
             </div>
           </div>
         ) : (
-          <div className="z-20 h-full inset-0 flex flex-col md:flex-row items-center justify-center gap-24 p-4 md:p-8 max-w-7xl mx-auto pt-72 md:pt-10 ">
+          <div className="z-20 h-full inset-0 flex flex-col md:flex-row items-center justify-center gap-24 p-4 md:p-8 max-w-7xl mx-auto pt-32 md:pt-10 ">
             <div className="pr-0 md:pr-0 max-w-xl">
               <h1 className="text-white  w-full text-center text-4xl  font-bold py-2 mb-6 lg:text-5xl ">
                 {title}
@@ -185,49 +185,6 @@ const Register = ({
                   {touched.registrationNumber && errors.registrationNumber && (
                     <div className="text-red-500 text-sm">
                       {errors.registrationNumber}
-                    </div>
-                  )}
-                  <div className="flex w-full justify-between items-center gap-x-2">
-                    <Field
-                      component="select"
-                      name="department"
-                      className={`${FieldClassDropDown} ${
-                        values.department ? 'text-white' : 'text-gray-500'
-                      }`}
-                    >
-                      <option value="" disabled selected hidden>
-                        Department
-                      </option>
-                      <option className="text-white" value="CTECH">
-                        CTECH
-                      </option>
-                      <option className="text-white" value="NWC">
-                        NWC
-                      </option>
-                      <option className="text-white" value="CINTEL">
-                        CINTEL
-                      </option>
-                      <option className="text-white" value="DSBS">
-                        DSBS
-                      </option>
-                      <option className="text-white" value="Others">
-                        Others
-                      </option>
-                    </Field>
-                    <a
-                      href="https://shashank-srmkzilla.notion.site/CSE-Departments-66def3c57b7f4ded9a43f8e4ad2635e3"
-                      title="Don't know which Department you're in? Click Me!"
-                      target="_blank"
-                    >
-                      <IoInformationCircleOutline
-                        size="2rem"
-                        className="text-white hover:text-green-500"
-                      />
-                    </a>
-                  </div>
-                  {touched.department && errors.department && (
-                    <div className="text-red-500 text-sm">
-                      {errors.department}
                     </div>
                   )}
                   <Field
