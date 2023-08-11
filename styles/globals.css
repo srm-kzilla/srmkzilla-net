@@ -1,5 +1,6 @@
 @tailwind base;
 @tailwind components;
+@tailwind utilities;
 
 @font-face {
   font-family: NewFont;
@@ -172,5 +173,3 @@ input[data-autocompleted] {
 .show-less {
   max-height: none !important;
 }
-
-@tailwind utilities;

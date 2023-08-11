@@ -9,7 +9,7 @@ type Props = {
     title: string
     description: string
   }
-}
+};
 
 export const LeftTimeline = ({ data }: Props) => {
   return (
@@ -27,7 +27,10 @@ export const LeftTimeline = ({ data }: Props) => {
               </div>
             </div>
           </div>
-          <Tilt options={{ max: 25, scale: 1 }}>
+          <Tilt options={{
+            max: 25,
+            scale: 1
+          }} style={{}}>
             <div className="Tilt-inner ml-4 lg:mx-10">
               <div className="lg:order-1 mt-6 lg:mt-12 ml-3 md:ml-0 lg:ml-16 lg:transform -rotate-2 min-w-96 w-11/12 md:max-w-full lg:w-4/5 h-max bg-black-200 rounded-xl p-4">
                 <div className="rounded-xl overflow-hidden">

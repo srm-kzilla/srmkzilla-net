@@ -3,8 +3,9 @@ import Carousel from 'react-elastic-carousel'
 import { alumniReviews } from '@lib/data/reviews'
 
 const NewCarousel = () => {
-  return (
+    return (
     <div>
+      {/*@ts-ignore*/}
       <Carousel enableAutoPlay autoPlaySpeed={30000} isRTL={false}>
         {alumniReviews.map((item, idx) => {
           return (

@@ -46,7 +46,7 @@ const Register = ({
     registrationNumber: '',
     email: '',
     phoneNumber: '',
-    department: '',
+    department: 'Others', // This Should have a default values orelse linting raises a error
   }
   const banner = eventCover ? eventCover : '/public/images/banner.png'
   const handleSubmit = async (values: registerFormData) => {
