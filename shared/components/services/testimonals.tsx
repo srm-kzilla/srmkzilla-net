@@ -25,25 +25,27 @@ const Testimonals = () => {
               </div>
               <div className="flex flex-col">
                 <div>
-                  <h2 className="text-left font-bold">Nikunj Panchal</h2>
+                  <h2 className="text-left font-bold">Kushal Aralihalli</h2>
                 </div>
 
                 <div>
-                  <p className="text-left text-sm">SIIC, SRMIST</p>
+                  <p className="text-left text-sm">
+                    Product Manager, Sarthaka Foundation
+                  </p>
                 </div>
               </div>
             </div>
           </div>
           <div className="flex justify-items-center items-center lg:px-20 -mt-10">
             <p className="lg:w-6/7 md:text-lg text-sm text-justify">
-              I have been fortunate to use the services of SRMKZILLA for the
-              past six months. In this ever changing world of technology,
-              SRMKZILLA has provided quality and timely service to my company.
-              SRMKZILLA has not only provided great service but provided
-              consultation on best practices for my company to make it grow
-              further. Having been in business for 5 years, I know when I’ve
-              found a club with integrity. I highly recommend this club and am
-              available for further reference if needed.
+              I'm incredibly grateful for the fantastic support we received from
+              SRMKZILLA in building our website and designs. Their dedication
+              and expertise were evident at every step, and their ongoing
+              assistance is truly appreciated. Thanks to SRMKZILLA, our NGO'S
+              online presence has flourished, allowing us to connect with our
+              donors and under privileged Students. They are a highly
+              recommended partner for anyone seeking top-notch web development
+              and design services.
             </p>
           </div>
         </div>
