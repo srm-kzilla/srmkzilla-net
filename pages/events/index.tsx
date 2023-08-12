@@ -67,8 +67,8 @@ const Events = ({ featuredEvents }: EventsProps) => {
       <div className="absolute left-0 pl-10 md:pl-32 top-1/3 text-left">
         <h1 className="text-6xl uppercase">Events</h1>
         <p className="text-xl font-light	mt-4 max-w-2xl">
-          A place where magic meets technology and makes our dream of sharing
-          unique experiences with the developer community come true.
+          Where magic meets technology, and our dream of sharing unique 
+          experiences with the developer community comes true.
         </p>
       </div>
       <div
