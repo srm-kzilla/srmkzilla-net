@@ -119,11 +119,11 @@ const Navbar = () => {
                   //   link: 'https://srmkzilla.net/events',
                   //   newTab: true,
                   // },
-                  {
+                  /* {
                     label: 'Everything',
                     link: 'https://everything.srmkzilla.net/',
                     newTab: true,
-                  },
+                  }, */
                   {
                     label: 'YouTube',
                     link: 'https://www.youtube.com/srmkzilla',

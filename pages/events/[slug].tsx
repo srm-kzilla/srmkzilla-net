@@ -77,7 +77,7 @@ export async function getStaticProps(context: { params: { slug: string } }) {
   let eventDetails: EventType
   const pageSlug = context.params.slug
   try {
-    eventDetails = await getEvent(pageSlug)
+    eventDetails = await getEvent(pageSlug);
   } catch (err) {
     return {
       notFound: true,

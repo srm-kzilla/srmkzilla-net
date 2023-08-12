@@ -3,16 +3,16 @@ import Collaborate from '@shared/components/services/collaborate'
 import Stats from '@shared/components/services/numbers'
 import ServicesProvided from '@shared/components/services/servicesprovided'
 import Testimonials from '@shared/components/services/testimonals'
+import axios from 'axios'
 import { motion, useTransform, useViewportScroll } from 'framer-motion'
 import Head from 'next/head'
 import React from 'react'
 
 const Fade = require('react-reveal/Fade')
 
-const Services = () => {
+const Services = (props) => {
   const { scrollYProgress } = useViewportScroll()
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0])
-
   return (
     <div>
       <Head>
@@ -82,7 +82,11 @@ const Services = () => {
                 </h3>
               </Fade>
               {/* <Numbers /> */}
-              <Stats />
+              <Stats
+                followers={
+                  props.data?.data?.user?.edge_followed_by?.count || 3720
+                }
+              />
             </div>
 
             <div className="text-gray-100 pb-10">
@@ -125,3 +129,29 @@ const Services = () => {
 }
 
 export default Services
+
+export async function getServerSideProps() {
+  try {
+    const response = await axios.get(
+      `https://i.instagram.com/api/v1/users/web_profile_info/?username=srmkzilla`,
+      {
+        headers: {
+          'User-Agent':
+            'Instagram 76.0.0.15.395 Android (24/7.0; 640dpi; 1440x2560; samsung; SM-G930F; herolte; samsungexynos8890; en_US; 138226743)',
+        },
+      }
+    )
+    const data = response.data
+    return {
+      props: {
+        data,
+      },
+    }
+  } catch (error) {
+    return {
+      props: {
+        data: null,
+      },
+    }
+  }
+}
