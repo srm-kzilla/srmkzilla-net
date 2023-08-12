@@ -37,7 +37,7 @@ const EventTimeline = ({ event }: { event: EventType }) => {
               fontSizes={{
                 cardSubtitle: '1.3rem',
                 cardText: '0.9rem',
-                cardTitle: '1.2rem',
+                cardTitle: '1.0rem',
               }}
               theme={{
                 primary: 'white',
