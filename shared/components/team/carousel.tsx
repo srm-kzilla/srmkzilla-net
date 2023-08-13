@@ -1,11 +1,11 @@
 import React from 'react'
-import Carousel from 'react-elastic-carousel'
+import Carousel from '@itseasy21/react-elastic-carousel'
 import { alumniReviews } from '@lib/data/reviews'
 
 const NewCarousel = () => {
   return (
     <div>
-      {/* <Carousel enableAutoPlay autoPlaySpeed={30000} isRTL={false}>
+      <Carousel enableAutoPlay autoPlaySpeed={30000} isRTL={false}>
         {alumniReviews.map((item, idx) => {
           return (
             <div key={idx}>
@@ -35,7 +35,7 @@ const NewCarousel = () => {
             </div>
           )
         })}
-      </Carousel> */}
+      </Carousel>
     </div>
   )
 }

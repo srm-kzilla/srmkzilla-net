@@ -1,7 +1,7 @@
 import { DOMAINS } from '@lib/data/domains'
 import { getTeamMembers } from '@lib/sanity-api'
 import Footer from '@shared/components/footer'
-// import NewCarousel from '@shared/components/team/carousel'
+import NewCarousel from '@shared/components/team/carousel'
 import MemberCard from '@shared/components/team/membercard'
 import Head from 'next/head'
 
@@ -82,7 +82,7 @@ const Team = ({ teamMembers }) => {
               what they have to say!
             </h3>
           </div>
-          {/* <NewCarousel /> */}
+          <NewCarousel />
         </div>
       </div>
       <Footer />
