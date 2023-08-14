@@ -21,7 +21,11 @@ const Services = (props) => {
           name="description"
           content="SRMKZILLA is a community of young tech enthusiasts who eat, sleep and breath technology. We organize everything from technical workshops to gaming events, you name it & we do it. "
         />
-        <link rel="icon preload canonical" href="./images/kzillalogo.png" />
+        <link
+          rel="icon preload canonical"
+          href="./images/kzillalogo.png"
+          as="image"
+        />
       </Head>
 
       <div className="h-screen bg-black-200 bg-light bg-fixed md:pt-40 pt-28 overflow-hidden px-5">

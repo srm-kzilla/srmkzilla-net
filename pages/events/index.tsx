@@ -55,7 +55,7 @@ const Events = ({ featuredEvents }: EventsProps) => {
           name="description"
           content="SRMKZILLA is a community of young tech enthusiasts who eat, sleep and breath technology. We organize everything from technical workshops to gaming events, you name it & we do it. "
         />
-        <link rel="icon" href="./images/kzillalogo.png" />
+        <link rel="icon" href="./images/kzillalogo.png" as="image" />
       </Head>
       <img
         src="./images/events-cover-3.jpeg"
@@ -67,7 +67,7 @@ const Events = ({ featuredEvents }: EventsProps) => {
       <div className="absolute left-0 pl-10 md:pl-32 top-1/3 text-left">
         <h1 className="text-6xl uppercase">Events</h1>
         <p className="text-xl font-light	mt-4 max-w-2xl">
-          Where magic meets technology, and our dream of sharing unique 
+          Where magic meets technology, and our dream of sharing unique
           experiences with the developer community comes true.
         </p>
       </div>

@@ -6,19 +6,28 @@ import Head from 'next/head'
 const Success = () => {
   const router = useRouter()
   let { title } = router.query
-  if (!title) title = "the event";
+  if (!title) title = 'the event'
   return (
     <div className="bg-gray-900 h-screen w-screen overflow-hidden z-30 relative">
       <Head>
         <title>Success</title>
         <meta name="description" content="Success page" />
-        <link rel="icon preload canonical" href="./images/kzillalogo.png" />
+        <link
+          rel="icon preload canonical"
+          href="./images/kzillalogo.png"
+          as="image"
+        />
       </Head>
       <div className="z-30 relative top-60">
-        <h1 className="text-center text-white text-5xl mt-16 pb-4 md:text-7xl">Success</h1>
+        <h1 className="text-center text-white text-5xl mt-16 pb-4 md:text-7xl">
+          Success
+        </h1>
 
         <p className="text-center text-lg text-white md:text-3xl">
-          You have successfully registered for <span className='font-bold'>{decodeURIComponent(title as string)}</span>
+          You have successfully registered for{' '}
+          <span className="font-bold">
+            {decodeURIComponent(title as string)}
+          </span>
         </p>
       </div>
       <img
@@ -37,6 +46,5 @@ const Success = () => {
     </div>
   )
 }
-
 
 export default Success
