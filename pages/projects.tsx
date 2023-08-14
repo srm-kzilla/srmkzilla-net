@@ -46,12 +46,10 @@ const Projects = ({ projects, serviceProjects }) => {
                   as={`/projects/${project.title}`}
                   key={project.title as string}
                 >
-                  <a>
-                    <ProjectIcon
-                      icon={project?.logo?.asset?.url}
-                      title={project?.title}
-                    />
-                  </a>
+                  <ProjectIcon
+                    icon={project?.logo?.asset?.url}
+                    title={project?.title}
+                  />
                 </Link>
               )
             )}

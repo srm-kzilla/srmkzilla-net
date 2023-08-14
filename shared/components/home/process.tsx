@@ -124,7 +124,7 @@ const Process = () => (
           animate="show"
           d="M951 72.5C965.5 92.8333 988.4 146 964 196"
           stroke="#FFFBFB"
-          stroke-linejoin="round"
+          strokeLinejoin="round"
         />
         <motion.path
           variants={container}
@@ -279,7 +279,7 @@ const Process = () => (
           animate="show"
           d="M951 72.5C965.5 92.8333 988.4 146 964 196"
           stroke="#FFFBFB"
-          stroke-linejoin="round"
+          strokeLinejoin="round"
         />
         <motion.path
           variants={container}

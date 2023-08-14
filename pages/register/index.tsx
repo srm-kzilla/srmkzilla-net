@@ -78,7 +78,7 @@ const Register = ({
         )
         reward()
         setTimeout(() => {
-          Router.push('/register/success/?title=' + encodeURIComponent(title)) 
+          Router.push('/register/success/?title=' + encodeURIComponent(title))
         }, 2000)
       } else if (registerUser.status === 502) {
         toast.warn(
@@ -99,7 +99,7 @@ const Register = ({
           name="description"
           content="SRMKZILLA is a community of young tech enthusiasts who eat, sleep and breath technology. We organize everything from technical workshops to gaming events, you name it & we do it. "
         />
-        <link rel="icon" href="./images/kzillalogo.png" />
+        <link rel="icon" href="./images/kzillalogo.png" as="image" />
       </Head>
       <ToastContainer />
       <img

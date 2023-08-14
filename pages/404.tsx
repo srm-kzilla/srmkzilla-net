@@ -10,7 +10,11 @@ const Error = () => {
       <Head>
         <title>404</title>
         <meta name="description" content="404 page" />
-        <link rel="icon preload canonical" href="./images/kzillalogo.png" />
+        <link
+          rel="icon preload canonical"
+          href="./images/kzillalogo.png"
+          as="image"
+        />
       </Head>
       <div className="z-30 relative">
         <h1 className="text-center text-white text-4xl mt-16">Oops..</h1>
@@ -32,7 +36,7 @@ const Error = () => {
       <motion.img
         initial={{ opacity: 1 }}
         animate={{ opacity: 0.3 }}
-        transition={{ yoyo: Infinity, duration: 2 }}
+        transition={{ reverse: Infinity, duration: 2 }}
         src="/images/404stars.png"
         className="absolute top-0 left-0 w-screen h-screen object-cover z-0"
         alt="stars"

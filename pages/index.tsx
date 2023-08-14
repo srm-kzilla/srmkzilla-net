@@ -13,7 +13,11 @@ const Home = ({ updatesCard }) => (
         name="description"
         content="SRMKZILLA is a community of young tech enthusiasts who eat, sleep and breath technology. We organize everything from technical workshops to gaming events, you name it & we do it. "
       />
-      <link rel="icon preload canonical" href="./images/kzillalogo.png" />
+      <link
+        rel="icon preload canonical"
+        href="./images/kzillalogo.png"
+        as="image"
+      />
     </Head>
     <div className="bg-black overflow-hidden">
       <FirstFold />
