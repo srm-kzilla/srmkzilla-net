@@ -9,18 +9,18 @@ import Head from 'next/head'
 const Team = ({ teamMembers }) => {
   teamMembers.sort((a: any, b: any) => {
     if (HIERARCHY.indexOf(a.designation) > HIERARCHY.indexOf(b.designation)) {
-      return 1;
+      return 1
     } else if (
       HIERARCHY.indexOf(a.designation) < HIERARCHY.indexOf(b.designation)
     ) {
-      return -1;
+      return -1
     } else {
       if (a.name > b.name) {
         return 1
       } else if (a.name < b.name) {
-        return -1;
+        return -1
       }
-      return 0;
+      return 0
     }
   })
 

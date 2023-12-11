@@ -2,19 +2,25 @@ import { DOMAINS } from '@lib/data/domains'
 import Footer from '@shared/components/footer'
 import MemberCard from '@shared/components/team/membercard'
 import Head from 'next/head'
-import type { GetStaticPropsContext } from "next";
+import type { GetStaticPropsContext } from 'next'
 
-import * as fs from "fs";
-import * as path from "path";
+import * as fs from 'fs'
+import * as path from 'path'
 
 interface Member {
-  url: string;
-  name: string;
-  designation: string;
-  domain: string;
+  url: string
+  name: string
+  designation: string
+  domain: string
 }
 
-const Team = ({ year, teamMembers }: { year: string, teamMembers: Array<Member> }) => {
+const Team = ({
+  year,
+  teamMembers,
+}: {
+  year: string
+  teamMembers: Array<Member>
+}) => {
   return (
     <>
       <Head>
@@ -50,23 +56,18 @@ const Team = ({ year, teamMembers }: { year: string, teamMembers: Array<Member> 
               </h5>
 
               <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 lg:gap-2 items-center">
-                {teamMembers.map(
-                  (
-                    member,
-                    index
-                  ) => {
-                    if (member.domain == `${domain.name}`) {
-                      return (
-                        <MemberCard
-                          key={index}
-                          src={member.url}
-                          name={member.name}
-                          designation={member.designation}
-                        />
-                      )
-                    }
+                {teamMembers.map((member, index) => {
+                  if (member.domain == `${domain.name}`) {
+                    return (
+                      <MemberCard
+                        key={index}
+                        src={member.url}
+                        name={member.name}
+                        designation={member.designation}
+                      />
+                    )
                   }
-                )}
+                })}
               </div>
             </div>
           ))}
@@ -78,10 +79,12 @@ const Team = ({ year, teamMembers }: { year: string, teamMembers: Array<Member> 
 }
 
 export async function getStaticPaths() {
-  const filePath = path.resolve(process.cwd(), "pages", "team", "data");
-  const years = fs.readdirSync(filePath).map((file) => file.replace(/\.json$/, ''));
+  const filePath = path.resolve(process.cwd(), 'pages', 'team', 'data')
+  const years = fs
+    .readdirSync(filePath)
+    .map((file) => file.replace(/\.json$/, ''))
 
-  const paths = years.map(year => ({
+  const paths = years.map((year) => ({
     params: { year },
   }))
 
@@ -89,8 +92,13 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context: GetStaticPropsContext) {
-  const year = context.params?.year as string;
-  const teamMembers = JSON.parse(fs.readFileSync(path.join(process.cwd(), "pages", "team", "data", `${year}.json`), 'utf8'));
+  const year = context.params?.year as string
+  const teamMembers = JSON.parse(
+    fs.readFileSync(
+      path.join(process.cwd(), 'pages', 'team', 'data', `${year}.json`),
+      'utf8'
+    )
+  )
 
   return {
     props: { year, teamMembers },
