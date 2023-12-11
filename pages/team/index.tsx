@@ -1,4 +1,5 @@
 import { DOMAINS } from '@lib/data/domains'
+import { HIERARCHY } from '@lib/data/hierarchy'
 import { getTeamMembers } from '@lib/sanity-api'
 import Footer from '@shared/components/footer'
 import NewCarousel from '@shared/components/team/carousel'
@@ -6,6 +7,23 @@ import MemberCard from '@shared/components/team/membercard'
 import Head from 'next/head'
 
 const Team = ({ teamMembers }) => {
+  teamMembers.sort((a: any, b: any) => {
+    if (HIERARCHY.indexOf(a.designation) > HIERARCHY.indexOf(b.designation)) {
+      return 1;
+    } else if (
+      HIERARCHY.indexOf(a.designation) < HIERARCHY.indexOf(b.designation)
+    ) {
+      return -1;
+    } else {
+      if (a.name > b.name) {
+        return 1
+      } else if (a.name < b.name) {
+        return -1;
+      }
+      return 0;
+    }
+  })
+
   return (
     <>
       <Head>
