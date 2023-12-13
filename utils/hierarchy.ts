@@ -27,10 +27,6 @@ export type TeamMembers = {
 
 export const sortedTeamMembers = (teamMembers: TeamMembers[]) => {
   return teamMembers.sort((a, b) => {
-    console.log(
-      HIERARCHY.indexOf(a.designation) - HIERARCHY.indexOf(b.designation) ||
-        a.name.localeCompare(b.name)
-    )
     return (
       HIERARCHY.indexOf(a.designation) - HIERARCHY.indexOf(b.designation) ||
       a.name.localeCompare(b.name)
