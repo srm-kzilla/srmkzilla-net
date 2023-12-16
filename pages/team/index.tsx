@@ -1,4 +1,5 @@
 import { DOMAINS } from '@lib/data/domains'
+import { TeamMember, sortedTeamMembers } from 'utils/hierarchy'
 import { getTeamMembers } from '@lib/sanity-api'
 import Footer from '@shared/components/footer'
 import NewCarousel from '@shared/components/team/carousel'
@@ -45,18 +46,9 @@ const Team = ({ teamMembers }) => {
               </h5>
 
               <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 lg:gap-2 items-center">
-                {teamMembers.map(
-                  (
-                    member: {
-                      picture: { asset: { url: string } }
-                      name: string
-                      domain: string
-                      designation: string
-                      description: { asset: { url: string } }
-                    },
-                    index
-                  ) => {
-                    if (member.domain == `${domain.name}`) {
+                {sortedTeamMembers(teamMembers).map(
+                  (member: TeamMember, index) => {
+                    if (member.domain === domain.name) {
                       return (
                         <MemberCard
                           key={index}
