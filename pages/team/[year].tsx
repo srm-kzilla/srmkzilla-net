@@ -21,10 +21,11 @@ const Team = ({
   year: string
   teamMembers: Array<Member>
 }) => {
-  return (
+  const title = `SRMKZILLA | Team of ${year}`
+  return (    
     <>
       <Head>
-        <title>SRMKZILLA | Team of {year}</title>
+        <title>title</title>
         <meta
           name="description"
           content="SRMKZILLA is a community of young tech enthusiasts, Meet the team,
