@@ -10,9 +10,14 @@ export const HIERARCHY = [
   'Member',
 ]
 
-export type TeamMembers = {
+export type TeamMember = {
   name: string
-  description: string
+  description: {
+    asset: {
+      _id: string
+      url: string
+    }
+  }
   designation: string
   domain: string
   picture: {
@@ -25,7 +30,7 @@ export type TeamMembers = {
   index: number
 }
 
-export const sortedTeamMembers = (teamMembers: TeamMembers[]) => {
+export const sortedTeamMembers = (teamMembers: TeamMember[]) => {
   return teamMembers.sort((a, b) => {
     return (
       HIERARCHY.indexOf(a.designation) - HIERARCHY.indexOf(b.designation) ||
