@@ -164,6 +164,15 @@ const Footer = () => {
                 <IoCall className="text-green-500 mr-2" />
                 Devansh Multani
               </a>
+
+              <a
+                rel="noopener noreferrer"
+                href="https://what.sapp.link/kzilla-24"
+                className="mt-2 cursor-pointer flex items-center"
+              >
+                <IoCall className="text-green-500 mr-2" />
+                Corporate Sponsorship
+              </a>
             </div>
           </div>
         </div>
