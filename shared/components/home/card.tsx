@@ -2,10 +2,10 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 
 const HomeCard = (props: {
-  name: String
+  name: string
   image: string
-  desc: String
-  link: String
+  desc: string
+  link: string
 }) => {
   return (
     <motion.div
@@ -24,7 +24,7 @@ const HomeCard = (props: {
       </h1>
       <p className="text-white font-light px-3 mt-3 text-xs">{props.desc}</p>
       <div className="text-center mt-10 mb-5">
-        <Link href={`/events`}>
+        <Link href={props.link ?? "/events"}>
           <button className="bg-black border rounded-full text-white text-xs px-5 py-1 border-white focus:outline-none">
             Know More
           </button>

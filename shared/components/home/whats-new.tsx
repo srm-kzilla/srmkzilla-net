@@ -15,10 +15,10 @@ const WhatsNew = ({ cardContent }) => (
           cardContent.map(
             (
               card: {
-                title: String
+                title: string
                 picture: { asset: { url: string } }
-                description: String
-                link: String
+                description: string
+                link: string
               },
               index
             ) => (
