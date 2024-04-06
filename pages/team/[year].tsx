@@ -25,7 +25,7 @@ const Team = ({
   return (    
     <>
       <Head>
-        <title>title</title>
+        <title>Team 2022</title>
         <meta
           name="description"
           content="SRMKZILLA is a community of young tech enthusiasts, Meet the team,
