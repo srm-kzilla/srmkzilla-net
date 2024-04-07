@@ -22,10 +22,10 @@ const Team = ({
   teamMembers: Array<Member>
 }) => {
   const title = `SRMKZILLA | Team of ${year}`
-  return (    
+  return (
     <>
       <Head>
-        <title>title</title>
+        <title>{title}</title>
         <meta
           name="description"
           content="SRMKZILLA is a community of young tech enthusiasts, Meet the team,
