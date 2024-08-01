@@ -1,0 +1,695 @@
+[
+  {
+    "name": "Nandini Nigam",
+    "designation": "President",
+    "domain": "Leadership",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/997711a302ab668d80bb1c5c7ea4c1f1cf625996-1080x1080.jpg",
+    "index": 0
+  },
+  {
+    "name": "Shashank Kumar",
+    "designation": "Vice President",
+    "domain": "Leadership",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/83279c2ab38deeaa481c2a2c134394f955ad1e07-460x460.jpg",
+    "index": 1
+  },
+  {
+    "name": "Viraj Agarwal",
+    "designation": "Technical Head",
+    "domain": "Leadership",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/ce00902c8ea878c16e27afe1d831ca2dfbc6778a-800x661.png",
+    "index": 2
+  },
+  {
+    "name": "Akshita Singh",
+    "designation": "Editorial Head",
+    "domain": "Leadership",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/a9540704a9d3475fc2562420b964d6b5fc468705-4032x3024.jpg",
+    "index": 3
+  },
+  {
+    "name": "Devansh Multani",
+    "designation": "Corporate Head",
+    "domain": "Leadership",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/6c5983ef6a28a666a7176e2bf089940224e7d826-720x720.jpg",
+    "index": 4
+  },
+  {
+    "name": "Riya Ann Thomas",
+    "designation": "Events Head",
+    "domain": "Leadership",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/610ee209a9791d8b052d19e51ac6944da17c7394-517x517.jpg",
+    "index": 5
+  },
+  {
+    "name": "Sukhumjeet Singh",
+    "designation": "Lead",
+    "domain": "Corporate",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/30a5c4b00f2bf881c513ffb3918554176a8d24d8-661x850.jpg",
+    "index": 6
+  },
+  {
+    "name": "Anjali Dubey",
+    "designation": "Associate Lead",
+    "domain": "Corporate",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/53f145e39d6d78c8108b7e18a81d4a86e4a5430c-2594x2594.jpg",
+    "index": 7
+  },
+  {
+    "name": "Himanshu Bhadani",
+    "designation": "Associate Lead",
+    "domain": "Corporate",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/f3dc9759519bd0979b6667e2fa5dc364743aa6ba-565x559.jpg",
+    "index": 8
+  },
+  {
+    "name": "Manavi Lahoti ",
+    "designation": "Associate Lead",
+    "domain": "Corporate",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/62b2ae01a0864f468450de0171e74b110209b244-1200x1599.jpg",
+    "index": 9
+  },
+  {
+    "name": "Sourabh Dhar ",
+    "designation": "Associate Lead",
+    "domain": "Corporate",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/408c635f2c5c46f80aa8fcb7d672d3a445476c2f-768x1024.jpg",
+    "index": 10
+  },
+  {
+    "name": "Anushka Maji",
+    "designation": "Member",
+    "domain": "Corporate",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/6265070a29e55254663a4b0ab644f60cb16a049d-681x853.jpg",
+    "index": 11
+  },
+  {
+    "name": "Pranav Singla",
+    "designation": "Member",
+    "domain": "Corporate",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/6c9fe91be036068e2a53351f6c5adf4849c08075-732x856.jpg",
+    "index": 12
+  },
+  {
+    "name": "Akshara Harihar",
+    "designation": "Member",
+    "domain": "Corporate",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/393a47a4fa659994a0a2cfb870b3da1d446b21ab-789x789.jpg",
+    "index": 13
+  },
+  {
+    "name": "Aditya Rathore",
+    "designation": "Member",
+    "domain": "Corporate",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/ffb37dfc8e985124166198a92a9354cb154f1d63-3024x4032.jpg",
+    "index": 14
+  },
+  {
+    "name": "Netra Dhuliya",
+    "designation": "Member",
+    "domain": "Corporate",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/e38210523dcf8ef760dd6d98a949a03fb1c6d06a-320x450.jpg",
+    "index": 15
+  },
+  {
+    "name": "Soumya Singh",
+    "designation": "Member",
+    "domain": "Corporate",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/0b7d7cde0e31df64fb6a141945e7be6e4e733fa7-1280x720.jpg",
+    "index": 16
+  },
+  {
+    "name": "Tanish Bhardwaj",
+    "designation": "Member",
+    "domain": "Corporate",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/0ac089ff7bad02b30a237f3bf75bb7fd74d5b78c-654x1344.jpg",
+    "index": 17
+  },
+  {
+    "name": "Shreya Ramanathan",
+    "designation": "Member",
+    "domain": "Corporate",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/38ae508e5d57da2e2c6c2ee178d434ef9da24142-1200x1384.jpg",
+    "index": 18
+  },
+  {
+    "name": "Adi Amartya Shankar",
+    "designation": "Member",
+    "domain": "Corporate",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/314239aa5c45a1daf5d903485737ddb4be1e68c1-312x474.jpg",
+    "index": 19
+  },
+  {
+    "name": "Paritosh Singh",
+    "designation": "Member",
+    "domain": "Corporate",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/f6746573b7d2cb45e042e4c4fc0bdaf972cc28c6-652x1333.jpg",
+    "index": 20
+  },
+  {
+    "name": "Akarsh Ghildyal",
+    "designation": "Lead",
+    "domain": "Events",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/07e4ed14319c8bbab91d93bec61f52c3a2fa21b9-743x599.png",
+    "index": 21
+  },
+  {
+    "name": "Rajdeep Chatterjee",
+    "designation": "Lead",
+    "domain": "Events",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/89380dfe4759e13b54c5548a863d68e23cf738d2-768x1024.jpg",
+    "index": 22
+  },
+  {
+    "name": "Pal Patel",
+    "designation": "Lead",
+    "domain": "Events",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/939a3ac947f669def9b1c39132a57cc4c4627352-768x1024.jpg",
+    "index": 23
+  },
+  {
+    "name": "Mythili Prakash",
+    "designation": "Associate Lead",
+    "domain": "Events",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/04d9c860b4e82559cf0444995c1579cf530b2843-1200x1600.jpg",
+    "index": 24
+  },
+  {
+    "name": "Dhruvaryan Chugh",
+    "designation": "Member",
+    "domain": "Events",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/4daf1fd9e9800ddbb5a1378fbda16eba369607c1-1515x2510.jpg",
+    "index": 25
+  },
+  {
+    "name": "Manya M Kashyap",
+    "designation": "Member",
+    "domain": "Events",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/e7f3d86d897b818f4770b92dbfbd31215baca3a3-902x1600.jpg",
+    "index": 26
+  },
+  {
+    "name": "Utkrisht Singh Parmar",
+    "designation": "Member",
+    "domain": "Events",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/beba39d5fd2f4b079eb0ef1ca92a8b5e5721235a-300x394.jpg",
+    "index": 27
+  },
+  {
+    "name": "Aaditya Pandey",
+    "designation": "Member",
+    "domain": "Events",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/ace96581fd025465140233588e2011f68bc87377-2953x2953.jpg",
+    "index": 28
+  },
+  {
+    "name": "Saiswarup Nayak",
+    "designation": "Member",
+    "domain": "Events",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/54afb1fbb2cfbe095a2dc0c43a44fc5ea4b3768a-1878x3342.jpg",
+    "index": 29
+  },
+  {
+    "name": "Priyanshika",
+    "designation": "Member",
+    "domain": "Events",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/db0ff735cf8fd4823ff9b6139d82a579d7af89b8-1024x768.jpg",
+    "index": 30
+  },
+  {
+    "name": "Nishtha Goyal",
+    "designation": "Member",
+    "domain": "Events",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/62bc265487b5df22bcaeac996bc8e51459222018-1200x1600.jpg",
+    "index": 31
+  },
+  {
+    "name": "Kanishk M M",
+    "designation": "Member",
+    "domain": "Events",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/121784bc78f79df94763842b5b946cc1fb50c6c6-611x1094.jpg",
+    "index": 32
+  },
+  {
+    "name": "Ananya Garg",
+    "designation": "Member",
+    "domain": "Events",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/cb5531acadf31cbbae185acf91b15ead9ec6ccc2-812x812.jpg",
+    "index": 33
+  },
+  {
+    "name": "Arnab Datta",
+    "designation": "Member",
+    "domain": "Events",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/44dddc9365227a326165af183b664ae27fce2285-2048x2048.jpg",
+    "index": 34
+  },
+  {
+    "name": "Jiya Sehgal",
+    "designation": "Member",
+    "domain": "Events",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/55d73090f7388b67289578c5161435301052fbf5-589x1024.jpg",
+    "index": 35
+  },
+  {
+    "name": "Hardik Agrawal",
+    "designation": "Member",
+    "domain": "Events",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/a83f7e1cccc0572975090d28e4167e2a4c5a0ef6-768x1024.jpg",
+    "index": 36
+  },
+  {
+    "name": "Ashmisikha Piri",
+    "designation": "Member",
+    "domain": "Events",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/35a8e47f228f3767e918689ab84ef3dc4e7bad6e-3024x4032.jpg",
+    "index": 37
+  },
+  {
+    "name": "Navdeep Singh Jakhar",
+    "designation": "Lead",
+    "domain": "Editorial",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/3f4ab241d9e82a26d2d4abdfaa1607cabb41fd46-543x543.jpg",
+    "index": 38
+  },
+  {
+    "name": "Yash Bohra",
+    "designation": "Lead",
+    "domain": "Editorial",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/3bd9b2a6ab6675cdbd343555a90e20a7fca990c4-2320x3088.jpg",
+    "index": 39
+  },
+  {
+    "name": "Priyanshi Sharma",
+    "designation": "Lead",
+    "domain": "Editorial",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/b089db75e2a65f7cf8a674adffddc411b7c254b2-1280x960.jpg",
+    "index": 40
+  },
+  {
+    "name": "Srishti Chatterjee ",
+    "designation": "Lead",
+    "domain": "Editorial",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/faffe522c5ca1c7ea44c60f26fd65ff91e4d9e05-1200x1600.jpg",
+    "index": 41
+  },
+  {
+    "name": "Subhranka Debnath",
+    "designation": "Associate Lead",
+    "domain": "Editorial",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/9796220778c886a6e0083e447d35fc23400b71fd-576x576.jpg",
+    "index": 42
+  },
+  {
+    "name": "Taranjeet Singh Bedi ",
+    "designation": "Associate Lead",
+    "domain": "Editorial",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/de564dae3d1ddb8a66929c2188430c5d3fce36da-600x600.jpg",
+    "index": 43
+  },
+  {
+    "name": "Asmi Bandyopadhyay",
+    "designation": "Associate Lead",
+    "domain": "Editorial",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/788dac4c57c3ebafceb0e1e6d9fc98beaf531012-1200x1600.jpg",
+    "index": 44
+  },
+  {
+    "name": "Aparna Jaiswal",
+    "designation": "Associate Lead",
+    "domain": "Editorial",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/5589fc8e408a84496c8b07cd1cac3968297fe821-1288x1288.jpg",
+    "index": 45
+  },
+  {
+    "name": "Ankitha Ragesh",
+    "designation": "Associate Lead",
+    "domain": "Editorial",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/3aefacbc04cab754bd9ff31ef86138e2a01e1f28-3024x4032.jpg",
+    "index": 46
+  },
+  {
+    "name": "Abhinav Singh",
+    "designation": "Associate Lead",
+    "domain": "Editorial",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/5d0bd0ad1a72d8d7d673f8e7461f743d1ec6b9b2-1003x1003.jpg",
+    "index": 47
+  },
+  {
+    "name": "Shaurya Awasthi",
+    "designation": "Associate Lead",
+    "domain": "Editorial",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/8dd010e09540d9c6a626507487636670e08115ef-500x500.jpg",
+    "index": 48
+  },
+  {
+    "name": "Devesh Patel",
+    "designation": "Associate Lead",
+    "domain": "Editorial",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/7922cc4a34f41877212115dab21402490af9acc8-3000x4000.jpg",
+    "index": 49
+  },
+  {
+    "name": "Anushtika S U",
+    "designation": "Member",
+    "domain": "Editorial",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/9584f73500088bfdf3818eb10028af3532b9f43c-540x756.jpg",
+    "index": 50
+  },
+  {
+    "name": "Amitabh Garg",
+    "designation": "Member",
+    "domain": "Editorial",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/a85a388272b95a51081ff498842ff404034384ce-800x800.jpg",
+    "index": 51
+  },
+  {
+    "name": "Saksham Mann",
+    "designation": "Member",
+    "domain": "Editorial",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/b6662d0cef39ec3c127a2d845aa0f7e5bb2a5054-2079x2078.jpg",
+    "index": 52
+  },
+  {
+    "name": "Gurtej Singh Bedi",
+    "designation": "Member",
+    "domain": "Editorial",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/fe5681a25703319651fadb162d9f4d3531330aa9-1320x1603.jpg",
+    "index": 53
+  },
+  {
+    "name": "Janmay",
+    "designation": "Member",
+    "domain": "Editorial",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/995294c37509d17b6988e6cad5c608a6d144b990-1280x720.jpg",
+    "index": 54
+  },
+  {
+    "name": "Md Dilshad Alam",
+    "designation": "Member",
+    "domain": "Editorial",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/bad47cfa40ceed039a546219683983e9dd213b8f-720x1084.jpg",
+    "index": 55
+  },
+  {
+    "name": "Lehar Deepak Tolani",
+    "designation": "Member",
+    "domain": "Editorial",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/c84bf47e8ef77f2b65ef5f1ed70f91de00ea9eba-1566x2406.jpg",
+    "index": 56
+  },
+  {
+    "name": "Samardeep Singh Garcha",
+    "designation": "Member",
+    "domain": "Editorial",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/7d94d489269f44384f9a65a4a839dc18b013a7c3-736x736.jpg",
+    "index": 57
+  },
+  {
+    "name": "Anushmita Bose",
+    "designation": "Member",
+    "domain": "Editorial",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/61a39594fb856462f977ff6a5801c766fe9550ae-919x1139.jpg",
+    "index": 58
+  },
+  {
+    "name": "Avni Rajawat",
+    "designation": "Member",
+    "domain": "Editorial",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/0a18622b009f6e7f1283966f7570df062a007dcb-1170x1170.jpg",
+    "index": 59
+  },
+  {
+    "name": "Shashvat Aghera",
+    "designation": "Member",
+    "domain": "Editorial",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/9529830912e0f02599cd416b981790290d2f8ee6-2250x3000.jpg",
+    "index": 60
+  },
+  {
+    "name": "Vikrant Kumar Singh",
+    "designation": "Member",
+    "domain": "Editorial",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/585eb5aaedead311d9b54d13b03afebed5dc5117-4896x6528.jpg",
+    "index": 61
+  },
+  {
+    "name": "Shivansh Sharma",
+    "designation": "Member",
+    "domain": "Editorial",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/98ab47a6f777ba6e4692e4fa7779c4302ec18e13-1019x1280.jpg",
+    "index": 62
+  },
+  {
+    "name": "Akshithaa M",
+    "designation": "Member",
+    "domain": "Editorial",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/bc3126f6580dc30dd5134dd7f7538ddd122d6601-768x1024.jpg",
+    "index": 63
+  },
+  {
+    "name": "Rakshit Yadav",
+    "designation": "Member",
+    "domain": "Editorial",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/62fda02ff3933dabd51e737c286c1d32d5d9a752-2268x4032.jpg",
+    "index": 64
+  },
+  {
+    "name": "Priyansh Sahu",
+    "designation": "Member",
+    "domain": "Editorial",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/d37609a5427d2a43d28bbc75d53702e6c913be41-1096x1390.jpg",
+    "index": 65
+  },
+  {
+    "name": "Suhani Gupta",
+    "designation": "Member",
+    "domain": "Editorial",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/7682eabd142acc747f97ab1e752c7e2b7338c8dd-1080x1080.webp",
+    "index": 66
+  },
+  {
+    "name": "Shuba Bhuvi Matam",
+    "designation": "Member",
+    "domain": "Editorial",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/e63986722b697ba9d31c7c0248d6551290cb0382-3024x4032.jpg",
+    "index": 67
+  },
+  {
+    "name": "Vikash M",
+    "designation": "Member",
+    "domain": "Editorial",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/86d5c22219dcb3616d4bd806272110514ce02215-1200x1600.jpg",
+    "index": 68
+  },
+  {
+    "name": "Mohamed Sami",
+    "designation": "Lead",
+    "domain": "Technical",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/6998a30e59d9983f5a0c9d4684d67ca4d70251ca-2459x2458.jpg",
+    "index": 69
+  },
+  {
+    "name": "Aryan Singh",
+    "designation": "Lead",
+    "domain": "Technical",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/2ac2d1c9f5ef11b4ecdea1fe00102d7bebc6b098-311x290.png",
+    "index": 70
+  },
+  {
+    "name": "Mohammed Farhaan ",
+    "designation": "Lead",
+    "domain": "Technical",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/bdfe19ef4738a94a796009ffa3688de7de41812a-1375x1868.jpg",
+    "index": 71
+  },
+  {
+    "name": "Aakash Rawat ",
+    "designation": "Associate Lead",
+    "domain": "Technical",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/e073e489d2fd347ddc7ac452a5917fc866150018-640x640.jpg",
+    "index": 72
+  },
+  {
+    "name": "Saanvi Kumar",
+    "designation": "Associate Lead",
+    "domain": "Technical",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/f203cfd33f0bba343a6438eb5cd7dd4a3795f3e3-1200x1600.jpg",
+    "index": 73
+  },
+  {
+    "name": "Pradyumna D",
+    "designation": "Associate Lead",
+    "domain": "Technical",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/6395e67fccec6b7865a94e78ac6db53e61c757dc-1200x1600.jpg",
+    "index": 74
+  },
+  {
+    "name": "Shail Antani",
+    "designation": "Associate Lead",
+    "domain": "Technical",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/1d2b546eefcbb02a4305532d2aa7fe2d13254541-427x551.jpg",
+    "index": 75
+  },
+  {
+    "name": "Jatin Kumar",
+    "designation": "Associate Lead",
+    "domain": "Technical",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/886a2e9077cf31d4a87d7c8dee3ddec47a86fb89-1869x1869.jpg",
+    "index": 76
+  },
+  {
+    "name": "Harsh N Patel",
+    "designation": "Associate Lead",
+    "domain": "Technical",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/aeb7c5ac692593c4970ae14b71bedfcff5bcf2ed-3456x4608.jpg",
+    "index": 77
+  },
+  {
+    "name": "Shivam Bansal",
+    "designation": "Associate Lead",
+    "domain": "Technical",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/62352e6bcce17666bb6167d034da048ddb3ee70b-1643x2190.jpg",
+    "index": 78
+  },
+  {
+    "name": "Utkarshini Narayan",
+    "designation": "Associate Lead",
+    "domain": "Technical",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/32fd8692f7c93bd0733624e92e0c199d38bb13c1-1518x1920.jpg",
+    "index": 79
+  },
+  {
+    "name": "Ajay ram",
+    "designation": "Associate Lead",
+    "domain": "Technical",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/fbb243a8e69aac6cd5d5c80361c84a4bf6effb55-1178x1178.jpg",
+    "index": 80
+  },
+  {
+    "name": "Manaya Pachpor",
+    "designation": "Associate Lead",
+    "domain": "Technical",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/63a8732bde497c80aa1fb739ae71a0cb7e42f6bd-4032x3024.jpg",
+    "index": 81
+  },
+  {
+    "name": "Alvin Ben George ",
+    "designation": "Associate Lead",
+    "domain": "Technical",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/d6f09570643b32118d3996dafe1a494b1e8be00e-1080x1920.jpg",
+    "index": 82
+  },
+  {
+    "name": "Aniketh Deb",
+    "designation": "Member",
+    "domain": "Technical",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/98039489355d8cbc4ba2d126dcad43fc4f61033b-3000x3000.jpg",
+    "index": 83
+  },
+  {
+    "name": "Harish S",
+    "designation": "Member",
+    "domain": "Technical",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/2bcdd2fce7cc129f2542f8b282cc464e345cdcd3-2828x2828.jpg",
+    "index": 84
+  },
+  {
+    "name": "Ritwik Sharma",
+    "designation": "Member",
+    "domain": "Technical",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/8f5131c0fbba4065db31c4dfe7caed8d31219f6c-1271x1271.png",
+    "index": 85
+  },
+  {
+    "name": "Prateek Deshmukh",
+    "designation": "Member",
+    "domain": "Technical",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/06c0d0fac1b6b625f19d978e2222995e2c7a027f-3456x4608.jpg",
+    "index": 86
+  },
+  {
+    "name": "Anuja Pandey",
+    "designation": "Member",
+    "domain": "Technical",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/f4f552034d8f9704ef95bcdb8e109d0de14de074-2448x3264.jpg",
+    "index": 87
+  },
+  {
+    "name": "Vijay Bala Mahalingam",
+    "designation": "Member",
+    "domain": "Technical",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/fdb6d14c9dbd099ae0fb6e061a633b95bcda0de1-1050x1350.jpg",
+    "index": 88
+  },
+  {
+    "name": "Suhayb Ahmed",
+    "designation": "Member",
+    "domain": "Technical",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/8cfc18f7fc0e08a734824cd6f90057bd166147ca-585x585.jpg",
+    "index": 89
+  },
+  {
+    "name": "Vinay Rajan S",
+    "designation": "Member",
+    "domain": "Technical",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/c3eea6722a19960e6ad470ab6c24fdc3bef926fa-308x305.jpg",
+    "index": 90
+  },
+  {
+    "name": "Aditya Coomar",
+    "designation": "Member",
+    "domain": "Technical",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/e1c6bf84499bd0311fc1eab2251c20954f8fcad7-333x360.png",
+    "index": 91
+  },
+  {
+    "name": "Krrish Chakravarty",
+    "designation": "Member",
+    "domain": "Technical",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/1a6aaa7b286c26926dc012c19ae107aa30e187ee-3072x4096.jpg",
+    "index": 92
+  },
+  {
+    "name": "Aashvi Swaroop",
+    "designation": "Member",
+    "domain": "Technical",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/71f931607b0c1c32c16942dd726c84c5d68b4a48-1080x1085.jpg",
+    "index": 93
+  },
+  {
+    "name": "Navya Chandra",
+    "designation": "Member",
+    "domain": "Technical",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/8c6d1790a57cdcd2db381325373570b0c1b5c202-584x700.jpg",
+    "index": 94
+  },
+  {
+    "name": "Aditi Ghosh",
+    "designation": "Member",
+    "domain": "Technical",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/e830df3daa2aaecd38ecf6aa973ddcb78eab1e85-454x412.jpg",
+    "index": 95
+  },
+  {
+    "name": "Vinayak Srivastava",
+    "designation": "Member",
+    "domain": "Technical",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/301b962ba69f7169472baa3a416de4f5c00a7928-2320x3088.jpg",
+    "index": 96
+  },
+  {
+    "name": "Aditya Gupta",
+    "designation": "Member",
+    "domain": "Technical",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/31dc3c4965cfcf82af9aef2ec398fe160e872229-1080x1078.jpg",
+    "index": 97
+  },
+  {
+    "name": "Sachin Prasanth",
+    "designation": "Member",
+    "domain": "Technical",
+    "url": "https://srmkzilla.s3.ap-south-1.amazonaws.com/team/2023/683df51553a922d5f6090837f12d62f624b174c2-768x1024.jpg",
+    "index": 98
+  }
+]
