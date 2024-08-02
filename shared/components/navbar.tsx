@@ -87,6 +87,11 @@ const Navbar = () => {
                     newTab: false,
                   },
                   {
+                    label: '2023',
+                    link: '/team/2023',
+                    newTab: false,
+                  },
+                  {
                     label: '2022',
                     link: '/team/2022',
                     newTab: false,
