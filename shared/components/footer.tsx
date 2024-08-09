@@ -149,20 +149,20 @@ const Footer = () => {
               </a>
               <a
                 rel="noopener noreferrer"
-                href="tel:87178 49390"
-                className="mt-2 cursor-pointer flex items-center"
-              >
-                <IoCall className="text-green-500 mr-2" />
-                Nandini Nigam
-              </a>
-
-              <a
-                rel="noopener noreferrer"
                 href="tel:97672 46968"
                 className="mt-2 cursor-pointer flex items-center"
               >
                 <IoCall className="text-green-500 mr-2" />
                 Devansh Multani
+              </a>
+
+              <a
+                rel="noopener noreferrer"
+                href="tel:96533 17382"
+                className="mt-2 cursor-pointer flex items-center"
+              >
+                <IoCall className="text-green-500 mr-2" />
+                Himanshu Bhadani
               </a>
 
               <a
