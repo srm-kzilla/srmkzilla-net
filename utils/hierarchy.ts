@@ -1,13 +1,13 @@
 export const HIERARCHY = [
-  'President',
-  'Vice President',
-  'Technical Head',
-  'Editorial Head',
-  'Corporate Head',
-  'Events Head',
-  'Lead',
-  'Associate Lead',
-  'Member',
+  'president',
+  'vice president',
+  'technical head',
+  'editorial head',
+  'corporate head',
+  'events head',
+  'lead',
+  'associate lead',
+  'member',
 ]
 
 export type TeamMember = {
@@ -31,10 +31,21 @@ export type TeamMember = {
 }
 
 export const sortedTeamMembers = (teamMembers: TeamMember[]) => {
-  return teamMembers.sort((a, b) => {
-    return (
-      HIERARCHY.indexOf(a.designation) - HIERARCHY.indexOf(b.designation) ||
-      a.name.localeCompare(b.name)
-    )
-  })
+  return teamMembers
+    .map((member) => ({
+      ...member,
+      designation: member.designation.toLowerCase(),
+    }))
+    .sort((a, b) => {
+      return (
+        HIERARCHY.indexOf(a.designation) - HIERARCHY.indexOf(b.designation) ||
+        a.name.localeCompare(b.name)
+      )
+    })
+    .map((member) => ({
+      ...member,
+      designation:
+        member.designation.charAt(0).toUpperCase() +
+        member.designation.slice(1),
+    }))
 }
